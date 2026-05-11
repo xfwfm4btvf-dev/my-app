@@ -5,7 +5,7 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2026 15:33:35 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 15:36:00 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
@@ -150,6 +150,17 @@
       <category>Database</category>
       <category>Edge Computing</category>
       <category>Architecture</category>
+    </item>
+    <item>
+      <title>本地AI部署：从实验到生产的三种架构模式</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-deployment-patterns-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-deployment-patterns-2026</guid>
+      <description>探讨本地AI从原型到生产的三种主流部署架构，以及各自适用场景与性能权衡。</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Local-LLM</category>
+      <category>Privacy</category>
+      <category>Edge-Computing</category>
     </item>
   </channel>
 </rss>
