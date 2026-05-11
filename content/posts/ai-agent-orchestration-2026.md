@@ -23,15 +23,15 @@ Running one AI agent is straightforward. Running ten agents that need to share c
 
 LangGraph has emerged as the dominant framework for agent orchestration. Its graph-based execution model lets you define agents as nodes and communication as edges:
 
-```python
-from langgraph.graph import StateGraph
+```typescript
+import { StateGraph } from 'langgraph';
 
-workflow = StateGraph(AgentState)
-workflow.add_node("researcher", research_agent)
-workflow.add_node("writer", writing_agent)
-workflow.add_node("reviewer", review_agent)
-workflow.add_edge("researcher", "writer")
-workflow.add_edge("writer", "reviewer")
+const workflow = new StateGraph(AgentState);
+workflow.addNode('researcher', researchAgent);
+workflow.addNode('writer', writingAgent);
+workflow.addNode('reviewer', reviewAgent);
+workflow.addEdge('researcher', 'writer');
+workflow.addEdge('writer', 'reviewer');
 ```
 
 ## Observability is Non-Negotiable
