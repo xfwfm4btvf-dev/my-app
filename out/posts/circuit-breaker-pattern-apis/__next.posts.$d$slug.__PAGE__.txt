@@ -168,93 +168,54 @@ For most teams, start with the Supervisor pattern using a strong reasoning model
 
 ## The Road Ahead
 
-Agent orchestration is becoming infrastructure. Expect standardized protocols (like MCP for tool use) to emerge for inter-agent communication, making multi-agent systems as composable as microservices are today.7:Ta0d,# OpenTelemetry: Unified Observability for Microservices
+Agent orchestration is becoming infrastructure. Expect standardized protocols (like MCP for tool use) to emerge for inter-agent communication, making multi-agent systems as composable as microservices are today.7:T742,# Edge-Native Databases: Data Where Your Users Are
 
-As microservices architectures grow more complex, understanding system behavior becomes critical. OpenTelemetry (OTel) has emerged as the unified standard for collecting traces, metrics, and logs.
+The traditional client-server model assumes a single, centralized database. Edge-native databases flip this model, placing data close to users across a global network of edge nodes.
 
-## The Three Pillars
+## Why Centralized Databases Fall Short
 
-Observability rests on three data types:
+A user in Tokyo querying a database in Virginia faces 150ms+ round-trip latency. For real-time collaboration, gaming, and IoT, this is unacceptable.
 
-- **Traces**: Track a request as it flows through multiple services
-- **Metrics**: Quantitative measurements like latency percentiles and error rates
-- **Logs**: Structured event records with contextual metadata
+## The Edge-Native Approach
 
-OTel provides a single SDK and API for all three, eliminating vendor lock-in.
+Edge-native databases replicate and partition data across geographic regions automatically:
 
-## Getting Started with Traces
+- **Local-first reads**: Served from the nearest edge node
+- **Conflict-free replication**: CRDTs handle concurrent writes
+- **Offline support**: Apps work without connectivity, syncing when reconnected
 
-```typescript
-import { trace } from '@opentelemetry/api';
+## Popular Solutions
 
-const tracer = trace.getTracer('my-service');
+**Cloudflare D1**: SQLite at the edge, backed by Cloudflare global network.
 
-async function handleRequest(req: Request) {
-  return tracer.startActiveSpan('handle-request', async (span) => {
-    span.setAttribute('http.method', req.method);
-    span.setAttribute('http.url', req.url);
+**Turso (libSQL)**: Distributed SQLite with per-user databases for multi-tenant SaaS.
 
-    try {
-      const result = await processRequest(req);
-      span.setStatus({ code: SpanStatusCode.OK });
-      return result;
-    } catch (error) {
-      span.setStatus({ code: SpanStatusCode.ERROR, message: error.message });
-      span.recordException(error);
-      throw error;
-    } finally {
-      span.end();
-    }
-  });
-}
-```
+**Neon**: Serverless PostgreSQL with branching for dev workflows.
 
-## Context Propagation
+## Consistency Trade-offs
 
-The magic of distributed tracing is context propagation. OTel automatically passes trace context between services via HTTP headers (W3C Trace Context standard), linking spans across service boundaries into a complete trace.
+Edge databases typically offer eventual consistency. For strong consistency:
 
-## Collector Architecture
+1. **Regional strong consistency**: Pin critical tables to a primary region
+2. **Conflict resolution policies**: Define custom merge logic
+3. **Hybrid approach**: Edge reads, centralized writes
 
-The OTel Collector is a vendor-agnostic proxy that receives, processes, and exports telemetry data. Deploy it as a sidecar or daemonset:
+## Architecture Patterns
 
-```yaml
-receivers:
-  otlp:
-    protocols:
-      grpc:
-      http:
+**Read Replicas at Edge**: Main DB in one region, read replicas at edge. Simple but write latency unchanged.
 
-processors:
-  batch:
-    timeout: 5s
-    send_batch_size: 1024
+**Multi-Primary with CRDTs**: Every edge node accepts writes. Complex but lowest latency.
 
-exporters:
-  prometheus:
-    endpoint: "0.0.0.0:8889"
-  jaeger:
-    endpoint: "jaeger:14250"
-    tls:
-      insecure: true
+**Tiered Storage**: Hot data at edge, warm in regional nodes, cold in central storage.
 
-service:
-  pipelines:
-    traces:
-      receivers: [otlp]
-      processors: [batch]
-      exporters: [jaeger]
-    metrics:
-      receivers: [otlp]
-      processors: [batch]
-      exporters: [prometheus]
-```
+## When to Use
 
-## Best Practices
+- Global SaaS with users across continents
+- Real-time collaborative applications
+- Offline-first mobile apps
+- IoT data collection at scale
 
-1. **Use semantic conventions**: Follow OTel semantic conventions for consistent attribute naming
-2. **Sample wisely**: Use head-based sampling for high-volume services, tail-based for error investigation
-3. **Correlate signals**: Link traces to logs with trace IDs for seamless debugging
-4. **Start small**: Begin with auto-instrumentation, then add custom spans for business logic0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Building Resilient APIs with the Circuit Breaker Pattern\",\"description\":\"Prevent cascading failures in distributed systems with the circuit breaker design pattern.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/circuit-breaker-pattern-apis\"},\"keywords\":\"Architecture, APIs\",\"wordCount\":241,\"articleSection\":\"Architecture\"}"}}],["$","$L2",null,{"post":{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$4"},"nextPost":{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$5"},"relatedPosts":[{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$6"},"$0:rsc:props:children:0:1:props:nextPost",{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$7"}]}]],["$L8","$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"q4MgMSfW0A-ov54Oj1GtN"}
+Start with one use case like user profiles, then expand as you build confidence.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Building Resilient APIs with the Circuit Breaker Pattern\",\"description\":\"Prevent cascading failures in distributed systems with the circuit breaker design pattern.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/circuit-breaker-pattern-apis\"},\"keywords\":\"Architecture, APIs\",\"wordCount\":241,\"articleSection\":\"Architecture\"}"}}],["$","$L2",null,{"post":{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$4"},"nextPost":{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$5"},"relatedPosts":[{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$6"},{"slug":"edge-native-databases","title":"Edge-Native Databases: Data Where Your Users Are","excerpt":"How edge-native databases are redefining data locality, latency, and offline-first architectures.","date":"2026-05-11","tags":["Database","Edge Computing","Architecture"],"content":"$7"},"$0:rsc:props:children:0:1:props:nextPost"]}]],["$L8","$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"R4fG0p6jyV8xw9lFOrYfs"}
 8:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
 9:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0462ueivjeopl.js","async":true}]
 a:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]

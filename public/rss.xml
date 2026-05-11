@@ -5,7 +5,7 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2026 14:45:19 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 15:33:35 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
@@ -128,6 +128,28 @@
       <category>Architecture</category>
       <category>LLM</category>
       <category>Orchestration</category>
+    </item>
+    <item>
+      <title>Post-Quantum Cryptography: Hardening Web Apps Before Q-Day</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/post-quantum-cryptography-web-apps</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/post-quantum-cryptography-web-apps</guid>
+      <description>NIST finalized post-quantum standards. Here is how to migrate your web apps before quantum computers break RSA and ECC.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Cryptography</category>
+      <category>Security</category>
+      <category>Quantum</category>
+      <category>TLS</category>
+      <category>NIST</category>
+    </item>
+    <item>
+      <title>Edge-Native Databases: Data Where Your Users Are</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/edge-native-databases</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/edge-native-databases</guid>
+      <description>How edge-native databases are redefining data locality, latency, and offline-first architectures.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Database</category>
+      <category>Edge Computing</category>
+      <category>Architecture</category>
     </item>
   </channel>
 </rss>

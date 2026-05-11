@@ -670,7 +670,7 @@ For most teams, start with the Supervisor pattern using a strong reasoning model
 ## The Road Ahead
 
 Agent orchestration is becoming infrastructure. Expect standardized protocols (like MCP for tool use) to emerge for inter-agent communication, making multi-agent systems as composable as microservices are today.`
-  },,
+  },
 
   {
     slug: 'post-quantum-cryptography-web-apps',
@@ -729,7 +729,7 @@ ssl_conf_command KEMGroups X25519Kyber768Draft00:X25519
 ## Bottom Line
 
 Start your migration now. Enable hybrid key exchange in your TLS stack today — it costs negligible performance and buys you future-proof security. The crypto-agility you build now will be critical when Q-Day arrives.`
-  }
+  },
   {
     slug: 'edge-native-databases',
     title: 'Edge-Native Databases: Data Where Your Users Are',
@@ -784,7 +784,7 @@ Edge databases typically offer eventual consistency. For strong consistency:
 - IoT data collection at scale
 
 Start with one use case like user profiles, then expand as you build confidence.`
-  },,
+  },
   ];
 
 export function getAllTags(): string[] {
