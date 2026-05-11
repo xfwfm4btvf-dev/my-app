@@ -5,13 +5,14 @@ export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
-export default function PostPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug);
+export default async function PostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   
   if (!post) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-xl text-gray-400">Post not found</p>
+        <p className="text-xl text-gray-400">Post not found: {slug}</p>
       </div>
     );
   }
