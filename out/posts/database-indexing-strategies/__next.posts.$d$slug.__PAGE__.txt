@@ -1,0 +1,48 @@
+1:"$Sreact.fragment"
+2:I[24082,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0n5b2r_quyw21.js"],"default"]
+4:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+3:T552,# Database Indexing Strategies for High-Traffic Applications
+
+Poor indexing is the number one cause of slow database queries. Here is how to get it right.
+
+## Understanding Index Types
+
+### B-Tree Indexes
+The default index type in most databases. Excellent for equality and range queries, ORDER BY, and JOIN operations.
+
+### Hash Indexes
+Faster for exact equality lookups but cannot handle range queries. Use sparingly.
+
+### GIN / GiST Indexes
+Specialized for full-text search, JSON queries, and geometric data in PostgreSQL.
+
+## Composite Indexes
+
+The order of columns matters. An index on (user_id, created_at) supports:
+- Queries filtering by user_id alone
+- Queries filtering by user_id AND created_at
+- Queries filtering by user_id with ORDER BY created_at
+
+It does NOT support queries filtering only by created_at.
+
+## The EXPLAIN Command
+
+Always validate your indexes:
+
+```sql
+EXPLAIN ANALYZE
+SELECT * FROM orders
+WHERE user_id = 123
+ORDER BY created_at DESC
+LIMIT 10;
+```
+
+Look for "Seq Scan" (sequential scan) on large tables — that is a sign you need an index.
+
+## Common Mistakes
+
+1. **Over-indexing**: Each index adds write overhead. Only index columns used in WHERE, JOIN, and ORDER BY.
+2. **Ignoring covering indexes**: Include all selected columns to avoid table lookups.
+3. **Not monitoring unused indexes**: Remove indexes that are never read.0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"post":{"slug":"database-indexing-strategies","title":"Database Indexing Strategies for High-Traffic Applications","excerpt":"Master the art of database indexing to keep your application fast as it scales.","date":"2026-05-09","tags":["Database","Performance"],"content":"$3"}}],[["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0n5b2r_quyw21.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"OfvZC3CINfXo86U-ROLCd"}
+6:null

@@ -1,0 +1,34 @@
+1:"$Sreact.fragment"
+2:I[24082,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0n5b2r_quyw21.js"],"default"]
+4:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+3:T526,# Edge Computing Meets WebAssembly
+
+The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
+
+## Why WebAssembly at the Edge
+
+Traditional serverless functions suffer from cold starts. Wasm modules, by contrast, can instantiate in microseconds. This makes them ideal for latency-sensitive edge workloads like real-time personalization, A/B testing, and authentication.
+
+## The WASI Standard
+
+The WebAssembly System Interface (WASI) provides a standardized way for Wasm modules to interact with the host OS. This means your Wasm code can run identically across Cloudflare Workers, Fastly Compute, and Fermyon's Spin — truly write once, run anywhere.
+
+## Getting Started
+
+```rust
+use spin_sdk::http::{Request, Response};
+
+#[spin_sdk::http_component]
+fn handle_request(req: Request) -> Response {
+    Response::builder()
+        .status(200)
+        .body("Hello from the edge!")
+        .build()
+}
+```
+
+## The Future
+
+With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"post":{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$3"}}],[["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0n5b2r_quyw21.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"OfvZC3CINfXo86U-ROLCd"}
+6:null

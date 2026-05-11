@@ -1,0 +1,37 @@
+1:"$Sreact.fragment"
+2:I[24082,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0n5b2r_quyw21.js"],"default"]
+4:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+3:T467,# Why Web Developers Should Learn Rust in 2026
+
+Rust has been voted the most loved programming language for eight years running. But beyond the hype, Rust is making concrete inroads into web development tooling.
+
+## Rust-Powered Web Tools
+
+The most popular web tools are increasingly built with Rust:
+
+- **SWC**: Powers Next.js compilation, replacing Babel
+- **Turbopack**: Vercel's Rust-based bundler replacing Webpack
+- **Biome**: Rust rewrite of ESLint + Prettier
+- **oxc**: Fast JavaScript linter and parser
+
+These tools deliver 10-100x speed improvements over their JavaScript predecessors.
+
+## Beyond Tooling
+
+Rust is also becoming viable for writing web applications directly:
+
+- **Leptos**: A full-stack Rust framework with fine-grained reactivity
+- **Actix Web**: Blazingly fast HTTP framework
+- **Dioxus**: React-like component model in Rust
+
+## Where to Start
+
+If you are a web developer new to Rust, start with:
+
+1. The Rust Book (free online)
+2. Exercism's Rust track
+3. Build a small CLI tool, then try a simple API with Actix
+
+The learning curve is real, but the payoff in performance and reliability is immense.0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"post":{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$3"}}],[["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0n5b2r_quyw21.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"OfvZC3CINfXo86U-ROLCd"}
+6:null

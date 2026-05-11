@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nitrogen Blog - Tech, Code and Future</title>
+    <link>https://xfwfm4btvf-dev.github.io/my-app</link>
+    <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 May 2026 08:11:35 GMT</lastBuildDate>
+    <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Edge Computing Meets WebAssembly</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/edge-computing-webassembly</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/edge-computing-webassembly</guid>
+      <description>How WebAssembly is unlocking new possibilities for edge computing and server-side applications.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>WebAssembly</category>
+      <category>Edge Computing</category>
+    </item>
+    <item>
+      <title>Building Resilient APIs with the Circuit Breaker Pattern</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/circuit-breaker-pattern-apis</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/circuit-breaker-pattern-apis</guid>
+      <description>Prevent cascading failures in distributed systems with the circuit breaker design pattern.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Architecture</category>
+      <category>APIs</category>
+    </item>
+    <item>
+      <title>Why Web Developers Should Learn Rust in 2026</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/rust-for-web-developers</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/rust-for-web-developers</guid>
+      <description>Rust is no longer just for systems programmers — it is becoming essential for modern web development.</description>
+      <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+      <category>Rust</category>
+      <category>Web Development</category>
+    </item>
+    <item>
+      <title>Database Indexing Strategies for High-Traffic Applications</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/database-indexing-strategies</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/database-indexing-strategies</guid>
+      <description>Master the art of database indexing to keep your application fast as it scales.</description>
+      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+      <category>Database</category>
+      <category>Performance</category>
+    </item>
+    <item>
+      <title>Container Queries: The End of Media Query Hacks</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/css-container-queries</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/css-container-queries</guid>
+      <description>CSS container queries let components respond to their own size, not just the viewport.</description>
+      <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+      <category>CSS</category>
+      <category>Frontend</category>
+    </item>
+    <item>
+      <title>Mastering TypeScript: A Guide to Better JavaScript</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/mastering-typescript</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/mastering-typescript</guid>
+      <description>TypeScript has become the gold standard for building robust web applications.</description>
+      <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+      <category>TypeScript</category>
+      <category>JavaScript</category>
+    </item>
+    <item>
+      <title>Getting Started with Next.js 16</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/getting-started-with-nextjs</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/getting-started-with-nextjs</guid>
+      <description>Next.js 16 brings exciting new features.</description>
+      <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+      <category>Next.js</category>
+      <category>React</category>
+    </item>
+    <item>
+      <title>AI-Powered Development Tools</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/ai-powered-development</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/ai-powered-development</guid>
+      <description>How AI assistants are transforming the way we write code.</description>
+      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Productivity</category>
+    </item>
+    <item>
+      <title>Web Security Essentials for Modern Apps</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/web-security-essentials</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/web-security-essentials</guid>
+      <description>Security is not optional. Learn the essential practices.</description>
+      <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+      <category>Security</category>
+      <category>Web</category>
+    </item>
+    <item>
+      <title>OpenTelemetry: Unified Observability for Microservices</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/opentelemetry-observability-microservices</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/opentelemetry-observability-microservices</guid>
+      <description>How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Observability</category>
+      <category>DevOps</category>
+    </item>
+  </channel>
+</rss>

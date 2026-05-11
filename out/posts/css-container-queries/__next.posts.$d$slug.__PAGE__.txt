@@ -1,0 +1,55 @@
+1:"$Sreact.fragment"
+2:I[24082,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0n5b2r_quyw21.js"],"default"]
+4:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+3:T4c9,# Container Queries: The End of Media Query Hacks
+
+For years, responsive design meant media queries tied to viewport width. Container queries change everything by letting components respond to their own container's size.
+
+## The Problem
+
+A card component might appear in a 300px sidebar or a 900px main area. With media queries, you cannot differentiate — the viewport is the same in both cases.
+
+## The Solution
+
+```css
+.card-container {
+  container-type: inline-size;
+  container-name: card;
+}
+
+@container card (min-width: 400px) {
+  .card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@container card (max-width: 399px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+```
+
+## Container Query Units
+
+New CSS units like `cqw` (container query width) let you size elements relative to their container:
+
+```css
+.card-title {
+  font-size: clamp(1rem, 3cqw, 1.5rem);
+}
+```
+
+## Browser Support
+
+Container queries have full support in all modern browsers as of 2025. You can safely use them in production without fallbacks.
+
+## Best Practices
+
+1. Use container queries for reusable components
+2. Keep media queries for page-level layout
+3. Name your containers for clarity in complex layouts0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"post":{"slug":"css-container-queries","title":"Container Queries: The End of Media Query Hacks","excerpt":"CSS container queries let components respond to their own size, not just the viewport.","date":"2026-05-08","tags":["CSS","Frontend"],"content":"$3"}}],[["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0n5b2r_quyw21.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"OfvZC3CINfXo86U-ROLCd"}
+6:null

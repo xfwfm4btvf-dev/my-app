@@ -1,0 +1,69 @@
+1:"$Sreact.fragment"
+2:I[24082,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0n5b2r_quyw21.js"],"default"]
+4:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+3:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
+
+In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
+
+## How It Works
+
+A circuit breaker monitors calls to external services and "trips" (opens) when failures exceed a threshold. It has three states:
+
+- **Closed**: Requests flow normally. Failures are counted.
+- **Open**: Requests are immediately rejected with a fallback response.
+- **Half-Open**: After a timeout, a limited number of test requests are allowed through.
+
+## Implementation
+
+```typescript
+class CircuitBreaker {
+  private failures = 0;
+  private lastFailure = 0;
+  private state: 'closed' | 'open' | 'half-open' = 'closed';
+
+  constructor(
+    private threshold: number = 5,
+    private timeout: number = 30000
+  ) {}
+
+  async call<T>(fn: () => Promise<T>): Promise<T> {
+    if (this.state === 'open') {
+      if (Date.now() - this.lastFailure > this.timeout) {
+        this.state = 'half-open';
+      } else {
+        throw new Error('Circuit is open');
+      }
+    }
+
+    try {
+      const result = await fn();
+      this.onSuccess();
+      return result;
+    } catch (error) {
+      this.onFailure();
+      throw error;
+    }
+  }
+
+  private onSuccess() {
+    this.failures = 0;
+    this.state = 'closed';
+  }
+
+  private onFailure() {
+    this.failures++;
+    this.lastFailure = Date.now();
+    if (this.failures >= this.threshold) {
+      this.state = 'open';
+    }
+  }
+}
+```
+
+## Best Practices
+
+1. **Use with retry logic**: Combine with exponential backoff for transient failures.
+2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
+3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"post":{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$3"}}],[["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0n5b2r_quyw21.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"OfvZC3CINfXo86U-ROLCd"}
+6:null
