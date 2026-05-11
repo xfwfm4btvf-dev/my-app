@@ -2,14 +2,12 @@
 
 import { motion } from "framer-motion";
 import { Post } from "../../../lib/posts";
-import { BorderBeam } from "@/components/magicui/border-beam";
-import { Particles } from "@/components/magicui/particles";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export default function PostContent({ post }: { post: Post }) {
   return (
     <div className="min-h-screen relative">
-      <Particles className="absolute inset-0" quantity={50} color="#ffffff" />
-      
       <article className="relative py-20 px-6 z-10">
         <div className="max-w-3xl mx-auto">
           <motion.div
@@ -73,12 +71,10 @@ export default function PostContent({ post }: { post: Post }) {
               transition={{ delay: 0.4 }}
               className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-12 overflow-hidden"
             >
-              <BorderBeam size={300} duration={12} colorFrom="#3b82f6" colorTo="#8b5cf6" />
-              
-              <div className="relative prose prose-invert prose-lg max-w-none">
-                <div className="text-gray-300 leading-relaxed whitespace-pre-wrap">
+              <div className="relative prose prose-invert prose-lg max-w-none prose-headings:text-white prose-p:text-gray-300 prose-strong:text-white prose-code:text-blue-300 prose-code:bg-white/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10 prose-a:text-blue-400 prose-li:text-gray-300">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
                   {post.content}
-                </div>
+                </ReactMarkdown>
               </div>
             </motion.div>
 
