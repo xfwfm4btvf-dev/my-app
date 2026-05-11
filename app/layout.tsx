@@ -47,7 +47,8 @@ export default function RootLayout({
           title="Nitrogen Blog RSS Feed"
           href="/my-app/rss.xml"
         />
-      </head>
+      <link rel="sitemap" type="application/xml" href="/my-app/sitemap.xml" />
+</head>
       <body className="bg-black text-white min-h-screen">
         <nav className="border-b border-white/10 bg-black/50 backdrop-blur-lg sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
