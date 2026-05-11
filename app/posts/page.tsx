@@ -120,7 +120,7 @@ export default function PostsPage() {
             {filteredPosts.map((post, i) => (
               <motion.a
                 key={post.slug}
-                href={`/posts/${post.slug}`}
+                href={`/my-app/posts/${post.slug}`}
                 layout
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}

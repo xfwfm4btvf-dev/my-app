@@ -67,7 +67,7 @@ export default function Home() {
               className="relative inline-block"
             >
               <a
-                href="/posts"
+                href="/my-app/posts"
                 className="relative inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium text-lg hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105"
               >
                 Browse Posts
@@ -102,7 +102,7 @@ export default function Home() {
             {posts.slice(0, 3).map((post, i) => (
               <motion.a
                 key={post.slug}
-                href={`/posts/${post.slug}`}
+                href={`/my-app/posts/${post.slug}`}
                 className="group relative overflow-hidden rounded-2xl border border-white/10 bg-black/50 backdrop-blur-sm p-8 hover:border-white/20 transition-all duration-500"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -165,7 +165,7 @@ export default function Home() {
             className="text-center mt-12"
           >
             <a
-              href="/posts"
+              href="/my-app/posts"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 text-gray-300 hover:text-white hover:border-white/40 hover:bg-white/5 transition-all duration-300"
             >
               View All Posts

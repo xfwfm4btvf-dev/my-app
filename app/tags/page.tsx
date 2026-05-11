@@ -57,7 +57,7 @@ export default function TagsPage() {
                       {tagPosts.map((post) => (
                         <a
                           key={post.slug}
-                          href={`/posts/${post.slug}`}
+                          href={`/my-app/posts/${post.slug}`}
                           className="text-sm px-3 py-1.5 rounded-full bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white border border-white/5 hover:border-white/10 transition-all"
                         >
                           {post.title}

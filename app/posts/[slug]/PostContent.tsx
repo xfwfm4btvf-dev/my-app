@@ -19,7 +19,7 @@ export default function PostContent({ post }: { post: Post }) {
           >
             {/* Back link */}
             <a
-              href="/posts"
+              href="/my-app/posts"
               className="inline-flex items-center gap-2 text-gray-400 hover:text-white mb-8 transition-colors"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
