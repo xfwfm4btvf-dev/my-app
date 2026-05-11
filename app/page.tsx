@@ -177,6 +177,34 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            name: "Nitrogen Blog",
+            description: "Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.",
+            url: "https://xfwfm4btvf-dev.github.io/my-app/",
+            author: {
+              "@type": "Person",
+              name: "Henry Nitrogen",
+              url: "https://xfwfm4btvf-dev.github.io/my-app/about"
+            },
+            blogPost: posts.slice(0, 10).map(post => ({
+              "@type": "BlogPosting",
+              headline: post.title,
+              description: post.excerpt,
+              datePublished: post.date,
+              url: `https://xfwfm4btvf-dev.github.io/my-app/posts/${post.slug}`,
+              keywords: post.tags.join(", ")
+            }))
+          })
+        }}
+      />
+
       {/* Footer Glow */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
     </div>
