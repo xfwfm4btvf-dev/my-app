@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { SearchDialog } from "@/components/SearchDialog";
+import { BackToTop } from "@/components/BackToTop";
 
 export const metadata: Metadata = {
   title: "Nitrogen Blog - Tech, Code and Future",
@@ -77,6 +78,7 @@ export default function RootLayout({
           </div>
         </nav>
         <main>{children}</main>
+        <BackToTop />
       </body>
     </html>
   );
