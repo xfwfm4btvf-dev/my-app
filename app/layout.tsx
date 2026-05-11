@@ -2,8 +2,28 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nitrogen Blog",
-  description: "Tech blog by Nitrogen",
+  title: "Nitrogen Blog - Tech, Code and Future",
+  description: "Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.",
+  keywords: ["web development", "TypeScript", "Next.js", "Rust", "DevOps", "architecture", "programming"],
+  authors: [{ name: "Nitrogen" }],
+  openGraph: {
+    title: "Nitrogen Blog - Tech, Code and Future",
+    description: "In-depth articles on web development, DevOps, architecture, and emerging technologies.",
+    url: "https://xfwfm4btvf-dev.github.io/my-app/",
+    siteName: "Nitrogen Blog",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nitrogen Blog - Tech, Code and Future",
+    description: "In-depth articles on web development, DevOps, architecture, and emerging technologies.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  metadataBase: new URL("https://xfwfm4btvf-dev.github.io/my-app/"),
 };
 
 export default function RootLayout({
