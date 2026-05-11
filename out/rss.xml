@@ -5,7 +5,7 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2026 13:51:45 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 14:23:49 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
@@ -96,6 +96,26 @@
       <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
       <category>Observability</category>
       <category>DevOps</category>
+    </item>
+    <item>
+      <title>Model Context Protocol: AI 工具集成的新标准</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/model-context-protocol-ai-integration</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/model-context-protocol-ai-integration</guid>
+      <description>深入解析 MCP 如何统一 AI 模型与外部工具的交互方式，以及它对开发者生态的影响。</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>MCP</category>
+      <category>开发工具</category>
+    </item>
+    <item>
+      <title>WebGPU: Browser-Side AI Inference Revolution</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/webgpu-browser-ai-inference</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/webgpu-browser-ai-inference</guid>
+      <description>How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>WebGPU</category>
+      <category>AI</category>
+      <category>Performance</category>
     </item>
   </channel>
 </rss>

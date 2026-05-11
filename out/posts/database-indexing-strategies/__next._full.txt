@@ -8,7 +8,7 @@ a:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"ViewportBoundary"]
 c:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"MetadataBoundary"]
 e:I[68027,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"default",1]
 :HL["/my-app/_next/static/chunks/0uhus_qq8h2i3.css","style"]
-0:{"P":null,"c":["","posts","database-indexing-strategies"],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","database-indexing-strategies","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/my-app/_next/static/chunks/0uhus_qq8h2i3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/my-app/_next/static/chunks/0bn7sb9dt40_4.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark","children":[["$","head",null,{"children":[["$","link",null,{"rel":"alternate","type":"application/rss+xml","title":"Nitrogen Blog RSS Feed","href":"/my-app/rss.xml"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/my-app/sitemap.xml"}]]}],["$","body",null,{"className":"bg-black text-white min-h-screen","children":[["$","nav",null,{"className":"border-b border-white/10 bg-black/50 backdrop-blur-lg sticky top-0 z-50","children":["$","div",null,{"className":"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between","children":[["$","a",null,{"href":"/my-app","className":"text-xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent","children":"Nitrogen"}],["$","div",null,{"className":"flex items-center gap-6","children":[["$","a",null,{"href":"/my-app","className":"text-gray-300 hover:text-white transition-colors","children":"Home"}],["$","a",null,{"href":"/my-app/posts","className":"text-gray-300 hover:text-white transition-colors","children":"Posts"}],["$","a",null,{"href":"/my-app/tags","className":"text-gray-300 hover:text-white transition-colors","children":"Tags"}],["$","a",null,{"href":"/my-app/about","className":"text-gray-300 hover:text-white transition-colors","children":"About"}],["$","a",null,{"href":"/my-app/rss.xml","target":"_blank","rel":"noopener noreferrer","className":"text-gray-400 hover:text-orange-400 transition-colors","title":"RSS Feed","children":["$","svg",null,{"className":"w-5 h-5","fill":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"d":"M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"}]}]}]]}]]}]}],["$","main",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L4",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0ro4fvui.x-yc.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,null]},null,false,"$@9"]},null,false,"$@9"]},null,false,null],["$","$1","h",{"children":[null,["$","$La",null,{"children":"$Lb"}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Ld"}]}]}],null]}],false]],"m":"$undefined","G":["$e",[["$","link","0",{"rel":"stylesheet","href":"/my-app/_next/static/chunks/0uhus_qq8h2i3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"GMzHRZd4S3B3HjLurgGYA"}
+0:{"P":null,"c":["","posts","database-indexing-strategies"],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","database-indexing-strategies","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/my-app/_next/static/chunks/0uhus_qq8h2i3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/my-app/_next/static/chunks/0bn7sb9dt40_4.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark","children":[["$","head",null,{"children":[["$","link",null,{"rel":"alternate","type":"application/rss+xml","title":"Nitrogen Blog RSS Feed","href":"/my-app/rss.xml"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/my-app/sitemap.xml"}]]}],["$","body",null,{"className":"bg-black text-white min-h-screen","children":[["$","nav",null,{"className":"border-b border-white/10 bg-black/50 backdrop-blur-lg sticky top-0 z-50","children":["$","div",null,{"className":"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between","children":[["$","a",null,{"href":"/my-app","className":"text-xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent","children":"Nitrogen"}],["$","div",null,{"className":"flex items-center gap-6","children":[["$","a",null,{"href":"/my-app","className":"text-gray-300 hover:text-white transition-colors","children":"Home"}],["$","a",null,{"href":"/my-app/posts","className":"text-gray-300 hover:text-white transition-colors","children":"Posts"}],["$","a",null,{"href":"/my-app/tags","className":"text-gray-300 hover:text-white transition-colors","children":"Tags"}],["$","a",null,{"href":"/my-app/about","className":"text-gray-300 hover:text-white transition-colors","children":"About"}],["$","a",null,{"href":"/my-app/rss.xml","target":"_blank","rel":"noopener noreferrer","className":"text-gray-400 hover:text-orange-400 transition-colors","title":"RSS Feed","children":["$","svg",null,{"className":"w-5 h-5","fill":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"d":"M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"}]}]}]]}]]}]}],["$","main",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L4",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L5",[["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0ro4fvui.x-yc.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,null]},null,false,"$@9"]},null,false,"$@9"]},null,false,null],["$","$1","h",{"children":[null,["$","$La",null,{"children":"$Lb"}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$Ld"}]}]}],null]}],false]],"m":"$undefined","G":["$e",[["$","link","0",{"rel":"stylesheet","href":"/my-app/_next/static/chunks/0uhus_qq8h2i3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"XQwwoS32wHxEsoxz0q0RV"}
 f:[]
 9:"$Wf"
 10:I[24082,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0ro4fvui.x-yc.js"],"default"]
@@ -134,7 +134,67 @@ If you are a web developer new to Rust, start with:
 2. Exercism's Rust track
 3. Build a small CLI tool, then try a simple API with Actix
 
-The learning curve is real, but the payoff in performance and reliability is immense.14:T526,# Edge Computing Meets WebAssembly
+The learning curve is real, but the payoff in performance and reliability is immense.14:T9a4,# WebGPU: Browser-Side AI Inference Revolution
+
+WebGPU is changing our understanding of browser capabilities. This new Web API gives developers direct GPU access, opening the door for browser-side AI inference.
+
+## Why WebGPU Matters
+
+WebGL has served us well for years, but it is limited by the OpenGL ES architecture. WebGPU is built on Vulkan, Metal, and Direct3D 12, providing more modern graphics and compute capabilities. The key difference is Compute Shader support.
+
+## Browser-Side AI Inference
+
+With Compute Shaders, we can now:
+
+- Run small language models directly in the browser
+- Realize real-time image recognition without a server
+- Build privacy-first AI applications where data never leaves the device
+
+```javascript
+const adapter = await navigator.gpu.requestAdapter();
+const device = await adapter.requestDevice();
+
+const computeModule = device.createShaderModule({
+  code: `
+    @group(0) @binding(0) var<storage, read> input: array<f32>;
+    @group(0) @binding(1) var<storage, read_write> output: array<f32>;
+
+    @compute @workgroup_size(64)
+    fn main(@builtin(global_invocation_id) id: vec3u) {
+      let i = id.x;
+      output[i] = input[i] * input[i];
+    }
+  `
+});
+```
+
+## Integration with ONNX Runtime Web
+
+Microsoft ONNX Runtime Web now natively supports the WebGPU backend. This means you can export PyTorch or TensorFlow models to ONNX format and run them directly in the browser, with performance 3-10x faster than the WebGL backend.
+
+## Performance Benchmarks
+
+Running the Phi-3-mini model with WebGPU on M2 MacBook:
+
+- First Token: 45ms (WebGPU) vs 180ms (WebGL) vs 320ms (WASM)
+- Throughput: 28 tokens/s (WebGPU) vs 7 (WebGL) vs 3 (WASM)
+- Memory: 2.1GB (WebGPU) vs 2.8GB (WebGL) vs 3.2GB (WASM)
+
+## Real-World Applications
+
+**Offline Translation Apps** - Translate documents on a plane without network access.
+
+**Medical Imaging Assistance** - Analyze X-rays locally while protecting patient privacy.
+
+**Real-time Code Completion** - IDE-level AI assistance without API calls.
+
+## Browser Compatibility
+
+As of May 2026: Chrome/Edge fully supported, Firefox experimental (manual flag), Safari supported on macOS 14+.
+
+## Conclusion
+
+WebGPU is more than a graphics API upgrade. It is the key step for browsers to become complete AI platforms. As model quantization and WebGPU mature, browser-side AI inference will become increasingly practical. Frontend developers should start learning Compute Shaders and WebGPU fundamentals now.15:T526,# Edge Computing Meets WebAssembly
 
 The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
 
@@ -162,7 +222,7 @@ fn handle_request(req: Request) -> Response {
 
 ## The Future
 
-With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.15:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
+With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.16:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
 
 In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
 
@@ -225,93 +285,7 @@ class CircuitBreaker {
 
 1. **Use with retry logic**: Combine with exponential backoff for transient failures.
 2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
-3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.16:Ta0d,# OpenTelemetry: Unified Observability for Microservices
-
-As microservices architectures grow more complex, understanding system behavior becomes critical. OpenTelemetry (OTel) has emerged as the unified standard for collecting traces, metrics, and logs.
-
-## The Three Pillars
-
-Observability rests on three data types:
-
-- **Traces**: Track a request as it flows through multiple services
-- **Metrics**: Quantitative measurements like latency percentiles and error rates
-- **Logs**: Structured event records with contextual metadata
-
-OTel provides a single SDK and API for all three, eliminating vendor lock-in.
-
-## Getting Started with Traces
-
-```typescript
-import { trace } from '@opentelemetry/api';
-
-const tracer = trace.getTracer('my-service');
-
-async function handleRequest(req: Request) {
-  return tracer.startActiveSpan('handle-request', async (span) => {
-    span.setAttribute('http.method', req.method);
-    span.setAttribute('http.url', req.url);
-
-    try {
-      const result = await processRequest(req);
-      span.setStatus({ code: SpanStatusCode.OK });
-      return result;
-    } catch (error) {
-      span.setStatus({ code: SpanStatusCode.ERROR, message: error.message });
-      span.recordException(error);
-      throw error;
-    } finally {
-      span.end();
-    }
-  });
-}
-```
-
-## Context Propagation
-
-The magic of distributed tracing is context propagation. OTel automatically passes trace context between services via HTTP headers (W3C Trace Context standard), linking spans across service boundaries into a complete trace.
-
-## Collector Architecture
-
-The OTel Collector is a vendor-agnostic proxy that receives, processes, and exports telemetry data. Deploy it as a sidecar or daemonset:
-
-```yaml
-receivers:
-  otlp:
-    protocols:
-      grpc:
-      http:
-
-processors:
-  batch:
-    timeout: 5s
-    send_batch_size: 1024
-
-exporters:
-  prometheus:
-    endpoint: "0.0.0.0:8889"
-  jaeger:
-    endpoint: "jaeger:14250"
-    tls:
-      insecure: true
-
-service:
-  pipelines:
-    traces:
-      receivers: [otlp]
-      processors: [batch]
-      exporters: [jaeger]
-    metrics:
-      receivers: [otlp]
-      processors: [batch]
-      exporters: [prometheus]
-```
-
-## Best Practices
-
-1. **Use semantic conventions**: Follow OTel semantic conventions for consistent attribute naming
-2. **Sample wisely**: Use head-based sampling for high-volume services, tail-based for error investigation
-3. **Correlate signals**: Link traces to logs with trace IDs for seamless debugging
-4. **Start small**: Begin with auto-instrumentation, then add custom spans for business logic5:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Database Indexing Strategies for High-Traffic Applications\",\"description\":\"Master the art of database indexing to keep your application fast as it scales.\",\"datePublished\":\"2026-05-09\",\"dateModified\":\"2026-05-09\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/database-indexing-strategies\"},\"keywords\":\"Database, Performance\",\"wordCount\":213,\"articleSection\":\"Database\"}"}}],["$","$L10",null,{"post":{"slug":"database-indexing-strategies","title":"Database Indexing Strategies for High-Traffic Applications","excerpt":"Master the art of database indexing to keep your application fast as it scales.","date":"2026-05-09","tags":["Database","Performance"],"content":"$11"},"readingTime":2,"prevPost":{"slug":"css-container-queries","title":"Container Queries: The End of Media Query Hacks","excerpt":"CSS container queries let components respond to their own size, not just the viewport.","date":"2026-05-08","tags":["CSS","Frontend"],"content":"$12"},"nextPost":{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$13"},"relatedPosts":[{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$14"},{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$15"},{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$16"}]}]]
+3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.5:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Database Indexing Strategies for High-Traffic Applications\",\"description\":\"Master the art of database indexing to keep your application fast as it scales.\",\"datePublished\":\"2026-05-09\",\"dateModified\":\"2026-05-09\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/database-indexing-strategies\"},\"keywords\":\"Database, Performance\",\"wordCount\":213,\"articleSection\":\"Database\"}"}}],["$","$L10",null,{"post":{"slug":"database-indexing-strategies","title":"Database Indexing Strategies for High-Traffic Applications","excerpt":"Master the art of database indexing to keep your application fast as it scales.","date":"2026-05-09","tags":["Database","Performance"],"content":"$11"},"readingTime":2,"prevPost":{"slug":"css-container-queries","title":"Container Queries: The End of Media Query Hacks","excerpt":"CSS container queries let components respond to their own size, not just the viewport.","date":"2026-05-08","tags":["CSS","Frontend"],"content":"$12"},"nextPost":{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$13"},"relatedPosts":[{"slug":"webgpu-browser-ai-inference","title":"WebGPU: Browser-Side AI Inference Revolution","excerpt":"How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.","date":"2026-05-11","tags":["WebGPU","AI","Performance"],"content":"$14"},{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$15"},{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$16"}]}]]
 b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 17:I[27201,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"IconMark"]
 8:null
