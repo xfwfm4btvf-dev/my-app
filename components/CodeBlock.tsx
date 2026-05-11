@@ -1,21 +1,21 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 interface CodeBlockProps {
   children?: React.ReactNode;
   className?: string;
+  codeContent?: string;
 }
 
-export function CodeBlock({ children, className }: CodeBlockProps) {
+export function CodeBlock({ children, className, codeContent }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
-  const codeRef = useRef<HTMLElement>(null);
 
   const handleCopy = async () => {
-    const code = codeRef.current?.textContent;
-    if (code) {
+    const textToCopy = codeContent || "";
+    if (textToCopy) {
       try {
-        await navigator.clipboard.writeText(code);
+        await navigator.clipboard.writeText(textToCopy);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
       } catch (err) {
@@ -24,51 +24,31 @@ export function CodeBlock({ children, className }: CodeBlockProps) {
     }
   };
 
-  const isCodeBlock = className?.includes("language-");
-
-  if (!isCodeBlock) {
-    return <code className={className}>{children}</code>;
-  }
-
-  const language = className?.replace("language-", "") || "code";
+  const language = (className || "").replace("language-", "") || "code";
 
   return (
-    <div className="relative group">
-      <div className="flex items-center justify-between px-4 py-2 border-b border-white/10 bg-white/5 rounded-t-lg">
-        <span className="text-xs text-gray-500 uppercase tracking-wider font-mono">
+    <div className="relative group not-prose rounded-lg border border-white/10 bg-white/5 overflow-hidden my-6">
+      <div className="flex items-center justify-between px-4 py-2 border-b border-white/10 bg-white-3">
+        <span className="text-xs text-gray-500 uppercase tracking-wider font-mono font-medium">
           {language}
         </span>
         <button
           onClick={handleCopy}
-          className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition-colors px-2 py-1 rounded hover:bg-white/10"
+          className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition-colors px-2 py-1 rounded hover:bg-white/10 active:scale-95"
           title="Copy code"
         >
           {copied ? (
-            <>
-              <svg className="w-3.5 h-3.5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              <span className="text-green-400">Copied!</span>
-            </>
+            <span className="text-green-400 text-xs">Copied!</span>
           ) : (
-            <>
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-              Copy
-            </>
+            <span className="text-xs">Copy</span>
           )}
         </button>
       </div>
-      <pre className="!rounded-t-none !mt-0 overflow-x-auto">
-        <code ref={codeRef} className={className}>
+      <div className="overflow-x-auto">
+        <pre className="!rounded-none !border-0 !bg-transparent !my-0 p-4">
           {children}
-        </code>
-      </pre>
+        </pre>
+      </div>
     </div>
   );
-}
-
-export function InlineCode({ children, className }: CodeBlockProps) {
-  return <code className={className}>{children}</code>;
 }

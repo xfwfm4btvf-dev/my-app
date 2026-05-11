@@ -1,7 +1,7 @@
 [
   {
     "route": "/posts/[slug]",
-    "firstLoadUncompressedJsBytes": 897838,
+    "firstLoadUncompressedJsBytes": 897375,
     "firstLoadChunkPaths": [
       ".next/static/chunks/0jee3jf~p8s-u.js",
       ".next/static/chunks/0bn7sb9dt40_4.js",
@@ -9,7 +9,7 @@
       ".next/static/chunks/0jganziq5pu93.js",
       ".next/static/chunks/0hn0fksvameoa.js",
       ".next/static/chunks/12s1493u42h3s.js",
-      ".next/static/chunks/0djv.h10bwpft.js",
+      ".next/static/chunks/0pppvzvhc9ir_.js",
       ".next/static/chunks/0j-yjan8jn-8-.js",
       ".next/static/chunks/12zcg5z_1n2y_.js",
       ".next/static/chunks/00xhsd~k-wxkl.js",
