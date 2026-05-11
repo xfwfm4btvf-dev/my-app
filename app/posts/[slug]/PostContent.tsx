@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Post } from "../../../lib/posts";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { useState, useEffect } from "react";
 
 export default function PostContent({
   post,
@@ -18,8 +19,31 @@ export default function PostContent({
   nextPost: Post | null;
   relatedPosts: Post[];
 }) {
+  const [readingProgress, setReadingProgress] = useState(0);
+
+  useEffect(() => {
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+      setReadingProgress(progress);
+    };
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    updateProgress();
+    return () => window.removeEventListener("scroll", updateProgress);
+  }, []);
+
   return (
     <div className="min-h-screen relative">
+      {/* Reading Progress Bar */}
+      <div className="fixed top-0 left-0 w-full h-1 z-[60]">
+        <div
+          className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-[width] duration-100 ease-out"
+          style={{ width: `${readingProgress}%` }}
+        />
+      </div>
+
+
       <article className="relative py-20 px-6 z-10">
         <div className="max-w-3xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
