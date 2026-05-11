@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0xflevjqb9.5x.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0462ueivjeopl.js"],"default"]
-b:I[97367,["/my-app/_next/static/chunks/0xflevjqb9.5x.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
-c:"$Sreact.suspense"
+2:I[24082,["/my-app/_next/static/chunks/0nc1~7xcujuzc.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0462ueivjeopl.js"],"default"]
+c:I[97367,["/my-app/_next/static/chunks/0nc1~7xcujuzc.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+d:"$Sreact.suspense"
 3:T923,# Passkeys: …年密码消亡的真正起点
 
 三年前，Passkeys 还只是一个令人兴奋的概念验证。2026年，它已成为 Google、Apple 和 Microsoft 平台上的默认认证选项。超过 80% 的主流网站已支持 WebAuthn，密码的终结终于不再是空谈。
@@ -44,7 +44,55 @@ Passkeys 并非没有痛点。跨平台迁移仍是主要障碍，从 iPhone 换
 
 ## 结语
 
-密码不会在一夜之间消失，但 Passkeys 的采用曲线已经越过临界点。对于新项目，现在就是集成 WebAuthn 的最佳时机。早一步拥抱无密码认证，用户就少一分凭证泄露的风险。4:Tada,# HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026
+密码不会在一夜之间消失，但 Passkeys 的采用曲线已经越过临界点。对于新项目，现在就是集成 WebAuthn 的最佳时机。早一步拥抱无密码认证，用户就少一分凭证泄露的风险。4:T93c,# Bun Runtime: The JavaScript Engine Revolution of 2026
+
+The JavaScript runtime landscape has long been dominated by Node.js and Deno, but Bun has emerged as a serious contender that's redefining developer expectations for speed and simplicity.
+
+## What Makes Bun Different
+
+Bun isn't just another JavaScript runtime — it's an all-in-one toolkit written in Zig that bundles a bundler, transpiler, package manager, and test runner into a single binary. This consolidation eliminates the toolchain sprawl that has plagued JavaScript development.
+
+## Performance Benchmarks
+
+Bun's speed advantage is striking. In HTTP server benchmarks, Bun handles 3-5x more requests per second than Node.js. Package installation runs 25x faster than npm, and TypeScript compilation is virtually instant because Bun transpiles on-the-fly.
+
+```typescript
+// Bun's built-in HTTP server — no imports needed
+Bun.serve({
+  port: 3000,
+  fetch(req) {
+    return new Response("Hello from Bun!", {
+      headers: { "Content-Type": "text/plain" },
+    });
+  },
+});
+```
+
+## Native TypeScript Support
+
+Unlike Node.js which requires a build step for TypeScript, Bun runs `.ts` files directly. Combined with its built-in JSX support, this means zero configuration for most projects.
+
+## Built-in SQLite and S3
+
+Bun 1.2 introduced native SQLite and S3 client support — no npm packages required. This "batteries included" philosophy reduces dependency trees and simplifies deployment.
+
+```typescript
+// Built-in SQLite — no npm install needed
+import { Database } from "bun:sqlite";
+const db = new Database("app.db");
+db.exec("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)");
+db.prepare("INSERT INTO users (name) VALUES (?)").run("Alice");
+```
+
+## The Migration Path
+
+Migrating from Node.js is surprisingly smooth. Bun implements Node.js APIs and resolves packages from `node_modules` by default. Most Express, Fastify, and Hono applications run without modification.
+
+## When to Choose Bun in 2026
+
+Bun excels for greenfield projects, development tooling, serverless functions, and any application where startup time and build speed matter. For production systems deeply integrated with Node.js native modules, thorough testing remains essential.
+
+The runtime wars are far from over, but Bun has proven that the JavaScript ecosystem benefits from healthy competition.5:Tada,# HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026
 
 HTTP/3, built on top of Google's QUIC protocol, has quietly become the dominant transport for web traffic. As of May 2026, over 40% of global web requests use HTTP/3. If you have not optimized for it yet, you are leaving performance on the table.
 
@@ -111,7 +159,7 @@ const response = await request('https://api.example.com/data', {
 
 If you run a content-heavy site, API, or real-time application, enable HTTP/3 today. The performance improvement on mobile and lossy networks is substantial, and most CDNs and modern servers support it with minimal configuration.
 
-The protocol has graduated from experimental to essential. Make sure your stack reflects that.5:T526,# Edge Computing Meets WebAssembly
+The protocol has graduated from experimental to essential. Make sure your stack reflects that.6:T526,# Edge Computing Meets WebAssembly
 
 The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
 
@@ -139,7 +187,7 @@ fn handle_request(req: Request) -> Response {
 
 ## The Future
 
-With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.6:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
+With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.7:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
 
 In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
 
@@ -202,7 +250,7 @@ class CircuitBreaker {
 
 1. **Use with retry logic**: Combine with exponential backoff for transient failures.
 2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
-3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.7:Ta0d,# OpenTelemetry: Unified Observability for Microservices
+3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.8:Ta0d,# OpenTelemetry: Unified Observability for Microservices
 
 As microservices architectures grow more complex, understanding system behavior becomes critical. OpenTelemetry (OTel) has emerged as the unified standard for collecting traces, metrics, and logs.
 
@@ -288,8 +336,8 @@ service:
 1. **Use semantic conventions**: Follow OTel semantic conventions for consistent attribute naming
 2. **Sample wisely**: Use head-based sampling for high-volume services, tail-based for error investigation
 3. **Correlate signals**: Link traces to logs with trace IDs for seamless debugging
-4. **Start small**: Begin with auto-instrumentation, then add custom spans for business logic0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Passkeys: …年密码消亡的真正起点\",\"description\":\"Passkeys 已从实验性功能变成主流认证方式。本文解析其工作原理、浏览器支持现状，以及如何在你的项目中集成无密码登录。\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/passkeys-passwordless-auth-web-2026\"},\"keywords\":\"安全, WebAuthn, 身份认证, 前端\",\"wordCount\":113,\"articleSection\":\"安全\"}"}}],["$","$L2",null,{"post":{"slug":"passkeys-passwordless-auth-web-2026","title":"Passkeys: …年密码消亡的真正起点","excerpt":"Passkeys 已从实验性功能变成主流认证方式。本文解析其工作原理、浏览器支持现状，以及如何在你的项目中集成无密码登录。","date":"2026-05-11","tags":["安全","WebAuthn","身份认证","前端"],"content":"$3"},"readingTime":1,"prevPost":null,"nextPost":{"slug":"http3-quic-web-developers-2026","title":"HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026","excerpt":"HTTP/3 adoption has crossed 40% of global web traffic. Understanding QUIC is no longer optional for performance-critical applications.","date":"2026-05-11","tags":["Web","Performance","Networking","DevOps"],"content":"$4"},"relatedPosts":[{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$5"},{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$6"},{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$7"}]}]],["$L8","$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"LQUhH0no4Cl6JJWenJ5T3"}
-8:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
-9:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0462ueivjeopl.js","async":true}]
-a:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
-d:null
+4. **Start small**: Begin with auto-instrumentation, then add custom spans for business logic0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Passkeys: …年密码消亡的真正起点\",\"description\":\"Passkeys 已从实验性功能变成主流认证方式。本文解析其工作原理、浏览器支持现状，以及如何在你的项目中集成无密码登录。\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/passkeys-passwordless-auth-web-2026\"},\"keywords\":\"安全, WebAuthn, 身份认证, 前端\",\"wordCount\":113,\"articleSection\":\"安全\"}"}}],["$","$L2",null,{"post":{"slug":"passkeys-passwordless-auth-web-2026","title":"Passkeys: …年密码消亡的真正起点","excerpt":"Passkeys 已从实验性功能变成主流认证方式。本文解析其工作原理、浏览器支持现状，以及如何在你的项目中集成无密码登录。","date":"2026-05-11","tags":["安全","WebAuthn","身份认证","前端"],"content":"$3"},"readingTime":1,"prevPost":{"slug":"bun-runtime-javascript-revolution-2026","title":"Bun Runtime: The JavaScript Engine Revolution of 2026","excerpt":"How Bun is reshaping the JavaScript ecosystem with its all-in-one toolkit approach and blazing-fast performance.","date":"2026-05-11","tags":["JavaScript","Performance","DevOps"],"content":"$4"},"nextPost":{"slug":"http3-quic-web-developers-2026","title":"HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026","excerpt":"HTTP/3 adoption has crossed 40% of global web traffic. Understanding QUIC is no longer optional for performance-critical applications.","date":"2026-05-11","tags":["Web","Performance","Networking","DevOps"],"content":"$5"},"relatedPosts":[{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$6"},{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$7"},{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"qMW_uWbzq6ABgYNDmukoa"}
+9:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
+a:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0462ueivjeopl.js","async":true}]
+b:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
+e:null

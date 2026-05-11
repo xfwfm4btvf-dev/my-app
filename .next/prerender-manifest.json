@@ -247,6 +247,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/posts/bun-runtime-javascript-revolution-2026": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/posts/[slug]",
+      "dataRoute": "/posts/bun-runtime-javascript-revolution-2026.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/posts/circuit-breaker-pattern-apis": {
       "experimentalBypassFor": [
         {
@@ -856,8 +880,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "db9ed3f495d39916a27b710a35e08897",
-    "previewModeSigningKey": "e945b06f7e117586088e94720fb893418babc7b65ef8c41aa6e6496c3b3f1e40",
-    "previewModeEncryptionKey": "0500bd715af3fda687367312aacac7f46184cd3f4bbd9db0d7c0506d9a014363"
+    "previewModeId": "a5b6b5ee608262ae098ba73d2df0492f",
+    "previewModeSigningKey": "627f0441a2da0ae102de3460e948a678fa7948e305564e6ff740b497dc94a91d",
+    "previewModeEncryptionKey": "7c3c8ea3512ec16863c13fae029f13f32f03ec0561fbf04797c5638cc9aa9831"
   }
 }

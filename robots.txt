@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://xfwfm4btvf-dev.github.io/my-app/sitemap.xml

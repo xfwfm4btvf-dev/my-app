@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0xflevjqb9.5x.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0462ueivjeopl.js"],"default"]
-c:I[97367,["/my-app/_next/static/chunks/0xflevjqb9.5x.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+2:I[24082,["/my-app/_next/static/chunks/0nc1~7xcujuzc.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0462ueivjeopl.js"],"default"]
+c:I[97367,["/my-app/_next/static/chunks/0nc1~7xcujuzc.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
 d:"$Sreact.suspense"
 3:T70d,# OpenTelemetry Native: The End of Bolt-On Observability
 
@@ -247,35 +247,55 @@ const response = await request('https://api.example.com/data', {
 
 If you run a content-heavy site, API, or real-time application, enable HTTP/3 today. The performance improvement on mobile and lossy networks is substantial, and most CDNs and modern servers support it with minimal configuration.
 
-The protocol has graduated from experimental to essential. Make sure your stack reflects that.8:T526,# Edge Computing Meets WebAssembly
+The protocol has graduated from experimental to essential. Make sure your stack reflects that.8:T93c,# Bun Runtime: The JavaScript Engine Revolution of 2026
 
-The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
+The JavaScript runtime landscape has long been dominated by Node.js and Deno, but Bun has emerged as a serious contender that's redefining developer expectations for speed and simplicity.
 
-## Why WebAssembly at the Edge
+## What Makes Bun Different
 
-Traditional serverless functions suffer from cold starts. Wasm modules, by contrast, can instantiate in microseconds. This makes them ideal for latency-sensitive edge workloads like real-time personalization, A/B testing, and authentication.
+Bun isn't just another JavaScript runtime — it's an all-in-one toolkit written in Zig that bundles a bundler, transpiler, package manager, and test runner into a single binary. This consolidation eliminates the toolchain sprawl that has plagued JavaScript development.
 
-## The WASI Standard
+## Performance Benchmarks
 
-The WebAssembly System Interface (WASI) provides a standardized way for Wasm modules to interact with the host OS. This means your Wasm code can run identically across Cloudflare Workers, Fastly Compute, and Fermyon's Spin — truly write once, run anywhere.
+Bun's speed advantage is striking. In HTTP server benchmarks, Bun handles 3-5x more requests per second than Node.js. Package installation runs 25x faster than npm, and TypeScript compilation is virtually instant because Bun transpiles on-the-fly.
 
-## Getting Started
-
-```rust
-use spin_sdk::http::{Request, Response};
-
-#[spin_sdk::http_component]
-fn handle_request(req: Request) -> Response {
-    Response::builder()
-        .status(200)
-        .body("Hello from the edge!")
-        .build()
-}
+```typescript
+// Bun's built-in HTTP server — no imports needed
+Bun.serve({
+  port: 3000,
+  fetch(req) {
+    return new Response("Hello from Bun!", {
+      headers: { "Content-Type": "text/plain" },
+    });
+  },
+});
 ```
 
-## The Future
+## Native TypeScript Support
 
-With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"OpenTelemetry Native: The End of Bolt-On Observability\",\"description\":\"How frameworks and languages are building OpenTelemetry support directly into their cores, eliminating the sidecar pattern and its overhead.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/observability-2026-otel-native\"},\"keywords\":\"Observability, OpenTelemetry, DevOps, Monitoring, SRE\",\"wordCount\":252,\"articleSection\":\"Observability\"}"}}],["$","$L2",null,{"post":{"slug":"observability-2026-otel-native","title":"OpenTelemetry Native: The End of Bolt-On Observability","excerpt":"How frameworks and languages are building OpenTelemetry support directly into their cores, eliminating the sidecar pattern and its overhead.","date":"2026-05-11","tags":["Observability","OpenTelemetry","DevOps","Monitoring","SRE"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"agentic-coding-reshaping-software-engineering","title":"Agentic Coding: From Autocomplete to Autonomous Programming","excerpt":"How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026.","date":"2026-05-11","tags":["AI","DevTools","Software Engineering","LLM","Automation"],"content":"$4"},"nextPost":{"slug":"biome-js-linter-2026","title":"Biome: The Rust-Powered JavaScript Toolchain Replacing ESLint and Prettier","excerpt":"How Biome is consolidating linting and formatting into a single, blazingly fast tool — and why the ecosystem is embracing it.","date":"2026-05-11","tags":["JavaScript","Tooling","Rust","Developer Experience"],"content":"$5"},"relatedPosts":[{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$6"},{"slug":"http3-quic-web-developers-2026","title":"HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026","excerpt":"HTTP/3 adoption has crossed 40% of global web traffic. Understanding QUIC is no longer optional for performance-critical applications.","date":"2026-05-11","tags":["Web","Performance","Networking","DevOps"],"content":"$7"},{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"LQUhH0no4Cl6JJWenJ5T3"}
+Unlike Node.js which requires a build step for TypeScript, Bun runs `.ts` files directly. Combined with its built-in JSX support, this means zero configuration for most projects.
+
+## Built-in SQLite and S3
+
+Bun 1.2 introduced native SQLite and S3 client support — no npm packages required. This "batteries included" philosophy reduces dependency trees and simplifies deployment.
+
+```typescript
+// Built-in SQLite — no npm install needed
+import { Database } from "bun:sqlite";
+const db = new Database("app.db");
+db.exec("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)");
+db.prepare("INSERT INTO users (name) VALUES (?)").run("Alice");
+```
+
+## The Migration Path
+
+Migrating from Node.js is surprisingly smooth. Bun implements Node.js APIs and resolves packages from `node_modules` by default. Most Express, Fastify, and Hono applications run without modification.
+
+## When to Choose Bun in 2026
+
+Bun excels for greenfield projects, development tooling, serverless functions, and any application where startup time and build speed matter. For production systems deeply integrated with Node.js native modules, thorough testing remains essential.
+
+The runtime wars are far from over, but Bun has proven that the JavaScript ecosystem benefits from healthy competition.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"OpenTelemetry Native: The End of Bolt-On Observability\",\"description\":\"How frameworks and languages are building OpenTelemetry support directly into their cores, eliminating the sidecar pattern and its overhead.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/observability-2026-otel-native\"},\"keywords\":\"Observability, OpenTelemetry, DevOps, Monitoring, SRE\",\"wordCount\":252,\"articleSection\":\"Observability\"}"}}],["$","$L2",null,{"post":{"slug":"observability-2026-otel-native","title":"OpenTelemetry Native: The End of Bolt-On Observability","excerpt":"How frameworks and languages are building OpenTelemetry support directly into their cores, eliminating the sidecar pattern and its overhead.","date":"2026-05-11","tags":["Observability","OpenTelemetry","DevOps","Monitoring","SRE"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"agentic-coding-reshaping-software-engineering","title":"Agentic Coding: From Autocomplete to Autonomous Programming","excerpt":"How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026.","date":"2026-05-11","tags":["AI","DevTools","Software Engineering","LLM","Automation"],"content":"$4"},"nextPost":{"slug":"biome-js-linter-2026","title":"Biome: The Rust-Powered JavaScript Toolchain Replacing ESLint and Prettier","excerpt":"How Biome is consolidating linting and formatting into a single, blazingly fast tool — and why the ecosystem is embracing it.","date":"2026-05-11","tags":["JavaScript","Tooling","Rust","Developer Experience"],"content":"$5"},"relatedPosts":[{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$6"},{"slug":"http3-quic-web-developers-2026","title":"HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026","excerpt":"HTTP/3 adoption has crossed 40% of global web traffic. Understanding QUIC is no longer optional for performance-critical applications.","date":"2026-05-11","tags":["Web","Performance","Networking","DevOps"],"content":"$7"},{"slug":"bun-runtime-javascript-revolution-2026","title":"Bun Runtime: The JavaScript Engine Revolution of 2026","excerpt":"How Bun is reshaping the JavaScript ecosystem with its all-in-one toolkit approach and blazing-fast performance.","date":"2026-05-11","tags":["JavaScript","Performance","DevOps"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"qMW_uWbzq6ABgYNDmukoa"}
 9:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
 a:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0462ueivjeopl.js","async":true}]
 b:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]

@@ -1139,6 +1139,54 @@ Passkeys 并非没有痛点。跨平台迁移仍是主要障碍，从 iPhone 换
 
 ## 结语
 
-密码不会在一夜之间消失，但 Passkeys 的采用曲线已经越过临界点。对于新项目，现在就是集成 WebAuthn 的最佳时机。早一步拥抱无密码认证，用户就少一分凭证泄露的风险。`}];function d(a){return c.find(b=>b.slug===a)}var e=a.i(17202);async function f({params:a}){let{slug:b}=await a,c=d(b);return c?{title:`${c.title} | Nitrogen Blog`,description:c.excerpt,keywords:c.tags,openGraph:{title:c.title,description:c.excerpt,url:`https://xfwfm4btvf-dev.github.io/my-app/posts/${c.slug}`,type:"article",publishedTime:c.date,tags:c.tags},twitter:{card:"summary_large_image",title:c.title,description:c.excerpt}}:{title:"Post Not Found"}}async function g({params:a}){let{slug:f}=await a,h=d(f);if(!h)return(0,b.jsx)("div",{className:"min-h-screen flex items-center justify-center",children:(0,b.jsxs)("p",{className:"text-xl text-gray-400",children:["Post not found: ",f]})});let i=Math.max(1,Math.ceil(h.content.trim().split(/\s+/).length/200)),j=c.findIndex(a=>a.slug===h.slug),k=j<c.length-1?c[j+1]:null,l=j>0?c[j-1]:null,m=function(a,b=3){let e=d(a);if(!e)return[];let f=c.filter(b=>b.slug!==a),g=f.map(a=>({post:a,score:a.tags.filter(a=>e.tags.includes(a)).length})).filter(a=>a.score>0);if(g.length>=b)return g.sort((a,b)=>b.score-a.score).slice(0,b).map(a=>a.post);let h=g.map(a=>a.post),i=new Set([a,...h.map(a=>a.slug)]);for(let a of f.filter(a=>!i.has(a.slug)).sort((a,b)=>b.date.localeCompare(a.date))){if(h.length>=b)break;h.push(a)}return h}(f,3),n={"@context":"https://schema.org","@type":"BlogPosting",headline:h.title,description:h.excerpt,datePublished:h.date,dateModified:h.date,author:{"@type":"Person",name:"Henry Nitrogen",url:"https://xfwfm4btvf-dev.github.io/my-app/about"},publisher:{"@type":"Organization",name:"Nitrogen Blog",url:"https://xfwfm4btvf-dev.github.io/my-app/"},mainEntityOfPage:{"@type":"WebPage","@id":`https://xfwfm4btvf-dev.github.io/my-app/posts/${h.slug}`},keywords:h.tags.join(", "),wordCount:h.content.trim().split(/\s+/).length,articleSection:h.tags[0]||"Technology"};return(0,b.jsxs)(b.Fragment,{children:[(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify(n)}}),(0,b.jsx)(e.default,{post:h,readingTime:i,prevPost:k,nextPost:l,relatedPosts:m})]})}a.s(["default",0,g,"generateMetadata",0,f,"generateStaticParams",0,function(){return c.map(a=>({slug:a.slug}))}],13886)},32441,a=>{a.n(a.i(13886))}];
+密码不会在一夜之间消失，但 Passkeys 的采用曲线已经越过临界点。对于新项目，现在就是集成 WebAuthn 的最佳时机。早一步拥抱无密码认证，用户就少一分凭证泄露的风险。`},{slug:"bun-runtime-javascript-revolution-2026",title:"Bun Runtime: The JavaScript Engine Revolution of 2026",excerpt:"How Bun is reshaping the JavaScript ecosystem with its all-in-one toolkit approach and blazing-fast performance.",date:"2026-05-11",tags:["JavaScript","Performance","DevOps"],content:`# Bun Runtime: The JavaScript Engine Revolution of 2026
+
+The JavaScript runtime landscape has long been dominated by Node.js and Deno, but Bun has emerged as a serious contender that's redefining developer expectations for speed and simplicity.
+
+## What Makes Bun Different
+
+Bun isn't just another JavaScript runtime — it's an all-in-one toolkit written in Zig that bundles a bundler, transpiler, package manager, and test runner into a single binary. This consolidation eliminates the toolchain sprawl that has plagued JavaScript development.
+
+## Performance Benchmarks
+
+Bun's speed advantage is striking. In HTTP server benchmarks, Bun handles 3-5x more requests per second than Node.js. Package installation runs 25x faster than npm, and TypeScript compilation is virtually instant because Bun transpiles on-the-fly.
+
+\`\`\`typescript
+// Bun's built-in HTTP server — no imports needed
+Bun.serve({
+  port: 3000,
+  fetch(req) {
+    return new Response("Hello from Bun!", {
+      headers: { "Content-Type": "text/plain" },
+    });
+  },
+});
+\`\`\`
+
+## Native TypeScript Support
+
+Unlike Node.js which requires a build step for TypeScript, Bun runs \`.ts\` files directly. Combined with its built-in JSX support, this means zero configuration for most projects.
+
+## Built-in SQLite and S3
+
+Bun 1.2 introduced native SQLite and S3 client support — no npm packages required. This "batteries included" philosophy reduces dependency trees and simplifies deployment.
+
+\`\`\`typescript
+// Built-in SQLite — no npm install needed
+import { Database } from "bun:sqlite";
+const db = new Database("app.db");
+db.exec("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name TEXT)");
+db.prepare("INSERT INTO users (name) VALUES (?)").run("Alice");
+\`\`\`
+
+## The Migration Path
+
+Migrating from Node.js is surprisingly smooth. Bun implements Node.js APIs and resolves packages from \`node_modules\` by default. Most Express, Fastify, and Hono applications run without modification.
+
+## When to Choose Bun in 2026
+
+Bun excels for greenfield projects, development tooling, serverless functions, and any application where startup time and build speed matter. For production systems deeply integrated with Node.js native modules, thorough testing remains essential.
+
+The runtime wars are far from over, but Bun has proven that the JavaScript ecosystem benefits from healthy competition.`}];function d(a){return c.find(b=>b.slug===a)}var e=a.i(17202);async function f({params:a}){let{slug:b}=await a,c=d(b);return c?{title:`${c.title} | Nitrogen Blog`,description:c.excerpt,keywords:c.tags,openGraph:{title:c.title,description:c.excerpt,url:`https://xfwfm4btvf-dev.github.io/my-app/posts/${c.slug}`,type:"article",publishedTime:c.date,tags:c.tags},twitter:{card:"summary_large_image",title:c.title,description:c.excerpt}}:{title:"Post Not Found"}}async function g({params:a}){let{slug:f}=await a,h=d(f);if(!h)return(0,b.jsx)("div",{className:"min-h-screen flex items-center justify-center",children:(0,b.jsxs)("p",{className:"text-xl text-gray-400",children:["Post not found: ",f]})});let i=Math.max(1,Math.ceil(h.content.trim().split(/\s+/).length/200)),j=c.findIndex(a=>a.slug===h.slug),k=j<c.length-1?c[j+1]:null,l=j>0?c[j-1]:null,m=function(a,b=3){let e=d(a);if(!e)return[];let f=c.filter(b=>b.slug!==a),g=f.map(a=>({post:a,score:a.tags.filter(a=>e.tags.includes(a)).length})).filter(a=>a.score>0);if(g.length>=b)return g.sort((a,b)=>b.score-a.score).slice(0,b).map(a=>a.post);let h=g.map(a=>a.post),i=new Set([a,...h.map(a=>a.slug)]);for(let a of f.filter(a=>!i.has(a.slug)).sort((a,b)=>b.date.localeCompare(a.date))){if(h.length>=b)break;h.push(a)}return h}(f,3),n={"@context":"https://schema.org","@type":"BlogPosting",headline:h.title,description:h.excerpt,datePublished:h.date,dateModified:h.date,author:{"@type":"Person",name:"Henry Nitrogen",url:"https://xfwfm4btvf-dev.github.io/my-app/about"},publisher:{"@type":"Organization",name:"Nitrogen Blog",url:"https://xfwfm4btvf-dev.github.io/my-app/"},mainEntityOfPage:{"@type":"WebPage","@id":`https://xfwfm4btvf-dev.github.io/my-app/posts/${h.slug}`},keywords:h.tags.join(", "),wordCount:h.content.trim().split(/\s+/).length,articleSection:h.tags[0]||"Technology"};return(0,b.jsxs)(b.Fragment,{children:[(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify(n)}}),(0,b.jsx)(e.default,{post:h,readingTime:i,prevPost:k,nextPost:l,relatedPosts:m})]})}a.s(["default",0,g,"generateMetadata",0,f,"generateStaticParams",0,function(){return c.map(a=>({slug:a.slug}))}],13886)},32441,a=>{a.n(a.i(13886))}];
 
 //# sourceMappingURL=app_posts_%5Bslug%5D_10d64-8._.js.map
