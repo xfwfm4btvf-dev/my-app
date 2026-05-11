@@ -1,43 +1,33 @@
-'use client';
+import type { Metadata } from "next";
+import "./globals.css";
 
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import Link from 'next/link';
+export const metadata: Metadata = {
+  title: "Nitrogen Blog",
+  description: "Tech blog by Nitrogen",
+};
 
-const theme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: { main: '#00d4ff' },
-    background: { default: '#0a0a0a', paper: '#1a1a2e' },
-  },
-});
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en">
-      <body>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <AppBar position="static" sx={{ bgcolor: 'background.paper' }}>
-            <Toolbar>
-              <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold' }}>
-                <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>Nitrogen</Link>
-              </Typography>
-              <Button color="inherit" component={Link} href="/">Home</Button>
-              <Button color="inherit" component={Link} href="/posts">Posts</Button>
-              <Button color="inherit" component={Link} href="/tags">Tags</Button>
-              <Button color="inherit" component={Link} href="/about">About</Button>
-            </Toolbar>
-          </AppBar>
-          <Box component="main" sx={{ minHeight: 'calc(100vh - 64px)', bgcolor: 'background.default' }}>
-            {children}
-          </Box>
-        </ThemeProvider>
+    <html lang="en" className="dark">
+      <body className="bg-black text-white min-h-screen">
+        <nav className="border-b border-white/10 bg-black/50 backdrop-blur-lg sticky top-0 z-50">
+          <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" className="text-xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Nitrogen
+            </a>
+            <div className="flex gap-6">
+              <a href="/" className="text-gray-300 hover:text-white transition-colors">Home</a>
+              <a href="/posts" className="text-gray-300 hover:text-white transition-colors">Posts</a>
+              <a href="/tags" className="text-gray-300 hover:text-white transition-colors">Tags</a>
+              <a href="/about" className="text-gray-300 hover:text-white transition-colors">About</a>
+            </div>
+          </div>
+        </nav>
+        <main>{children}</main>
       </body>
     </html>
   );
