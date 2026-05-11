@@ -5,7 +5,7 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2026 16:20:25 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 18:19:19 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
@@ -232,6 +232,17 @@
       <category>Web Development</category>
     </item>
     <item>
+      <title>Biome: The Rust-Powered JavaScript Toolchain Replacing ESLint and Prettier</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/biome-js-linter-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/biome-js-linter-2026</guid>
+      <description>How Biome is consolidating linting and formatting into a single, blazingly fast tool — and why the ecosystem is embracing it.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>JavaScript</category>
+      <category>Tooling</category>
+      <category>Rust</category>
+      <category>Developer Experience</category>
+    </item>
+    <item>
       <title>OpenTelemetry Native: The End of Bolt-On Observability</title>
       <link>https://xfwfm4btvf-dev.github.io/my-app/posts/observability-2026-otel-native</link>
       <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/observability-2026-otel-native</guid>
@@ -242,6 +253,40 @@
       <category>DevOps</category>
       <category>Monitoring</category>
       <category>SRE</category>
+    </item>
+    <item>
+      <title>Agentic Coding: From Autocomplete to Autonomous Programming</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/agentic-coding-reshaping-software-engineering</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/agentic-coding-reshaping-software-engineering</guid>
+      <description>How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>DevTools</category>
+      <category>Software Engineering</category>
+      <category>LLM</category>
+      <category>Automation</category>
+    </item>
+    <item>
+      <title>HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/http3-quic-web-developers-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/http3-quic-web-developers-2026</guid>
+      <description>HTTP/3 adoption has crossed 40% of global web traffic. Understanding QUIC is no longer optional for performance-critical applications.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Web</category>
+      <category>Performance</category>
+      <category>Networking</category>
+      <category>DevOps</category>
+    </item>
+    <item>
+      <title>Passkeys: …年密码消亡的真正起点</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/passkeys-passwordless-auth-web-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/passkeys-passwordless-auth-web-2026</guid>
+      <description>Passkeys 已从实验性功能变成主流认证方式。本文解析其工作原理、浏览器支持现状，以及如何在你的项目中集成无密码登录。</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>安全</category>
+      <category>WebAuthn</category>
+      <category>身份认证</category>
+      <category>前端</category>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0462ueivjeopl.js"],"default"]
-b:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+2:I[24082,["/my-app/_next/static/chunks/0xflevjqb9.5x.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0462ueivjeopl.js"],"default"]
+b:I[97367,["/my-app/_next/static/chunks/0xflevjqb9.5x.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
 c:"$Sreact.suspense"
 3:Ta0d,# OpenTelemetry: Unified Observability for Microservices
 
@@ -157,7 +157,74 @@ More importantly, it reduces the observability tax. Native instrumentation is ty
 
 ## The Migration Path
 
-For existing applications, upgrade to the latest framework version, configure the OTLP exporter, and remove the old instrumentation agents. Most teams complete the migration in a sprint or two.6:T526,# Edge Computing Meets WebAssembly
+For existing applications, upgrade to the latest framework version, configure the OTLP exporter, and remove the old instrumentation agents. Most teams complete the migration in a sprint or two.6:Tada,# HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026
+
+HTTP/3, built on top of Google's QUIC protocol, has quietly become the dominant transport for web traffic. As of May 2026, over 40% of global web requests use HTTP/3. If you have not optimized for it yet, you are leaving performance on the table.
+
+## What Changed From HTTP/2
+
+HTTP/2 solved head-of-line blocking at the application layer with multiplexed streams, but it still ran over TCP. A single lost packet stalls ALL streams because TCP delivers data in order. This is TCP-level head-of-line blocking.
+
+HTTP/3 fixes this by running over QUIC, which is built on UDP. Each stream is independently ordered. A lost packet on stream 3 does not affect streams 1, 2, or 4.
+
+## The Real Performance Gains
+
+**Connection setup**: QUIC combines transport and cryptographic handshakes into one round trip (0-RTT for returning connections). Compare this to TCP + TLS 1.3 which needs 2 round trips minimum.
+
+```
+TCP + TLS 1.3:  2 RTT  (~200ms on mobile)
+QUIC 1-RTT:     1 RTT  (~100ms on mobile)
+QUIC 0-RTT:     0 RTT  (~0ms for returning visitors)
+```
+
+**Mobile networks**: The gains are dramatic on lossy connections. A 2% packet loss rate that causes 300ms stalls in HTTP/2 causes near-zero impact in HTTP/3 because individual streams continue uninterrupted.
+
+## Enabling HTTP/3 on Your Server
+
+**Nginx** (1.25+):
+```nginx
+listen 443 quic reuseport;
+listen 443 ssl;
+add_header Alt-Svc 'h3=":443"; ma=86400';
+ssl_protocols TLSv1.3;
+```
+
+**Caddy** (automatic):
+```
+example.com {
+    tls admin@example.com
+    # HTTP/3 enabled by default since v2.7
+}
+```
+
+**Cloudflare** (zero config):
+HTTP/3 is enabled by default on all plans. Just verify with browser DevTools Network tab.
+
+## Client-Side Considerations
+
+Most modern browsers negotiate HTTP/3 automatically via Alt-Svc headers. But for API clients and server-to-server communication:
+
+```typescript
+// Node.js 22+ with built-in HTTP/3 support
+import { request } from 'node:http3';
+
+const response = await request('https://api.example.com/data', {
+  method: 'GET',
+  headers: { 'Accept': 'application/json' }
+});
+```
+
+## What to Watch
+
+- **WebTransport API**: Browser-native QUIC streams for bidirectional communication, replacing WebSocket for new projects
+- **QUIC datagrams**: Unreliable delivery for video streaming and gaming
+- **Connection migration**: Seamless network switches (WiFi to cellular) without reconnection
+
+## Bottom Line
+
+If you run a content-heavy site, API, or real-time application, enable HTTP/3 today. The performance improvement on mobile and lossy networks is substantial, and most CDNs and modern servers support it with minimal configuration.
+
+The protocol has graduated from experimental to essential. Make sure your stack reflects that.7:T526,# Edge Computing Meets WebAssembly
 
 The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
 
@@ -185,70 +252,7 @@ fn handle_request(req: Request) -> Response {
 
 ## The Future
 
-With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.7:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
-
-In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
-
-## How It Works
-
-A circuit breaker monitors calls to external services and "trips" (opens) when failures exceed a threshold. It has three states:
-
-- **Closed**: Requests flow normally. Failures are counted.
-- **Open**: Requests are immediately rejected with a fallback response.
-- **Half-Open**: After a timeout, a limited number of test requests are allowed through.
-
-## Implementation
-
-```typescript
-class CircuitBreaker {
-  private failures = 0;
-  private lastFailure = 0;
-  private state: 'closed' | 'open' | 'half-open' = 'closed';
-
-  constructor(
-    private threshold: number = 5,
-    private timeout: number = 30000
-  ) {}
-
-  async call<T>(fn: () => Promise<T>): Promise<T> {
-    if (this.state === 'open') {
-      if (Date.now() - this.lastFailure > this.timeout) {
-        this.state = 'half-open';
-      } else {
-        throw new Error('Circuit is open');
-      }
-    }
-
-    try {
-      const result = await fn();
-      this.onSuccess();
-      return result;
-    } catch (error) {
-      this.onFailure();
-      throw error;
-    }
-  }
-
-  private onSuccess() {
-    this.failures = 0;
-    this.state = 'closed';
-  }
-
-  private onFailure() {
-    this.failures++;
-    this.lastFailure = Date.now();
-    if (this.failures >= this.threshold) {
-      this.state = 'open';
-    }
-  }
-}
-```
-
-## Best Practices
-
-1. **Use with retry logic**: Combine with exponential backoff for transient failures.
-2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
-3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"OpenTelemetry: Unified Observability for Microservices\",\"description\":\"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/opentelemetry-observability-microservices\"},\"keywords\":\"Observability, DevOps\",\"wordCount\":299,\"articleSection\":\"Observability\"}"}}],["$","$L2",null,{"post":{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"model-context-protocol-ai-integration","title":"Model Context Protocol: AI 工具集成的新标准","excerpt":"深入解析 MCP 如何统一 AI 模型与外部工具的交互方式，以及它对开发者生态的影响。","date":"2026-05-11","tags":["AI","MCP","开发工具"],"content":"$4"},"nextPost":{"slug":"web-security-essentials","title":"Web Security Essentials for Modern Apps","excerpt":"Security is not optional. Learn the essential practices.","date":"2026-05-01","tags":["Security","Web"],"content":"# Web Security Essentials for Modern Apps\n\nSecurity must be a priority from day one.\n\n## OWASP Top 10\n\n1. Broken Access Control\n2. Cryptographic Failures\n3. Injection attacks\n4. Insecure Design\n5. Security Misconfiguration\n\n## Authentication Best Practices\n\n### Password Storage\n\n    import bcrypt from 'bcrypt';\n    const SALT_ROUNDS = 12;\n    async function hashPassword(password) {\n      return bcrypt.hash(password, SALT_ROUNDS);\n    }\n\n### JWT Security\n\n- Use short-lived tokens (15 minutes)\n- Implement refresh token rotation\n- Store in httpOnly cookies, not localStorage\n- Always validate iss and aud claims\n\n## Quick Wins\n\n1. Enable HTTPS everywhere\n2. Sanitize user input\n3. Keep dependencies updated\n4. Implement rate limiting\n5. Log security events"},"relatedPosts":[{"slug":"observability-2026-otel-native","title":"OpenTelemetry Native: The End of Bolt-On Observability","excerpt":"How frameworks and languages are building OpenTelemetry support directly into their cores, eliminating the sidecar pattern and its overhead.","date":"2026-05-11","tags":["Observability","OpenTelemetry","DevOps","Monitoring","SRE"],"content":"$5"},{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$6"},{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$7"}]}]],["$L8","$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"4mCQDKMVYGuFfu9qg5zcS"}
+With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"OpenTelemetry: Unified Observability for Microservices\",\"description\":\"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/opentelemetry-observability-microservices\"},\"keywords\":\"Observability, DevOps\",\"wordCount\":299,\"articleSection\":\"Observability\"}"}}],["$","$L2",null,{"post":{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"model-context-protocol-ai-integration","title":"Model Context Protocol: AI 工具集成的新标准","excerpt":"深入解析 MCP 如何统一 AI 模型与外部工具的交互方式，以及它对开发者生态的影响。","date":"2026-05-11","tags":["AI","MCP","开发工具"],"content":"$4"},"nextPost":{"slug":"web-security-essentials","title":"Web Security Essentials for Modern Apps","excerpt":"Security is not optional. Learn the essential practices.","date":"2026-05-01","tags":["Security","Web"],"content":"# Web Security Essentials for Modern Apps\n\nSecurity must be a priority from day one.\n\n## OWASP Top 10\n\n1. Broken Access Control\n2. Cryptographic Failures\n3. Injection attacks\n4. Insecure Design\n5. Security Misconfiguration\n\n## Authentication Best Practices\n\n### Password Storage\n\n    import bcrypt from 'bcrypt';\n    const SALT_ROUNDS = 12;\n    async function hashPassword(password) {\n      return bcrypt.hash(password, SALT_ROUNDS);\n    }\n\n### JWT Security\n\n- Use short-lived tokens (15 minutes)\n- Implement refresh token rotation\n- Store in httpOnly cookies, not localStorage\n- Always validate iss and aud claims\n\n## Quick Wins\n\n1. Enable HTTPS everywhere\n2. Sanitize user input\n3. Keep dependencies updated\n4. Implement rate limiting\n5. Log security events"},"relatedPosts":[{"slug":"observability-2026-otel-native","title":"OpenTelemetry Native: The End of Bolt-On Observability","excerpt":"How frameworks and languages are building OpenTelemetry support directly into their cores, eliminating the sidecar pattern and its overhead.","date":"2026-05-11","tags":["Observability","OpenTelemetry","DevOps","Monitoring","SRE"],"content":"$5"},{"slug":"http3-quic-web-developers-2026","title":"HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026","excerpt":"HTTP/3 adoption has crossed 40% of global web traffic. Understanding QUIC is no longer optional for performance-critical applications.","date":"2026-05-11","tags":["Web","Performance","Networking","DevOps"],"content":"$6"},{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$7"}]}]],["$L8","$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"u-uXKLAeW7Y1pzOyXA8g4"}
 8:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
 9:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0462ueivjeopl.js","async":true}]
 a:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]

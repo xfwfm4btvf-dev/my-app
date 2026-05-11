@@ -1,2 +1,2 @@
-:HL["/my-app/_next/static/chunks/0_1-jprmnuw8i.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"posts","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"rust-wasm-edge-computing-2026","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"4mCQDKMVYGuFfu9qg5zcS"}
+:HL["/my-app/_next/static/chunks/0c.3gnlchabsd.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"posts","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"rust-wasm-edge-computing-2026","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"u-uXKLAeW7Y1pzOyXA8g4"}
