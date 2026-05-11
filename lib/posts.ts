@@ -9,6 +9,100 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'deno-2-typescript-runtime-2026',
+    title: 'Deno 2.x: The TypeScript-First Runtime Challenging Node.js in 2026',
+    excerpt: 'Deno 2.x has matured into a production-ready runtime with native TypeScript, npm compatibility, and built-in tooling that eliminates JavaScript fatigue.',
+    date: '2026-05-12',
+    tags: ['Deno', 'TypeScript', 'JavaScript', 'Runtime', 'DevOps'],
+    content: `# Deno 2.x: The TypeScript-First Runtime Challenging Node.js in 2026
+
+While Bun grabbed headlines for raw speed, Deno 2.x has quietly built something arguably more valuable: a complete, standards-compliant TypeScript runtime with zero-configuration tooling that actually works in production.
+
+## The Deno 2.x Difference
+
+Deno 2.x made a critical strategic decision: full npm compatibility. Instead of forcing developers to choose between the npm ecosystem and Deno's security model, it supports node_modules resolution natively. You can import express from "npm:express@4" or use a traditional package.json — both work.
+
+This pragmatism, combined with Deno's original vision, creates a compelling package:
+
+- **Native TypeScript** — no tsconfig, no build step, just run .ts files
+- **Built-in formatter, linter, and test runner** — replaces Prettier, ESLint, and Jest
+- **Secure by default** — explicit permissions for file, network, and environment access
+- **Web Standard APIs** — fetch, Web Streams, crypto, all built in
+
+## Zero-Config TypeScript
+
+Compare the setup for a new TypeScript project:
+
+```bash
+# Node.js path
+npm init -y
+npm install -D typescript @types/node ts-node
+# Create tsconfig.json, configure paths, set up scripts...
+
+# Deno path
+echo 'console.log("Hello from TypeScript!")' > main.ts
+deno run main.ts
+```
+
+That is the entire setup. Deno infers types from imports, respects JSDoc annotations, and provides LSP support for IDE integration without any configuration files.
+
+## Built-in Security Model
+
+Deno's permission system is its most underrated feature. Every script runs in a sandbox by default:
+
+```bash
+# This fails — no permissions granted
+deno run server.ts
+
+# Grant only what is needed
+deno run --allow-net=:8000 --allow-read=./data server.ts
+```
+
+In 2026, with supply chain attacks increasing, this model is not paranoia — it is essential. A compromised npm package cannot access your filesystem or make network requests unless you explicitly allowed it.
+
+## Deploying Deno in Production
+
+Deno Deploy provides edge hosting with zero cold starts (WASM-based runtime). For self-hosted deployments:
+
+```bash
+# Compile to standalone binary
+deno compile --allow-net --allow-read server.ts
+
+# Docker (official image)
+FROM denoland/deno:2.x
+WORKDIR /app
+COPY . .
+RUN deno cache main.ts
+CMD ["deno", "run", "--allow-net", "main.ts"]
+```
+
+The compiled binary is a single self-contained executable — no runtime dependencies, no node_modules, no container layer needed for the runtime.
+
+## When to Choose Deno Over Bun and Node
+
+**Choose Deno when:**
+- You want TypeScript-first development without toolchain overhead
+- Security is a priority (enterprise, regulated environments)
+- You value Web Standard API compliance
+- Greenfield projects where npm compatibility is secondary
+
+**Stick with Node.js when:**
+- Deep integration with Node-specific native modules
+- Existing large codebase with complex build pipelines
+- Enterprise support contracts matter
+
+**Choose Bun when:**
+- Raw execution speed is the primary concern
+- Development tooling speed (bundling, testing) is critical
+- You want the fastest possible package installation
+
+## The Bigger Picture
+
+The JavaScript runtime landscape in 2026 is healthier than ever. Three competing runtimes — Node.js, Deno, and Bun — are pushing each other to improve. Deno's contribution is proving that developer experience and security can coexist with practical npm compatibility.
+
+For new TypeScript projects, Deno 2.x deserves serious consideration. The days of configuring tsconfig.json, setting up ESLint rules, and managing build toolchains may finally be ending.`
+  },
+  {
     slug: 'edge-computing-webassembly',
     title: 'Edge Computing Meets WebAssembly',
     excerpt: 'How WebAssembly is unlocking new possibilities for edge computing and server-side applications.',
