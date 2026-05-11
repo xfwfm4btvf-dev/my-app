@@ -522,14 +522,34 @@ export function getRelatedPosts(currentSlug: string, limit: number = 3): Post[] 
   const current = getPostBySlug(currentSlug);
   if (!current) return [];
   
-  return posts
-    .filter(p => p.slug !== currentSlug)
-    .map(p => ({
-      post: p,
-      score: p.tags.filter(tag => current.tags.includes(tag)).length
-    }))
-    .filter(item => item.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map(item => item.post);
+  const others = posts.filter(p => p.slug !== currentSlug);
+  
+  // Score by shared tags
+  const scored = others.map(p => ({
+    post: p,
+    score: p.tags.filter(tag => current.tags.includes(tag)).length
+  }));
+  
+  // If we have enough tag matches, return those sorted by score
+  const withTags = scored.filter(item => item.score > 0);
+  if (withTags.length >= limit) {
+    return withTags
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit)
+      .map(item => item.post);
+  }
+  
+  // Fallback: add most recent posts to fill up to limit
+  const result: Post[] = withTags.map(i => i.post);
+  const used = new Set([currentSlug, ...result.map(p => p.slug)]);
+  const remaining = others
+    .filter(p => !used.has(p.slug))
+    .sort((a, b) => b.date.localeCompare(a.date));
+  
+  for (const p of remaining) {
+    if (result.length >= limit) break;
+    result.push(p);
+  }
+  
+  return result;
 }
