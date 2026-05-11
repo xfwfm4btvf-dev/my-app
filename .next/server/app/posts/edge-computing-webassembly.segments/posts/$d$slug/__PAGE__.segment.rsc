@@ -1,0 +1,175 @@
+1:"$Sreact.fragment"
+2:I[24082,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0462ueivjeopl.js"],"default"]
+a:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:T526,# Edge Computing Meets WebAssembly
+
+The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
+
+## Why WebAssembly at the Edge
+
+Traditional serverless functions suffer from cold starts. Wasm modules, by contrast, can instantiate in microseconds. This makes them ideal for latency-sensitive edge workloads like real-time personalization, A/B testing, and authentication.
+
+## The WASI Standard
+
+The WebAssembly System Interface (WASI) provides a standardized way for Wasm modules to interact with the host OS. This means your Wasm code can run identically across Cloudflare Workers, Fastly Compute, and Fermyon's Spin — truly write once, run anywhere.
+
+## Getting Started
+
+```rust
+use spin_sdk::http::{Request, Response};
+
+#[spin_sdk::http_component]
+fn handle_request(req: Request) -> Response {
+    Response::builder()
+        .status(200)
+        .body("Hello from the edge!")
+        .build()
+}
+```
+
+## The Future
+
+With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.4:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
+
+In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
+
+## How It Works
+
+A circuit breaker monitors calls to external services and "trips" (opens) when failures exceed a threshold. It has three states:
+
+- **Closed**: Requests flow normally. Failures are counted.
+- **Open**: Requests are immediately rejected with a fallback response.
+- **Half-Open**: After a timeout, a limited number of test requests are allowed through.
+
+## Implementation
+
+```typescript
+class CircuitBreaker {
+  private failures = 0;
+  private lastFailure = 0;
+  private state: 'closed' | 'open' | 'half-open' = 'closed';
+
+  constructor(
+    private threshold: number = 5,
+    private timeout: number = 30000
+  ) {}
+
+  async call<T>(fn: () => Promise<T>): Promise<T> {
+    if (this.state === 'open') {
+      if (Date.now() - this.lastFailure > this.timeout) {
+        this.state = 'half-open';
+      } else {
+        throw new Error('Circuit is open');
+      }
+    }
+
+    try {
+      const result = await fn();
+      this.onSuccess();
+      return result;
+    } catch (error) {
+      this.onFailure();
+      throw error;
+    }
+  }
+
+  private onSuccess() {
+    this.failures = 0;
+    this.state = 'closed';
+  }
+
+  private onFailure() {
+    this.failures++;
+    this.lastFailure = Date.now();
+    if (this.failures >= this.threshold) {
+      this.state = 'open';
+    }
+  }
+}
+```
+
+## Best Practices
+
+1. **Use with retry logic**: Combine with exponential backoff for transient failures.
+2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
+3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.5:T742,# Edge-Native Databases: Data Where Your Users Are
+
+The traditional client-server model assumes a single, centralized database. Edge-native databases flip this model, placing data close to users across a global network of edge nodes.
+
+## Why Centralized Databases Fall Short
+
+A user in Tokyo querying a database in Virginia faces 150ms+ round-trip latency. For real-time collaboration, gaming, and IoT, this is unacceptable.
+
+## The Edge-Native Approach
+
+Edge-native databases replicate and partition data across geographic regions automatically:
+
+- **Local-first reads**: Served from the nearest edge node
+- **Conflict-free replication**: CRDTs handle concurrent writes
+- **Offline support**: Apps work without connectivity, syncing when reconnected
+
+## Popular Solutions
+
+**Cloudflare D1**: SQLite at the edge, backed by Cloudflare global network.
+
+**Turso (libSQL)**: Distributed SQLite with per-user databases for multi-tenant SaaS.
+
+**Neon**: Serverless PostgreSQL with branching for dev workflows.
+
+## Consistency Trade-offs
+
+Edge databases typically offer eventual consistency. For strong consistency:
+
+1. **Regional strong consistency**: Pin critical tables to a primary region
+2. **Conflict resolution policies**: Define custom merge logic
+3. **Hybrid approach**: Edge reads, centralized writes
+
+## Architecture Patterns
+
+**Read Replicas at Edge**: Main DB in one region, read replicas at edge. Simple but write latency unchanged.
+
+**Multi-Primary with CRDTs**: Every edge node accepts writes. Complex but lowest latency.
+
+**Tiered Storage**: Hot data at edge, warm in regional nodes, cold in central storage.
+
+## When to Use
+
+- Global SaaS with users across continents
+- Real-time collaborative applications
+- Offline-first mobile apps
+- IoT data collection at scale
+
+Start with one use case like user profiles, then expand as you build confidence.6:T6ba,# Rust + WebAssembly: The New Default Stack for Edge Computing in 2026
+
+The edge computing landscape has consolidated around a clear winner in 2026: Rust compiled to WebAssembly. Cloudflare Workers, Fastly Compute, Deno Deploy, and Fermyon Spin all now optimize for the Rust+WASM combo, and the performance numbers explain why.
+
+## Why Rust+WASM Won at the Edge
+
+Edge runtimes impose strict constraints: cold starts under 5ms, memory limits of 128MB, and CPU time quotas measured in milliseconds. Traditional container-based deployments cannot meet these requirements. WASM modules start in microseconds and run in sandboxed isolation without the overhead of a full OS.
+
+Rust fits this model perfectly. Its zero-cost abstractions, lack of a garbage collector, and predictable memory usage produce WASM binaries that are typically 10x smaller than equivalent Go or Java modules.
+
+## The Performance Gap Is Real
+
+- **Cold start**: 0.5-2ms (WASM) vs 50-200ms (Node.js containers)
+- **Memory usage**: 2-8MB typical vs 30-80MB for Node.js
+- **Throughput**: 2-5x higher requests/second at the same CPU quota
+- **P99 latency**: 40-60% lower tail latency due to no GC pauses
+
+## Getting Started
+
+    use worker::*;
+    #[event(fetch)]
+    async fn main(req: Request, env: Env, _ctx: Context) -> Result<Response> {
+        let router = Router::new();
+        router.get_async("/api/data", handle_data).run(req, env).await
+    }
+
+## What This Means for Web Developers
+
+The shift to Rust+WASM at the edge changes deployment economics. With sub-millisecond cold starts and minimal memory footprints, platforms can pack thousands of edge workers on a single machine. This directly translates to lower costs and higher free-tier limits.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Edge Computing Meets WebAssembly\",\"description\":\"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/edge-computing-webassembly\"},\"keywords\":\"WebAssembly, Edge Computing\",\"wordCount\":179,\"articleSection\":\"WebAssembly\"}"}}],["$","$L2",null,{"post":{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$3"},"readingTime":1,"prevPost":{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$4"},"nextPost":null,"relatedPosts":[{"slug":"edge-native-databases","title":"Edge-Native Databases: Data Where Your Users Are","excerpt":"How edge-native databases are redefining data locality, latency, and offline-first architectures.","date":"2026-05-11","tags":["Database","Edge Computing","Architecture"],"content":"$5"},{"slug":"rust-wasm-edge-computing-2026","title":"Rust + WebAssembly: The New Default Stack for Edge Computing in 2026","excerpt":"Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.","date":"2026-05-11","tags":["Rust","WebAssembly","Edge Computing","Serverless","Performance"],"content":"$6"},"$0:rsc:props:children:0:1:props:prevPost"]}]],["$L7","$L8"],"$L9"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"tEVC1bf4k0DGXrcqPi4MX"}
+7:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
+8:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0462ueivjeopl.js","async":true}]
+9:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

@@ -1,0 +1,2 @@
+:HL["/my-app/_next/static/chunks/0x2wfxm0ezic_.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"posts","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"building-mcp-servers","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"u-XdtP1Zi3r1jycR3agFP"}

@@ -1,0 +1,171 @@
+1:"$Sreact.fragment"
+2:I[24082,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0ro4fvui.x-yc.js"],"default"]
+9:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+3:T755,# Building MCP Servers: AI Tool Integration Standard
+
+Model Context Protocol (MCP) is becoming the de facto standard for AI tool integration. It provides LLMs a standardized way to discover and call external tools.
+
+## Why MCP?
+
+Before MCP, each AI app had its own tool integration. A GitHub plugin for one platform could not be used on another. MCP defines a unified protocol, enabling "write once, run anywhere."
+
+## Core Architecture
+
+MCP uses client-server architecture:
+
+- **Host**: The app running the AI model (e.g. Cursor, Claude Desktop)
+- **Client**: Manages connections to servers within the host
+- **Server**: Exposes tools, resources, and prompts as a standalone service
+
+## Hands-on: Build a File System MCP Server
+
+```typescript
+import { Server } from "@modelcontextprotocol/sdk/server";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio";
+import { readFile } from "fs/promises";
+
+const server = new Server(
+  { name: "fs-server", version: "1.0.0" },
+  { capabilities: { tools: {} } }
+);
+
+server.setRequestHandler(CallToolRequestSchema, async (req) => {
+  if (req.params.name === "read_file") {
+    const content = await readFile(req.params.arguments.path, "utf-8");
+    return { content: [{ type: "text", text: content }] };
+  }
+});
+
+const transport = new StdioServerTransport();
+await server.connect(transport);
+```
+
+## Best Practices
+
+1. **Detailed tool descriptions**: LLMs rely on descriptions to decide when to call tools
+2. **Input validation**: Use JSON Schema to strictly validate parameters
+3. **Error handling**: Return structured error messages, not stack traces
+4. **Idempotency**: Tool calls should be retryable
+
+## Future Outlook
+
+As the MCP ecosystem matures, databases, cloud services, and IoT devices are all being exposed as AI-callable tools through MCP. This signals the emergence of a native AI integration layer.4:Ta0d,# OpenTelemetry: Unified Observability for Microservices
+
+As microservices architectures grow more complex, understanding system behavior becomes critical. OpenTelemetry (OTel) has emerged as the unified standard for collecting traces, metrics, and logs.
+
+## The Three Pillars
+
+Observability rests on three data types:
+
+- **Traces**: Track a request as it flows through multiple services
+- **Metrics**: Quantitative measurements like latency percentiles and error rates
+- **Logs**: Structured event records with contextual metadata
+
+OTel provides a single SDK and API for all three, eliminating vendor lock-in.
+
+## Getting Started with Traces
+
+```typescript
+import { trace } from '@opentelemetry/api';
+
+const tracer = trace.getTracer('my-service');
+
+async function handleRequest(req: Request) {
+  return tracer.startActiveSpan('handle-request', async (span) => {
+    span.setAttribute('http.method', req.method);
+    span.setAttribute('http.url', req.url);
+
+    try {
+      const result = await processRequest(req);
+      span.setStatus({ code: SpanStatusCode.OK });
+      return result;
+    } catch (error) {
+      span.setStatus({ code: SpanStatusCode.ERROR, message: error.message });
+      span.recordException(error);
+      throw error;
+    } finally {
+      span.end();
+    }
+  });
+}
+```
+
+## Context Propagation
+
+The magic of distributed tracing is context propagation. OTel automatically passes trace context between services via HTTP headers (W3C Trace Context standard), linking spans across service boundaries into a complete trace.
+
+## Collector Architecture
+
+The OTel Collector is a vendor-agnostic proxy that receives, processes, and exports telemetry data. Deploy it as a sidecar or daemonset:
+
+```yaml
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+    timeout: 5s
+    send_batch_size: 1024
+
+exporters:
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+  jaeger:
+    endpoint: "jaeger:14250"
+    tls:
+      insecure: true
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [jaeger]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [prometheus]
+```
+
+## Best Practices
+
+1. **Use semantic conventions**: Follow OTel semantic conventions for consistent attribute naming
+2. **Sample wisely**: Use head-based sampling for high-volume services, tail-based for error investigation
+3. **Correlate signals**: Link traces to logs with trace IDs for seamless debugging
+4. **Start small**: Begin with auto-instrumentation, then add custom spans for business logic5:T526,# Edge Computing Meets WebAssembly
+
+The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
+
+## Why WebAssembly at the Edge
+
+Traditional serverless functions suffer from cold starts. Wasm modules, by contrast, can instantiate in microseconds. This makes them ideal for latency-sensitive edge workloads like real-time personalization, A/B testing, and authentication.
+
+## The WASI Standard
+
+The WebAssembly System Interface (WASI) provides a standardized way for Wasm modules to interact with the host OS. This means your Wasm code can run identically across Cloudflare Workers, Fastly Compute, and Fermyon's Spin — truly write once, run anywhere.
+
+## Getting Started
+
+```rust
+use spin_sdk::http::{Request, Response};
+
+#[spin_sdk::http_component]
+fn handle_request(req: Request) -> Response {
+    Response::builder()
+        .status(200)
+        .body("Hello from the edge!")
+        .build()
+}
+```
+
+## The Future
+
+With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Building MCP Servers: AI Tool Integration Standard\",\"description\":\"How Model Context Protocol is unifying AI tool integration and how to build production MCP servers.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/building-mcp-servers\"},\"keywords\":\"AI, MCP, TypeScript, Developer Tools\",\"wordCount\":267,\"articleSection\":\"AI\"}"}}],["$","$L2",null,{"post":{"slug":"building-mcp-servers","title":"Building MCP Servers: AI Tool Integration Standard","excerpt":"How Model Context Protocol is unifying AI tool integration and how to build production MCP servers.","date":"2026-05-11","tags":["AI","MCP","TypeScript","Developer Tools"],"content":"$3"},"readingTime":2,"prevPost":null,"nextPost":{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$4"},"relatedPosts":[{"slug":"mastering-typescript","title":"Mastering TypeScript: A Guide to Better JavaScript","excerpt":"TypeScript has become the gold standard for building robust web applications.","date":"2026-05-10","tags":["TypeScript","JavaScript"],"content":"# Mastering TypeScript: A Guide to Better JavaScript\n\nTypeScript has become the gold standard for building robust web applications. But many developers only scratch the surface.\n\n## Why TypeScript Matters\n\nJavaScript is dynamic. TypeScript adds static typing, catching bugs before production. Teams report 15-20% fewer bugs.\n\n## Advanced Patterns\n\n### Utility Types\n\n    interface User { id: number; name: string; }\n    type UpdateUser = Partial<User>;\n    type UserCredentials = Pick<User, 'email' | 'role'>;\n\n### Discriminated Unions\n\n    type ApiResponse<T> =\n      | { status: 'loading' }\n      | { status: 'success'; data: T }\n      | { status: 'error'; message: string };\n\n## Best Practices\n\n1. Avoid any - Use unknown instead\n2. Enable strict mode in tsconfig.json\n3. Use branded types for IDs\n4. Type your environment variables"},{"slug":"ai-powered-development","title":"AI-Powered Development Tools","excerpt":"How AI assistants are transforming the way we write code.","date":"2026-05-05","tags":["AI","Productivity"],"content":"# AI-Powered Development Tools\n\nArtificial intelligence is revolutionizing how we write, review, and ship code.\n\n## The AI Coding Landscape\n\n1. Code completion: Inline suggestions (Copilot, Codeium)\n2. Conversational agents: Chat-based assistants (Claude, ChatGPT)\n3. Autonomous agents: Full-task execution (Codex, Claude Code)\n\n## Code Completion Tools\n\n- GitHub Copilot: VS Code integration, $10/mo\n- Codeium: Free tier, multi-IDE\n- Cursor: Agent mode, $20/mo\n- Supermaven: Fastest completions\n\n## Impact on Productivity\n\n- 30-55% faster code writing\n- 25% faster code review\n- 10-15% fewer bugs with test generation\n\n## Best Practices\n\n1. Review everything - AI code may have subtle bugs\n2. Use for boilerplate - Focus on architecture\n3. Pair with tests - Always test AI-generated code\n4. Stay in control - Use AI as a tool, not replacement"},{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$5"}]}]],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"u-XdtP1Zi3r1jycR3agFP"}
+6:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
+7:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0ro4fvui.x-yc.js","async":true}]
+8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null
