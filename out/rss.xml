@@ -5,7 +5,7 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2026 15:54:58 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 16:20:25 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
@@ -183,6 +183,65 @@
       <category>Local-LLM</category>
       <category>Privacy</category>
       <category>Edge-Computing</category>
+    </item>
+    <item>
+      <title>Zero-Knowledge Proofs Are Finally Coming to Web Apps</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-proofs-web-apps-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-proofs-web-apps-2026</guid>
+      <description>How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Cryptography</category>
+      <category>ZKP</category>
+      <category>Privacy</category>
+      <category>Web Development</category>
+      <category>Security</category>
+    </item>
+    <item>
+      <title>Rust + WebAssembly: The New Default Stack for Edge Computing in 2026</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/rust-wasm-edge-computing-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/rust-wasm-edge-computing-2026</guid>
+      <description>Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Rust</category>
+      <category>WebAssembly</category>
+      <category>Edge Computing</category>
+      <category>Serverless</category>
+      <category>Performance</category>
+    </item>
+    <item>
+      <title>TypeScript 5.7: Pattern Matching and Beyond</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/typescript-5-7-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/typescript-5-7-2026</guid>
+      <description>TypeScript 5.7 finally introduces native pattern matching, bringing one of the most requested features to the language.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>TypeScript</category>
+      <category>JavaScript</category>
+      <category>Programming</category>
+      <category>Web Development</category>
+    </item>
+    <item>
+      <title>The HTMX + Alpine.js Stack: Building Dynamic UIs Without React</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/htmx-alpine-javascript-free-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/htmx-alpine-javascript-free-2026</guid>
+      <description>How the HTMX and Alpine.js combination is challenging the SPA orthodoxy and delivering better developer experience for content-driven applications.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>HTMX</category>
+      <category>Alpine.js</category>
+      <category>Frontend</category>
+      <category>Architecture</category>
+      <category>Web Development</category>
+    </item>
+    <item>
+      <title>OpenTelemetry Native: The End of Bolt-On Observability</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/observability-2026-otel-native</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/observability-2026-otel-native</guid>
+      <description>How frameworks and languages are building OpenTelemetry support directly into their cores, eliminating the sidecar pattern and its overhead.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Observability</category>
+      <category>OpenTelemetry</category>
+      <category>DevOps</category>
+      <category>Monitoring</category>
+      <category>SRE</category>
     </item>
   </channel>
 </rss>
