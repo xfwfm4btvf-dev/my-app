@@ -5,7 +5,7 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2026 15:36:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 15:54:58 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
@@ -156,6 +156,28 @@
       <link>https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-deployment-patterns-2026</link>
       <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-deployment-patterns-2026</guid>
       <description>探讨本地AI从原型到生产的三种主流部署架构，以及各自适用场景与性能权衡。</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Local-LLM</category>
+      <category>Privacy</category>
+      <category>Edge-Computing</category>
+    </item>
+    <item>
+      <title>Zero-Knowledge Proofs Are Revolutionizing Web Authentication</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-web-auth-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-web-auth-2026</guid>
+      <description>How zero-knowledge proofs are eliminating password breaches and transforming how we prove identity online.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Security</category>
+      <category>Cryptography</category>
+      <category>Web Development</category>
+      <category>Authentication</category>
+    </item>
+    <item>
+      <title>Why Local AI Is Becoming the Default Choice in 2026</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-movement-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-movement-2026</guid>
+      <description>The shift from cloud-dependent AI to local inference is accelerating. Here is why privacy, cost, and latency are making local-first AI the new standard.</description>
       <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
       <category>AI</category>
       <category>Local-LLM</category>
