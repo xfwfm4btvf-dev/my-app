@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0mj53vux5j-af.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0t22lgdtuez_h.js"],"default"]
-c:I[97367,["/my-app/_next/static/chunks/0mj53vux5j-af.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+2:I[24082,["/my-app/_next/static/chunks/15e1llgr~7x7o.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0t22lgdtuez_h.js"],"default"]
+c:I[97367,["/my-app/_next/static/chunks/15e1llgr~7x7o.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
 d:"$Sreact.suspense"
-3:T6ba,# Rust + WebAssembly: The New Default Stack for Edge Computing in 2026
+3:T674,
 
 The edge computing landscape has consolidated around a clear winner in 2026: Rust compiled to WebAssembly. Cloudflare Workers, Fastly Compute, Deno Deploy, and Fermyon Spin all now optimize for the Rust+WASM combo, and the performance numbers explain why.
 
@@ -30,7 +30,7 @@ Rust fits this model perfectly. Its zero-cost abstractions, lack of a garbage co
 
 ## What This Means for Web Developers
 
-The shift to Rust+WASM at the edge changes deployment economics. With sub-millisecond cold starts and minimal memory footprints, platforms can pack thousands of edge workers on a single machine. This directly translates to lower costs and higher free-tier limits.4:T5fe,# TypeScript 5.7: Pattern Matching and Beyond
+The shift to Rust+WASM at the edge changes deployment economics. With sub-millisecond cold starts and minimal memory footprints, platforms can pack thousands of edge workers on a single machine. This directly translates to lower costs and higher free-tier limits.4:T5d1,
 
 TypeScript 5.7 shipped with the feature developers have been requesting since 2018: native pattern matching. Combined with exhaustiveness checking and improved type narrowing, this release fundamentally changes how we write conditional logic.
 
@@ -61,7 +61,7 @@ The feature is backward compatible. Existing switch statements continue to work.
 
 ## Performance Impact
 
-Pattern matching compiles to optimized if-else chains — there is no runtime overhead compared to hand-written conditionals. The real win is developer productivity and code clarity.5:T80f,# Zero-Knowledge Proofs Are Finally Coming to Web Apps
+Pattern matching compiles to optimized if-else chains — there is no runtime overhead compared to hand-written conditionals. The real win is developer productivity and code clarity.5:T7d9,
 
 The cryptographic primitive that powered Zcash and blockchain rollups is now landing in your browser. Zero-Knowledge Proofs (ZKPs) let a user prove they know something without revealing the thing itself. In 2026, this is finally practical for mainstream web apps.
 
@@ -95,7 +95,7 @@ The biggest barrier is user education. Nobody understands what generating a zero
 
 Recursive proofs (proofs of proofs) are enabling composable verification chains. Imagine a job application where each credential check generates a proof, and all proofs roll up into a single 256-byte proof the employer verifies instantly.
 
-The web is entering a new privacy era. ZKPs are the infrastructure that makes it real.6:T526,# Edge Computing Meets WebAssembly
+The web is entering a new privacy era. ZKPs are the infrastructure that makes it real.6:T504,
 
 The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
 
@@ -123,7 +123,7 @@ fn handle_request(req: Request) -> Response {
 
 ## The Future
 
-With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.7:T467,# Why Web Developers Should Learn Rust in 2026
+With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.7:T439,
 
 Rust has been voted the most loved programming language for eight years running. But beyond the hype, Rust is making concrete inroads into web development tooling.
 
@@ -154,7 +154,7 @@ If you are a web developer new to Rust, start with:
 2. Exercism's Rust track
 3. Build a small CLI tool, then try a simple API with Actix
 
-The learning curve is real, but the payoff in performance and reliability is immense.8:T552,# Database Indexing Strategies for High-Traffic Applications
+The learning curve is real, but the payoff in performance and reliability is immense.8:T516,
 
 Poor indexing is the number one cause of slow database queries. Here is how to get it right.
 
@@ -196,7 +196,7 @@ Look for "Seq Scan" (sequential scan) on large tables — that is a sign you nee
 
 1. **Over-indexing**: Each index adds write overhead. Only index columns used in WHERE, JOIN, and ORDER BY.
 2. **Ignoring covering indexes**: Include all selected columns to avoid table lookups.
-3. **Not monitoring unused indexes**: Remove indexes that are never read.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Rust + WebAssembly: The New Default Stack for Edge Computing in 2026\",\"description\":\"Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/rust-wasm-edge-computing-2026\"},\"keywords\":\"Rust, WebAssembly, Edge Computing, Serverless, Performance\",\"wordCount\":250,\"articleSection\":\"Rust\"}"}}],["$","$L2",null,{"post":{"slug":"rust-wasm-edge-computing-2026","title":"Rust + WebAssembly: The New Default Stack for Edge Computing in 2026","excerpt":"Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.","date":"2026-05-11","tags":["Rust","WebAssembly","Edge Computing","Serverless","Performance"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"typescript-5-7-2026","title":"TypeScript 5.7: Pattern Matching and Beyond","excerpt":"TypeScript 5.7 finally introduces native pattern matching, bringing one of the most requested features to the language.","date":"2026-05-11","tags":["TypeScript","JavaScript","Programming","Web Development"],"content":"$4"},"nextPost":{"slug":"zero-knowledge-proofs-web-apps-2026","title":"Zero-Knowledge Proofs Are Finally Coming to Web Apps","excerpt":"How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.","date":"2026-05-11","tags":["Cryptography","ZKP","Privacy","Web Development","Security"],"content":"$5"},"relatedPosts":[{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$6"},{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$7"},{"slug":"database-indexing-strategies","title":"Database Indexing Strategies for High-Traffic Applications","excerpt":"Master the art of database indexing to keep your application fast as it scales.","date":"2026-05-09","tags":["Database","Performance"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7hsnwHnfrExr6MEgALrib"}
+3. **Not monitoring unused indexes**: Remove indexes that are never read.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Rust + WebAssembly: The New Default Stack for Edge Computing in 2026\",\"description\":\"Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/rust-wasm-edge-computing-2026\"},\"keywords\":\"Rust, WebAssembly, Edge Computing, Serverless, Performance\",\"wordCount\":237,\"articleSection\":\"Rust\"}"}}],["$","$L2",null,{"post":{"slug":"rust-wasm-edge-computing-2026","title":"Rust + WebAssembly: The New Default Stack for Edge Computing in 2026","excerpt":"Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.","date":"2026-05-11","tags":["Rust","WebAssembly","Edge Computing","Serverless","Performance"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"typescript-5-7-2026","title":"TypeScript 5.7: Pattern Matching and Beyond","excerpt":"TypeScript 5.7 finally introduces native pattern matching, bringing one of the most requested features to the language.","date":"2026-05-11","tags":["TypeScript","JavaScript","Programming","Web Development"],"content":"$4"},"nextPost":{"slug":"zero-knowledge-proofs-web-apps-2026","title":"Zero-Knowledge Proofs Are Finally Coming to Web Apps","excerpt":"How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.","date":"2026-05-11","tags":["Cryptography","ZKP","Privacy","Web Development","Security"],"content":"$5"},"relatedPosts":[{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$6"},{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$7"},{"slug":"database-indexing-strategies","title":"Database Indexing Strategies for High-Traffic Applications","excerpt":"Master the art of database indexing to keep your application fast as it scales.","date":"2026-05-09","tags":["Database","Performance"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"_qyfHjluOOXste8Owcp4n"}
 9:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
 a:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0t22lgdtuez_h.js","async":true}]
 b:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]

@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0mj53vux5j-af.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0t22lgdtuez_h.js"],"default"]
-c:I[97367,["/my-app/_next/static/chunks/0mj53vux5j-af.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+2:I[24082,["/my-app/_next/static/chunks/15e1llgr~7x7o.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0t22lgdtuez_h.js"],"default"]
+c:I[97367,["/my-app/_next/static/chunks/15e1llgr~7x7o.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
 d:"$Sreact.suspense"
-3:T6e1,# The HTMX + Alpine.js Stack: Building Dynamic UIs Without React
+3:T6a1,
 
 The frontend ecosystem has long assumed that dynamic web applications require React, Vue, or Svelte. HTMX and Alpine.js are proving that assumption wrong — and the results are compelling for a large class of applications.
 
@@ -35,7 +35,7 @@ This approach excels for content-driven applications: blogs, dashboards, admin p
 
 ## When to Stick With React
 
-Complex client-side applications with rich interactions — real-time collaboration tools, design editors, spreadsheet apps — genuinely benefit from a component framework. The key insight is that most web applications are not in this category.4:T743,# Biome: The Rust-Powered JavaScript Toolchain Replacing ESLint and Prettier
+Complex client-side applications with rich interactions — real-time collaboration tools, design editors, spreadsheet apps — genuinely benefit from a component framework. The key insight is that most web applications are not in this category.4:T6f7,
 
 The JavaScript tooling ecosystem is consolidating around Rust. After SWC replaced Babel and Turbopack replaced Webpack, the next target is linting and formatting. Biome — the Rust successor to Rome — is now the fastest all-in-one JavaScript toolchain.
 
@@ -69,7 +69,7 @@ Teams adopting Biome report:
 
 ## The Bigger Picture
 
-Biome represents the maturation of the Rust-for-JavaScript tooling movement. The pattern is clear: identify the slowest tool in the pipeline, rewrite it in Rust, deliver 10-100x speedup. With SWC, Turbopack, and Biome, the JavaScript build and development toolchain is now almost entirely Rust-powered.5:T5fe,# TypeScript 5.7: Pattern Matching and Beyond
+Biome represents the maturation of the Rust-for-JavaScript tooling movement. The pattern is clear: identify the slowest tool in the pipeline, rewrite it in Rust, deliver 10-100x speedup. With SWC, Turbopack, and Biome, the JavaScript build and development toolchain is now almost entirely Rust-powered.5:T5d1,
 
 TypeScript 5.7 shipped with the feature developers have been requesting since 2018: native pattern matching. Combined with exhaustiveness checking and improved type narrowing, this release fundamentally changes how we write conditional logic.
 
@@ -100,7 +100,7 @@ The feature is backward compatible. Existing switch statements continue to work.
 
 ## Performance Impact
 
-Pattern matching compiles to optimized if-else chains — there is no runtime overhead compared to hand-written conditionals. The real win is developer productivity and code clarity.6:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
+Pattern matching compiles to optimized if-else chains — there is no runtime overhead compared to hand-written conditionals. The real win is developer productivity and code clarity.6:T6c5,
 
 In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
 
@@ -163,7 +163,7 @@ class CircuitBreaker {
 
 1. **Use with retry logic**: Combine with exponential backoff for transient failures.
 2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
-3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.7:T467,# Why Web Developers Should Learn Rust in 2026
+3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.7:T439,
 
 Rust has been voted the most loved programming language for eight years running. But beyond the hype, Rust is making concrete inroads into web development tooling.
 
@@ -194,7 +194,7 @@ If you are a web developer new to Rust, start with:
 2. Exercism's Rust track
 3. Build a small CLI tool, then try a simple API with Actix
 
-The learning curve is real, but the payoff in performance and reliability is immense.8:T4c9,# Container Queries: The End of Media Query Hacks
+The learning curve is real, but the payoff in performance and reliability is immense.8:T498,
 
 For years, responsive design meant media queries tied to viewport width. Container queries change everything by letting components respond to their own container's size.
 
@@ -243,7 +243,7 @@ Container queries have full support in all modern browsers as of 2025. You can s
 
 1. Use container queries for reusable components
 2. Keep media queries for page-level layout
-3. Name your containers for clarity in complex layouts0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"The HTMX + Alpine.js Stack: Building Dynamic UIs Without React\",\"description\":\"How the HTMX and Alpine.js combination is challenging the SPA orthodoxy and delivering better developer experience for content-driven applications.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/htmx-alpine-javascript-free-2026\"},\"keywords\":\"HTMX, Alpine.js, Frontend, Architecture, Web Development\",\"wordCount\":232,\"articleSection\":\"HTMX\"}"}}],["$","$L2",null,{"post":{"slug":"htmx-alpine-javascript-free-2026","title":"The HTMX + Alpine.js Stack: Building Dynamic UIs Without React","excerpt":"How the HTMX and Alpine.js combination is challenging the SPA orthodoxy and delivering better developer experience for content-driven applications.","date":"2026-05-11","tags":["HTMX","Alpine.js","Frontend","Architecture","Web Development"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"biome-js-linter-2026","title":"Biome: The Rust-Powered JavaScript Toolchain Replacing ESLint and Prettier","excerpt":"How Biome is consolidating linting and formatting into a single, blazingly fast tool — and why the ecosystem is embracing it.","date":"2026-05-11","tags":["JavaScript","Tooling","Rust","Developer Experience"],"content":"$4"},"nextPost":{"slug":"typescript-5-7-2026","title":"TypeScript 5.7: Pattern Matching and Beyond","excerpt":"TypeScript 5.7 finally introduces native pattern matching, bringing one of the most requested features to the language.","date":"2026-05-11","tags":["TypeScript","JavaScript","Programming","Web Development"],"content":"$5"},"relatedPosts":[{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$6"},{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$7"},{"slug":"css-container-queries","title":"Container Queries: The End of Media Query Hacks","excerpt":"CSS container queries let components respond to their own size, not just the viewport.","date":"2026-05-08","tags":["CSS","Frontend"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7hsnwHnfrExr6MEgALrib"}
+3. Name your containers for clarity in complex layouts0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"The HTMX + Alpine.js Stack: Building Dynamic UIs Without React\",\"description\":\"How the HTMX and Alpine.js combination is challenging the SPA orthodoxy and delivering better developer experience for content-driven applications.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/htmx-alpine-javascript-free-2026\"},\"keywords\":\"HTMX, Alpine.js, Frontend, Architecture, Web Development\",\"wordCount\":221,\"articleSection\":\"HTMX\"}"}}],["$","$L2",null,{"post":{"slug":"htmx-alpine-javascript-free-2026","title":"The HTMX + Alpine.js Stack: Building Dynamic UIs Without React","excerpt":"How the HTMX and Alpine.js combination is challenging the SPA orthodoxy and delivering better developer experience for content-driven applications.","date":"2026-05-11","tags":["HTMX","Alpine.js","Frontend","Architecture","Web Development"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"biome-js-linter-2026","title":"Biome: The Rust-Powered JavaScript Toolchain Replacing ESLint and Prettier","excerpt":"How Biome is consolidating linting and formatting into a single, blazingly fast tool — and why the ecosystem is embracing it.","date":"2026-05-11","tags":["JavaScript","Tooling","Rust","Developer Experience"],"content":"$4"},"nextPost":{"slug":"typescript-5-7-2026","title":"TypeScript 5.7: Pattern Matching and Beyond","excerpt":"TypeScript 5.7 finally introduces native pattern matching, bringing one of the most requested features to the language.","date":"2026-05-11","tags":["TypeScript","JavaScript","Programming","Web Development"],"content":"$5"},"relatedPosts":[{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$6"},{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$7"},{"slug":"css-container-queries","title":"Container Queries: The End of Media Query Hacks","excerpt":"CSS container queries let components respond to their own size, not just the viewport.","date":"2026-05-08","tags":["CSS","Frontend"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"_qyfHjluOOXste8Owcp4n"}
 9:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
 a:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0t22lgdtuez_h.js","async":true}]
 b:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]

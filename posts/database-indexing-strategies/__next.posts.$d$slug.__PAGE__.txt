@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0mj53vux5j-af.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0t22lgdtuez_h.js"],"default"]
-c:I[97367,["/my-app/_next/static/chunks/0mj53vux5j-af.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+2:I[24082,["/my-app/_next/static/chunks/15e1llgr~7x7o.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0t22lgdtuez_h.js"],"default"]
+c:I[97367,["/my-app/_next/static/chunks/15e1llgr~7x7o.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
 d:"$Sreact.suspense"
-3:T552,# Database Indexing Strategies for High-Traffic Applications
+3:T516,
 
 Poor indexing is the number one cause of slow database queries. Here is how to get it right.
 
@@ -44,7 +44,7 @@ Look for "Seq Scan" (sequential scan) on large tables — that is a sign you nee
 
 1. **Over-indexing**: Each index adds write overhead. Only index columns used in WHERE, JOIN, and ORDER BY.
 2. **Ignoring covering indexes**: Include all selected columns to avoid table lookups.
-3. **Not monitoring unused indexes**: Remove indexes that are never read.4:T4c9,# Container Queries: The End of Media Query Hacks
+3. **Not monitoring unused indexes**: Remove indexes that are never read.4:T498,
 
 For years, responsive design meant media queries tied to viewport width. Container queries change everything by letting components respond to their own container's size.
 
@@ -93,7 +93,7 @@ Container queries have full support in all modern browsers as of 2025. You can s
 
 1. Use container queries for reusable components
 2. Keep media queries for page-level layout
-3. Name your containers for clarity in complex layouts5:T467,# Why Web Developers Should Learn Rust in 2026
+3. Name your containers for clarity in complex layouts5:T439,
 
 Rust has been voted the most loved programming language for eight years running. But beyond the hype, Rust is making concrete inroads into web development tooling.
 
@@ -124,7 +124,7 @@ If you are a web developer new to Rust, start with:
 2. Exercism's Rust track
 3. Build a small CLI tool, then try a simple API with Actix
 
-The learning curve is real, but the payoff in performance and reliability is immense.6:T9a4,# WebGPU: Browser-Side AI Inference Revolution
+The learning curve is real, but the payoff in performance and reliability is immense.6:T976,
 
 WebGPU is changing our understanding of browser capabilities. This new Web API gives developers direct GPU access, opening the door for browser-side AI inference.
 
@@ -184,7 +184,7 @@ As of May 2026: Chrome/Edge fully supported, Firefox experimental (manual flag),
 
 ## Conclusion
 
-WebGPU is more than a graphics API upgrade. It is the key step for browsers to become complete AI platforms. As model quantization and WebGPU mature, browser-side AI inference will become increasingly practical. Frontend developers should start learning Compute Shaders and WebGPU fundamentals now.7:T742,# Edge-Native Databases: Data Where Your Users Are
+WebGPU is more than a graphics API upgrade. It is the key step for browsers to become complete AI platforms. As model quantization and WebGPU mature, browser-side AI inference will become increasingly practical. Frontend developers should start learning Compute Shaders and WebGPU fundamentals now.7:T710,
 
 The traditional client-server model assumes a single, centralized database. Edge-native databases flip this model, placing data close to users across a global network of edge nodes.
 
@@ -231,7 +231,7 @@ Edge databases typically offer eventual consistency. For strong consistency:
 - Offline-first mobile apps
 - IoT data collection at scale
 
-Start with one use case like user profiles, then expand as you build confidence.8:T6ba,# Rust + WebAssembly: The New Default Stack for Edge Computing in 2026
+Start with one use case like user profiles, then expand as you build confidence.8:T674,
 
 The edge computing landscape has consolidated around a clear winner in 2026: Rust compiled to WebAssembly. Cloudflare Workers, Fastly Compute, Deno Deploy, and Fermyon Spin all now optimize for the Rust+WASM combo, and the performance numbers explain why.
 
@@ -259,7 +259,7 @@ Rust fits this model perfectly. Its zero-cost abstractions, lack of a garbage co
 
 ## What This Means for Web Developers
 
-The shift to Rust+WASM at the edge changes deployment economics. With sub-millisecond cold starts and minimal memory footprints, platforms can pack thousands of edge workers on a single machine. This directly translates to lower costs and higher free-tier limits.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Database Indexing Strategies for High-Traffic Applications\",\"description\":\"Master the art of database indexing to keep your application fast as it scales.\",\"datePublished\":\"2026-05-09\",\"dateModified\":\"2026-05-09\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/database-indexing-strategies\"},\"keywords\":\"Database, Performance\",\"wordCount\":213,\"articleSection\":\"Database\"}"}}],["$","$L2",null,{"post":{"slug":"database-indexing-strategies","title":"Database Indexing Strategies for High-Traffic Applications","excerpt":"Master the art of database indexing to keep your application fast as it scales.","date":"2026-05-09","tags":["Database","Performance"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"css-container-queries","title":"Container Queries: The End of Media Query Hacks","excerpt":"CSS container queries let components respond to their own size, not just the viewport.","date":"2026-05-08","tags":["CSS","Frontend"],"content":"$4"},"nextPost":{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$5"},"relatedPosts":[{"slug":"webgpu-browser-ai-inference","title":"WebGPU: Browser-Side AI Inference Revolution","excerpt":"How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.","date":"2026-05-11","tags":["WebGPU","AI","Performance"],"content":"$6"},{"slug":"edge-native-databases","title":"Edge-Native Databases: Data Where Your Users Are","excerpt":"How edge-native databases are redefining data locality, latency, and offline-first architectures.","date":"2026-05-11","tags":["Database","Edge Computing","Architecture"],"content":"$7"},{"slug":"rust-wasm-edge-computing-2026","title":"Rust + WebAssembly: The New Default Stack for Edge Computing in 2026","excerpt":"Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.","date":"2026-05-11","tags":["Rust","WebAssembly","Edge Computing","Serverless","Performance"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7hsnwHnfrExr6MEgALrib"}
+The shift to Rust+WASM at the edge changes deployment economics. With sub-millisecond cold starts and minimal memory footprints, platforms can pack thousands of edge workers on a single machine. This directly translates to lower costs and higher free-tier limits.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Database Indexing Strategies for High-Traffic Applications\",\"description\":\"Master the art of database indexing to keep your application fast as it scales.\",\"datePublished\":\"2026-05-09\",\"dateModified\":\"2026-05-09\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/database-indexing-strategies\"},\"keywords\":\"Database, Performance\",\"wordCount\":206,\"articleSection\":\"Database\"}"}}],["$","$L2",null,{"post":{"slug":"database-indexing-strategies","title":"Database Indexing Strategies for High-Traffic Applications","excerpt":"Master the art of database indexing to keep your application fast as it scales.","date":"2026-05-09","tags":["Database","Performance"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"css-container-queries","title":"Container Queries: The End of Media Query Hacks","excerpt":"CSS container queries let components respond to their own size, not just the viewport.","date":"2026-05-08","tags":["CSS","Frontend"],"content":"$4"},"nextPost":{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$5"},"relatedPosts":[{"slug":"webgpu-browser-ai-inference","title":"WebGPU: Browser-Side AI Inference Revolution","excerpt":"How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.","date":"2026-05-11","tags":["WebGPU","AI","Performance"],"content":"$6"},{"slug":"edge-native-databases","title":"Edge-Native Databases: Data Where Your Users Are","excerpt":"How edge-native databases are redefining data locality, latency, and offline-first architectures.","date":"2026-05-11","tags":["Database","Edge Computing","Architecture"],"content":"$7"},{"slug":"rust-wasm-edge-computing-2026","title":"Rust + WebAssembly: The New Default Stack for Edge Computing in 2026","excerpt":"Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.","date":"2026-05-11","tags":["Rust","WebAssembly","Edge Computing","Serverless","Performance"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"_qyfHjluOOXste8Owcp4n"}
 9:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
 a:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0t22lgdtuez_h.js","async":true}]
 b:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
