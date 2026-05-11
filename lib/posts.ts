@@ -1206,6 +1206,44 @@ For existing applications, upgrade to the latest framework version, configure th
   },
 
 
+  {
+    slug: 'agentic-coding-reshaping-software-engineering',
+    title: 'Agentic Coding: From Autocomplete to Autonomous Programming',
+    excerpt: 'How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026.',
+    date: '2026-05-11',
+    tags: ['AI', 'DevTools', 'Software Engineering', 'LLM', 'Automation'],
+    content: `# Agentic Coding: From Autocomplete to Autonomous Programming
+
+In 2024, Copilot-style code completion was the mainstream. By 2026, agentic coding tools like Claude Code, Codex, and Cursor Agent have become core components of developer daily workflows. These tools are no longer passive assistants waiting to provide suggestions.
+
+## Three Levels of Agentic Coding
+
+**Level 1: Context Completion** -- The traditional Copilot mode, predicting the next code based on cursor position.
+
+**Level 2: Task Execution** -- Developers describe tasks in natural language, and the tool autonomously decomposes subtasks, modifies files across the codebase, and runs commands.
+
+**Level 3: Engineering Autonomy** -- The agent can independently handle a complete feature branch: understanding requirements docs, designing solutions, writing code, submitting PRs, and responding to review comments.
+
+## The Real Technical Challenges
+
+The core difficulty is engineering context understanding and maintenance. A real project might have hundreds of thousands of lines of code, complex dependency graphs, and implicit architectural constraints.
+
+Current solutions include: hierarchical code indexing and retrieval, structured project knowledge graphs, and context compression techniques across multi-turn conversations.
+
+Another critical issue is determinism and controllability. Engineering teams need clear guardrails: which files can be modified, which operations require human confirmation, and how CI/CD pipelines validate agent output.
+
+## Impact on the Developer Role
+
+High-value developer capabilities in the agentic era:
+
+- **System design and architectural decisions** -- Agents excel at implementation, but high-level design trade-offs require human judgment
+- **Precise task description skills** -- Expressing technical intent precisely in natural language becomes a core skill
+- **Code review and quality assurance** -- When 80% of code is agent-generated, reviewers shift to verifying architectural consistency
+
+## Looking Ahead
+
+We are in the midst of another major shift in software development methodology. Agentic coding will become the next standardized engineering practice. The key question is how to design the collaboration boundary between humans and agents.`
+  },
   ];
 
 export function getAllTags(): string[] {
