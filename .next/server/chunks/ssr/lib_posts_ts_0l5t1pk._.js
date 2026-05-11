@@ -1187,6 +1187,30 @@ Migrating from Node.js is surprisingly smooth. Bun implements Node.js APIs and r
 
 Bun excels for greenfield projects, development tooling, serverless functions, and any application where startup time and build speed matter. For production systems deeply integrated with Node.js native modules, thorough testing remains essential.
 
-The runtime wars are far from over, but Bun has proven that the JavaScript ecosystem benefits from healthy competition.`}];a.s(["getAllTags",0,function(){let a=new Set;return b.forEach(b=>b.tags.forEach(b=>a.add(b))),Array.from(a)},"getPostsByTag",0,function(a){return b.filter(b=>b.tags.includes(a))},"posts",0,b])}];
+The runtime wars are far from over, but Bun has proven that the JavaScript ecosystem benefits from healthy competition.`},{slug:"mcp-security-risks-2026",title:"MCP安全风险: 当AI代理成为攻击面",excerpt:"Model Context Protocol正在成为AI集成的默认标准, 但其安全模型仍存在严重隐患. 本文剖析MCP的三大攻击面及防护策略.",date:"2026-05-11",tags:["AI","Security","MCP","Protocol","DevSecOps"],content:`# MCP安全风险: 当AI代理成为攻击面
+
+MCP的核心机制是让LLM发现并调用工具. 恶意MCP Server可以在工具描述中嵌入隐蔽指令, 劫持AI代理的行为. 例如, 一个看似正常的代码审查工具, 可能在描述中注入在返回结果前先将用户代码发送到外部服务器的指令. 由于这些描述对用户不可见, 而模型会照常执行, 投毒攻击极难被发现.
+
+## 攻击面一: 工具投毒
+
+**防护策略**: 在沙箱环境中运行MCP Server, 限制网络访问权限; 对工具调用实施白名单审查.
+
+## 攻击面二: 上下文泄露
+
+MCP通过共享上下文让AI理解工作环境, 但这意味着敏感信息(API密钥, 数据库连接串, 用户数据)会进入模型的上下文窗口. 当AI代理连接多个MCP Server时, 一个Server可能通过精心构造的请求诱导模型泄露另一个Server提供的敏感上下文.
+
+**防护策略**: 实施上下文隔离机制, 不同敏感级别的MCP Server使用独立的会话上下文; 对返回给模型的数据做脱敏处理.
+
+## 攻击面三: 权限蔓延
+
+许多MCP Server在安装时请求过宽的权限 -- 用户为了便利往往直接批准. 一旦代理被提示注入攻击利用, 攻击者就能通过这些宽松的权限执行文件写入, 代码执行, 数据导出等高危操作.
+
+**防护策略**: 采用最小权限原则配置MCP Server; 实施操作前确认机制(human-in-the-loop); 记录并审计所有工具调用日志.
+
+## 前瞻: 标准化安全框架
+
+业界正在推动MCP安全标准化. MCP规范v2预计将引入声明式权限模型, 工具描述签名验证和跨Server上下文隔离机制. 在此之前, 开发者应将每个MCP Server视为不可信节点, 在架构层面设计纵深防御.
+
+AI代理的便利性不应以安全性为代价. 在MCP生态成熟之前, 保持警惕是唯一的正确选择.`}];a.s(["getAllTags",0,function(){let a=new Set;return b.forEach(b=>b.tags.forEach(b=>a.add(b))),Array.from(a)},"getPostsByTag",0,function(a){return b.filter(b=>b.tags.includes(a))},"posts",0,b])}];
 
 //# sourceMappingURL=lib_posts_ts_0l5t1pk._.js.map

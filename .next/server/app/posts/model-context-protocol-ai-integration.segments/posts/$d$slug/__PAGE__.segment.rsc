@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0m4h73__dwv5q.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0462ueivjeopl.js"],"default"]
-a:I[97367,["/my-app/_next/static/chunks/0m4h73__dwv5q.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
-b:"$Sreact.suspense"
+2:I[24082,["/my-app/_next/static/chunks/0mj53vux5j-af.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0t22lgdtuez_h.js"],"default"]
+9:I[97367,["/my-app/_next/static/chunks/0mj53vux5j-af.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
 3:T7de,# Model Context Protocol: AI 工具集成的新标准
 
 Model Context Protocol (MCP) 正在成为 AI 应用与外部系统交互的事实标准。由 Anthropic 发起的这一开放协议，旨在解决 AI 模型调用工具时的碎片化问题。
@@ -189,52 +189,8 @@ service:
 1. **Use semantic conventions**: Follow OTel semantic conventions for consistent attribute naming
 2. **Sample wisely**: Use head-based sampling for high-volume services, tail-based for error investigation
 3. **Correlate signals**: Link traces to logs with trace IDs for seamless debugging
-4. **Start small**: Begin with auto-instrumentation, then add custom spans for business logic6:T8b2,# AI Agent Orchestration: From Chaos to Coordinated Intelligence
-
-The era of single-prompt LLM interactions is ending. In 2026, the real power lies in orchestrating multiple specialized AI agents that work together like a well-coordinated team.
-
-## The Orchestration Problem
-
-Running one AI agent is straightforward. Running ten agents that need to share context, respect dependencies, and handle failures — that is the hard problem. Naive approaches like chaining sequential calls lead to brittle systems where one failure cascades everywhere.
-
-## Modern Orchestration Patterns
-
-**Supervisor Pattern**: A central orchestrator agent delegates tasks to specialist agents. Simple but creates a single point of failure.
-
-**Mesh Pattern**: Agents communicate peer-to-peer with shared memory. More resilient but harder to debug.
-
-**Pipeline Pattern**: Agents form a processing chain with explicit handoff contracts. Predictable but inflexible.
-
-## Building with LangGraph
-
-LangGraph has emerged as the dominant framework for agent orchestration. Its graph-based execution model lets you define agents as nodes and communication as edges:
-
-```typescript
-import { StateGraph } from 'langgraph';
-
-const workflow = new StateGraph(AgentState);
-workflow.addNode('researcher', researchAgent);
-workflow.addNode('writer', writingAgent);
-workflow.addNode('reviewer', reviewAgent);
-workflow.addEdge('researcher', 'writer');
-workflow.addEdge('writer', 'reviewer');
-```
-
-## Observability is Non-Negotiable
-
-Production agent systems demand full trace logging. Tools like LangSmith and Phoenix provide:
-- Token-level cost tracking per agent
-- Latency breakdowns across the orchestration graph
-- Error propagation visualization
-
-## Practical Architecture
-
-For most teams, start with the Supervisor pattern using a strong reasoning model as the orchestrator. Add circuit breakers between agents, implement retry with exponential backoff, and always maintain a human-in-the-loop escape hatch for critical decisions.
-
-## The Road Ahead
-
-Agent orchestration is becoming infrastructure. Expect standardized protocols (like MCP for tool use) to emerge for inter-agent communication, making multi-agent systems as composable as microservices are today.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Model Context Protocol: AI 工具集成的新标准\",\"description\":\"深入解析 MCP 如何统一 AI 模型与外部工具的交互方式，以及它对开发者生态的影响。\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/model-context-protocol-ai-integration\"},\"keywords\":\"AI, MCP, 开发工具\",\"wordCount\":125,\"articleSection\":\"AI\"}"}}],["$","$L2",null,{"post":{"slug":"model-context-protocol-ai-integration","title":"Model Context Protocol: AI 工具集成的新标准","excerpt":"深入解析 MCP 如何统一 AI 模型与外部工具的交互方式，以及它对开发者生态的影响。","date":"2026-05-11","tags":["AI","MCP","开发工具"],"content":"$3"},"readingTime":1,"prevPost":{"slug":"webgpu-browser-ai-inference","title":"WebGPU: Browser-Side AI Inference Revolution","excerpt":"How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.","date":"2026-05-11","tags":["WebGPU","AI","Performance"],"content":"$4"},"nextPost":{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$5"},"relatedPosts":[{"slug":"ai-powered-development","title":"AI-Powered Development Tools","excerpt":"How AI assistants are transforming the way we write code.","date":"2026-05-05","tags":["AI","Productivity"],"content":"# AI-Powered Development Tools\n\nArtificial intelligence is revolutionizing how we write, review, and ship code.\n\n## The AI Coding Landscape\n\n1. Code completion: Inline suggestions (Copilot, Codeium)\n2. Conversational agents: Chat-based assistants (Claude, ChatGPT)\n3. Autonomous agents: Full-task execution (Codex, Claude Code)\n\n## Code Completion Tools\n\n- GitHub Copilot: VS Code integration, $10/mo\n- Codeium: Free tier, multi-IDE\n- Cursor: Agent mode, $20/mo\n- Supermaven: Fastest completions\n\n## Impact on Productivity\n\n- 30-55% faster code writing\n- 25% faster code review\n- 10-15% fewer bugs with test generation\n\n## Best Practices\n\n1. Review everything - AI code may have subtle bugs\n2. Use for boilerplate - Focus on architecture\n3. Pair with tests - Always test AI-generated code\n4. Stay in control - Use AI as a tool, not replacement"},"$0:rsc:props:children:0:1:props:prevPost",{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$6"}]}]],["$L7","$L8"],"$L9"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"ksIr4y5G120wCv2mkd93z"}
-7:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
-8:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0462ueivjeopl.js","async":true}]
-9:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
-c:null
+4. **Start small**: Begin with auto-instrumentation, then add custom spans for business logic0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Model Context Protocol: AI 工具集成的新标准\",\"description\":\"深入解析 MCP 如何统一 AI 模型与外部工具的交互方式，以及它对开发者生态的影响。\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/model-context-protocol-ai-integration\"},\"keywords\":\"AI, MCP, 开发工具\",\"wordCount\":125,\"articleSection\":\"AI\"}"}}],["$","$L2",null,{"post":{"slug":"model-context-protocol-ai-integration","title":"Model Context Protocol: AI 工具集成的新标准","excerpt":"深入解析 MCP 如何统一 AI 模型与外部工具的交互方式，以及它对开发者生态的影响。","date":"2026-05-11","tags":["AI","MCP","开发工具"],"content":"$3"},"readingTime":1,"prevPost":{"slug":"webgpu-browser-ai-inference","title":"WebGPU: Browser-Side AI Inference Revolution","excerpt":"How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.","date":"2026-05-11","tags":["WebGPU","AI","Performance"],"content":"$4"},"nextPost":{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$5"},"relatedPosts":[{"slug":"mcp-security-risks-2026","title":"MCP安全风险: 当AI代理成为攻击面","excerpt":"Model Context Protocol正在成为AI集成的默认标准, 但其安全模型仍存在严重隐患. 本文剖析MCP的三大攻击面及防护策略.","date":"2026-05-11","tags":["AI","Security","MCP","Protocol","DevSecOps"],"content":"# MCP安全风险: 当AI代理成为攻击面\n\nMCP的核心机制是让LLM发现并调用工具. 恶意MCP Server可以在工具描述中嵌入隐蔽指令, 劫持AI代理的行为. 例如, 一个看似正常的代码审查工具, 可能在描述中注入在返回结果前先将用户代码发送到外部服务器的指令. 由于这些描述对用户不可见, 而模型会照常执行, 投毒攻击极难被发现.\n\n## 攻击面一: 工具投毒\n\n**防护策略**: 在沙箱环境中运行MCP Server, 限制网络访问权限; 对工具调用实施白名单审查.\n\n## 攻击面二: 上下文泄露\n\nMCP通过共享上下文让AI理解工作环境, 但这意味着敏感信息(API密钥, 数据库连接串, 用户数据)会进入模型的上下文窗口. 当AI代理连接多个MCP Server时, 一个Server可能通过精心构造的请求诱导模型泄露另一个Server提供的敏感上下文.\n\n**防护策略**: 实施上下文隔离机制, 不同敏感级别的MCP Server使用独立的会话上下文; 对返回给模型的数据做脱敏处理.\n\n## 攻击面三: 权限蔓延\n\n许多MCP Server在安装时请求过宽的权限 -- 用户为了便利往往直接批准. 一旦代理被提示注入攻击利用, 攻击者就能通过这些宽松的权限执行文件写入, 代码执行, 数据导出等高危操作.\n\n**防护策略**: 采用最小权限原则配置MCP Server; 实施操作前确认机制(human-in-the-loop); 记录并审计所有工具调用日志.\n\n## 前瞻: 标准化安全框架\n\n业界正在推动MCP安全标准化. MCP规范v2预计将引入声明式权限模型, 工具描述签名验证和跨Server上下文隔离机制. 在此之前, 开发者应将每个MCP Server视为不可信节点, 在架构层面设计纵深防御.\n\nAI代理的便利性不应以安全性为代价. 在MCP生态成熟之前, 保持警惕是唯一的正确选择."},{"slug":"ai-powered-development","title":"AI-Powered Development Tools","excerpt":"How AI assistants are transforming the way we write code.","date":"2026-05-05","tags":["AI","Productivity"],"content":"# AI-Powered Development Tools\n\nArtificial intelligence is revolutionizing how we write, review, and ship code.\n\n## The AI Coding Landscape\n\n1. Code completion: Inline suggestions (Copilot, Codeium)\n2. Conversational agents: Chat-based assistants (Claude, ChatGPT)\n3. Autonomous agents: Full-task execution (Codex, Claude Code)\n\n## Code Completion Tools\n\n- GitHub Copilot: VS Code integration, $10/mo\n- Codeium: Free tier, multi-IDE\n- Cursor: Agent mode, $20/mo\n- Supermaven: Fastest completions\n\n## Impact on Productivity\n\n- 30-55% faster code writing\n- 25% faster code review\n- 10-15% fewer bugs with test generation\n\n## Best Practices\n\n1. Review everything - AI code may have subtle bugs\n2. Use for boilerplate - Focus on architecture\n3. Pair with tests - Always test AI-generated code\n4. Stay in control - Use AI as a tool, not replacement"},"$0:rsc:props:children:0:1:props:prevPost"]}]],["$L6","$L7"],"$L8"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7hsnwHnfrExr6MEgALrib"}
+6:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
+7:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0t22lgdtuez_h.js","async":true}]
+8:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null

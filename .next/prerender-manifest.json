@@ -535,6 +535,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/posts/mcp-security-risks-2026": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/posts/[slug]",
+      "dataRoute": "/posts/mcp-security-risks-2026.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/posts/model-context-protocol-ai-integration": {
       "experimentalBypassFor": [
         {
@@ -880,8 +904,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "89cabfda110f888fa47117f1b6b3a216",
-    "previewModeSigningKey": "15a246c10dd05b18369efffb86365d51782f287c2122564ed1e5b9bb52de7a58",
-    "previewModeEncryptionKey": "8dec0088f27f55dbeb80ed6d09a63de54af4b3199b58e04c32b38ac5eea098fc"
+    "previewModeId": "4fdd2d118ce9eaac069a61ed20d42cee",
+    "previewModeSigningKey": "7c3b5d08ed778efc8f2d3497ce8be35a7a752f80c3cd4e3c8fa4fb0fb73a61fe",
+    "previewModeEncryptionKey": "6afd870bf7ea410ef7c0cab1cfebbbfc3423cab86588ad6fa1124553b9f989c6"
   }
 }

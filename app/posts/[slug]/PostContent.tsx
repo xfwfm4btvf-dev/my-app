@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Post } from "../../../lib/posts";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import TableOfContents from "../../../components/TableOfContents";
 
 export default function PostContent({
@@ -21,6 +21,15 @@ export default function PostContent({
   relatedPosts: Post[];
 }) {
   const [readingProgress, setReadingProgress] = useState(0);
+
+  // Strip the first H1 heading from content to avoid duplicate title rendering
+  const contentWithoutH1 = useMemo(() => {
+    const lines = post.content.split('\n');
+    if (lines[0]?.match(/^#\s+/)) {
+      return lines.slice(1).join('\n').trim();
+    }
+    return post.content;
+  }, [post.content]);
 
   useEffect(() => {
     const updateProgress = () => {
@@ -45,7 +54,7 @@ export default function PostContent({
       </div>
 
       {/* Table of Contents Sidebar */}
-      <TableOfContents content={post.content} />
+      <TableOfContents content={contentWithoutH1} />
 
       <article className="relative py-20 px-6 z-10">
         <div className="max-w-3xl mx-auto">
@@ -72,7 +81,7 @@ export default function PostContent({
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-12 overflow-hidden">
               <div className="relative prose prose-invert prose-lg max-w-none prose-headings:text-white prose-p:text-gray-300 prose-strong:text-white prose-code:text-blue-300 prose-code:bg-white/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10 prose-a:text-blue-400 prose-li:text-gray-300 prose-headings:scroll-mt-20">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>{contentWithoutH1}</ReactMarkdown>
               </div>
             </motion.div>
             {(prevPost || nextPost) && (
