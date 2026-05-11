@@ -841,6 +841,48 @@ Start with one use case like user profiles, then expand as you build confidence.
 
 随着WebGPU和移动端NPU算力提升，嵌入式推理将在浏览器和移动端普及。模型小型化趋势（如Phi-4-mini、Gemma-3-1B）进一步降低了本地运行门槛。2026年下半年，预计本地AI将成为大多数开发者工具的默认选项，而非特殊配置。
 `  },
+  {
+    slug: 'zero-knowledge-web-auth-2026',
+    title: 'Zero-Knowledge Proofs Are Revolutionizing Web Authentication',
+    excerpt: 'How zero-knowledge proofs are eliminating password breaches and transforming how we prove identity online.',
+    date: '2026-05-11',
+    tags: ['Security', 'Cryptography', 'Web Development', 'Authentication'],
+    content: `# Zero-Knowledge Proofs Are Revolutionizing Web Authentication
+
+The biggest security news of 2026 is the mainstream adoption of zero-knowledge proofs (ZKPs) for web authentication.
+
+## The Password Problem
+
+Traditional authentication stores hashed passwords server-side. Even with bcrypt or argon2, a compromised database means millions of credentials are at risk. ZKPs flip this model entirely.
+
+## How ZKP Authentication Works
+
+Instead of sending your password to a server, you prove you *know* the password without revealing it:
+
+1. **Commitment**: Your client generates a cryptographic commitment to your secret
+2. **Challenge**: The server sends a random challenge
+3. **Proof**: Your client computes a proof showing knowledge of the secret
+4. **Verification**: The server verifies the proof learns nothing about your actual password
+
+The server never stores, sees, or transmits your password — ever.
+
+## Libraries Leading the Change
+
+**SnarkJS** and **Circom** have matured into production-ready tools. **zkLogin** from Sui Foundation now handles millions of authentications daily. **Semaphore** enables anonymous group authentication for privacy-first applications.
+
+## Real-World Impact
+
+- **Financial services**: Banks adopting ZKP auth for regulatory compliance
+- **Healthcare**: HIPAA-friendly authentication without storing PHI
+- **Gaming**: Proving account ownership without exposing credentials
+
+## Getting Started
+
+Start with Semaphore for anonymous auth or zkLogin for OAuth-compatible ZKP flows. The learning curve is steep, but the security payoff is massive.
+
+The passwordless future is proofs.`
+  },
+
   ];
 
 export function getAllTags(): string[] {
