@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { getAllTags, getPostsByTag } from "@/lib/posts";
+import { getAllTags, getPostsByTag } from "../../lib/posts";
 
 export default function TagsPage() {
   const tags = getAllTags();

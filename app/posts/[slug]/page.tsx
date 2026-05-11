@@ -1,4 +1,4 @@
-import { getPostBySlug, posts } from "@/lib/posts";
+import { getPostBySlug, posts } from "../../../lib/posts";
 import PostContent from "./PostContent";
 
 export function generateStaticParams() {

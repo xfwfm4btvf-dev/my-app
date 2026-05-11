@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { posts } from "@/lib/posts";
+import { posts } from "../lib/posts";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-6xl md:text-8xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
+              <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                 Nitrogen
               </span>
             </h1>

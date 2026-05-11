@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { posts } from "@/lib/posts";
+import { posts } from "../../lib/posts";
 
 export default function PostsPage() {
   return (
