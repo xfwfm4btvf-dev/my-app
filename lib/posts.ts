@@ -9,12 +9,267 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'edge-computing-webassembly',
+    title: 'Edge Computing Meets WebAssembly',
+    excerpt: 'How WebAssembly is unlocking new possibilities for edge computing and server-side applications.',
+    date: '2026-05-11',
+    tags: ['WebAssembly', 'Edge Computing'],
+    content: `# Edge Computing Meets WebAssembly
+
+The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
+
+## Why WebAssembly at the Edge
+
+Traditional serverless functions suffer from cold starts. Wasm modules, by contrast, can instantiate in microseconds. This makes them ideal for latency-sensitive edge workloads like real-time personalization, A/B testing, and authentication.
+
+## The WASI Standard
+
+The WebAssembly System Interface (WASI) provides a standardized way for Wasm modules to interact with the host OS. This means your Wasm code can run identically across Cloudflare Workers, Fastly Compute, and Fermyon's Spin — truly write once, run anywhere.
+
+## Getting Started
+
+\`\`\`rust
+use spin_sdk::http::{Request, Response};
+
+#[spin_sdk::http_component]
+fn handle_request(req: Request) -> Response {
+    Response::builder()
+        .status(200)
+        .body("Hello from the edge!")
+        .build()
+}
+\`\`\`
+
+## The Future
+
+With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.`
+  },
+  {
+    slug: 'circuit-breaker-pattern-apis',
+    title: 'Building Resilient APIs with the Circuit Breaker Pattern',
+    excerpt: 'Prevent cascading failures in distributed systems with the circuit breaker design pattern.',
+    date: '2026-05-11',
+    tags: ['Architecture', 'APIs'],
+    content: `# Building Resilient APIs with the Circuit Breaker Pattern
+
+In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
+
+## How It Works
+
+A circuit breaker monitors calls to external services and "trips" (opens) when failures exceed a threshold. It has three states:
+
+- **Closed**: Requests flow normally. Failures are counted.
+- **Open**: Requests are immediately rejected with a fallback response.
+- **Half-Open**: After a timeout, a limited number of test requests are allowed through.
+
+## Implementation
+
+\`\`\`typescript
+class CircuitBreaker {
+  private failures = 0;
+  private lastFailure = 0;
+  private state: 'closed' | 'open' | 'half-open' = 'closed';
+
+  constructor(
+    private threshold: number = 5,
+    private timeout: number = 30000
+  ) {}
+
+  async call<T>(fn: () => Promise<T>): Promise<T> {
+    if (this.state === 'open') {
+      if (Date.now() - this.lastFailure > this.timeout) {
+        this.state = 'half-open';
+      } else {
+        throw new Error('Circuit is open');
+      }
+    }
+
+    try {
+      const result = await fn();
+      this.onSuccess();
+      return result;
+    } catch (error) {
+      this.onFailure();
+      throw error;
+    }
+  }
+
+  private onSuccess() {
+    this.failures = 0;
+    this.state = 'closed';
+  }
+
+  private onFailure() {
+    this.failures++;
+    this.lastFailure = Date.now();
+    if (this.failures >= this.threshold) {
+      this.state = 'open';
+    }
+  }
+}
+\`\`\`
+
+## Best Practices
+
+1. **Use with retry logic**: Combine with exponential backoff for transient failures.
+2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
+3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.`
+  },
+  {
+    slug: 'rust-for-web-developers',
+    title: 'Why Web Developers Should Learn Rust in 2026',
+    excerpt: 'Rust is no longer just for systems programmers — it is becoming essential for modern web development.',
+    date: '2026-05-10',
+    tags: ['Rust', 'Web Development'],
+    content: `# Why Web Developers Should Learn Rust in 2026
+
+Rust has been voted the most loved programming language for eight years running. But beyond the hype, Rust is making concrete inroads into web development tooling.
+
+## Rust-Powered Web Tools
+
+The most popular web tools are increasingly built with Rust:
+
+- **SWC**: Powers Next.js compilation, replacing Babel
+- **Turbopack**: Vercel's Rust-based bundler replacing Webpack
+- **Biome**: Rust rewrite of ESLint + Prettier
+- **oxc**: Fast JavaScript linter and parser
+
+These tools deliver 10-100x speed improvements over their JavaScript predecessors.
+
+## Beyond Tooling
+
+Rust is also becoming viable for writing web applications directly:
+
+- **Leptos**: A full-stack Rust framework with fine-grained reactivity
+- **Actix Web**: Blazingly fast HTTP framework
+- **Dioxus**: React-like component model in Rust
+
+## Where to Start
+
+If you are a web developer new to Rust, start with:
+
+1. The Rust Book (free online)
+2. Exercism's Rust track
+3. Build a small CLI tool, then try a simple API with Actix
+
+The learning curve is real, but the payoff in performance and reliability is immense.`
+  },
+  {
+    slug: 'database-indexing-strategies',
+    title: 'Database Indexing Strategies for High-Traffic Applications',
+    excerpt: 'Master the art of database indexing to keep your application fast as it scales.',
+    date: '2026-05-09',
+    tags: ['Database', 'Performance'],
+    content: `# Database Indexing Strategies for High-Traffic Applications
+
+Poor indexing is the number one cause of slow database queries. Here is how to get it right.
+
+## Understanding Index Types
+
+### B-Tree Indexes
+The default index type in most databases. Excellent for equality and range queries, ORDER BY, and JOIN operations.
+
+### Hash Indexes
+Faster for exact equality lookups but cannot handle range queries. Use sparingly.
+
+### GIN / GiST Indexes
+Specialized for full-text search, JSON queries, and geometric data in PostgreSQL.
+
+## Composite Indexes
+
+The order of columns matters. An index on (user_id, created_at) supports:
+- Queries filtering by user_id alone
+- Queries filtering by user_id AND created_at
+- Queries filtering by user_id with ORDER BY created_at
+
+It does NOT support queries filtering only by created_at.
+
+## The EXPLAIN Command
+
+Always validate your indexes:
+
+\`\`\`sql
+EXPLAIN ANALYZE
+SELECT * FROM orders
+WHERE user_id = 123
+ORDER BY created_at DESC
+LIMIT 10;
+\`\`\`
+
+Look for "Seq Scan" (sequential scan) on large tables — that is a sign you need an index.
+
+## Common Mistakes
+
+1. **Over-indexing**: Each index adds write overhead. Only index columns used in WHERE, JOIN, and ORDER BY.
+2. **Ignoring covering indexes**: Include all selected columns to avoid table lookups.
+3. **Not monitoring unused indexes**: Remove indexes that are never read.`
+  },
+  {
+    slug: 'css-container-queries',
+    title: 'Container Queries: The End of Media Query Hacks',
+    excerpt: 'CSS container queries let components respond to their own size, not just the viewport.',
+    date: '2026-05-08',
+    tags: ['CSS', 'Frontend'],
+    content: `# Container Queries: The End of Media Query Hacks
+
+For years, responsive design meant media queries tied to viewport width. Container queries change everything by letting components respond to their own container's size.
+
+## The Problem
+
+A card component might appear in a 300px sidebar or a 900px main area. With media queries, you cannot differentiate — the viewport is the same in both cases.
+
+## The Solution
+
+\`\`\`css
+.card-container {
+  container-type: inline-size;
+  container-name: card;
+}
+
+@container card (min-width: 400px) {
+  .card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@container card (max-width: 399px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+\`\`\`
+
+## Container Query Units
+
+New CSS units like \`cqw\` (container query width) let you size elements relative to their container:
+
+\`\`\`css
+.card-title {
+  font-size: clamp(1rem, 3cqw, 1.5rem);
+}
+\`\`\`
+
+## Browser Support
+
+Container queries have full support in all modern browsers as of 2025. You can safely use them in production without fallbacks.
+
+## Best Practices
+
+1. Use container queries for reusable components
+2. Keep media queries for page-level layout
+3. Name your containers for clarity in complex layouts`
+  },
+  {
     slug: 'mastering-typescript',
     title: 'Mastering TypeScript: A Guide to Better JavaScript',
     excerpt: 'TypeScript has become the gold standard for building robust web applications.',
     date: '2026-05-10',
     tags: ['TypeScript', 'JavaScript'],
-    content: `# Mastering TypeScript\n\nTypeScript has become the gold standard for building robust web applications.`
+    content: `# Mastering TypeScript
+
+TypeScript has become the gold standard for building robust web applications.`
   },
   {
     slug: 'getting-started-with-nextjs',
@@ -22,7 +277,9 @@ export const posts: Post[] = [
     excerpt: 'Next.js 16 brings exciting new features.',
     date: '2026-05-08',
     tags: ['Next.js', 'React'],
-    content: `# Getting Started with Next.js 16\n\nNext.js continues to evolve with powerful new features.`
+    content: `# Getting Started with Next.js 16
+
+Next.js continues to evolve with powerful new features.`
   },
   {
     slug: 'ai-powered-development',
@@ -30,7 +287,9 @@ export const posts: Post[] = [
     excerpt: 'How AI assistants are transforming the way we write code.',
     date: '2026-05-05',
     tags: ['AI', 'Productivity'],
-    content: `# AI-Powered Development Tools\n\nArtificial intelligence is revolutionizing software development.`
+    content: `# AI-Powered Development Tools
+
+Artificial intelligence is revolutionizing software development.`
   },
   {
     slug: 'web-security-essentials',
@@ -38,7 +297,9 @@ export const posts: Post[] = [
     excerpt: 'Security is not optional. Learn the essential practices.',
     date: '2026-05-01',
     tags: ['Security', 'Web'],
-    content: `# Web Security Essentials\n\nSecurity must be a priority from day one.`
+    content: `# Web Security Essentials
+
+Security must be a priority from day one.`
   }
 ];
 
