@@ -724,7 +724,65 @@ For most teams, start with the Supervisor pattern using a strong reasoning model
 Agent orchestration is becoming infrastructure. Expect standardized protocols (like MCP for tool use) to emerge for inter-agent communication, making multi-agent systems as composable as microservices are today.`
   },
 
-];
+  {
+    slug: 'post-quantum-cryptography-web-apps',
+    title: 'Post-Quantum Cryptography: Hardening Web Apps Before Q-Day',
+    excerpt: 'NIST finalized post-quantum standards. Here is how to migrate your web apps before quantum computers break RSA and ECC.',
+    date: '2026-05-11',
+    tags: ['Cryptography', 'Security', 'Quantum', 'TLS', 'NIST'],
+    content: `# Post-Quantum Cryptography: Hardening Web Apps Before Q-Day
+
+## The Quantum Clock Is Ticking
+
+NIST officially finalized three post-quantum cryptographic standards in 2024: ML-KEM (formerly Kyber), ML-DSA (Dilithium), and SLH-DSA (SPHINCS+). With quantum computing advances accelerating, the window to migrate your applications is narrowing.
+
+The "harvest now, decrypt later" threat means adversaries are already collecting encrypted traffic today, waiting for quantum machines capable of breaking RSA-2048 and ECC-256.
+
+## What Breaks First
+
+- **RSA/ECC key exchange** - replaced by ML-KEM-768/1024
+- **Digital signatures** - replaced by ML-DSA-65/87
+- **TLS certificates** - hybrid certificates becoming standard
+- **SSH keys** - OpenSSH 9.x added hybrid key exchange
+
+## Migration Checklist
+
+**1. TLS Libraries**
+OpenSSL 3.2+, BoringSSL, and rustls all support hybrid key exchange. Enable X25519Kyber768Draft00 alongside classical ECDHE for backward compatibility.
+
+**2. Hybrid Mode is Non-Negotiable**
+Never go pure-PQC yet. Hybrid schemes combine classical + post-quantum algorithms. If PQC turns out weak, your classical layer still protects.
+
+**3. Certificate Authorities**
+DigiCert and Let's Encrypt are testing PQC certificate issuance. Start requesting hybrid test certificates for staging environments.
+
+**4. Application-Layer Crypto**
+Review JWT signing (switch from RS256 to ML-DSA), database encryption keys, and API authentication tokens.
+
+## Code Example: Hybrid TLS with OpenSSL
+
+\`\`\`bash
+# Generate hybrid PQC + classical key pair
+openssl genpkey -algorithm MLKEM768 -out pqc_key.pem
+openssl genpkey -algorithm X25519 -out classical_key.pem
+
+# Configure nginx with hybrid groups
+ssl_conf_command KEMGroups X25519Kyber768Draft00:X25519
+\`\`\`
+
+## Timeline Estimates
+
+| Milestone | Target |
+|-----------|--------|
+| Hybrid TLS in production | 2025-2026 |
+| PQC-only TLS optional | 2027-2028 |
+| RSA/ECC deprecation begins | 2029-2030 |
+
+## Bottom Line
+
+Start your migration now. Enable hybrid key exchange in your TLS stack today — it costs negligible performance and buys you future-proof security. The crypto-agility you build now will be critical when Q-Day arrives.`
+  },
+  ];
 
 export function getAllTags(): string[] {
   const tags = new Set<string>();
