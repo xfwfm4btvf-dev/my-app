@@ -38,17 +38,21 @@ export function CodeBlock({ children, className, codeContent }: CodeBlockProps) 
           title="Copy code"
         >
           {copied ? (
-            <span className="text-green-400 text-xs">Copied!</span>
+            <span className="text-green-400 flex items-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 13l4 4L19 7"/></svg>
+              Copied
+            </span>
           ) : (
-            <span className="text-xs">Copy</span>
+            <span className="flex items-center gap-1">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copy
+            </span>
           )}
         </button>
       </div>
-      <div className="overflow-x-auto">
-        <pre className="!rounded-none !border-0 !bg-transparent !my-0 p-4">
-          {children}
-        </pre>
-      </div>
+      <pre className="!rounded-none !border-0 !bg-transparent !my-0 p-4 overflow-x-auto">
+        <code className={className}>{children}</code>
+      </pre>
     </div>
   );
 }

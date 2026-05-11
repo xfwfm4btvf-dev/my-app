@@ -85,15 +85,23 @@ export default function PostContent({
                 <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
-                  pre: ({ children }) => {
-                    // Extract code content and className from the code element
-                    const codeChild = (children as any)?.props;
-                    const className = codeChild?.className || "";
-                    const codeContent = codeChild?.children || children;
-                    if (className.includes("language-")) {
-                      return <CodeBlock className={className} codeContent={String(codeContent)}>{children}</CodeBlock>;
+                  code({ className, children, ...props }) {
+                    const match = /language-(\w+)/.exec(className || "");
+                    const isBlock = String(children).includes("\n");
+                    if (match && isBlock) {
+                      return (
+                        <CodeBlock
+                          className={className}
+                          codeContent={String(children).replace(/\n$/, "")}
+                        >
+                          {children}
+                        </CodeBlock>
+                      );
                     }
-                    return <pre>{children}</pre>;
+                    return <code className={className} {...props}>{children}</code>;
+                  },
+                  pre({ children }) {
+                    return <>{children}</>;
                   },
                 }}
               >
