@@ -267,9 +267,35 @@ Container queries have full support in all modern browsers as of 2025. You can s
     excerpt: 'TypeScript has become the gold standard for building robust web applications.',
     date: '2026-05-10',
     tags: ['TypeScript', 'JavaScript'],
-    content: `# Mastering TypeScript
+    content: `# Mastering TypeScript: A Guide to Better JavaScript
 
-TypeScript has become the gold standard for building robust web applications.`
+TypeScript has become the gold standard for building robust web applications. But many developers only scratch the surface.
+
+## Why TypeScript Matters
+
+JavaScript is dynamic. TypeScript adds static typing, catching bugs before production. Teams report 15-20% fewer bugs.
+
+## Advanced Patterns
+
+### Utility Types
+
+    interface User { id: number; name: string; }
+    type UpdateUser = Partial<User>;
+    type UserCredentials = Pick<User, 'email' | 'role'>;
+
+### Discriminated Unions
+
+    type ApiResponse<T> =
+      | { status: 'loading' }
+      | { status: 'success'; data: T }
+      | { status: 'error'; message: string };
+
+## Best Practices
+
+1. Avoid any - Use unknown instead
+2. Enable strict mode in tsconfig.json
+3. Use branded types for IDs
+4. Type your environment variables`
   },
   {
     slug: 'getting-started-with-nextjs',
@@ -279,7 +305,29 @@ TypeScript has become the gold standard for building robust web applications.`
     tags: ['Next.js', 'React'],
     content: `# Getting Started with Next.js 16
 
-Next.js continues to evolve with powerful new features.`
+Next.js 16 continues to evolve with powerful new features.
+
+## What is New
+
+- Turbopack is now the default bundler
+- Partial Prerendering combines static and dynamic content
+- React 19 integration with Server Components
+- Improved caching with a simpler model
+
+## Project Setup
+
+    npx create-next-app@latest my-app
+
+## Server Components by Default
+
+Components run on the server, reducing client JS. Add 'use client' only for interactivity.
+
+## Tips for Production
+
+1. Use generateStaticParams for static generation
+2. Set output: export for fully static sites
+3. Use loading.tsx for loading states
+4. Add error.tsx for graceful error boundaries`
   },
   {
     slug: 'ai-powered-development',
@@ -289,7 +337,33 @@ Next.js continues to evolve with powerful new features.`
     tags: ['AI', 'Productivity'],
     content: `# AI-Powered Development Tools
 
-Artificial intelligence is revolutionizing software development.`
+Artificial intelligence is revolutionizing how we write, review, and ship code.
+
+## The AI Coding Landscape
+
+1. Code completion: Inline suggestions (Copilot, Codeium)
+2. Conversational agents: Chat-based assistants (Claude, ChatGPT)
+3. Autonomous agents: Full-task execution (Codex, Claude Code)
+
+## Code Completion Tools
+
+- GitHub Copilot: VS Code integration, $10/mo
+- Codeium: Free tier, multi-IDE
+- Cursor: Agent mode, $20/mo
+- Supermaven: Fastest completions
+
+## Impact on Productivity
+
+- 30-55% faster code writing
+- 25% faster code review
+- 10-15% fewer bugs with test generation
+
+## Best Practices
+
+1. Review everything - AI code may have subtle bugs
+2. Use for boilerplate - Focus on architecture
+3. Pair with tests - Always test AI-generated code
+4. Stay in control - Use AI as a tool, not replacement`
   },
   {
     slug: 'web-security-essentials',
@@ -297,9 +371,42 @@ Artificial intelligence is revolutionizing software development.`
     excerpt: 'Security is not optional. Learn the essential practices.',
     date: '2026-05-01',
     tags: ['Security', 'Web'],
-    content: `# Web Security Essentials
+    content: `# Web Security Essentials for Modern Apps
 
-Security must be a priority from day one.`
+Security must be a priority from day one.
+
+## OWASP Top 10
+
+1. Broken Access Control
+2. Cryptographic Failures
+3. Injection attacks
+4. Insecure Design
+5. Security Misconfiguration
+
+## Authentication Best Practices
+
+### Password Storage
+
+    import bcrypt from 'bcrypt';
+    const SALT_ROUNDS = 12;
+    async function hashPassword(password) {
+      return bcrypt.hash(password, SALT_ROUNDS);
+    }
+
+### JWT Security
+
+- Use short-lived tokens (15 minutes)
+- Implement refresh token rotation
+- Store in httpOnly cookies, not localStorage
+- Always validate iss and aud claims
+
+## Quick Wins
+
+1. Enable HTTPS everywhere
+2. Sanitize user input
+3. Keep dependencies updated
+4. Implement rate limiting
+5. Log security events`
   },
   {
     slug: 'opentelemetry-observability-microservices',
