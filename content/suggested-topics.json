@@ -1,0 +1,108 @@
+{
+  "generatedAt": "2026-05-11T20:19:50.589Z",
+  "suggestions": [
+    {
+      "title": "mirage: A Unified Virtual Filesystem For AI Agents",
+      "source": "github",
+      "url": "https://github.com/strukto-ai/mirage",
+      "score": 1914,
+      "topics": [
+        "ai",
+        "agents"
+      ],
+      "relevance": 36.41084389152321
+    },
+    {
+      "title": "Velocity-Executor: This repository contains Velocity Executor — a free Roblox script executor for PC built for fast injection, stable performance, and easy access. Includes Level 8 execution in 2026 with no ads, no key checkpoints, and no extra verification.",
+      "source": "github",
+      "url": "https://github.com/thakur-works/Velocity-Executor",
+      "score": 528,
+      "topics": [
+        "ai",
+        "performance"
+      ],
+      "relevance": 33.61727836017593
+    },
+    {
+      "title": "Training an LLM in Swift, Part 1: Taking matrix mult from Gflop/s to Tflop/s",
+      "source": "hackernews",
+      "url": "https://www.cocoawithlove.com/blog/matrix-multiplications-swift.html",
+      "score": 182,
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "relevance": 31.312255448652145
+    },
+    {
+      "title": "zero-native: Build desktop + mobile apps with Zig and web UI",
+      "source": "github",
+      "url": "https://github.com/vercel-labs/zero-native",
+      "score": 2575,
+      "topics": [
+        "zig"
+      ],
+      "relevance": 27.05472929343887
+    },
+    {
+      "title": "Local AI needs to be the norm",
+      "source": "hackernews",
+      "url": "https://unix.foo/posts/local-ai-needs-to-be-norm/",
+      "score": 1705,
+      "topics": [
+        "ai"
+      ],
+      "relevance": 26.15989513415752
+    },
+    {
+      "title": "yao-open-prompts: Yao Open Prompts：中文 AI 提示词库，覆盖工作、学习、内容、营销和生活场景",
+      "source": "github",
+      "url": "https://github.com/yaojingang/yao-open-prompts",
+      "score": 1624,
+      "topics": [
+        "ai"
+      ],
+      "relevance": 26.054266826574466
+    },
+    {
+      "title": "3DCellForge: AI-powered interactive 3D cell generation and exploration studio.",
+      "source": "github",
+      "url": "https://github.com/huangserva/3DCellForge",
+      "score": 1334,
+      "topics": [
+        "ai"
+      ],
+      "relevance": 25.62740632850297
+    },
+    {
+      "title": "tokenspeed: TokenSpeed is a speed-of-light LLM inference engine.",
+      "source": "github",
+      "url": "https://github.com/lightseekorg/tokenspeed",
+      "score": 944,
+      "topics": [
+        "llm"
+      ],
+      "relevance": 24.877159042546317
+    },
+    {
+      "title": "Sing-Flare-Auto: 本项目提供了一个基于 Docker 容器的轻量级、高隐匿性科学上网节点部署方案。通过集成 sing-box 和 cloudflared，你可以轻松地在各类云平台（如 Koyeb、Render 等）或个人 VPS 上一键构建安全隧道。下方是详细的视频教程链接：",
+      "source": "github",
+      "url": "https://github.com/zzzhhh1/Sing-Flare-Auto",
+      "score": 518,
+      "topics": [
+        "docker"
+      ],
+      "relevance": 23.575836789242288
+    },
+    {
+      "title": "cs2-overlay-utility: CS2 external overlay tool — memory reader, entity ESP, and visual aids. D3D11 render, no injection. For educational purposes.",
+      "source": "github",
+      "url": "https://github.com/RadianceToadAmend/cs2-overlay-utility",
+      "score": 498,
+      "topics": [
+        "ai"
+      ],
+      "relevance": 23.49050272811695
+    }
+  ]
+}
