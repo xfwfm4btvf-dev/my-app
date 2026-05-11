@@ -300,6 +300,100 @@ Artificial intelligence is revolutionizing software development.`
     content: `# Web Security Essentials
 
 Security must be a priority from day one.`
+  },
+  {
+    slug: 'opentelemetry-observability-microservices',
+    title: 'OpenTelemetry: Unified Observability for Microservices',
+    excerpt: 'How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.',
+    date: '2026-05-11',
+    tags: ['Observability', 'DevOps'],
+    content: `# OpenTelemetry: Unified Observability for Microservices
+
+As microservices architectures grow more complex, understanding system behavior becomes critical. OpenTelemetry (OTel) has emerged as the unified standard for collecting traces, metrics, and logs.
+
+## The Three Pillars
+
+Observability rests on three data types:
+
+- **Traces**: Track a request as it flows through multiple services
+- **Metrics**: Quantitative measurements like latency percentiles and error rates
+- **Logs**: Structured event records with contextual metadata
+
+OTel provides a single SDK and API for all three, eliminating vendor lock-in.
+
+## Getting Started with Traces
+
+\`\`\`typescript
+import { trace } from '@opentelemetry/api';
+
+const tracer = trace.getTracer('my-service');
+
+async function handleRequest(req: Request) {
+  return tracer.startActiveSpan('handle-request', async (span) => {
+    span.setAttribute('http.method', req.method);
+    span.setAttribute('http.url', req.url);
+
+    try {
+      const result = await processRequest(req);
+      span.setStatus({ code: SpanStatusCode.OK });
+      return result;
+    } catch (error) {
+      span.setStatus({ code: SpanStatusCode.ERROR, message: error.message });
+      span.recordException(error);
+      throw error;
+    } finally {
+      span.end();
+    }
+  });
+}
+\`\`\`
+
+## Context Propagation
+
+The magic of distributed tracing is context propagation. OTel automatically passes trace context between services via HTTP headers (W3C Trace Context standard), linking spans across service boundaries into a complete trace.
+
+## Collector Architecture
+
+The OTel Collector is a vendor-agnostic proxy that receives, processes, and exports telemetry data. Deploy it as a sidecar or daemonset:
+
+\`\`\`yaml
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+    timeout: 5s
+    send_batch_size: 1024
+
+exporters:
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+  jaeger:
+    endpoint: "jaeger:14250"
+    tls:
+      insecure: true
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [jaeger]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [prometheus]
+\`\`\`
+
+## Best Practices
+
+1. **Use semantic conventions**: Follow OTel semantic conventions for consistent attribute naming
+2. **Sample wisely**: Use head-based sampling for high-volume services, tail-based for error investigation
+3. **Correlate signals**: Link traces to logs with trace IDs for seamless debugging
+4. **Start small**: Begin with auto-instrumentation, then add custom spans for business logic`
   }
 ];
 
