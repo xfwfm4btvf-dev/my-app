@@ -517,3 +517,19 @@ export function getPostsByTag(tag: string): Post[] {
 export function getPostBySlug(slug: string): Post | undefined {
   return posts.find(post => post.slug === slug);
 }
+
+export function getRelatedPosts(currentSlug: string, limit: number = 3): Post[] {
+  const current = getPostBySlug(currentSlug);
+  if (!current) return [];
+  
+  return posts
+    .filter(p => p.slug !== currentSlug)
+    .map(p => ({
+      post: p,
+      score: p.tags.filter(tag => current.tags.includes(tag)).length
+    }))
+    .filter(item => item.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(item => item.post);
+}

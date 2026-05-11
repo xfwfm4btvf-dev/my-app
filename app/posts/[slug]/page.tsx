@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getPostBySlug, posts } from "../../../lib/posts";
+import { getPostBySlug, getRelatedPosts, posts } from "../../../lib/posts";
 import PostContent from "./PostContent";
 
 export function generateStaticParams() {
@@ -32,6 +32,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const postIndex = posts.findIndex((p) => p.slug === post.slug);
   const prevPost = postIndex < posts.length - 1 ? posts[postIndex + 1] : null;
   const nextPost = postIndex > 0 ? posts[postIndex - 1] : null;
+  const relatedPosts = getRelatedPosts(slug, 3);
 
   const jsonLd = {
     "@context": "https://schema.org", "@type": "BlogPosting",
@@ -45,7 +46,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <PostContent post={post} readingTime={readingTime} prevPost={prevPost} nextPost={nextPost} />
+      <PostContent post={post} readingTime={readingTime} prevPost={prevPost} nextPost={nextPost} relatedPosts={relatedPosts} />
     </>
   );
 }

@@ -10,11 +10,13 @@ export default function PostContent({
   readingTime,
   prevPost,
   nextPost,
+  relatedPosts,
 }: {
   post: Post;
   readingTime: number;
   prevPost: Post | null;
   nextPost: Post | null;
+  relatedPosts: Post[];
 }) {
   return (
     <div className="min-h-screen relative">
@@ -60,6 +62,33 @@ export default function PostContent({
                     <span className="text-white group-hover:text-blue-400 transition-colors font-medium">{nextPost.title}</span>
                   </a>
                 ) : <div />}
+              </motion.div>
+            )}
+
+            {/* Related Posts Section */}
+            {relatedPosts.length > 0 && (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="mt-16">
+                <h2 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
+                  Related Posts
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {relatedPosts.map((related) => (
+                    <a
+                      key={related.slug}
+                      href={`/my-app/posts/${related.slug}`}
+                      className="group p-5 rounded-xl border border-white/10 bg-white/5 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all"
+                    >
+                      <div className="flex gap-2 mb-3">
+                        {related.tags.slice(0, 2).map((tag) => (
+                          <span key={tag} className="text-xs px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-300">{tag}</span>
+                        ))}
+                      </div>
+                      <h3 className="text-white group-hover:text-purple-400 transition-colors font-medium text-sm leading-snug">{related.title}</h3>
+                      <p className="text-gray-500 text-xs mt-2">{related.date}</p>
+                    </a>
+                  ))}
+                </div>
               </motion.div>
             )}
           </motion.div>
