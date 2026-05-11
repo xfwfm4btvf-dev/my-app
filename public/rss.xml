@@ -5,7 +5,7 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2026 14:26:04 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 14:45:19 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
@@ -116,6 +116,18 @@
       <category>WebGPU</category>
       <category>AI</category>
       <category>Performance</category>
+    </item>
+    <item>
+      <title>AI Agent Orchestration: From Chaos to Coordinated Intelligence</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/ai-agent-orchestration-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/ai-agent-orchestration-2026</guid>
+      <description>How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Agents</category>
+      <category>Architecture</category>
+      <category>LLM</category>
+      <category>Orchestration</category>
     </item>
   </channel>
 </rss>
