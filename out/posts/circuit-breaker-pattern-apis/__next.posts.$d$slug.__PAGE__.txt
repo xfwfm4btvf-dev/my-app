@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0n5b2r_quyw21.js"],"default"]
-4:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
-5:"$Sreact.suspense"
+2:I[24082,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0-6znib9kpc_-.js"],"default"]
+a:I[97367,["/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
 3:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
 
 In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
@@ -65,5 +65,153 @@ class CircuitBreaker {
 
 1. **Use with retry logic**: Combine with exponential backoff for transient failures.
 2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
-3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"post":{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$3"}}],[["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0n5b2r_quyw21.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"OfvZC3CINfXo86U-ROLCd"}
-6:null
+3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.4:T467,# Why Web Developers Should Learn Rust in 2026
+
+Rust has been voted the most loved programming language for eight years running. But beyond the hype, Rust is making concrete inroads into web development tooling.
+
+## Rust-Powered Web Tools
+
+The most popular web tools are increasingly built with Rust:
+
+- **SWC**: Powers Next.js compilation, replacing Babel
+- **Turbopack**: Vercel's Rust-based bundler replacing Webpack
+- **Biome**: Rust rewrite of ESLint + Prettier
+- **oxc**: Fast JavaScript linter and parser
+
+These tools deliver 10-100x speed improvements over their JavaScript predecessors.
+
+## Beyond Tooling
+
+Rust is also becoming viable for writing web applications directly:
+
+- **Leptos**: A full-stack Rust framework with fine-grained reactivity
+- **Actix Web**: Blazingly fast HTTP framework
+- **Dioxus**: React-like component model in Rust
+
+## Where to Start
+
+If you are a web developer new to Rust, start with:
+
+1. The Rust Book (free online)
+2. Exercism's Rust track
+3. Build a small CLI tool, then try a simple API with Actix
+
+The learning curve is real, but the payoff in performance and reliability is immense.5:T526,# Edge Computing Meets WebAssembly
+
+The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
+
+## Why WebAssembly at the Edge
+
+Traditional serverless functions suffer from cold starts. Wasm modules, by contrast, can instantiate in microseconds. This makes them ideal for latency-sensitive edge workloads like real-time personalization, A/B testing, and authentication.
+
+## The WASI Standard
+
+The WebAssembly System Interface (WASI) provides a standardized way for Wasm modules to interact with the host OS. This means your Wasm code can run identically across Cloudflare Workers, Fastly Compute, and Fermyon's Spin — truly write once, run anywhere.
+
+## Getting Started
+
+```rust
+use spin_sdk::http::{Request, Response};
+
+#[spin_sdk::http_component]
+fn handle_request(req: Request) -> Response {
+    Response::builder()
+        .status(200)
+        .body("Hello from the edge!")
+        .build()
+}
+```
+
+## The Future
+
+With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.6:Ta0d,# OpenTelemetry: Unified Observability for Microservices
+
+As microservices architectures grow more complex, understanding system behavior becomes critical. OpenTelemetry (OTel) has emerged as the unified standard for collecting traces, metrics, and logs.
+
+## The Three Pillars
+
+Observability rests on three data types:
+
+- **Traces**: Track a request as it flows through multiple services
+- **Metrics**: Quantitative measurements like latency percentiles and error rates
+- **Logs**: Structured event records with contextual metadata
+
+OTel provides a single SDK and API for all three, eliminating vendor lock-in.
+
+## Getting Started with Traces
+
+```typescript
+import { trace } from '@opentelemetry/api';
+
+const tracer = trace.getTracer('my-service');
+
+async function handleRequest(req: Request) {
+  return tracer.startActiveSpan('handle-request', async (span) => {
+    span.setAttribute('http.method', req.method);
+    span.setAttribute('http.url', req.url);
+
+    try {
+      const result = await processRequest(req);
+      span.setStatus({ code: SpanStatusCode.OK });
+      return result;
+    } catch (error) {
+      span.setStatus({ code: SpanStatusCode.ERROR, message: error.message });
+      span.recordException(error);
+      throw error;
+    } finally {
+      span.end();
+    }
+  });
+}
+```
+
+## Context Propagation
+
+The magic of distributed tracing is context propagation. OTel automatically passes trace context between services via HTTP headers (W3C Trace Context standard), linking spans across service boundaries into a complete trace.
+
+## Collector Architecture
+
+The OTel Collector is a vendor-agnostic proxy that receives, processes, and exports telemetry data. Deploy it as a sidecar or daemonset:
+
+```yaml
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+    timeout: 5s
+    send_batch_size: 1024
+
+exporters:
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+  jaeger:
+    endpoint: "jaeger:14250"
+    tls:
+      insecure: true
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [jaeger]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [prometheus]
+```
+
+## Best Practices
+
+1. **Use semantic conventions**: Follow OTel semantic conventions for consistent attribute naming
+2. **Sample wisely**: Use head-based sampling for high-volume services, tail-based for error investigation
+3. **Correlate signals**: Link traces to logs with trace IDs for seamless debugging
+4. **Start small**: Begin with auto-instrumentation, then add custom spans for business logic0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Building Resilient APIs with the Circuit Breaker Pattern\",\"description\":\"Prevent cascading failures in distributed systems with the circuit breaker design pattern.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/circuit-breaker-pattern-apis\"},\"keywords\":\"Architecture, APIs\",\"wordCount\":241,\"articleSection\":\"Architecture\"}"}}],["$","$L2",null,{"post":{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$4"},"nextPost":{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$5"},"relatedPosts":["$0:rsc:props:children:0:1:props:nextPost",{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$6"},"$0:rsc:props:children:0:1:props:prevPost"]}]],["$L7","$L8"],"$L9"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"oNpVIrOYCGl6ED6vjWUVB"}
+7:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
+8:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0-6znib9kpc_-.js","async":true}]
+9:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null
