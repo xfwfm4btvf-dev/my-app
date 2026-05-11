@@ -670,59 +670,7 @@ For most teams, start with the Supervisor pattern using a strong reasoning model
 ## The Road Ahead
 
 Agent orchestration is becoming infrastructure. Expect standardized protocols (like MCP for tool use) to emerge for inter-agent communication, making multi-agent systems as composable as microservices are today.`
-  },
-  {
-    slug: 'ai-agent-orchestration-2026',
-    title: 'AI Agent Orchestration: From Chaos to Coordinated Intelligence',
-    excerpt: 'How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.',
-    date: '2026-05-11',
-    tags: ['AI', 'Agents', 'Architecture', 'LLM', 'Orchestration'],
-    content: `# AI Agent Orchestration: From Chaos to Coordinated Intelligence
-
-The era of single-prompt LLM interactions is ending. In 2026, the real power lies in orchestrating multiple specialized AI agents that work together like a well-coordinated team.
-
-## The Orchestration Problem
-
-Running one AI agent is straightforward. Running ten agents that need to share context, respect dependencies, and handle failures — that is the hard problem. Naive approaches like chaining sequential calls lead to brittle systems where one failure cascades everywhere.
-
-## Modern Orchestration Patterns
-
-**Supervisor Pattern**: A central orchestrator agent delegates tasks to specialist agents. Simple but creates a single point of failure.
-
-**Mesh Pattern**: Agents communicate peer-to-peer with shared memory. More resilient but harder to debug.
-
-**Pipeline Pattern**: Agents form a processing chain with explicit handoff contracts. Predictable but inflexible.
-
-## Building with LangGraph
-
-LangGraph has emerged as the dominant framework for agent orchestration. Its graph-based execution model lets you define agents as nodes and communication as edges:
-
-\`\`\`typescript
-import { StateGraph } from 'langgraph';
-
-const workflow = new StateGraph(AgentState);
-workflow.addNode('researcher', researchAgent);
-workflow.addNode('writer', writingAgent);
-workflow.addNode('reviewer', reviewAgent);
-workflow.addEdge('researcher', 'writer');
-workflow.addEdge('writer', 'reviewer');
-\`\`\`
-
-## Observability is Non-Negotiable
-
-Production agent systems demand full trace logging. Tools like LangSmith and Phoenix provide:
-- Token-level cost tracking per agent
-- Latency breakdowns across the orchestration graph
-- Error propagation visualization
-
-## Practical Architecture
-
-For most teams, start with the Supervisor pattern using a strong reasoning model as the orchestrator. Add circuit breakers between agents, implement retry with exponential backoff, and always maintain a human-in-the-loop escape hatch for critical decisions.
-
-## The Road Ahead
-
-Agent orchestration is becoming infrastructure. Expect standardized protocols (like MCP for tool use) to emerge for inter-agent communication, making multi-agent systems as composable as microservices are today.`
-  },
+  },,
 
   {
     slug: 'post-quantum-cryptography-web-apps',
@@ -781,7 +729,62 @@ ssl_conf_command KEMGroups X25519Kyber768Draft00:X25519
 ## Bottom Line
 
 Start your migration now. Enable hybrid key exchange in your TLS stack today — it costs negligible performance and buys you future-proof security. The crypto-agility you build now will be critical when Q-Day arrives.`
-  },
+  }
+  {
+    slug: 'edge-native-databases',
+    title: 'Edge-Native Databases: Data Where Your Users Are',
+    excerpt: 'How edge-native databases are redefining data locality, latency, and offline-first architectures.',
+    date: '2026-05-11',
+    tags: ['Database', 'Edge Computing', 'Architecture'],
+    content: `# Edge-Native Databases: Data Where Your Users Are
+
+The traditional client-server model assumes a single, centralized database. Edge-native databases flip this model, placing data close to users across a global network of edge nodes.
+
+## Why Centralized Databases Fall Short
+
+A user in Tokyo querying a database in Virginia faces 150ms+ round-trip latency. For real-time collaboration, gaming, and IoT, this is unacceptable.
+
+## The Edge-Native Approach
+
+Edge-native databases replicate and partition data across geographic regions automatically:
+
+- **Local-first reads**: Served from the nearest edge node
+- **Conflict-free replication**: CRDTs handle concurrent writes
+- **Offline support**: Apps work without connectivity, syncing when reconnected
+
+## Popular Solutions
+
+**Cloudflare D1**: SQLite at the edge, backed by Cloudflare global network.
+
+**Turso (libSQL)**: Distributed SQLite with per-user databases for multi-tenant SaaS.
+
+**Neon**: Serverless PostgreSQL with branching for dev workflows.
+
+## Consistency Trade-offs
+
+Edge databases typically offer eventual consistency. For strong consistency:
+
+1. **Regional strong consistency**: Pin critical tables to a primary region
+2. **Conflict resolution policies**: Define custom merge logic
+3. **Hybrid approach**: Edge reads, centralized writes
+
+## Architecture Patterns
+
+**Read Replicas at Edge**: Main DB in one region, read replicas at edge. Simple but write latency unchanged.
+
+**Multi-Primary with CRDTs**: Every edge node accepts writes. Complex but lowest latency.
+
+**Tiered Storage**: Hot data at edge, warm in regional nodes, cold in central storage.
+
+## When to Use
+
+- Global SaaS with users across continents
+- Real-time collaborative applications
+- Offline-first mobile apps
+- IoT data collection at scale
+
+Start with one use case like user profiles, then expand as you build confidence.`
+  },,
   ];
 
 export function getAllTags(): string[] {
