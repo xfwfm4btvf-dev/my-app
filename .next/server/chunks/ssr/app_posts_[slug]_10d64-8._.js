@@ -1211,6 +1211,85 @@ MCP通过共享上下文让AI理解工作环境, 但这意味着敏感信息(API
 
 业界正在推动MCP安全标准化. MCP规范v2预计将引入声明式权限模型, 工具描述签名验证和跨Server上下文隔离机制. 在此之前, 开发者应将每个MCP Server视为不可信节点, 在架构层面设计纵深防御.
 
-AI代理的便利性不应以安全性为代价. 在MCP生态成熟之前, 保持警惕是唯一的正确选择.`}];function d(a){return c.find(b=>b.slug===a)}var e=a.i(17202);async function f({params:a}){let{slug:b}=await a,c=d(b);return c?{title:`${c.title} | Nitrogen Blog`,description:c.excerpt,keywords:c.tags,openGraph:{title:c.title,description:c.excerpt,url:`https://xfwfm4btvf-dev.github.io/my-app/posts/${c.slug}`,type:"article",publishedTime:c.date,tags:c.tags},twitter:{card:"summary_large_image",title:c.title,description:c.excerpt}}:{title:"Post Not Found"}}async function g({params:a}){let{slug:f}=await a,h=d(f);if(!h)return(0,b.jsx)("div",{className:"min-h-screen flex items-center justify-center",children:(0,b.jsxs)("p",{className:"text-xl text-gray-400",children:["Post not found: ",f]})});let i=Math.max(1,Math.ceil(h.content.trim().split(/\s+/).length/200)),j=c.findIndex(a=>a.slug===h.slug),k=j<c.length-1?c[j+1]:null,l=j>0?c[j-1]:null,m=function(a,b=3){let e=d(a);if(!e)return[];let f=c.filter(b=>b.slug!==a),g=f.map(a=>({post:a,score:a.tags.filter(a=>e.tags.includes(a)).length})).filter(a=>a.score>0);if(g.length>=b)return g.sort((a,b)=>b.score-a.score).slice(0,b).map(a=>a.post);let h=g.map(a=>a.post),i=new Set([a,...h.map(a=>a.slug)]);for(let a of f.filter(a=>!i.has(a.slug)).sort((a,b)=>b.date.localeCompare(a.date))){if(h.length>=b)break;h.push(a)}return h}(f,3),n={"@context":"https://schema.org","@type":"BlogPosting",headline:h.title,description:h.excerpt,datePublished:h.date,dateModified:h.date,author:{"@type":"Person",name:"Henry Nitrogen",url:"https://xfwfm4btvf-dev.github.io/my-app/about"},publisher:{"@type":"Organization",name:"Nitrogen Blog",url:"https://xfwfm4btvf-dev.github.io/my-app/"},mainEntityOfPage:{"@type":"WebPage","@id":`https://xfwfm4btvf-dev.github.io/my-app/posts/${h.slug}`},keywords:h.tags.join(", "),wordCount:h.content.trim().split(/\s+/).length,articleSection:h.tags[0]||"Technology"};return(0,b.jsxs)(b.Fragment,{children:[(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify(n)}}),(0,b.jsx)(e.default,{post:h,readingTime:i,prevPost:k,nextPost:l,relatedPosts:m})]})}a.s(["default",0,g,"generateMetadata",0,f,"generateStaticParams",0,function(){return c.map(a=>({slug:a.slug}))}],13886)},32441,a=>{a.n(a.i(13886))}];
+AI代理的便利性不应以安全性为代价. 在MCP生态成熟之前, 保持警惕是唯一的正确选择.`},{slug:"virtual-filesystem-ai-agents-2026",title:"Virtual Filesystems: The Missing Layer in AI Agent Architecture",excerpt:"How unified virtual filesystems are solving the tool fragmentation problem that plagues autonomous AI agents.",date:"2026-05-11",tags:["AI","Agents","Architecture","DevTools"],content:`# Virtual Filesystems: The Missing Layer in AI Agent Architecture
+
+As AI agents grow more autonomous, a persistent pain point has emerged: **tool fragmentation**. Each agent framework invents its own way to read files, write outputs, and share state between tools.
+
+## The Problem
+
+Consider a typical agent workflow: read a codebase, analyze it, generate tests, write results to disk. In most frameworks, each step uses a different I/O abstraction. The real cost is **context loss** — when an agent switches between tools, each tool sees a different slice of the filesystem.
+
+## Enter the Virtual Filesystem
+
+A new pattern is emerging: a unified virtual filesystem (VFS) layer that sits between the agent and its tools. Key capabilities:
+
+- **Atomic reads and writes** — no race conditions
+- **Virtual mounts** — expose GitHub repos, S3 buckets as filesystem trees
+- **Snapshot and rollback** — checkpoint before risky operations
+- **Sandboxing** — isolated filesystem namespaces per agent
+
+## Implementation Pattern
+
+\`typescript
+const vfs = new VirtualFS();
+await vfs.mount('/repo', new GitHubMount(owner, repo));
+const checkpoint = await vfs.snapshot();
+try { await agent.run('Refactor the auth module'); }
+catch (e) { await vfs.restore(checkpoint); }
+\`
+
+## Why This Matters
+
+1. **Observability** — all file ops logged through one interface
+2. **Security** — sandboxed FS prevents host access
+3. **Composability** — tools portable across frameworks
+
+The VFS pattern is part of the shift toward standardized agent infrastructure. Just as Docker standardized app environments, virtual filesystems are standardizing how AI agents interact with data. Combined with MCP for tool discovery, we're seeing the agent OS layer emerge.`},{slug:"modular-monoliths-2026",title:"The Rise of Modular Monoliths: Why Teams Are Abandoning Microservices",excerpt:"After years of microservice complexity, engineering teams are rediscovering the power of well-structured monoliths with modular boundaries that preserve independent deployment.",date:"2026-05-11",tags:["Architecture","Software Engineering","DevOps"],content:`# The Rise of Modular Monoliths
+
+In 2026, the pendulum has swung back. Teams that spent years decomposing monoliths into dozens of microservices are now consolidating into **modular monoliths** with clean internal boundaries.
+
+## What Went Wrong with Microservices
+
+The microservice promise was seductive: independent deployment, team autonomy, technology diversity. The reality for most teams:
+
+- **Distributed monolith** — services so tightly coupled they must deploy together
+- **Debugging hell** — tracing a request across 15 services
+- **Infrastructure overhead** — more time on Kubernetes YAML than business logic
+- **Premature decomposition** — splitting boundaries before understanding the domain
+
+## The Modular Monolith Pattern
+
+A modular monolith applies the same internal discipline as microservices — bounded contexts, clear interfaces, dependency rules — but within a single deployable unit.
+
+\`\`\`typescript
+// modules/auth/index.ts — clear boundaries enforced by TypeScript
+export { AuthService } from './service';
+export { AuthController } from './controller';
+export type { User, Session } from './types';
+
+// Cross-module communication via events, not direct imports
+import { EventBus } from '../../shared/events';
+EventBus.on('auth:user-registered', (user) => {
+  // Orders module reacts without direct dependency
+});
+\`\`\`
+
+## When to Split (and When Not To)
+
+Split into separate services ONLY when you need:
+
+1. **Independent scaling** — one module needs 10x more capacity
+2. **Different deployment cadences** — one module ships daily, another monthly
+3. **Team boundary** — a genuinely separate team with different ownership
+
+Everything else stays in the monolith.
+
+## The Hybrid Approach
+
+Most successful 2026 architectures are **modular monoliths that extract services surgically**. Start monolith, extract only the parts that genuinely benefit from independent deployment.
+
+Tools like **Nx**, **Turborepo**, and **Moon** enforce module boundaries in monorepos, giving you microservice-grade isolation without the operational overhead.
+
+The lesson: architecture should follow team structure and business needs, not trends.`}];function d(a){return c.find(b=>b.slug===a)}var e=a.i(17202);async function f({params:a}){let{slug:b}=await a,c=d(b);return c?{title:`${c.title} | Nitrogen Blog`,description:c.excerpt,keywords:c.tags,openGraph:{title:c.title,description:c.excerpt,url:`https://xfwfm4btvf-dev.github.io/my-app/posts/${c.slug}`,type:"article",publishedTime:c.date,tags:c.tags},twitter:{card:"summary_large_image",title:c.title,description:c.excerpt}}:{title:"Post Not Found"}}async function g({params:a}){let{slug:f}=await a,h=d(f);if(!h)return(0,b.jsx)("div",{className:"min-h-screen flex items-center justify-center",children:(0,b.jsxs)("p",{className:"text-xl text-gray-400",children:["Post not found: ",f]})});let i=Math.max(1,Math.ceil(h.content.trim().split(/\s+/).length/200)),j=c.findIndex(a=>a.slug===h.slug),k=j<c.length-1?c[j+1]:null,l=j>0?c[j-1]:null,m=function(a,b=3){let e=d(a);if(!e)return[];let f=c.filter(b=>b.slug!==a),g=f.map(a=>({post:a,score:a.tags.filter(a=>e.tags.includes(a)).length})).filter(a=>a.score>0);if(g.length>=b)return g.sort((a,b)=>b.score-a.score).slice(0,b).map(a=>a.post);let h=g.map(a=>a.post),i=new Set([a,...h.map(a=>a.slug)]);for(let a of f.filter(a=>!i.has(a.slug)).sort((a,b)=>b.date.localeCompare(a.date))){if(h.length>=b)break;h.push(a)}return h}(f,3),n={"@context":"https://schema.org","@type":"BlogPosting",headline:h.title,description:h.excerpt,datePublished:h.date,dateModified:h.date,author:{"@type":"Person",name:"Henry Nitrogen",url:"https://xfwfm4btvf-dev.github.io/my-app/about"},publisher:{"@type":"Organization",name:"Nitrogen Blog",url:"https://xfwfm4btvf-dev.github.io/my-app/"},mainEntityOfPage:{"@type":"WebPage","@id":`https://xfwfm4btvf-dev.github.io/my-app/posts/${h.slug}`},keywords:h.tags.join(", "),wordCount:h.content.trim().split(/\s+/).length,articleSection:h.tags[0]||"Technology"};return(0,b.jsxs)(b.Fragment,{children:[(0,b.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify(n)}}),(0,b.jsx)(e.default,{post:h,readingTime:i,prevPost:k,nextPost:l,relatedPosts:m})]})}a.s(["default",0,g,"generateMetadata",0,f,"generateStaticParams",0,function(){return c.map(a=>({slug:a.slug}))}],13886)},32441,a=>{a.n(a.i(13886))}];
 
 //# sourceMappingURL=app_posts_%5Bslug%5D_10d64-8._.js.map

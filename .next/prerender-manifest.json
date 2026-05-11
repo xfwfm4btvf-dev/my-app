@@ -583,6 +583,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/posts/modular-monoliths-2026": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/posts/[slug]",
+      "dataRoute": "/posts/modular-monoliths-2026.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/posts/observability-2026-otel-native": {
       "experimentalBypassFor": [
         {
@@ -751,6 +775,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/posts/virtual-filesystem-ai-agents-2026": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/posts/[slug]",
+      "dataRoute": "/posts/virtual-filesystem-ai-agents-2026.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/posts/web-security-essentials": {
       "experimentalBypassFor": [
         {
@@ -847,6 +895,35 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/robots.txt": {
+      "initialHeaders": {
+        "cache-control": "public, max-age=0, must-revalidate",
+        "content-type": "text/plain",
+        "x-next-cache-tags": "_N_T_/layout,_N_T_/robots.txt/layout,_N_T_/robots.txt/route,_N_T_/robots.txt"
+      },
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/robots.txt",
+      "dataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/tags": {
       "experimentalBypassFor": [
         {
@@ -904,8 +981,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "4fdd2d118ce9eaac069a61ed20d42cee",
-    "previewModeSigningKey": "7c3b5d08ed778efc8f2d3497ce8be35a7a752f80c3cd4e3c8fa4fb0fb73a61fe",
-    "previewModeEncryptionKey": "6afd870bf7ea410ef7c0cab1cfebbbfc3423cab86588ad6fa1124553b9f989c6"
+    "previewModeId": "ddef4e09538fc06f98f1bab86314363f",
+    "previewModeSigningKey": "7546ecb8f84a4bbb5babdcee5b2e076b643797158cec251cc2ee688f2ea23f4b",
+    "previewModeEncryptionKey": "05447ebce1f228fa3489cd1afc96f697c2e20aea0175046a8c77b143e091d57f"
   }
 }

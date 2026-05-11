@@ -78,6 +78,12 @@
       "namedRegex": "^/posts(?:/)?$"
     },
     {
+      "page": "/robots.txt",
+      "regex": "^/robots\\.txt(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/robots\\.txt(?:/)?$"
+    },
+    {
       "page": "/tags",
       "regex": "^/tags(?:/)?$",
       "routeKeys": {},

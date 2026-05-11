@@ -6,5 +6,6 @@
   "/page": "app/page.js",
   "/posts/[slug]/page": "app/posts/[slug]/page.js",
   "/posts/page": "app/posts/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
   "/tags/page": "app/tags/page.js"
 }

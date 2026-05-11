@@ -5,7 +5,7 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2026 20:05:04 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2026 22:15:44 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
@@ -309,6 +309,27 @@
       <category>MCP</category>
       <category>Protocol</category>
       <category>DevSecOps</category>
+    </item>
+    <item>
+      <title>Virtual Filesystems: The Missing Layer in AI Agent Architecture</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/virtual-filesystem-ai-agents-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/virtual-filesystem-ai-agents-2026</guid>
+      <description>How unified virtual filesystems are solving the tool fragmentation problem that plagues autonomous AI agents.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Agents</category>
+      <category>Architecture</category>
+      <category>DevTools</category>
+    </item>
+    <item>
+      <title>The Rise of Modular Monoliths: Why Teams Are Abandoning Microservices</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/modular-monoliths-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/modular-monoliths-2026</guid>
+      <description>After years of microservice complexity, engineering teams are rediscovering the power of well-structured monoliths with modular boundaries that preserve independent deployment.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Architecture</category>
+      <category>Software Engineering</category>
+      <category>DevOps</category>
     </item>
   </channel>
 </rss>

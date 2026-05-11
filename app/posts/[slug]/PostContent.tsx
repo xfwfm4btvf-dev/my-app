@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import React, { useState, useEffect, useMemo } from "react";
 import TableOfContents from "../../../components/TableOfContents";
+import { CodeBlock } from "../../../components/CodeBlock";
 
 export default function PostContent({
   post,
@@ -81,7 +82,17 @@ export default function PostContent({
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-12 overflow-hidden">
               <div className="relative prose prose-invert prose-lg max-w-none prose-headings:text-white prose-p:text-gray-300 prose-strong:text-white prose-code:text-blue-300 prose-code:bg-white/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-pre:bg-white/5 prose-pre:border prose-pre:border-white/10 prose-a:text-blue-400 prose-li:text-gray-300 prose-headings:scroll-mt-20">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>{contentWithoutH1}</ReactMarkdown>
+                <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
+                components={{
+                  pre: ({ children }) => <>{children}</>,
+                  code: ({ className, children }) => (
+                    <CodeBlock className={className}>{children}</CodeBlock>
+                  ),
+                }}
+              >
+                {contentWithoutH1}
+              </ReactMarkdown>
               </div>
             </motion.div>
             {(prevPost || nextPost) && (

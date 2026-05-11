@@ -6,5 +6,6 @@
   "/page": "/",
   "/posts/[slug]/page": "/posts/[slug]",
   "/posts/page": "/posts",
+  "/robots.txt/route": "/robots.txt",
   "/tags/page": "/tags"
 }
