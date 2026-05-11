@@ -1126,6 +1126,49 @@ This approach excels for content-driven applications: blogs, dashboards, admin p
 Complex client-side applications with rich interactions — real-time collaboration tools, design editors, spreadsheet apps — genuinely benefit from a component framework. The key insight is that most web applications are not in this category.`
   },
   {
+    slug: 'biome-js-linter-2026',
+    title: 'Biome: The Rust-Powered JavaScript Toolchain Replacing ESLint and Prettier',
+    excerpt: 'How Biome is consolidating linting and formatting into a single, blazingly fast tool — and why the ecosystem is embracing it.',
+    date: '2026-05-11',
+    tags: ['JavaScript', 'Tooling', 'Rust', 'Developer Experience'],
+    content: `# Biome: The Rust-Powered JavaScript Toolchain Replacing ESLint and Prettier
+
+The JavaScript tooling ecosystem is consolidating around Rust. After SWC replaced Babel and Turbopack replaced Webpack, the next target is linting and formatting. Biome — the Rust successor to Rome — is now the fastest all-in-one JavaScript toolchain.
+
+## Why Biome Exists
+
+Running ESLint + Prettier on a large codebase is painfully slow. A monorepo with 500K lines of TypeScript can take 30-60 seconds for a full lint pass. Biome does the same job in under 2 seconds.
+
+The speed advantage comes from Rust zero-cost abstractions and Biome parallel architecture. It parses JavaScript and TypeScript into a CST once, then runs lint rules and formatting in a single pass.
+
+## What Biome Replaces
+
+- **ESLint**: 95% of common rules covered, including TypeScript-specific rules
+- **Prettier**: Full formatting support with compatible output
+- **eslint-plugin-import**: Import sorting built-in
+
+## Migration Path
+
+Biome is designed for incremental adoption. Start by running it alongside ESLint and Prettier:
+
+1. Install biome: npm install --save-dev @biomejs/biome
+2. Run biome check --write . to auto-fix safe issues
+3. Compare output with your existing config
+4. Gradually disable ESLint rules as Biome coverage improves
+
+## Real-World Impact
+
+Teams adopting Biome report:
+- CI pipeline time reduced by 40-60%
+- Developer feedback loop from 15s to 0.5s (watch mode)
+- Fewer config files to maintain (one biome.json vs .eslintrc + .prettierrc + tsconfig)
+
+## The Bigger Picture
+
+Biome represents the maturation of the Rust-for-JavaScript tooling movement. The pattern is clear: identify the slowest tool in the pipeline, rewrite it in Rust, deliver 10-100x speedup. With SWC, Turbopack, and Biome, the JavaScript build and development toolchain is now almost entirely Rust-powered.`
+  },
+
+  {
     slug: 'observability-2026-otel-native',
     title: 'OpenTelemetry Native: The End of Bolt-On Observability',
     excerpt: 'How frameworks and languages are building OpenTelemetry support directly into their cores, eliminating the sidecar pattern and its overhead.',
