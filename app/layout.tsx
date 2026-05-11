@@ -16,11 +16,13 @@ export const metadata: Metadata = {
     siteName: "Nitrogen Blog",
     locale: "en_US",
     type: "website",
+    images: [{ url: "/my-app/og-image.svg", width: 1200, height: 630, alt: "Nitrogen Blog" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nitrogen Blog - Tech, Code and Future",
     description: "In-depth articles on web development, DevOps, architecture, and emerging technologies.",
+    images: ["/my-app/og-image.svg"],
   },
   robots: {
     index: true,
@@ -28,6 +30,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://xfwfm4btvf-dev.github.io/"),
   alternates: {
+    canonical: "/my-app/",
     types: {
       "application/rss+xml": [
         { url: "/my-app/rss.xml", title: "Nitrogen Blog RSS Feed" },
@@ -41,6 +44,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Nitrogen Blog",
+    url: "https://xfwfm4btvf-dev.github.io/my-app/",
+    description: "In-depth articles on web development, DevOps, architecture, and emerging technologies.",
+    author: { "@type": "Person", name: "Henry Nitrogen" },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://xfwfm4btvf-dev.github.io/my-app/posts?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <html lang="en" className="dark">
       <head>
@@ -51,6 +68,10 @@ export default function RootLayout({
           href="/my-app/rss.xml"
         />
         <link rel="sitemap" type="application/xml" href="/my-app/sitemap.xml" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
       </head>
       <body className="bg-black text-white min-h-screen flex flex-col">
         <nav className="border-b border-white/10 bg-black/50 backdrop-blur-lg sticky top-0 z-50">

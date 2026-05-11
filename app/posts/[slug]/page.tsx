@@ -10,12 +10,27 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
+  const postUrl = `https://xfwfm4btvf-dev.github.io/my-app/posts/${post.slug}`;
   return {
     title: `${post.title} | Nitrogen Blog`,
     description: post.excerpt,
     keywords: post.tags,
-    openGraph: { title: post.title, description: post.excerpt, url: `https://xfwfm4btvf-dev.github.io/my-app/posts/${post.slug}`, type: "article", publishedTime: post.date, tags: post.tags },
-    twitter: { card: "summary_large_image", title: post.title, description: post.excerpt },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: postUrl,
+      type: "article",
+      publishedTime: post.date,
+      tags: post.tags,
+      images: [{ url: "/my-app/og-image.svg", width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: ["/my-app/og-image.svg"],
+    },
+    alternates: { canonical: `/my-app/posts/${post.slug}` },
   };
 }
 
@@ -41,6 +56,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     publisher: { "@type": "Organization", name: "Nitrogen Blog", url: "https://xfwfm4btvf-dev.github.io/my-app/" },
     mainEntityOfPage: { "@type": "WebPage", "@id": `https://xfwfm4btvf-dev.github.io/my-app/posts/${post.slug}` },
     keywords: post.tags.join(", "), wordCount: post.content.trim().split(/\s+/).length, articleSection: post.tags[0] || "Technology",
+    image: "https://xfwfm4btvf-dev.github.io/my-app/og-image.svg",
   };
 
   return (
