@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  metadataBase: new URL("https://xfwfm4btvf-dev.github.io/my-app/"),
+  metadataBase: new URL("https://xfwfm4btvf-dev.github.io/"),
   alternates: {
     types: {
       "application/rss+xml": [
