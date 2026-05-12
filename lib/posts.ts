@@ -1723,6 +1723,84 @@ For new projects, Restate offers the gentlest learning curve. For existing Tempo
 
 The era of hand-rolled retry logic is ending. Durable execution is becoming the default way to build reliable distributed systems.`
   },
+  {
+    slug: 'npm-supply-chain-attacks-2026',
+    title: 'npm Supply Chain Attacks: How to Protect Your Projects in 2026',
+    excerpt: 'The TanStack compromise is a wake-up call. Here is how npm supply chain attacks work and the concrete steps to defend your projects.',
+    date: '2026-05-12',
+    tags: ['Security', 'JavaScript', 'DevSecOps', 'npm'],
+    content: `# npm Supply Chain Attacks: How to Protect Your Projects in 2026
+
+Today's TanStack npm supply chain compromise is the latest reminder that our dependency trees are attack surfaces. With over 2 million packages on npm and an average project pulling in 700+ dependencies, the supply chain is the softest target in modern web development.
+
+## How Supply Chain Attacks Work
+
+Attackers compromise a maintainer's npm account through phishing, credential stuffing, or social engineering, then publish a malicious patch version. Since most projects use caret or tilde version ranges, the malicious update gets pulled automatically on the next install.
+
+The malicious code typically steals environment variables (API keys, tokens, secrets), injects cryptocurrency miners, opens reverse shells for persistent access, or harvests credentials from environment files and CI/CD pipelines.
+
+## The Scale of the Problem
+
+In 2025-2026, npm supply chain attacks have accelerated dramatically:
+
+- **Average time to detection**: 72+ days for sophisticated payloads
+- **Affected projects per incident**: 10,000-500,000 downstream consumers
+- **Most targeted**: Build tools, UI frameworks, and utility libraries with broad adoption
+
+## Concrete Defenses
+
+### 1. Lock Your Dependencies
+
+Use exact versions for critical dependencies. The package-lock.json file must be committed and reviewed on every change. Avoid caret and tilde ranges for security-sensitive packages.
+
+### 2. Enable npm Audit in CI
+
+\`\`\`bash
+# Fail the build on high/critical vulnerabilities
+npm audit --audit-level=high
+\`\`\`
+
+### 3. Use npm Provenance
+
+npm provenance cryptographically links packages to their source repository and build pipeline. Check for the provenance badge on npmjs.com before adopting new packages.
+
+### 4. Pin and Review Lock Files
+
+\`\`\`bash
+# Use npm ci in CI/CD (installs from lock file exactly)
+npm ci  # NOT npm install
+\`\`\`
+
+### 5. Sandbox Your Builds
+
+Run builds in isolated containers using GitHub Actions container support. This limits the blast radius of a compromised dependency.
+
+### 6. Use Behavioral Analysis Tools
+
+Supply chain security tools like Socket.dev analyze package behavior beyond CVEs:
+
+- Does it make network requests during install?
+- Does it read environment variables?
+- Does it access the filesystem beyond its scope?
+- Does it install dependencies with obfuscated code?
+
+### 7. Restrict Token Permissions
+
+Never use NODE_AUTH_TOKEN with full write access in CI. Create read-only, IP-restricted tokens for automated workflows.
+
+## For Organizations
+
+- **SBOM generation**: Generate Software Bill of Materials for every release
+- **Internal registry**: Use Artifactory or Verdaccio as a proxy with allowlisting
+- **Automated dependency updates**: Use Renovate or Dependabot with manual approval
+- **Incident response**: Have a plan for rotating secrets if a dependency is compromised
+
+## The Bigger Picture
+
+The npm ecosystem's openness is both its strength and vulnerability. Supply chain security must become as routine as writing tests. The TanStack incident will not be the last, but with the right practices, its impact can be contained.
+
+Start today: run npm audit, review your lock file, and enable provenance on packages you maintain. Security is not a feature, it is a discipline.`
+  },
   ];
 
 export function getAllTags(): string[] {
