@@ -1802,67 +1802,146 @@ The npm ecosystem's openness is both its strength and vulnerability. Supply chai
 Start today: run npm audit, review your lock file, and enable provenance on packages you maintain. Security is not a feature, it is a discipline.`
   },
   {
-    slug: 'unified-virtual-filesystem-ai-agents-2026',
-    title: 'Unified Virtual Filesystems: Solving AI Agent File Access at Scale',
-    excerpt: 'How virtual filesystem layers are becoming the missing infrastructure piece for reliable, multi-agent AI systems.',
+    slug: 'llm-inference-optimization-simd-2026',
+    title: 'SIMD-Aware LLM Inference: Beyond the Low-Hanging Fruit',
+    excerpt: 'How SIMD-level optimizations are pushing LLM inference throughput past what naive implementations achieve, and why it matters for local-first AI.',
     date: '2026-05-12',
-    tags: ['AI', 'Agents', 'Architecture', 'Filesystem', 'Infrastructure'],
-    content: `# Unified Virtual Filesystems: Solving AI Agent File Access at Scale
+    tags: ['AI', 'LLM', 'Performance', 'Systems', 'Optimization'],
+    content: `# SIMD-Aware LLM Inference: Beyond the Low-Hanging Fruit
 
-AI agents need to read and write files. Simple enough — until you have twenty agents working on the same project, each with different permissions, isolation requirements, and undo capabilities. The filesystem was never designed for this.
+Most LLM inference optimization guides stop at quantization and batching. But there is an entire layer of performance gains hiding below — at the SIMD instruction level — that separates production-grade inference engines from toy implementations.
 
-## The Agent File Access Problem
+## Why SIMD Matters for LLMs
 
-Every agent framework eventually hits the same wall. An agent needs to read source code, write test files, and modify configs. But giving raw filesystem access to autonomous agents is dangerous:
+Transformer inference is dominated by matrix multiplications and attention computations. These operations are embarrassingly parallel at the vector level. A single AVX-512 instruction can process 16 FP16 values simultaneously, meaning your theoretical throughput scales directly with SIMD width.
 
-- **No isolation**: One agent's bug overwrites another agent's work
-- **No rollback**: An agent deletes a file, and there is no way to recover
-- **No audit trail**: You cannot trace which agent changed what and when
-- **No sandboxing**: A misconfigured agent can access \`.env\` files, SSH keys, anything
+But most inference code does not take advantage of this:
 
-Teams solve this with ad-hoc solutions — temp directories, Docker containers, Git worktrees. But these are band-aids, not infrastructure.
+- **Memory-bound kernels**: Naive implementations bottleneck on memory bandwidth before saturating compute. SIMD-aware data layout (tiling, packing) fixes this.
+- **Suboptimal data types**: FP32 wastes SIMD lanes. INT8 or FP8 pack twice as many operations per instruction.
+- **Instruction-level parallelism**: Interleaving independent operations keeps execution units busy during memory stalls.
 
-## Enter the Virtual Filesystem
+## The Practical Gains
 
-The pattern emerging across the ecosystem is a virtual filesystem layer that sits between agents and the real disk. Think of it as a FUSE-like abstraction purpose-built for AI agents.
+Benchmarks from the llama.cpp and vLLM communities tell the story:
 
-**Core features:**
+- Naive FP32: 12 tokens/sec on a 7B model
+- Quantized INT8: 34 tokens/sec
+- INT8 + SIMD-optimized kernels: 58 tokens/sec
+- INT4 + custom SIMD kernels: 89 tokens/sec
 
-- **Overlay mounts**: Each agent gets its own view of the filesystem. Writes go to an agent-specific overlay; reads fall through to the base layer
-- **Snapshot and rollback**: Every write creates an implicit snapshot. Roll back any agent's changes to any point in time
-- **Permission gates**: Fine-grained access control — this agent can read \`src/\` but not write to \`config/\`
-- **Audit logging**: Every file operation is recorded with agent ID, timestamp, and diff
+The jump from quantized-but-naive to SIMD-optimized is nearly 2x — without changing the model.
 
-## Architecture Patterns
+## Key Optimization Patterns
 
-### Copy-on-Write Overlay
+**1. GEMM Kernel Specialization**
 
-The simplest approach. Each agent gets a copy of the working directory on first access. Changes are isolated. Merging requires explicit resolution.
+Generic matrix multiply code handles all sizes. Specialized kernels for common shapes (like 4096x4096 in typical transformer layers) eliminate branching overhead.
 
-Pros: Complete isolation. Cons: Slow for large repos, no shared state.
+**2. Fused Operations**
 
-### Union Filesystem (Preferred)
+Combining operations that share memory access patterns reduces memory round-trips. Fusing LayerNorm + activation saves one full memory pass per transformer block.
 
-A true overlay filesystem where agents share a base layer and writes go to per-agent upper layers. Fast, shared reads, efficient disk usage.
+**3. KV-Cache Layout**
 
-### Transactional Filesystem
+The key-value cache layout determines attention kernel efficiency. Interleaving key and value heads in memory improves cache locality during the dot-product phase.
 
-Every agent session wraps its file operations in a transaction. On success, changes are committed atomically. On failure, everything rolls back.
+**4. Prefetch Scheduling**
 
-## What This Unlocks
+Explicit prefetch instructions timed to memory access patterns hide latency. For attention, prefetching the next chunk of the KV cache while computing the current chunk.
 
-Once you have a proper virtual filesystem layer, several capabilities become straightforward:
+## When This Actually Matters
 
-- **Parallel agent workflows**: Multiple agents modify different parts of the same project simultaneously
-- **Safe experimentation**: Agents can try risky refactors knowing rollback is one operation away
-- **Audit compliance**: Every change is attributed to a specific agent session
-- **Multi-tenant isolation**: Different users' agents share infrastructure without data leakage
+SIMD optimization pays off when serving many concurrent users on the same hardware, latency requirements are strict (real-time code completion, voice assistants), or you are running on CPU-only hardware with cost per token mattering more than convenience.
 
-## The Stack Is Forming
+For hobbyist single-user setups, quantization alone may suffice. But for production local inference, SIMD optimization is the difference between 30 tokens/sec and 60 tokens/sec on the same hardware.
 
-This is the kind of infrastructure that nobody talks about until it is everywhere. Virtual filesystems for agents will be as fundamental as container runtimes were for microservices. The teams building this layer now will have a significant advantage as agent systems scale from single-agent demos to production multi-agent deployments.
+## The Tooling Gap
 
-Start treating your agent file access as a first-class infrastructure concern. The temp-directory approach does not scale.`
+Writing SIMD-optimized inference kernels requires deep systems knowledge. The good news is that projects like llama.cpp, MLC-LLM, and ExecuTorch expose these optimizations behind simple APIs. You do not need to write AVX intrinsics yourself.
+
+The next frontier is runtime SIMD dispatch — detecting CPU capabilities at startup and selecting the optimal kernel dynamically. Combined with speculative decoding and continuous batching, local inference is approaching GPU-level throughput on modern CPUs.`
+  },
+  {
+    slug: 'css-anchor-positioning-popovers-2026',
+    title: 'CSS Anchor Positioning: No More JavaScript for Tooltips and Popovers',
+    excerpt: 'How the CSS Anchor Positioning API is eliminating the need for JavaScript-based positioning libraries like Popper.js and Floating UI.',
+    date: '2026-05-12',
+    tags: ['CSS', 'Frontend', 'Web Standards'],
+    content: `# CSS Anchor Positioning: No More JavaScript for Tooltips and Popovers
+
+For years, positioning a tooltip or popover relative to a button required JavaScript libraries like Popper.js or Floating UI. They handled edge detection, flipping, and viewport awareness. Now, the CSS Anchor Positioning API does all of that natively — no JavaScript needed.
+
+## The Problem It Solves
+
+Consider a dropdown menu attached to a button. Traditionally, you needed JS to:
+1. Calculate the button's position
+2. Place the dropdown relative to it
+3. Flip it if it overflows the viewport
+4. Adjust on scroll and resize
+
+This was fragile, performance-heavy, and required a dependency.
+
+## The Native Solution
+
+\`\`\`css
+.anchor-button {
+  anchor-name: --my-button;
+}
+
+.dropdown {
+  position: fixed;
+  position-anchor: --my-button;
+  top: anchor(bottom);
+  left: anchor(left);
+  position-try-fallbacks: flip-block, flip-inline;
+}
+\`\`\`
+
+Three lines of CSS replace an entire positioning library. The browser handles edge detection, flipping, and viewport awareness automatically.
+
+## Key Features
+
+**Anchor References**: Use \`anchor()\` to reference an anchor element's edges — \`anchor(top)\`, \`anchor(bottom)\`, \`anchor(start)\`, \`anchor(end)\`.
+
+**Automatic Fallbacks**: \`position-try-fallbacks\` tells the browser to try alternative positions if the element overflows. It can flip vertically (\`flip-block\`), horizontally (\`flip-inline\`), or try a predefined fallback.
+
+**Position Visibility**: \`position-visibility: anchors-visible\` hides the positioned element if its anchor scrolls out of view.
+
+## Browser Support
+
+As of mid-2026, Anchor Positioning is supported in Chrome 125+, Edge 125+, and Firefox 131+. Safari added support in 18.4. Coverage is now above 85% of global users — production-ready for most audiences.
+
+## Real-World Example: Tooltip
+
+\`\`\`css
+.info-icon {
+  anchor-name: --info-tip;
+}
+
+.tooltip {
+  position: fixed;
+  position-anchor: --info-tip;
+  bottom: anchor(top);
+  left: anchor(center);
+  translate: -50% 0;
+  position-try-fallbacks: flip-block;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.info-icon:hover + .tooltip {
+  opacity: 1;
+}
+\`\`\`
+
+No JavaScript. No \`getBoundingClientRect()\`. No scroll listeners. The browser handles everything.
+
+## What This Means for Your Stack
+
+If you are using Floating UI, Popper.js, or Tippy.js, you can start planning to remove them. The CSS Anchor Positioning API covers the core use cases. For advanced scenarios (virtual elements, complex middleware chains), the JS libraries still have an edge — but for standard tooltips, dropdowns, and popovers, native CSS is now the better choice.
+
+Less JavaScript, fewer dependencies, better performance. This is the web platform doing what it should.`
   },
   ];
 
