@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-12T01:54:05.204Z",
+  "generatedAt": "2026-05-12T03:55:03.410Z",
   "suggestions": [
     {
       "title": "mirage: A Unified Virtual Filesystem For AI Agents",
       "source": "github",
       "url": "https://github.com/strukto-ai/mirage",
-      "score": 1946,
+      "score": 1950,
       "topics": [
         "ai",
         "agents"
       ],
-      "relevance": 36.446829757600156
+      "relevance": 36.451286346972594
     },
     {
       "title": "Velocity-Executor: This repository contains Velocity Executor — a free Roblox script executor for PC built for fast injection, stable performance, and easy access. Includes Level 8 execution in 2026 with no ads, no key checkpoints, and no extra verification.",
@@ -27,53 +27,53 @@
       "title": "agent-skills-eval: A test runner for agentskills.io-style AI agent skills",
       "source": "github",
       "url": "https://github.com/darkrishabh/agent-skills-eval",
-      "score": 429,
+      "score": 430,
       "topics": [
         "ai",
         "agents"
       ],
-      "relevance": 33.16734227789793
+      "relevance": 33.172386350803656
     },
     {
       "title": "Training an LLM in Swift, Part 1: Taking matrix mult from Gflop/s to Tflop/s",
       "source": "hackernews",
       "url": "https://www.cocoawithlove.com/blog/matrix-multiplications-swift.html",
-      "score": 216,
+      "score": 223,
       "topics": [
         "ai",
         "llm"
       ],
-      "relevance": 31.68229866924265
+      "relevance": 31.751240091670816
     },
     {
       "title": "zero-native: Build desktop + mobile apps with Zig and web UI",
       "source": "github",
       "url": "https://github.com/vercel-labs/zero-native",
-      "score": 2656,
+      "score": 2703,
       "topics": [
         "zig"
       ],
-      "relevance": 27.12195777205139
+      "relevance": 27.16003343634799
     },
     {
       "title": "yao-open-prompts: Yao Open Prompts：中文 AI 提示词库，覆盖工作、学习、内容、营销和生活场景",
       "source": "github",
       "url": "https://github.com/yaojingang/yao-open-prompts",
-      "score": 1630,
+      "score": 1637,
       "topics": [
         "ai"
       ],
-      "relevance": 26.062269805201378
+      "relevance": 26.071569487121998
     },
     {
       "title": "3DCellForge: AI-powered interactive 3D cell generation and exploration studio.",
       "source": "github",
       "url": "https://github.com/huangserva/3DCellForge",
-      "score": 1417,
+      "score": 1486,
       "topics": [
         "ai"
       ],
-      "relevance": 25.758381154235238
+      "relevance": 25.86155484260977
     },
     {
       "title": "tokenspeed: TokenSpeed is a speed-of-light LLM inference engine.",
@@ -86,24 +86,24 @@
       "relevance": 24.879455682008963
     },
     {
-      "title": "Gmail registration now requires scanning a QR code and sending a text message",
-      "source": "hackernews",
-      "url": "https://discuss.privacyguides.net/t/google-account-registration-now-requires-sending-an-sms-via-phone-instead-of-receiving-an-sms/36082",
-      "score": 562,
-      "topics": [
-        "ai"
-      ],
-      "relevance": 23.75254197425673
-    },
-    {
       "title": "Postmortem: TanStack npm supply-chain compromise",
       "source": "hackernews",
       "url": "https://tanstack.com/blog/npm-supply-chain-compromise-postmortem",
-      "score": 528,
+      "score": 609,
       "topics": [
         "ai"
       ],
-      "relevance": 23.61727836017593
+      "relevance": 23.926649175053836
+    },
+    {
+      "title": "cs2-overlay-utility: CS2 external overlay tool — memory reader, entity ESP, and visual aids. D3D11 render, no injection. For educational purposes.",
+      "source": "github",
+      "url": "https://github.com/RadianceToadAmend/cs2-overlay-utility",
+      "score": 498,
+      "topics": [
+        "ai"
+      ],
+      "relevance": 23.49050272811695
     }
   ]
 }

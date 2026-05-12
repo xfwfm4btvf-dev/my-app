@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!post) return { title: "Post Not Found" };
   const postUrl = `https://xfwfm4btvf-dev.github.io/my-app/posts/${post.slug}`;
   return {
-    title: `${post.title} | Nitrogen Blog`,
+    title: post.title,
     description: post.excerpt,
     keywords: post.tags,
     openGraph: {
@@ -22,13 +22,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       publishedTime: post.date,
       tags: post.tags,
-      images: [{ url: "/my-app/og-image.svg", width: 1200, height: 630, alt: post.title }],
+      images: [{ url: "og-image.svg", width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: ["/my-app/og-image.svg"],
+      images: ["og-image.svg"],
     },
     alternates: { canonical: `/my-app/posts/${post.slug}` },
   };

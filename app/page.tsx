@@ -10,30 +10,11 @@ import {
   Button,
 } from "@mui/material";
 import Link from "next/link";
+import { posts } from "../lib/posts";
 
-const posts = [
-  {
-    slug: "edge-computing-webassembly",
-    title: "Edge Computing Meets WebAssembly",
-    excerpt: "How WebAssembly is unlocking new possibilities for edge computing and server-side applications.",
-    tags: ["WebAssembly", "Edge Computing"],
-    date: "2026-05-11",
-  },
-  {
-    slug: "circuit-breaker-pattern-apis",
-    title: "Building Resilient APIs with the Circuit Breaker Pattern",
-    excerpt: "Prevent cascading failures in distributed systems with the circuit breaker design pattern.",
-    tags: ["Architecture", "APIs"],
-    date: "2026-05-11",
-  },
-  {
-    slug: "rust-for-web-developers",
-    title: "Why Web Developers Should Learn Rust in 2026",
-    excerpt: "Rust is no longer just for systems programmers — it is becoming essential for modern web development.",
-    tags: ["Rust", "Web Development"],
-    date: "2026-05-11",
-  },
-];
+const displayPosts = [...posts]
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 6);
 
 export default function Home() {
   return (
@@ -59,12 +40,18 @@ export default function Home() {
         Latest Posts
       </Typography>
       <Typography sx={{ color: "text.secondary", mb: 4 }}>
-        Thoughts on technology and development
+        {posts.length} articles on technology and development
       </Typography>
 
       <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
-        {posts.map((post) => (
-          <Box key={post.slug} sx={{ flex: { xs: "1 1 100%", md: "1 1 calc(33.333% - 16px)" }, minWidth: 280 }}>
+        {displayPosts.map((post) => (
+          <Box
+            key={post.slug}
+            sx={{
+              flex: { xs: "1 1 100%", md: "1 1 calc(33.333% - 16px)" },
+              minWidth: 280,
+            }}
+          >
             <Card
               sx={{
                 height: "100%",
@@ -89,12 +76,21 @@ export default function Home() {
                   <Typography variant="body2" sx={{ color: "text.secondary" }}>
                     {post.excerpt}
                   </Typography>
-                  <Typography
-                    variant="caption"
-                    sx={{ mt: 2, display: "block", color: "primary.main" }}
+                  <Box
+                    sx={{
+                      mt: 2,
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
                   >
-                    Read more →
-                  </Typography>
+                    <Typography variant="caption" sx={{ color: "primary.main" }}>
+                      Read more {"\u2192"}
+                    </Typography>
+                    <Typography variant="caption" sx={{ color: "text.disabled" }}>
+                      {post.date}
+                    </Typography>
+                  </Box>
                 </CardContent>
               </CardActionArea>
             </Card>
@@ -104,7 +100,7 @@ export default function Home() {
 
       <Box sx={{ textAlign: "center", mt: 6 }}>
         <Button component={Link} href="/posts" variant="outlined">
-          View All Posts
+          View All {posts.length} Posts
         </Button>
       </Box>
     </Container>

@@ -1,6 +1,19 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import {
+  Dialog,
+  TextField,
+  Box,
+  Typography,
+  Chip,
+  IconButton,
+  Paper,
+  Link as MuiLink,
+} from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { posts } from "@/lib/posts";
 
 interface SearchResult {
@@ -57,11 +70,6 @@ export function SearchDialog() {
         e.preventDefault();
         setIsOpen(true);
       }
-      if (e.key === "Escape") {
-        setIsOpen(false);
-        setQuery("");
-        setResults([]);
-      }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
@@ -73,108 +81,174 @@ export function SearchDialog() {
     }
   }, [isOpen]);
 
-  if (!isOpen) {
-    return (
-      <button
-        onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition-colors text-gray-400 text-sm"
-        title="Search (Ctrl+K)"
-      >
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-        <span className="hidden sm:inline">Search...</span>
-        <kbd className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 text-xs bg-white/10 rounded border border-white/10">
-          Ctrl+K
-        </kbd>
-      </button>
-    );
-  }
+  const handleClose = () => {
+    setIsOpen(false);
+    setQuery("");
+    setResults([]);
+  };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh]">
-      <div
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
-        onClick={() => {
-          setIsOpen(false);
-          setQuery("");
-          setResults([]);
+    <>
+      <IconButton
+        onClick={() => setIsOpen(true)}
+        size="small"
+        sx={{
+          color: "text.secondary",
+          border: "1px solid",
+          borderColor: "divider",
+          borderRadius: 2,
+          px: 1.5,
+          py: 0.5,
+          fontSize: "0.8rem",
+          gap: 0.5,
+          "&:hover": { bgcolor: "action.hover" },
         }}
-      />
-      <div className="relative w-full max-w-xl mx-4 bg-gray-900 border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
-        <div className="flex items-center gap-3 px-4 py-3 border-b border-white/10">
-          <svg className="w-5 h-5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-          <input
-            ref={inputRef}
-            type="text"
+        title="Search (Ctrl+K)"
+      >
+        <SearchIcon sx={{ fontSize: 18 }} />
+        <Typography variant="caption" sx={{ display: { xs: "none", sm: "inline" }, color: "text.secondary" }}>
+          Search
+        </Typography>
+        <Chip
+          label="⌘K"
+          size="small"
+          sx={{
+            display: { xs: "none", sm: "inline-flex" },
+            height: 18,
+            fontSize: "0.65rem",
+            bgcolor: "action.hover",
+            color: "text.disabled",
+          }}
+        />
+      </IconButton>
+
+      <Dialog
+        open={isOpen}
+        onClose={handleClose}
+        maxWidth="sm"
+        fullWidth
+        slotProps={{
+          paper: {
+            sx: {
+              bgcolor: "grey.900",
+              borderRadius: 3,
+              mt: "15vh",
+              border: "1px solid",
+              borderColor: "divider",
+            },
+          },
+        }}
+      >
+        <Box sx={{ display: "flex", alignItems: "center", px: 2, py: 1.5, borderBottom: "1px solid", borderColor: "divider" }}>
+          <SearchIcon sx={{ color: "text.secondary", mr: 1.5 }} />
+          <TextField
+            inputRef={inputRef}
             value={query}
             onChange={(e) => handleSearch(e.target.value)}
             placeholder="Search posts by title, tag, or keyword..."
-            className="flex-1 bg-transparent text-white placeholder-gray-500 outline-none text-base"
-          />
-          <button
-            onClick={() => {
-              setIsOpen(false);
-              setQuery("");
-              setResults([]);
+            variant="standard"
+            fullWidth
+            slotProps={{
+              input: {
+                disableUnderline: true,
+                style: { color: "white", fontSize: "1rem" },
+              },
             }}
-            className="px-2 py-1 text-xs text-gray-400 bg-white/10 rounded-md hover:bg-white/20 transition-colors"
-          >
-            ESC
-          </button>
-        </div>
-        <div className="max-h-[400px] overflow-y-auto">
+          />
+          <IconButton onClick={handleClose} size="small" sx={{ ml: 1 }}>
+            <CloseIcon sx={{ fontSize: 18, color: "text.secondary" }} />
+          </IconButton>
+        </Box>
+
+        <Box sx={{ maxHeight: 400, overflowY: "auto", py: 1 }}>
           {query.trim() === "" ? (
-            <div className="px-4 py-8 text-center text-gray-500">
-              <p className="text-sm">Type to search through {posts.length} articles</p>
-              <p className="text-xs mt-1 text-gray-600">Search by title, tags, or content keywords</p>
-            </div>
+            <Box sx={{ textAlign: "center", py: 4, color: "text.secondary" }}>
+              <Typography variant="body2">Type to search through {posts.length} articles</Typography>
+              <Typography variant="caption" sx={{ color: "text.disabled", mt: 0.5, display: "block" }}>
+                Search by title, tags, or content keywords
+              </Typography>
+            </Box>
           ) : results.length === 0 ? (
-            <div className="px-4 py-8 text-center text-gray-500">
-              <p className="text-sm">No results found</p>
-            </div>
+            <Box sx={{ textAlign: "center", py: 4, color: "text.secondary" }}>
+              <Typography variant="body2">No results found</Typography>
+            </Box>
           ) : (
-            <div className="py-2">
-              {results.map((result) => (
-                <a
-                  key={result.slug}
-                  href={`/my-app/posts/${result.slug}`}
-                  className="block px-4 py-3 hover:bg-white/5 transition-colors"
-                  onClick={() => {
-                    setIsOpen(false);
-                    setQuery("");
-                    setResults([]);
+            results.map((result) => (
+              <MuiLink
+                key={result.slug}
+                href={`/my-app/posts/${result.slug}`}
+                underline="none"
+                onClick={handleClose}
+              >
+                <Paper
+                  elevation={0}
+                  sx={{
+                    px: 2,
+                    py: 1.5,
+                    mx: 1,
+                    mb: 0.5,
+                    bgcolor: "transparent",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "flex-start",
+                    justifyContent: "space-between",
+                    gap: 1,
+                    "&:hover": { bgcolor: "action.hover" },
+                    borderRadius: 1,
                   }}
                 >
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="flex-1 min-w-0">
-                      <h4 className="text-white font-medium truncate">{result.title}</h4>
-                      <p className="text-sm text-gray-400 mt-0.5 line-clamp-1">{result.excerpt}</p>
-                      <div className="flex items-center gap-2 mt-1.5">
-                        <span className="text-xs text-gray-500">{result.date}</span>
-                        {result.tags.slice(0, 3).map((tag) => (
-                          <span key={tag} className="text-xs px-1.5 py-0.5 rounded bg-blue-500/10 text-blue-400">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <svg className="w-4 h-4 text-gray-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </a>
-              ))}
-            </div>
+                  <Box sx={{ flex: 1, minWidth: 0 }}>
+                    <Typography variant="body1" sx={{ color: "white", fontWeight: 500 }} noWrap>
+                      {result.title}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "text.secondary", mt: 0.5 }} noWrap>
+                      {result.excerpt}
+                    </Typography>
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 1, mt: 1 }}>
+                      <Typography variant="caption" sx={{ color: "text.disabled" }}>
+                        {result.date}
+                      </Typography>
+                      {result.tags.slice(0, 3).map((tag) => (
+                        <Chip
+                          key={tag}
+                          label={tag}
+                          size="small"
+                          sx={{
+                            height: 20,
+                            fontSize: "0.7rem",
+                            bgcolor: "primary.dark",
+                            color: "primary.light",
+                          }}
+                        />
+                      ))}
+                    </Box>
+                  </Box>
+                  <ArrowForwardIcon sx={{ fontSize: 16, color: "text.disabled", mt: 0.5, flexShrink: 0 }} />
+                </Paper>
+              </MuiLink>
+            ))
           )}
-        </div>
-        <div className="px-4 py-2 border-t border-white/10 flex items-center justify-between text-xs text-gray-600">
-          <span>{results.length > 0 ? `${results.length} results` : ""}</span>
-          <span>Nitrogen Search</span>
-        </div>
-      </div>
-    </div>
+        </Box>
+
+        <Box
+          sx={{
+            px: 2,
+            py: 1,
+            borderTop: "1px solid",
+            borderColor: "divider",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Typography variant="caption" sx={{ color: "text.disabled" }}>
+            {results.length > 0 ? `${results.length} results` : ""}
+          </Typography>
+          <Typography variant="caption" sx={{ color: "text.disabled" }}>
+            Nitrogen Search
+          </Typography>
+        </Box>
+      </Dialog>
+    </>
   );
 }
