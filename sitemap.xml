@@ -2,27 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://xfwfm4btvf-dev.github.io/my-app/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://xfwfm4btvf-dev.github.io/my-app/posts</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://xfwfm4btvf-dev.github.io/my-app/tags</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://xfwfm4btvf-dev.github.io/my-app/about</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/virtual-filesystems-ai-agents-2026</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/edge-computing-webassembly</loc>
@@ -81,6 +87,180 @@
   <url>
     <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/opentelemetry-observability-microservices</loc>
     <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/model-context-protocol-ai-integration</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/webgpu-browser-ai-inference</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/ai-agent-orchestration-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/post-quantum-cryptography-web-apps</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/edge-native-databases</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-deployment-patterns-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-web-auth-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-movement-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-proofs-web-apps-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/rust-wasm-edge-computing-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/typescript-5-7-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/htmx-alpine-javascript-free-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/biome-js-linter-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/observability-2026-otel-native</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/agentic-coding-reshaping-software-engineering</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/http3-quic-web-developers-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/passkeys-passwordless-auth-web-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/bun-runtime-javascript-revolution-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/mcp-security-risks-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/virtual-filesystem-ai-agents-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/modular-monoliths-2026</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/mcp-remote-servers-ai-interop-2026</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/browser-native-local-ai-inference-2026</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/durable-execution-reliable-workflows-2026</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/npm-supply-chain-attacks-2026</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/llm-inference-optimization-simd-2026</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/css-anchor-positioning-popovers-2026</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/agentic-rag-knowledge-graphs-2026</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xfwfm4btvf-dev.github.io/my-app/posts/wasi-preview3-native-async</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

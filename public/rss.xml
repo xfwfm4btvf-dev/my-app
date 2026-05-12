@@ -5,8 +5,20 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 May 2026 01:59:47 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 03:57:42 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Virtual Filesystems for AI Agents: Why Agents Need Their Own File Layer</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/virtual-filesystems-ai-agents-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/virtual-filesystems-ai-agents-2026</guid>
+      <description>AI agents that can read, write, and orchestrate files need a purpose-built filesystem abstraction. Here is how virtual filesystems are solving the agent I/O problem.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Agents</category>
+      <category>Filesystem</category>
+      <category>Architecture</category>
+      <category>Developer Tools</category>
+    </item>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
       <link>https://xfwfm4btvf-dev.github.io/my-app/posts/edge-computing-webassembly</link>
@@ -378,16 +390,51 @@
       <category>npm</category>
     </item>
     <item>
-      <title>Unified Virtual Filesystems: Solving AI Agent File Access at Scale</title>
-      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/unified-virtual-filesystem-ai-agents-2026</link>
-      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/unified-virtual-filesystem-ai-agents-2026</guid>
-      <description>How virtual filesystem layers are becoming the missing infrastructure piece for reliable, multi-agent AI systems.</description>
+      <title>SIMD-Aware LLM Inference: Beyond the Low-Hanging Fruit</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/llm-inference-optimization-simd-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/llm-inference-optimization-simd-2026</guid>
+      <description>How SIMD-level optimizations are pushing LLM inference throughput past what naive implementations achieve, and why it matters for local-first AI.</description>
       <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
       <category>AI</category>
-      <category>Agents</category>
+      <category>LLM</category>
+      <category>Performance</category>
+      <category>Systems</category>
+      <category>Optimization</category>
+    </item>
+    <item>
+      <title>CSS Anchor Positioning: No More JavaScript for Tooltips and Popovers</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/css-anchor-positioning-popovers-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/css-anchor-positioning-popovers-2026</guid>
+      <description>How the CSS Anchor Positioning API is eliminating the need for JavaScript-based positioning libraries like Popper.js and Floating UI.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>CSS</category>
+      <category>Frontend</category>
+      <category>Web Standards</category>
+    </item>
+    <item>
+      <title>Agentic RAG: From Vector Search to Knowledge Graph-Driven Intelligent Retrieval</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/agentic-rag-knowledge-graphs-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/agentic-rag-knowledge-graphs-2026</guid>
+      <description>When traditional RAG struggles with complex reasoning tasks, Agentic RAG transforms retrieval by introducing AI agents and knowledge graphs for multi-hop reasoning, redefining the boundaries of AI information retrieval.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>RAG</category>
+      <category>Knowledge Graph</category>
+      <category>LLM</category>
       <category>Architecture</category>
-      <category>Filesystem</category>
-      <category>Infrastructure</category>
+    </item>
+    <item>
+      <title>WASI Preview 3: Native Async and the Future of Composable Systems</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/wasi-preview3-native-async</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/wasi-preview3-native-async</guid>
+      <description>WASI Preview 3 introduces native async support to WebAssembly, fundamentally changing how we build composable, portable systems across cloud and edge.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>WebAssembly</category>
+      <category>WASI</category>
+      <category>Rust</category>
+      <category>Systems</category>
+      <category>Async</category>
+      <category>Cloud Native</category>
     </item>
   </channel>
 </rss>
