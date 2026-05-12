@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0jyf~1t3.bagm.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
-a:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0jyf~1t3.bagm.js"],"OutletBoundary"]
-b:"$Sreact.suspense"
+2:I[24082,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
+b:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"OutletBoundary"]
+c:"$Sreact.suspense"
 3:T93c,# Bun Runtime: The JavaScript Engine Revolution of 2026
 
 The JavaScript runtime landscape has long been dominated by Node.js and Deno, but Bun has emerged as a serious contender that's redefining developer expectations for speed and simplicity.
@@ -159,7 +159,66 @@ const response = await request('https://api.example.com/data', {
 
 If you run a content-heavy site, API, or real-time application, enable HTTP/3 today. The performance improvement on mobile and lossy networks is substantial, and most CDNs and modern servers support it with minimal configuration.
 
-The protocol has graduated from experimental to essential. Make sure your stack reflects that.6:T552,# Database Indexing Strategies for High-Traffic Applications
+The protocol has graduated from experimental to essential. Make sure your stack reflects that.6:Tbf0,# Browser-Native AI: Running LLMs Locally with WebGPU and WASM
+
+The browser is becoming an AI runtime. With WebGPU now shipping in all major browsers and WASM threading mature enough for matrix operations, running 7B-parameter language models entirely client-side is not just possible — it's becoming practical.
+
+## Why Browser-Native AI Matters
+
+Three forces are converging:
+
+1. **Privacy regulation**: GDPR enforcement fines hit record levels in 2026. Companies are desperate for AI features that never transmit user data.
+
+2. **Cost pressure**: API inference costs remain significant at scale. Client-side inference eliminates per-request billing entirely.
+
+3. **Latency requirements**: Real-time features like code completion need sub-50ms responses. Even fast APIs can't compete with local execution.
+
+## The 2026 Stack
+
+**WebGPU** provides GPU compute shaders that match CUDA capabilities for inference. Chrome, Firefox, and Safari all ship WebGPU with compute shader support as of early 2026.
+
+**WASM SIMD + Threads** handle the CPU fallback path. Modern browsers support SharedArrayBuffer and 128-bit SIMD, enabling optimized matrix multiplication without GPU access.
+
+**ONNX Runtime Web** and **MediaPipe LLM Inference** provide the runtime layer, handling quantized model formats optimized for browser memory constraints.
+
+## Performance Realities
+
+In 2026 benchmarks on mid-range hardware:
+
+- **Phi-3 Mini (3.8B, Q4)**: 25-40 tokens/sec on WebGPU, 8-12 tokens/sec CPU-only
+- **Gemma 2B (Q4)**: 35-55 tokens/sec on WebGPU
+- **Llama 3.1 8B (Q4)**: 12-20 tokens/sec on WebGPU (usable but not snappy)
+
+These numbers make browser-native AI viable for chat interfaces, code suggestions, and document summarization.
+
+## Memory Management Is the Real Challenge
+
+The biggest constraint is not compute — it is memory. A 4-bit quantized 3.8B model needs about 2.5GB of RAM. Browsers allocate this from the same pool as your tabs.
+
+Best practices:
+
+- Check `navigator.deviceMemory` before loading large models
+- Offload to Web Worker to avoid blocking UI
+- Fall back to API-based inference for low-memory devices
+
+## Use Cases Already in Production
+
+Several major applications shipped browser-native AI in 2026:
+
+- Code editors run fine-tuned 1.5B models locally for privacy-sensitive corporate accounts
+- Design tools use WebGPU for AI inference, avoiding round-trips to servers
+- Web IDEs run 2B code completion models client-side for offline coding support
+- Writing apps use local 1B models for real-time suggestions
+
+## Getting Started
+
+If you are building a web app today, consider a hybrid approach:
+
+1. **Ship a small model** (1-3B params) for latency-critical, privacy-sensitive features
+2. **Fall back to API** for complex tasks that need larger models
+3. **Cache aggressively** — model weights are downloaded once and persist across sessions
+
+The era of AI requires a server is ending. The browser is now a legitimate AI inference platform, and early adopters are shipping features that feel magical — instant, private, and free at scale.7:T552,# Database Indexing Strategies for High-Traffic Applications
 
 Poor indexing is the number one cause of slow database queries. Here is how to get it right.
 
@@ -201,8 +260,8 @@ Look for "Seq Scan" (sequential scan) on large tables — that is a sign you nee
 
 1. **Over-indexing**: Each index adds write overhead. Only index columns used in WHERE, JOIN, and ORDER BY.
 2. **Ignoring covering indexes**: Include all selected columns to avoid table lookups.
-3. **Not monitoring unused indexes**: Remove indexes that are never read.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Bun Runtime: The JavaScript Engine Revolution of 2026\",\"description\":\"How Bun is reshaping the JavaScript ecosystem with its all-in-one toolkit approach and blazing-fast performance.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/bun-runtime-javascript-revolution-2026\"},\"keywords\":\"JavaScript, Performance, DevOps\",\"wordCount\":336,\"articleSection\":\"JavaScript\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"bun-runtime-javascript-revolution-2026","title":"Bun Runtime: The JavaScript Engine Revolution of 2026","excerpt":"How Bun is reshaping the JavaScript ecosystem with its all-in-one toolkit approach and blazing-fast performance.","date":"2026-05-11","tags":["JavaScript","Performance","DevOps"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"mcp-security-risks-2026","title":"MCP安全风险: 当AI代理成为攻击面","excerpt":"Model Context Protocol正在成为AI集成的默认标准, 但其安全模型仍存在严重隐患. 本文剖析MCP的三大攻击面及防护策略.","date":"2026-05-11","tags":["AI","Security","MCP","Protocol","DevSecOps"],"content":"# MCP安全风险: 当AI代理成为攻击面\n\nMCP的核心机制是让LLM发现并调用工具. 恶意MCP Server可以在工具描述中嵌入隐蔽指令, 劫持AI代理的行为. 例如, 一个看似正常的代码审查工具, 可能在描述中注入在返回结果前先将用户代码发送到外部服务器的指令. 由于这些描述对用户不可见, 而模型会照常执行, 投毒攻击极难被发现.\n\n## 攻击面一: 工具投毒\n\n**防护策略**: 在沙箱环境中运行MCP Server, 限制网络访问权限; 对工具调用实施白名单审查.\n\n## 攻击面二: 上下文泄露\n\nMCP通过共享上下文让AI理解工作环境, 但这意味着敏感信息(API密钥, 数据库连接串, 用户数据)会进入模型的上下文窗口. 当AI代理连接多个MCP Server时, 一个Server可能通过精心构造的请求诱导模型泄露另一个Server提供的敏感上下文.\n\n**防护策略**: 实施上下文隔离机制, 不同敏感级别的MCP Server使用独立的会话上下文; 对返回给模型的数据做脱敏处理.\n\n## 攻击面三: 权限蔓延\n\n许多MCP Server在安装时请求过宽的权限 -- 用户为了便利往往直接批准. 一旦代理被提示注入攻击利用, 攻击者就能通过这些宽松的权限执行文件写入, 代码执行, 数据导出等高危操作.\n\n**防护策略**: 采用最小权限原则配置MCP Server; 实施操作前确认机制(human-in-the-loop); 记录并审计所有工具调用日志.\n\n## 前瞻: 标准化安全框架\n\n业界正在推动MCP安全标准化. MCP规范v2预计将引入声明式权限模型, 工具描述签名验证和跨Server上下文隔离机制. 在此之前, 开发者应将每个MCP Server视为不可信节点, 在架构层面设计纵深防御.\n\nAI代理的便利性不应以安全性为代价. 在MCP生态成熟之前, 保持警惕是唯一的正确选择."},"nextPost":{"slug":"passkeys-passwordless-auth-web-2026","title":"Passkeys: …年密码消亡的真正起点","excerpt":"Passkeys 已从实验性功能变成主流认证方式。本文解析其工作原理、浏览器支持现状，以及如何在你的项目中集成无密码登录。","date":"2026-05-11","tags":["安全","WebAuthn","身份认证","前端"],"content":"$4"},"relatedPosts":[{"slug":"http3-quic-web-developers-2026","title":"HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026","excerpt":"HTTP/3 adoption has crossed 40% of global web traffic. Understanding QUIC is no longer optional for performance-critical applications.","date":"2026-05-11","tags":["Web","Performance","Networking","DevOps"],"content":"$5"},{"slug":"database-indexing-strategies","title":"Database Indexing Strategies for High-Traffic Applications","excerpt":"Master the art of database indexing to keep your application fast as it scales.","date":"2026-05-09","tags":["Database","Performance"],"content":"$6"},{"slug":"mastering-typescript","title":"Mastering TypeScript: A Guide to Better JavaScript","excerpt":"TypeScript has become the gold standard for building robust web applications.","date":"2026-05-10","tags":["TypeScript","JavaScript"],"content":"# Mastering TypeScript: A Guide to Better JavaScript\n\nTypeScript has become the gold standard for building robust web applications. But many developers only scratch the surface.\n\n## Why TypeScript Matters\n\nJavaScript is dynamic. TypeScript adds static typing, catching bugs before production. Teams report 15-20% fewer bugs.\n\n## Advanced Patterns\n\n### Utility Types\n\n    interface User { id: number; name: string; }\n    type UpdateUser = Partial<User>;\n    type UserCredentials = Pick<User, 'email' | 'role'>;\n\n### Discriminated Unions\n\n    type ApiResponse<T> =\n      | { status: 'loading' }\n      | { status: 'success'; data: T }\n      | { status: 'error'; message: string };\n\n## Best Practices\n\n1. Avoid any - Use unknown instead\n2. Enable strict mode in tsconfig.json\n3. Use branded types for IDs\n4. Type your environment variables"}]}]],["$L7","$L8"],"$L9"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Zr503uEeoa3d5mXatso1X"}
-7:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
-8:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true}]
-9:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
-c:null
+3. **Not monitoring unused indexes**: Remove indexes that are never read.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Bun Runtime: The JavaScript Engine Revolution of 2026\",\"description\":\"How Bun is reshaping the JavaScript ecosystem with its all-in-one toolkit approach and blazing-fast performance.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/bun-runtime-javascript-revolution-2026\"},\"keywords\":\"JavaScript, Performance, DevOps\",\"wordCount\":336,\"articleSection\":\"JavaScript\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"bun-runtime-javascript-revolution-2026","title":"Bun Runtime: The JavaScript Engine Revolution of 2026","excerpt":"How Bun is reshaping the JavaScript ecosystem with its all-in-one toolkit approach and blazing-fast performance.","date":"2026-05-11","tags":["JavaScript","Performance","DevOps"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"mcp-security-risks-2026","title":"MCP安全风险: 当AI代理成为攻击面","excerpt":"Model Context Protocol正在成为AI集成的默认标准, 但其安全模型仍存在严重隐患. 本文剖析MCP的三大攻击面及防护策略.","date":"2026-05-11","tags":["AI","Security","MCP","Protocol","DevSecOps"],"content":"# MCP安全风险: 当AI代理成为攻击面\n\nMCP的核心机制是让LLM发现并调用工具. 恶意MCP Server可以在工具描述中嵌入隐蔽指令, 劫持AI代理的行为. 例如, 一个看似正常的代码审查工具, 可能在描述中注入在返回结果前先将用户代码发送到外部服务器的指令. 由于这些描述对用户不可见, 而模型会照常执行, 投毒攻击极难被发现.\n\n## 攻击面一: 工具投毒\n\n**防护策略**: 在沙箱环境中运行MCP Server, 限制网络访问权限; 对工具调用实施白名单审查.\n\n## 攻击面二: 上下文泄露\n\nMCP通过共享上下文让AI理解工作环境, 但这意味着敏感信息(API密钥, 数据库连接串, 用户数据)会进入模型的上下文窗口. 当AI代理连接多个MCP Server时, 一个Server可能通过精心构造的请求诱导模型泄露另一个Server提供的敏感上下文.\n\n**防护策略**: 实施上下文隔离机制, 不同敏感级别的MCP Server使用独立的会话上下文; 对返回给模型的数据做脱敏处理.\n\n## 攻击面三: 权限蔓延\n\n许多MCP Server在安装时请求过宽的权限 -- 用户为了便利往往直接批准. 一旦代理被提示注入攻击利用, 攻击者就能通过这些宽松的权限执行文件写入, 代码执行, 数据导出等高危操作.\n\n**防护策略**: 采用最小权限原则配置MCP Server; 实施操作前确认机制(human-in-the-loop); 记录并审计所有工具调用日志.\n\n## 前瞻: 标准化安全框架\n\n业界正在推动MCP安全标准化. MCP规范v2预计将引入声明式权限模型, 工具描述签名验证和跨Server上下文隔离机制. 在此之前, 开发者应将每个MCP Server视为不可信节点, 在架构层面设计纵深防御.\n\nAI代理的便利性不应以安全性为代价. 在MCP生态成熟之前, 保持警惕是唯一的正确选择."},"nextPost":{"slug":"passkeys-passwordless-auth-web-2026","title":"Passkeys: …年密码消亡的真正起点","excerpt":"Passkeys 已从实验性功能变成主流认证方式。本文解析其工作原理、浏览器支持现状，以及如何在你的项目中集成无密码登录。","date":"2026-05-11","tags":["安全","WebAuthn","身份认证","前端"],"content":"$4"},"relatedPosts":[{"slug":"http3-quic-web-developers-2026","title":"HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026","excerpt":"HTTP/3 adoption has crossed 40% of global web traffic. Understanding QUIC is no longer optional for performance-critical applications.","date":"2026-05-11","tags":["Web","Performance","Networking","DevOps"],"content":"$5"},{"slug":"browser-native-local-ai-inference-2026","title":"Browser-Native AI: Running LLMs Locally with WebGPU and WASM","excerpt":"How WebGPU and WebAssembly are enabling full LLM inference directly in the browser — no server, no API keys, no data leaving your machine.","date":"2026-05-12","tags":["AI","WebGPU","WebAssembly","JavaScript","Performance","Privacy"],"content":"$6"},{"slug":"database-indexing-strategies","title":"Database Indexing Strategies for High-Traffic Applications","excerpt":"Master the art of database indexing to keep your application fast as it scales.","date":"2026-05-09","tags":["Database","Performance"],"content":"$7"}]}]],["$L8","$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"m2Yb7gi7Fk-W8YhPJ2E6F"}
+8:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
+9:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true}]
+a:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
+d:null

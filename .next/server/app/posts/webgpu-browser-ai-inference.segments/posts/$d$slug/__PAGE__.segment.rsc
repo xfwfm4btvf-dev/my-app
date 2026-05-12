@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0jyf~1t3.bagm.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
-a:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0jyf~1t3.bagm.js"],"OutletBoundary"]
-b:"$Sreact.suspense"
+2:I[24082,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
+b:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"OutletBoundary"]
+c:"$Sreact.suspense"
 3:T9a4,# WebGPU: Browser-Side AI Inference Revolution
 
 WebGPU is changing our understanding of browser capabilities. This new Web API gives developers direct GPU access, opening the door for browser-side AI inference.
@@ -147,7 +147,66 @@ server.tool(
 
 MCP 采用能力协商机制，客户端声明支持的能力，服务器按需暴露功能。但需要注意权限控制——建议在 Server 端实现细粒度的访问策略，避免 AI 获得过多权限。
 
-MCP 代表了 AI 工具生态从“各自为战”走向“互联互通”的关键一步。随着更多工具和服务加入 MCP 生态，AI 应用的能力边界将持续扩展。6:T552,# Database Indexing Strategies for High-Traffic Applications
+MCP 代表了 AI 工具生态从“各自为战”走向“互联互通”的关键一步。随着更多工具和服务加入 MCP 生态，AI 应用的能力边界将持续扩展。6:Tbf0,# Browser-Native AI: Running LLMs Locally with WebGPU and WASM
+
+The browser is becoming an AI runtime. With WebGPU now shipping in all major browsers and WASM threading mature enough for matrix operations, running 7B-parameter language models entirely client-side is not just possible — it's becoming practical.
+
+## Why Browser-Native AI Matters
+
+Three forces are converging:
+
+1. **Privacy regulation**: GDPR enforcement fines hit record levels in 2026. Companies are desperate for AI features that never transmit user data.
+
+2. **Cost pressure**: API inference costs remain significant at scale. Client-side inference eliminates per-request billing entirely.
+
+3. **Latency requirements**: Real-time features like code completion need sub-50ms responses. Even fast APIs can't compete with local execution.
+
+## The 2026 Stack
+
+**WebGPU** provides GPU compute shaders that match CUDA capabilities for inference. Chrome, Firefox, and Safari all ship WebGPU with compute shader support as of early 2026.
+
+**WASM SIMD + Threads** handle the CPU fallback path. Modern browsers support SharedArrayBuffer and 128-bit SIMD, enabling optimized matrix multiplication without GPU access.
+
+**ONNX Runtime Web** and **MediaPipe LLM Inference** provide the runtime layer, handling quantized model formats optimized for browser memory constraints.
+
+## Performance Realities
+
+In 2026 benchmarks on mid-range hardware:
+
+- **Phi-3 Mini (3.8B, Q4)**: 25-40 tokens/sec on WebGPU, 8-12 tokens/sec CPU-only
+- **Gemma 2B (Q4)**: 35-55 tokens/sec on WebGPU
+- **Llama 3.1 8B (Q4)**: 12-20 tokens/sec on WebGPU (usable but not snappy)
+
+These numbers make browser-native AI viable for chat interfaces, code suggestions, and document summarization.
+
+## Memory Management Is the Real Challenge
+
+The biggest constraint is not compute — it is memory. A 4-bit quantized 3.8B model needs about 2.5GB of RAM. Browsers allocate this from the same pool as your tabs.
+
+Best practices:
+
+- Check `navigator.deviceMemory` before loading large models
+- Offload to Web Worker to avoid blocking UI
+- Fall back to API-based inference for low-memory devices
+
+## Use Cases Already in Production
+
+Several major applications shipped browser-native AI in 2026:
+
+- Code editors run fine-tuned 1.5B models locally for privacy-sensitive corporate accounts
+- Design tools use WebGPU for AI inference, avoiding round-trips to servers
+- Web IDEs run 2B code completion models client-side for offline coding support
+- Writing apps use local 1B models for real-time suggestions
+
+## Getting Started
+
+If you are building a web app today, consider a hybrid approach:
+
+1. **Ship a small model** (1-3B params) for latency-critical, privacy-sensitive features
+2. **Fall back to API** for complex tasks that need larger models
+3. **Cache aggressively** — model weights are downloaded once and persist across sessions
+
+The era of AI requires a server is ending. The browser is now a legitimate AI inference platform, and early adopters are shipping features that feel magical — instant, private, and free at scale.7:T552,# Database Indexing Strategies for High-Traffic Applications
 
 Poor indexing is the number one cause of slow database queries. Here is how to get it right.
 
@@ -189,8 +248,8 @@ Look for "Seq Scan" (sequential scan) on large tables — that is a sign you nee
 
 1. **Over-indexing**: Each index adds write overhead. Only index columns used in WHERE, JOIN, and ORDER BY.
 2. **Ignoring covering indexes**: Include all selected columns to avoid table lookups.
-3. **Not monitoring unused indexes**: Remove indexes that are never read.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"WebGPU: Browser-Side AI Inference Revolution\",\"description\":\"How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/webgpu-browser-ai-inference\"},\"keywords\":\"WebGPU, AI, Performance\",\"wordCount\":348,\"articleSection\":\"WebGPU\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"webgpu-browser-ai-inference","title":"WebGPU: Browser-Side AI Inference Revolution","excerpt":"How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.","date":"2026-05-11","tags":["WebGPU","AI","Performance"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$4"},"nextPost":{"slug":"model-context-protocol-ai-integration","title":"Model Context Protocol: AI 工具集成的新标准","excerpt":"深入解析 MCP 如何统一 AI 模型与外部工具的交互方式，以及它对开发者生态的影响。","date":"2026-05-11","tags":["AI","MCP","开发工具"],"content":"$5"},"relatedPosts":[{"slug":"database-indexing-strategies","title":"Database Indexing Strategies for High-Traffic Applications","excerpt":"Master the art of database indexing to keep your application fast as it scales.","date":"2026-05-09","tags":["Database","Performance"],"content":"$6"},{"slug":"ai-powered-development","title":"AI-Powered Development Tools","excerpt":"How AI assistants are transforming the way we write code.","date":"2026-05-05","tags":["AI","Productivity"],"content":"# AI-Powered Development Tools\n\nArtificial intelligence is revolutionizing how we write, review, and ship code.\n\n## The AI Coding Landscape\n\n1. Code completion: Inline suggestions (Copilot, Codeium)\n2. Conversational agents: Chat-based assistants (Claude, ChatGPT)\n3. Autonomous agents: Full-task execution (Codex, Claude Code)\n\n## Code Completion Tools\n\n- GitHub Copilot: VS Code integration, $10/mo\n- Codeium: Free tier, multi-IDE\n- Cursor: Agent mode, $20/mo\n- Supermaven: Fastest completions\n\n## Impact on Productivity\n\n- 30-55% faster code writing\n- 25% faster code review\n- 10-15% fewer bugs with test generation\n\n## Best Practices\n\n1. Review everything - AI code may have subtle bugs\n2. Use for boilerplate - Focus on architecture\n3. Pair with tests - Always test AI-generated code\n4. Stay in control - Use AI as a tool, not replacement"},"$0:rsc:props:children:0:1:props:nextPost"]}]],["$L7","$L8"],"$L9"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Zr503uEeoa3d5mXatso1X"}
-7:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
-8:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true}]
-9:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
-c:null
+3. **Not monitoring unused indexes**: Remove indexes that are never read.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"WebGPU: Browser-Side AI Inference Revolution\",\"description\":\"How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/webgpu-browser-ai-inference\"},\"keywords\":\"WebGPU, AI, Performance\",\"wordCount\":348,\"articleSection\":\"WebGPU\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"webgpu-browser-ai-inference","title":"WebGPU: Browser-Side AI Inference Revolution","excerpt":"How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.","date":"2026-05-11","tags":["WebGPU","AI","Performance"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$4"},"nextPost":{"slug":"model-context-protocol-ai-integration","title":"Model Context Protocol: AI 工具集成的新标准","excerpt":"深入解析 MCP 如何统一 AI 模型与外部工具的交互方式，以及它对开发者生态的影响。","date":"2026-05-11","tags":["AI","MCP","开发工具"],"content":"$5"},"relatedPosts":[{"slug":"browser-native-local-ai-inference-2026","title":"Browser-Native AI: Running LLMs Locally with WebGPU and WASM","excerpt":"How WebGPU and WebAssembly are enabling full LLM inference directly in the browser — no server, no API keys, no data leaving your machine.","date":"2026-05-12","tags":["AI","WebGPU","WebAssembly","JavaScript","Performance","Privacy"],"content":"$6"},{"slug":"database-indexing-strategies","title":"Database Indexing Strategies for High-Traffic Applications","excerpt":"Master the art of database indexing to keep your application fast as it scales.","date":"2026-05-09","tags":["Database","Performance"],"content":"$7"},{"slug":"ai-powered-development","title":"AI-Powered Development Tools","excerpt":"How AI assistants are transforming the way we write code.","date":"2026-05-05","tags":["AI","Productivity"],"content":"# AI-Powered Development Tools\n\nArtificial intelligence is revolutionizing how we write, review, and ship code.\n\n## The AI Coding Landscape\n\n1. Code completion: Inline suggestions (Copilot, Codeium)\n2. Conversational agents: Chat-based assistants (Claude, ChatGPT)\n3. Autonomous agents: Full-task execution (Codex, Claude Code)\n\n## Code Completion Tools\n\n- GitHub Copilot: VS Code integration, $10/mo\n- Codeium: Free tier, multi-IDE\n- Cursor: Agent mode, $20/mo\n- Supermaven: Fastest completions\n\n## Impact on Productivity\n\n- 30-55% faster code writing\n- 25% faster code review\n- 10-15% fewer bugs with test generation\n\n## Best Practices\n\n1. Review everything - AI code may have subtle bugs\n2. Use for boilerplate - Focus on architecture\n3. Pair with tests - Always test AI-generated code\n4. Stay in control - Use AI as a tool, not replacement"}]}]],["$L8","$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"m2Yb7gi7Fk-W8YhPJ2E6F"}
+8:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
+9:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true}]
+a:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
+d:null

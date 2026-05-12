@@ -105,7 +105,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/tmp/my-app-v2",
+    "outputFileTracingRoot": "/tmp/my-app-source",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -305,11 +305,11 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "/tmp/my-app-v2"
+      "root": "/tmp/my-app-source"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "/tmp/my-app-v2",
+  "appDir": "/tmp/my-app-source",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",

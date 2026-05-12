@@ -1,5 +1,5 @@
 {
   "version": 1,
-  "outDirectory": "/tmp/my-app-v2/out",
+  "outDirectory": "/tmp/my-app-source/out",
   "success": true
 }

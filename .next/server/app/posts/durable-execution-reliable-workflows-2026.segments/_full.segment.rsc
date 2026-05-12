@@ -1,0 +1,327 @@
+1:"$Sreact.fragment"
+2:I[62028,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"SearchDialog"]
+3:I[39756,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"default"]
+4:I[37457,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"default"]
+5:I[36768,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js","/my-app/_next/static/chunks/0jganziq5pu93.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/12s1493u42h3s.js"],"default"]
+6:I[56691,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"Footer"]
+7:I[71691,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"BackToTop"]
+c:I[68027,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"default",1]
+:HL["/my-app/_next/static/chunks/0gf7xl81s05ue.css","style"]
+0:{"P":null,"c":["","posts","durable-execution-reliable-workflows-2026"],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","durable-execution-reliable-workflows-2026","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/my-app/_next/static/chunks/0gf7xl81s05ue.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/my-app/_next/static/chunks/0jee3jf~p8s-u.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0bn7sb9dt40_4.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/my-app/_next/static/chunks/0_ywz9ml~be3m.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark","children":[["$","head",null,{"children":[["$","link",null,{"rel":"alternate","type":"application/rss+xml","title":"Nitrogen Blog RSS Feed","href":"/my-app/rss.xml"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/my-app/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\",\"description\":\"In-depth articles on web development, DevOps, architecture, and emerging technologies.\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://xfwfm4btvf-dev.github.io/my-app/posts?q={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"bg-black text-white min-h-screen flex flex-col","children":[["$","nav",null,{"className":"border-b border-white/10 bg-black/50 backdrop-blur-lg sticky top-0 z-50","children":["$","div",null,{"className":"max-w-6xl mx-auto px-6 py-4 flex items-center justify-between","children":[["$","a",null,{"href":"/my-app","className":"text-xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent","children":"Nitrogen"}],["$","div",null,{"className":"flex items-center gap-4","children":[["$","a",null,{"href":"/my-app","className":"text-gray-300 hover:text-white transition-colors hidden sm:block","children":"Home"}],["$","a",null,{"href":"/my-app/posts","className":"text-gray-300 hover:text-white transition-colors hidden sm:block","children":"Posts"}],["$","a",null,{"href":"/my-app/tags","className":"text-gray-300 hover:text-white transition-colors hidden sm:block","children":"Tags"}],["$","a",null,{"href":"/my-app/about","className":"text-gray-300 hover:text-white transition-colors hidden sm:block","children":"About"}],["$","a",null,{"href":"/my-app/rss.xml","target":"_blank","rel":"noopener noreferrer","className":"text-gray-400 hover:text-orange-400 transition-colors","title":"RSS Feed","children":["$","svg",null,{"className":"w-5 h-5","fill":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"d":"M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"}]}]}],["$","$L2",null,{}]]}]]}]}],["$","main",null,{"className":"flex-1","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L6",null,{}],["$","$L7",null,{}]]}]]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L8",[["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true,"nonce":"$undefined"}]],"$L9"]}],{},null,false,null]},null,false,"$@a"]},null,false,"$@a"]},null,false,null],"$Lb",false]],"m":"$undefined","G":["$c",["$Ld"]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"m2Yb7gi7Fk-W8YhPJ2E6F"}
+e:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"OutletBoundary"]
+f:"$Sreact.suspense"
+12:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"ViewportBoundary"]
+14:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"MetadataBoundary"]
+9:["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]
+11:[]
+a:"$W11"
+b:["$","$1","h",{"children":[null,["$","$L12",null,{"children":"$L13"}],["$","div",null,{"hidden":true,"children":["$","$L14",null,{"children":["$","$f",null,{"name":"Next.Metadata","children":"$L15"}]}]}],null]}]
+d:["$","link","0",{"rel":"stylesheet","href":"/my-app/_next/static/chunks/0gf7xl81s05ue.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+16:I[24082,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
+17:Tc1a,# Durable Execution: Building Reliable Workflows Without the Headache
+
+Every backend developer has written the same nightmare code: a multi-step workflow with manual retries, compensating transactions, and state tracking in a database column. Durable execution frameworks eliminate this entirely by making your code *inherently reliable*.
+
+## What Is Durable Execution?
+
+Durable execution means your function's progress is automatically persisted. If a server crashes mid-workflow, execution resumes from exactly where it left off — on a different machine, hours later, with the same state. No lost work, no duplicate processing.
+
+The key insight: **your code is the state machine**. The framework checkpoints every step, so you write normal-looking functions instead of complex state management logic.
+
+## The Three Leaders in 2026
+
+**Temporal** — The enterprise standard. Battle-tested at Uber, Netflix, and Stripe. Supports Go, Java, TypeScript, and Python. Best for complex workflows with compensation logic.
+
+**Restate** — The modern challenger. Designed for serverless from day one. Lightweight, fast startup, and a simpler programming model. Great for event-driven microservices.
+
+**Inngest** — Developer experience focused. Works as a drop-in for existing Next.js and serverless apps. Best for teams wanting durability without infrastructure overhead.
+
+## A Practical Example
+
+Here is a payment workflow that handles failures gracefully:
+
+    // With Temporal — this code automatically survives crashes
+    async function processPayment(orderId: string): Promise<Receipt> {
+      const order = await getOrder(orderId);
+      const reserved = await inventory.reserve(order.items);  // Step 1: checkpointed
+      try {
+        const charge = await payment.charge(order.total);      // Step 2: checkpointed
+        await shipping.schedule(order);                        // Step 3: checkpointed
+        return { success: true, receipt: charge.id };
+      } catch (err) {
+        await inventory.release(reserved);                     // Automatic compensation
+        throw err;
+      }
+    }
+
+If the server crashes after the payment step but before shipping, the framework replays from step 3 — not from scratch. Previous step results are reused, not re-executed.
+
+## Why This Changes Backend Architecture
+
+Traditional approaches require you to build: retry queues, idempotency keys, saga orchestrators, state persistence layers, and dead letter handlers. Durable execution gives you all of this for free.
+
+The cost is workflow determinism — your functions must produce the same outputs when replayed. This means no random numbers, no current timestamps, and no side effects outside of framework-managed activities.
+
+## Getting Started
+
+For new projects, Restate offers the gentlest learning curve. For existing Temporal users, the TypeScript SDK has matured significantly. For serverless-first teams, Inngest integrates with minimal code changes.
+
+The era of hand-rolled retry logic is ending. Durable execution is becoming the default way to build reliable distributed systems.18:Tbf0,# Browser-Native AI: Running LLMs Locally with WebGPU and WASM
+
+The browser is becoming an AI runtime. With WebGPU now shipping in all major browsers and WASM threading mature enough for matrix operations, running 7B-parameter language models entirely client-side is not just possible — it's becoming practical.
+
+## Why Browser-Native AI Matters
+
+Three forces are converging:
+
+1. **Privacy regulation**: GDPR enforcement fines hit record levels in 2026. Companies are desperate for AI features that never transmit user data.
+
+2. **Cost pressure**: API inference costs remain significant at scale. Client-side inference eliminates per-request billing entirely.
+
+3. **Latency requirements**: Real-time features like code completion need sub-50ms responses. Even fast APIs can't compete with local execution.
+
+## The 2026 Stack
+
+**WebGPU** provides GPU compute shaders that match CUDA capabilities for inference. Chrome, Firefox, and Safari all ship WebGPU with compute shader support as of early 2026.
+
+**WASM SIMD + Threads** handle the CPU fallback path. Modern browsers support SharedArrayBuffer and 128-bit SIMD, enabling optimized matrix multiplication without GPU access.
+
+**ONNX Runtime Web** and **MediaPipe LLM Inference** provide the runtime layer, handling quantized model formats optimized for browser memory constraints.
+
+## Performance Realities
+
+In 2026 benchmarks on mid-range hardware:
+
+- **Phi-3 Mini (3.8B, Q4)**: 25-40 tokens/sec on WebGPU, 8-12 tokens/sec CPU-only
+- **Gemma 2B (Q4)**: 35-55 tokens/sec on WebGPU
+- **Llama 3.1 8B (Q4)**: 12-20 tokens/sec on WebGPU (usable but not snappy)
+
+These numbers make browser-native AI viable for chat interfaces, code suggestions, and document summarization.
+
+## Memory Management Is the Real Challenge
+
+The biggest constraint is not compute — it is memory. A 4-bit quantized 3.8B model needs about 2.5GB of RAM. Browsers allocate this from the same pool as your tabs.
+
+Best practices:
+
+- Check `navigator.deviceMemory` before loading large models
+- Offload to Web Worker to avoid blocking UI
+- Fall back to API-based inference for low-memory devices
+
+## Use Cases Already in Production
+
+Several major applications shipped browser-native AI in 2026:
+
+- Code editors run fine-tuned 1.5B models locally for privacy-sensitive corporate accounts
+- Design tools use WebGPU for AI inference, avoiding round-trips to servers
+- Web IDEs run 2B code completion models client-side for offline coding support
+- Writing apps use local 1B models for real-time suggestions
+
+## Getting Started
+
+If you are building a web app today, consider a hybrid approach:
+
+1. **Ship a small model** (1-3B params) for latency-critical, privacy-sensitive features
+2. **Fall back to API** for complex tasks that need larger models
+3. **Cache aggressively** — model weights are downloaded once and persist across sessions
+
+The era of AI requires a server is ending. The browser is now a legitimate AI inference platform, and early adopters are shipping features that feel magical — instant, private, and free at scale.19:T873,# The Rise of Modular Monoliths
+
+In 2026, the pendulum has swung back. Teams that spent years decomposing monoliths into dozens of microservices are now consolidating into **modular monoliths** with clean internal boundaries.
+
+## What Went Wrong with Microservices
+
+The microservice promise was seductive: independent deployment, team autonomy, technology diversity. The reality for most teams:
+
+- **Distributed monolith** — services so tightly coupled they must deploy together
+- **Debugging hell** — tracing a request across 15 services
+- **Infrastructure overhead** — more time on Kubernetes YAML than business logic
+- **Premature decomposition** — splitting boundaries before understanding the domain
+
+## The Modular Monolith Pattern
+
+A modular monolith applies the same internal discipline as microservices — bounded contexts, clear interfaces, dependency rules — but within a single deployable unit.
+
+```typescript
+// modules/auth/index.ts — clear boundaries enforced by TypeScript
+export { AuthService } from './service';
+export { AuthController } from './controller';
+export type { User, Session } from './types';
+
+// Cross-module communication via events, not direct imports
+import { EventBus } from '../../shared/events';
+EventBus.on('auth:user-registered', (user) => {
+  // Orders module reacts without direct dependency
+});
+```
+
+## When to Split (and When Not To)
+
+Split into separate services ONLY when you need:
+
+1. **Independent scaling** — one module needs 10x more capacity
+2. **Different deployment cadences** — one module ships daily, another monthly
+3. **Team boundary** — a genuinely separate team with different ownership
+
+Everything else stays in the monolith.
+
+## The Hybrid Approach
+
+Most successful 2026 architectures are **modular monoliths that extract services surgically**. Start monolith, extract only the parts that genuinely benefit from independent deployment.
+
+Tools like **Nx**, **Turborepo**, and **Moon** enforce module boundaries in monorepos, giving you microservice-grade isolation without the operational overhead.
+
+The lesson: architecture should follow team structure and business needs, not trends.1a:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
+
+In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
+
+## How It Works
+
+A circuit breaker monitors calls to external services and "trips" (opens) when failures exceed a threshold. It has three states:
+
+- **Closed**: Requests flow normally. Failures are counted.
+- **Open**: Requests are immediately rejected with a fallback response.
+- **Half-Open**: After a timeout, a limited number of test requests are allowed through.
+
+## Implementation
+
+```typescript
+class CircuitBreaker {
+  private failures = 0;
+  private lastFailure = 0;
+  private state: 'closed' | 'open' | 'half-open' = 'closed';
+
+  constructor(
+    private threshold: number = 5,
+    private timeout: number = 30000
+  ) {}
+
+  async call<T>(fn: () => Promise<T>): Promise<T> {
+    if (this.state === 'open') {
+      if (Date.now() - this.lastFailure > this.timeout) {
+        this.state = 'half-open';
+      } else {
+        throw new Error('Circuit is open');
+      }
+    }
+
+    try {
+      const result = await fn();
+      this.onSuccess();
+      return result;
+    } catch (error) {
+      this.onFailure();
+      throw error;
+    }
+  }
+
+  private onSuccess() {
+    this.failures = 0;
+    this.state = 'closed';
+  }
+
+  private onFailure() {
+    this.failures++;
+    this.lastFailure = Date.now();
+    if (this.failures >= this.threshold) {
+      this.state = 'open';
+    }
+  }
+}
+```
+
+## Best Practices
+
+1. **Use with retry logic**: Combine with exponential backoff for transient failures.
+2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
+3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.1b:Ta0d,# OpenTelemetry: Unified Observability for Microservices
+
+As microservices architectures grow more complex, understanding system behavior becomes critical. OpenTelemetry (OTel) has emerged as the unified standard for collecting traces, metrics, and logs.
+
+## The Three Pillars
+
+Observability rests on three data types:
+
+- **Traces**: Track a request as it flows through multiple services
+- **Metrics**: Quantitative measurements like latency percentiles and error rates
+- **Logs**: Structured event records with contextual metadata
+
+OTel provides a single SDK and API for all three, eliminating vendor lock-in.
+
+## Getting Started with Traces
+
+```typescript
+import { trace } from '@opentelemetry/api';
+
+const tracer = trace.getTracer('my-service');
+
+async function handleRequest(req: Request) {
+  return tracer.startActiveSpan('handle-request', async (span) => {
+    span.setAttribute('http.method', req.method);
+    span.setAttribute('http.url', req.url);
+
+    try {
+      const result = await processRequest(req);
+      span.setStatus({ code: SpanStatusCode.OK });
+      return result;
+    } catch (error) {
+      span.setStatus({ code: SpanStatusCode.ERROR, message: error.message });
+      span.recordException(error);
+      throw error;
+    } finally {
+      span.end();
+    }
+  });
+}
+```
+
+## Context Propagation
+
+The magic of distributed tracing is context propagation. OTel automatically passes trace context between services via HTTP headers (W3C Trace Context standard), linking spans across service boundaries into a complete trace.
+
+## Collector Architecture
+
+The OTel Collector is a vendor-agnostic proxy that receives, processes, and exports telemetry data. Deploy it as a sidecar or daemonset:
+
+```yaml
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:
+    timeout: 5s
+    send_batch_size: 1024
+
+exporters:
+  prometheus:
+    endpoint: "0.0.0.0:8889"
+  jaeger:
+    endpoint: "jaeger:14250"
+    tls:
+      insecure: true
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [jaeger]
+    metrics:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [prometheus]
+```
+
+## Best Practices
+
+1. **Use semantic conventions**: Follow OTel semantic conventions for consistent attribute naming
+2. **Sample wisely**: Use head-based sampling for high-volume services, tail-based for error investigation
+3. **Correlate signals**: Link traces to logs with trace IDs for seamless debugging
+4. **Start small**: Begin with auto-instrumentation, then add custom spans for business logic8:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Durable Execution: Building Reliable Workflows Without the Headache\",\"description\":\"How durable execution frameworks like Temporal, Restate, and Inngest are replacing brittle retry loops with truly reliable distributed workflows.\",\"datePublished\":\"2026-05-12\",\"dateModified\":\"2026-05-12\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/durable-execution-reliable-workflows-2026\"},\"keywords\":\"Architecture, Backend, DevOps, Reliability\",\"wordCount\":413,\"articleSection\":\"Architecture\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L16",null,{"post":{"slug":"durable-execution-reliable-workflows-2026","title":"Durable Execution: Building Reliable Workflows Without the Headache","excerpt":"How durable execution frameworks like Temporal, Restate, and Inngest are replacing brittle retry loops with truly reliable distributed workflows.","date":"2026-05-12","tags":["Architecture","Backend","DevOps","Reliability"],"content":"$17"},"readingTime":3,"prevPost":null,"nextPost":{"slug":"browser-native-local-ai-inference-2026","title":"Browser-Native AI: Running LLMs Locally with WebGPU and WASM","excerpt":"How WebGPU and WebAssembly are enabling full LLM inference directly in the browser — no server, no API keys, no data leaving your machine.","date":"2026-05-12","tags":["AI","WebGPU","WebAssembly","JavaScript","Performance","Privacy"],"content":"$18"},"relatedPosts":[{"slug":"modular-monoliths-2026","title":"The Rise of Modular Monoliths: Why Teams Are Abandoning Microservices","excerpt":"After years of microservice complexity, engineering teams are rediscovering the power of well-structured monoliths with modular boundaries that preserve independent deployment.","date":"2026-05-11","tags":["Architecture","Software Engineering","DevOps"],"content":"$19"},{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$1a"},{"slug":"opentelemetry-observability-microservices","title":"OpenTelemetry: Unified Observability for Microservices","excerpt":"How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.","date":"2026-05-11","tags":["Observability","DevOps"],"content":"$1b"}]}]]
+13:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1c:I[27201,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"IconMark"]
+10:null
+15:[["$","title","0",{"children":"Durable Execution: Building Reliable Workflows Without the Headache | Nitrogen Blog"}],["$","meta","1",{"name":"description","content":"How durable execution frameworks like Temporal, Restate, and Inngest are replacing brittle retry loops with truly reliable distributed workflows."}],["$","meta","2",{"name":"author","content":"Nitrogen"}],["$","meta","3",{"name":"keywords","content":"Architecture,Backend,DevOps,Reliability"}],["$","meta","4",{"name":"robots","content":"index, follow"}],["$","link","5",{"rel":"canonical","href":"https://xfwfm4btvf-dev.github.io/my-app/posts/durable-execution-reliable-workflows-2026"}],["$","meta","6",{"property":"og:title","content":"Durable Execution: Building Reliable Workflows Without the Headache"}],["$","meta","7",{"property":"og:description","content":"How durable execution frameworks like Temporal, Restate, and Inngest are replacing brittle retry loops with truly reliable distributed workflows."}],["$","meta","8",{"property":"og:url","content":"https://xfwfm4btvf-dev.github.io/my-app/posts/durable-execution-reliable-workflows-2026"}],["$","meta","9",{"property":"og:image","content":"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg"}],["$","meta","10",{"property":"og:image:width","content":"1200"}],["$","meta","11",{"property":"og:image:height","content":"630"}],["$","meta","12",{"property":"og:image:alt","content":"Durable Execution: Building Reliable Workflows Without the Headache"}],["$","meta","13",{"property":"og:type","content":"article"}],["$","meta","14",{"property":"article:published_time","content":"2026-05-12"}],["$","meta","15",{"property":"article:tag","content":"Architecture"}],["$","meta","16",{"property":"article:tag","content":"Backend"}],["$","meta","17",{"property":"article:tag","content":"DevOps"}],["$","meta","18",{"property":"article:tag","content":"Reliability"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"Durable Execution: Building Reliable Workflows Without the Headache"}],["$","meta","21",{"name":"twitter:description","content":"How durable execution frameworks like Temporal, Restate, and Inngest are replacing brittle retry loops with truly reliable distributed workflows."}],["$","meta","22",{"name":"twitter:image","content":"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg"}],["$","link","23",{"rel":"icon","href":"/my-app/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L1c","24",{}]]

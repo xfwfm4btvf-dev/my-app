@@ -5,7 +5,7 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 May 2026 00:43:58 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 00:50:43 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
@@ -354,6 +354,17 @@
       <category>JavaScript</category>
       <category>Performance</category>
       <category>Privacy</category>
+    </item>
+    <item>
+      <title>Durable Execution: Building Reliable Workflows Without the Headache</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/durable-execution-reliable-workflows-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/durable-execution-reliable-workflows-2026</guid>
+      <description>How durable execution frameworks like Temporal, Restate, and Inngest are replacing brittle retry loops with truly reliable distributed workflows.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>Architecture</category>
+      <category>Backend</category>
+      <category>DevOps</category>
+      <category>Reliability</category>
     </item>
   </channel>
 </rss>

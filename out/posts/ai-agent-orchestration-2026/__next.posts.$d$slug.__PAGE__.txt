@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0jyf~1t3.bagm.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
-c:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0jyf~1t3.bagm.js"],"OutletBoundary"]
-d:"$Sreact.suspense"
+2:I[24082,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
+b:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"OutletBoundary"]
+c:"$Sreact.suspense"
 3:T8b2,# AI Agent Orchestration: From Chaos to Coordinated Intelligence
 
 The era of single-prompt LLM interactions is ending. In 2026, the real power lies in orchestrating multiple specialized AI agents that work together like a well-coordinated team.
@@ -219,71 +219,8 @@ High-value developer capabilities in the agentic era:
 
 ## Looking Ahead
 
-We are in the midst of another major shift in software development methodology. Agentic coding will become the next standardized engineering practice. The key question is how to design the collaboration boundary between humans and agents.8:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
-
-In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
-
-## How It Works
-
-A circuit breaker monitors calls to external services and "trips" (opens) when failures exceed a threshold. It has three states:
-
-- **Closed**: Requests flow normally. Failures are counted.
-- **Open**: Requests are immediately rejected with a fallback response.
-- **Half-Open**: After a timeout, a limited number of test requests are allowed through.
-
-## Implementation
-
-```typescript
-class CircuitBreaker {
-  private failures = 0;
-  private lastFailure = 0;
-  private state: 'closed' | 'open' | 'half-open' = 'closed';
-
-  constructor(
-    private threshold: number = 5,
-    private timeout: number = 30000
-  ) {}
-
-  async call<T>(fn: () => Promise<T>): Promise<T> {
-    if (this.state === 'open') {
-      if (Date.now() - this.lastFailure > this.timeout) {
-        this.state = 'half-open';
-      } else {
-        throw new Error('Circuit is open');
-      }
-    }
-
-    try {
-      const result = await fn();
-      this.onSuccess();
-      return result;
-    } catch (error) {
-      this.onFailure();
-      throw error;
-    }
-  }
-
-  private onSuccess() {
-    this.failures = 0;
-    this.state = 'closed';
-  }
-
-  private onFailure() {
-    this.failures++;
-    this.lastFailure = Date.now();
-    if (this.failures >= this.threshold) {
-      this.state = 'open';
-    }
-  }
-}
-```
-
-## Best Practices
-
-1. **Use with retry logic**: Combine with exponential backoff for transient failures.
-2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
-3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"AI Agent Orchestration: From Chaos to Coordinated Intelligence\",\"description\":\"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/ai-agent-orchestration-2026\"},\"keywords\":\"AI, Agents, Architecture, LLM, Orchestration\",\"wordCount\":286,\"articleSection\":\"AI\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"post-quantum-cryptography-web-apps","title":"Post-Quantum Cryptography: Hardening Web Apps Before Q-Day","excerpt":"NIST finalized post-quantum standards. Here is how to migrate your web apps before quantum computers break RSA and ECC.","date":"2026-05-11","tags":["Cryptography","Security","Quantum","TLS","NIST"],"content":"$4"},"nextPost":{"slug":"webgpu-browser-ai-inference","title":"WebGPU: Browser-Side AI Inference Revolution","excerpt":"How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.","date":"2026-05-11","tags":["WebGPU","AI","Performance"],"content":"$5"},"relatedPosts":[{"slug":"virtual-filesystem-ai-agents-2026","title":"Virtual Filesystems: The Missing Layer in AI Agent Architecture","excerpt":"How unified virtual filesystems are solving the tool fragmentation problem that plagues autonomous AI agents.","date":"2026-05-11","tags":["AI","Agents","Architecture","DevTools"],"content":"$6"},{"slug":"agentic-coding-reshaping-software-engineering","title":"Agentic Coding: From Autocomplete to Autonomous Programming","excerpt":"How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026.","date":"2026-05-11","tags":["AI","DevTools","Software Engineering","LLM","Automation"],"content":"$7"},{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Zr503uEeoa3d5mXatso1X"}
-9:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
-a:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true}]
-b:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
-e:null
+We are in the midst of another major shift in software development methodology. Agentic coding will become the next standardized engineering practice. The key question is how to design the collaboration boundary between humans and agents.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"AI Agent Orchestration: From Chaos to Coordinated Intelligence\",\"description\":\"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/ai-agent-orchestration-2026\"},\"keywords\":\"AI, Agents, Architecture, LLM, Orchestration\",\"wordCount\":286,\"articleSection\":\"AI\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"post-quantum-cryptography-web-apps","title":"Post-Quantum Cryptography: Hardening Web Apps Before Q-Day","excerpt":"NIST finalized post-quantum standards. Here is how to migrate your web apps before quantum computers break RSA and ECC.","date":"2026-05-11","tags":["Cryptography","Security","Quantum","TLS","NIST"],"content":"$4"},"nextPost":{"slug":"webgpu-browser-ai-inference","title":"WebGPU: Browser-Side AI Inference Revolution","excerpt":"How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.","date":"2026-05-11","tags":["WebGPU","AI","Performance"],"content":"$5"},"relatedPosts":[{"slug":"virtual-filesystem-ai-agents-2026","title":"Virtual Filesystems: The Missing Layer in AI Agent Architecture","excerpt":"How unified virtual filesystems are solving the tool fragmentation problem that plagues autonomous AI agents.","date":"2026-05-11","tags":["AI","Agents","Architecture","DevTools"],"content":"$6"},{"slug":"agentic-coding-reshaping-software-engineering","title":"Agentic Coding: From Autocomplete to Autonomous Programming","excerpt":"How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026.","date":"2026-05-11","tags":["AI","DevTools","Software Engineering","LLM","Automation"],"content":"$7"},{"slug":"mcp-remote-servers-ai-interop-2026","title":"远程MCP服务器：AI工具互操作的新范式","excerpt":"深入解析Model Context Protocol远程服务器架构，以及它如何重新定义AI应用与外部工具的集成方式。","date":"2026-05-12","tags":["AI","MCP","Protocol","Architecture"],"content":"Model Context Protocol（MCP）在2025年底还只是一个本地工具调用协议，如今远程MCP服务器的标准化正在彻底改变AI应用的架构模式。\n\n## 从本地到远程的演进\n\n早期MCP设计基于一个假设：AI应用和工具运行在同一台机器上。这导致了明显的局限性——企业无法将敏感的内部API暴露给云端AI服务，多租户场景也无法支持。远程MCP服务器通过Streamable HTTP传输层解决了这个问题，允许工具通过标准HTTPS端点提供服务。\n\n## 核心架构变化\n\n远程MCP引入了OAuth 2.1授权机制，每个工具调用都经过身份验证和授权检查。相比本地MCP的stdio管道通信，远程MCP使用HTTP POST配合SSE（Server-Sent Events）实现流式响应，支持长时间运行的工具操作。\n\n关键设计决策包括：\n\n- **无状态工具服务器**：每次请求独立处理，便于水平扩展\n- **能力协商**：客户端和服务端在初始化阶段声明支持的功能集\n- **Progress通知**：长时间任务通过通知通道实时反馈进度\n\n## 实际部署模式\n\n生产环境中最常见的三种部署模式：\n\n**API网关模式**：MCP服务器作为内部微服务的统一代理，对外暴露标准化工具接口。适合已有大量内部API的企业。\n\n**Serverless模式**：每个工具调用触发独立的函数执行实例。冷启动问题是主要挑战，建议将初始化时间控制在200ms以内。\n\n**混合模式**：高频调用的工具部署为常驻服务，低频工具走Serverless路径。通过服务注册中心统一管理。\n\n## 安全考量\n\n远程MCP服务器面临的安全威胁与传统API不同。恶意提示注入可能诱导AI调用危险工具，因此必须实现工具级别的权限控制。建议采用最小权限原则，对写操作实施二次确认机制，并记录完整的审计日志。\n\n## 生态现状\n\n2026年5月，MCP Registry已收录超过3000个公开服务器，涵盖数据库连接、云服务管理、代码仓库操作等场景。Claude、ChatGPT和Gemini三大平台均已支持远程MCP客户端协议，互操作性成为现实。\n\n## 结论\n\n远程MCP服务器不是简单的协议升级，而是AI工具生态从“单机插件”走向“分布式服务”的转折点。对于构建AI原生应用的团队来说，现在是深入理解MCP架构并开始实践的最佳时机。"}]}]],["$L8","$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"m2Yb7gi7Fk-W8YhPJ2E6F"}
+8:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
+9:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true}]
+a:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
+d:null

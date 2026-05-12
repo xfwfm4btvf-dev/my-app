@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0jyf~1t3.bagm.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
-a:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0jyf~1t3.bagm.js"],"OutletBoundary"]
+2:I[24082,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
+a:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"OutletBoundary"]
 b:"$Sreact.suspense"
 3:Tbf2,# Why Local AI Is Becoming the Default Choice in 2026
 
@@ -145,48 +145,66 @@ The server never stores, sees, or transmits your password — ever.
 
 Start with Semaphore for anonymous auth or zkLogin for OAuth-compatible ZKP flows. The learning curve is steep, but the security payoff is massive.
 
-The passwordless future is proofs.6:T7de,# Model Context Protocol: AI 工具集成的新标准
+The passwordless future is proofs.6:Tbf0,# Browser-Native AI: Running LLMs Locally with WebGPU and WASM
 
-Model Context Protocol (MCP) 正在成为 AI 应用与外部系统交互的事实标准。由 Anthropic 发起的这一开放协议，旨在解决 AI 模型调用工具时的碎片化问题。
+The browser is becoming an AI runtime. With WebGPU now shipping in all major browsers and WASM threading mature enough for matrix operations, running 7B-parameter language models entirely client-side is not just possible — it's becoming practical.
 
-## 为什么需要 MCP
+## Why Browser-Native AI Matters
 
-在 MCP 出现之前，每个 AI 应用都需要为每种工具编写自定义集成代码。一个代码编辑器想接入文件系统、Git、数据库，每种都要单独适配。这导致了大量的重复工作和生态碎片化。
+Three forces are converging:
 
-MCP 通过标准化的客户端-服务器架构解决了这个问题。工具提供方只需实现一个 MCP Server，任何支持 MCP 的 AI 应用都能直接使用。
+1. **Privacy regulation**: GDPR enforcement fines hit record levels in 2026. Companies are desperate for AI features that never transmit user data.
 
-## 核心架构
+2. **Cost pressure**: API inference costs remain significant at scale. Client-side inference eliminates per-request billing entirely.
 
-MCP 基于 JSON-RPC 2.0，支持三种核心能力：
+3. **Latency requirements**: Real-time features like code completion need sub-50ms responses. Even fast APIs can't compete with local execution.
 
-1. **Tools**：AI 可调用的函数，如读写文件、执行查询
-2. **Resources**：可被 AI 引用的上下数据，如文件内容、数据库 schema
-3. **Prompts**：预定义的提示模板，标准化常见交互模式
+## The 2026 Stack
 
-```typescript
-// MCP Server 示例
-const server = new McpServer({ name: "my-tool", version: "1.0.0" });
+**WebGPU** provides GPU compute shaders that match CUDA capabilities for inference. Chrome, Firefox, and Safari all ship WebGPU with compute shader support as of early 2026.
 
-server.tool(
-  "search_docs",
-  "搜索技术文档",
-  { query: z.string() },
-  async ({ query }) => {
-    const results = await searchEngine.search(query);
-    return { content: [{ type: "text", text: JSON.stringify(results) }] };
-  }
-);
-```
+**WASM SIMD + Threads** handle the CPU fallback path. Modern browsers support SharedArrayBuffer and 128-bit SIMD, enabling optimized matrix multiplication without GPU access.
 
-## 实际应用场景
+**ONNX Runtime Web** and **MediaPipe LLM Inference** provide the runtime layer, handling quantized model formats optimized for browser memory constraints.
 
-目前 MCP 已被广泛集成到 Cursor、VS Code、Claude Desktop 等工具中。开发者可以快速构建 MCP Server 连接内部系统：公司知识库、监控平台、CI/CD 流水线等，让 AI 助手获得真实的业务上下文。
+## Performance Realities
 
-## 安全考量
+In 2026 benchmarks on mid-range hardware:
 
-MCP 采用能力协商机制，客户端声明支持的能力，服务器按需暴露功能。但需要注意权限控制——建议在 Server 端实现细粒度的访问策略，避免 AI 获得过多权限。
+- **Phi-3 Mini (3.8B, Q4)**: 25-40 tokens/sec on WebGPU, 8-12 tokens/sec CPU-only
+- **Gemma 2B (Q4)**: 35-55 tokens/sec on WebGPU
+- **Llama 3.1 8B (Q4)**: 12-20 tokens/sec on WebGPU (usable but not snappy)
 
-MCP 代表了 AI 工具生态从“各自为战”走向“互联互通”的关键一步。随着更多工具和服务加入 MCP 生态，AI 应用的能力边界将持续扩展。0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Why Local AI Is Becoming the Default Choice in 2026\",\"description\":\"The shift from cloud-dependent AI to local inference is accelerating. Here is why privacy, cost, and latency are making local-first AI the new standard.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-movement-2026\"},\"keywords\":\"AI, Local-LLM, Privacy, Edge-Computing\",\"wordCount\":440,\"articleSection\":\"AI\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"local-ai-movement-2026","title":"Why Local AI Is Becoming the Default Choice in 2026","excerpt":"The shift from cloud-dependent AI to local inference is accelerating. Here is why privacy, cost, and latency are making local-first AI the new standard.","date":"2026-05-11","tags":["AI","Local-LLM","Privacy","Edge-Computing"],"content":"$3"},"readingTime":3,"prevPost":{"slug":"zero-knowledge-proofs-web-apps-2026","title":"Zero-Knowledge Proofs Are Finally Coming to Web Apps","excerpt":"How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.","date":"2026-05-11","tags":["Cryptography","ZKP","Privacy","Web Development","Security"],"content":"$4"},"nextPost":{"slug":"zero-knowledge-web-auth-2026","title":"Zero-Knowledge Proofs Are Revolutionizing Web Authentication","excerpt":"How zero-knowledge proofs are eliminating password breaches and transforming how we prove identity online.","date":"2026-05-11","tags":["Security","Cryptography","Web Development","Authentication"],"content":"$5"},"relatedPosts":[{"slug":"local-ai-deployment-patterns-2026","title":"本地AI部署：从实验到生产的三种架构模式","excerpt":"探讨本地AI从原型到生产的三种主流部署架构，以及各自适用场景与性能权衡。","date":"2026-05-11","tags":["AI","Local-LLM","Privacy","Edge-Computing"],"content":"随着大模型量化技术和推理引擎的成熟，本地AI部署正从极客玩具走向生产级应用。本文梳理三种主流架构模式，帮助开发者做出正确的技术选型。\n\n## 模式一：嵌入式推理（Embedded Inference）\n\n直接将推理引擎集成到应用中，适用于桌面应用和CLI工具。\n\n**技术栈：** llama.cpp / MLX / ONNX Runtime\n\n**典型场景：** 代码补全助手、离线翻译、文档摘要\n\n**优势：** 零网络延迟，完全隐私，无需服务器基础设施\n\n**关键指标：**\n- M4 Pro运行7B模型：首Token约40ms，吞吐35 tokens/s\n- 内存占用：INT4量化约4GB，INT8约7GB\n- 启动时间：模型加载约2-3秒（SSD）\n\n## 模式二：本地API网关（Local API Gateway）\n\n在本地运行推理服务，通过类OpenAI API对外暴露，适合多应用共享模型。\n\n**技术栈：** Ollama / vLLM / LocalAI\n\n**典型场景：** 开发环境AI辅助、多工具共享模型、本地RAG管线\n\n**优势：** 模型一次加载多处使用，统一API接口便于切换\n\n## 模式三：混合推理（Hybrid Inference）\n\n本地处理简单任务，复杂任务路由到云端，实现成本与隐私的最佳平衡。\n\n**架构设计：**\n- 路由层判断任务复杂度和敏感度\n- 日常对话、代码片段 -> 本地7B模型\n- 长文档分析、复杂推理 -> 云端70B+模型\n- 含敏感数据的请求 -> 强制本地处理\n\n**关键挘战：**\n上下文同步是最大难点。本地和云端模型需要共享对话历史，否则用户体验割裂。推荐方案是使用结构化的会话格式，确保上下文可移植。\n\n## 选型建议\n\n- **单机桌面应用** -> 嵌入式推理（llama.cpp, MLX）\n- **多工具共享** -> 本地API网关（Ollama, vLLM）\n- **隐私敏感+复杂任务** -> 混合推理（自建路由层）\n\n## 未来展望\n\n随着WebGPU和移动端NPU算力提升，嵌入式推理将在浏览器和移动端普及。模型小型化趋势（如Phi-4-mini、Gemma-3-1B）进一步降低了本地运行门槛。2026年下半年，预计本地AI将成为大多数开发者工具的默认选项，而非特殊配置。\n"},{"slug":"ai-powered-development","title":"AI-Powered Development Tools","excerpt":"How AI assistants are transforming the way we write code.","date":"2026-05-05","tags":["AI","Productivity"],"content":"# AI-Powered Development Tools\n\nArtificial intelligence is revolutionizing how we write, review, and ship code.\n\n## The AI Coding Landscape\n\n1. Code completion: Inline suggestions (Copilot, Codeium)\n2. Conversational agents: Chat-based assistants (Claude, ChatGPT)\n3. Autonomous agents: Full-task execution (Codex, Claude Code)\n\n## Code Completion Tools\n\n- GitHub Copilot: VS Code integration, $10/mo\n- Codeium: Free tier, multi-IDE\n- Cursor: Agent mode, $20/mo\n- Supermaven: Fastest completions\n\n## Impact on Productivity\n\n- 30-55% faster code writing\n- 25% faster code review\n- 10-15% fewer bugs with test generation\n\n## Best Practices\n\n1. Review everything - AI code may have subtle bugs\n2. Use for boilerplate - Focus on architecture\n3. Pair with tests - Always test AI-generated code\n4. Stay in control - Use AI as a tool, not replacement"},{"slug":"model-context-protocol-ai-integration","title":"Model Context Protocol: AI 工具集成的新标准","excerpt":"深入解析 MCP 如何统一 AI 模型与外部工具的交互方式，以及它对开发者生态的影响。","date":"2026-05-11","tags":["AI","MCP","开发工具"],"content":"$6"}]}]],["$L7","$L8"],"$L9"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Zr503uEeoa3d5mXatso1X"}
+These numbers make browser-native AI viable for chat interfaces, code suggestions, and document summarization.
+
+## Memory Management Is the Real Challenge
+
+The biggest constraint is not compute — it is memory. A 4-bit quantized 3.8B model needs about 2.5GB of RAM. Browsers allocate this from the same pool as your tabs.
+
+Best practices:
+
+- Check `navigator.deviceMemory` before loading large models
+- Offload to Web Worker to avoid blocking UI
+- Fall back to API-based inference for low-memory devices
+
+## Use Cases Already in Production
+
+Several major applications shipped browser-native AI in 2026:
+
+- Code editors run fine-tuned 1.5B models locally for privacy-sensitive corporate accounts
+- Design tools use WebGPU for AI inference, avoiding round-trips to servers
+- Web IDEs run 2B code completion models client-side for offline coding support
+- Writing apps use local 1B models for real-time suggestions
+
+## Getting Started
+
+If you are building a web app today, consider a hybrid approach:
+
+1. **Ship a small model** (1-3B params) for latency-critical, privacy-sensitive features
+2. **Fall back to API** for complex tasks that need larger models
+3. **Cache aggressively** — model weights are downloaded once and persist across sessions
+
+The era of AI requires a server is ending. The browser is now a legitimate AI inference platform, and early adopters are shipping features that feel magical — instant, private, and free at scale.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Why Local AI Is Becoming the Default Choice in 2026\",\"description\":\"The shift from cloud-dependent AI to local inference is accelerating. Here is why privacy, cost, and latency are making local-first AI the new standard.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-movement-2026\"},\"keywords\":\"AI, Local-LLM, Privacy, Edge-Computing\",\"wordCount\":440,\"articleSection\":\"AI\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"local-ai-movement-2026","title":"Why Local AI Is Becoming the Default Choice in 2026","excerpt":"The shift from cloud-dependent AI to local inference is accelerating. Here is why privacy, cost, and latency are making local-first AI the new standard.","date":"2026-05-11","tags":["AI","Local-LLM","Privacy","Edge-Computing"],"content":"$3"},"readingTime":3,"prevPost":{"slug":"zero-knowledge-proofs-web-apps-2026","title":"Zero-Knowledge Proofs Are Finally Coming to Web Apps","excerpt":"How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.","date":"2026-05-11","tags":["Cryptography","ZKP","Privacy","Web Development","Security"],"content":"$4"},"nextPost":{"slug":"zero-knowledge-web-auth-2026","title":"Zero-Knowledge Proofs Are Revolutionizing Web Authentication","excerpt":"How zero-knowledge proofs are eliminating password breaches and transforming how we prove identity online.","date":"2026-05-11","tags":["Security","Cryptography","Web Development","Authentication"],"content":"$5"},"relatedPosts":[{"slug":"local-ai-deployment-patterns-2026","title":"本地AI部署：从实验到生产的三种架构模式","excerpt":"探讨本地AI从原型到生产的三种主流部署架构，以及各自适用场景与性能权衡。","date":"2026-05-11","tags":["AI","Local-LLM","Privacy","Edge-Computing"],"content":"随着大模型量化技术和推理引擎的成熟，本地AI部署正从极客玩具走向生产级应用。本文梳理三种主流架构模式，帮助开发者做出正确的技术选型。\n\n## 模式一：嵌入式推理（Embedded Inference）\n\n直接将推理引擎集成到应用中，适用于桌面应用和CLI工具。\n\n**技术栈：** llama.cpp / MLX / ONNX Runtime\n\n**典型场景：** 代码补全助手、离线翻译、文档摘要\n\n**优势：** 零网络延迟，完全隐私，无需服务器基础设施\n\n**关键指标：**\n- M4 Pro运行7B模型：首Token约40ms，吞吐35 tokens/s\n- 内存占用：INT4量化约4GB，INT8约7GB\n- 启动时间：模型加载约2-3秒（SSD）\n\n## 模式二：本地API网关（Local API Gateway）\n\n在本地运行推理服务，通过类OpenAI API对外暴露，适合多应用共享模型。\n\n**技术栈：** Ollama / vLLM / LocalAI\n\n**典型场景：** 开发环境AI辅助、多工具共享模型、本地RAG管线\n\n**优势：** 模型一次加载多处使用，统一API接口便于切换\n\n## 模式三：混合推理（Hybrid Inference）\n\n本地处理简单任务，复杂任务路由到云端，实现成本与隐私的最佳平衡。\n\n**架构设计：**\n- 路由层判断任务复杂度和敏感度\n- 日常对话、代码片段 -> 本地7B模型\n- 长文档分析、复杂推理 -> 云端70B+模型\n- 含敏感数据的请求 -> 强制本地处理\n\n**关键挘战：**\n上下文同步是最大难点。本地和云端模型需要共享对话历史，否则用户体验割裂。推荐方案是使用结构化的会话格式，确保上下文可移植。\n\n## 选型建议\n\n- **单机桌面应用** -> 嵌入式推理（llama.cpp, MLX）\n- **多工具共享** -> 本地API网关（Ollama, vLLM）\n- **隐私敏感+复杂任务** -> 混合推理（自建路由层）\n\n## 未来展望\n\n随着WebGPU和移动端NPU算力提升，嵌入式推理将在浏览器和移动端普及。模型小型化趋势（如Phi-4-mini、Gemma-3-1B）进一步降低了本地运行门槛。2026年下半年，预计本地AI将成为大多数开发者工具的默认选项，而非特殊配置。\n"},{"slug":"browser-native-local-ai-inference-2026","title":"Browser-Native AI: Running LLMs Locally with WebGPU and WASM","excerpt":"How WebGPU and WebAssembly are enabling full LLM inference directly in the browser — no server, no API keys, no data leaving your machine.","date":"2026-05-12","tags":["AI","WebGPU","WebAssembly","JavaScript","Performance","Privacy"],"content":"$6"},{"slug":"ai-powered-development","title":"AI-Powered Development Tools","excerpt":"How AI assistants are transforming the way we write code.","date":"2026-05-05","tags":["AI","Productivity"],"content":"# AI-Powered Development Tools\n\nArtificial intelligence is revolutionizing how we write, review, and ship code.\n\n## The AI Coding Landscape\n\n1. Code completion: Inline suggestions (Copilot, Codeium)\n2. Conversational agents: Chat-based assistants (Claude, ChatGPT)\n3. Autonomous agents: Full-task execution (Codex, Claude Code)\n\n## Code Completion Tools\n\n- GitHub Copilot: VS Code integration, $10/mo\n- Codeium: Free tier, multi-IDE\n- Cursor: Agent mode, $20/mo\n- Supermaven: Fastest completions\n\n## Impact on Productivity\n\n- 30-55% faster code writing\n- 25% faster code review\n- 10-15% fewer bugs with test generation\n\n## Best Practices\n\n1. Review everything - AI code may have subtle bugs\n2. Use for boilerplate - Focus on architecture\n3. Pair with tests - Always test AI-generated code\n4. Stay in control - Use AI as a tool, not replacement"}]}]],["$L7","$L8"],"$L9"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"m2Yb7gi7Fk-W8YhPJ2E6F"}
 7:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
 8:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true}]
 9:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]

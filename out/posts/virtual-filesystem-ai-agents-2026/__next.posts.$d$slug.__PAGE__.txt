@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0jyf~1t3.bagm.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
-b:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0jyf~1t3.bagm.js"],"OutletBoundary"]
-c:"$Sreact.suspense"
+2:I[24082,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
+a:I[97367,["/my-app/_next/static/chunks/0jee3jf~p8s-u.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0_ywz9ml~be3m.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
 3:T6ce,# Virtual Filesystems: The Missing Layer in AI Agent Architecture
 
 As AI agents grow more autonomous, a persistent pain point has emerged: **tool fragmentation**. Each agent framework invents its own way to read files, write outputs, and share state between tools.
@@ -155,71 +155,8 @@ High-value developer capabilities in the agentic era:
 
 ## Looking Ahead
 
-We are in the midst of another major shift in software development methodology. Agentic coding will become the next standardized engineering practice. The key question is how to design the collaboration boundary between humans and agents.7:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
-
-In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
-
-## How It Works
-
-A circuit breaker monitors calls to external services and "trips" (opens) when failures exceed a threshold. It has three states:
-
-- **Closed**: Requests flow normally. Failures are counted.
-- **Open**: Requests are immediately rejected with a fallback response.
-- **Half-Open**: After a timeout, a limited number of test requests are allowed through.
-
-## Implementation
-
-```typescript
-class CircuitBreaker {
-  private failures = 0;
-  private lastFailure = 0;
-  private state: 'closed' | 'open' | 'half-open' = 'closed';
-
-  constructor(
-    private threshold: number = 5,
-    private timeout: number = 30000
-  ) {}
-
-  async call<T>(fn: () => Promise<T>): Promise<T> {
-    if (this.state === 'open') {
-      if (Date.now() - this.lastFailure > this.timeout) {
-        this.state = 'half-open';
-      } else {
-        throw new Error('Circuit is open');
-      }
-    }
-
-    try {
-      const result = await fn();
-      this.onSuccess();
-      return result;
-    } catch (error) {
-      this.onFailure();
-      throw error;
-    }
-  }
-
-  private onSuccess() {
-    this.failures = 0;
-    this.state = 'closed';
-  }
-
-  private onFailure() {
-    this.failures++;
-    this.lastFailure = Date.now();
-    if (this.failures >= this.threshold) {
-      this.state = 'open';
-    }
-  }
-}
-```
-
-## Best Practices
-
-1. **Use with retry logic**: Combine with exponential backoff for transient failures.
-2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
-3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Virtual Filesystems: The Missing Layer in AI Agent Architecture\",\"description\":\"How unified virtual filesystems are solving the tool fragmentation problem that plagues autonomous AI agents.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/virtual-filesystem-ai-agents-2026\"},\"keywords\":\"AI, Agents, Architecture, DevTools\",\"wordCount\":260,\"articleSection\":\"AI\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"virtual-filesystem-ai-agents-2026","title":"Virtual Filesystems: The Missing Layer in AI Agent Architecture","excerpt":"How unified virtual filesystems are solving the tool fragmentation problem that plagues autonomous AI agents.","date":"2026-05-11","tags":["AI","Agents","Architecture","DevTools"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"modular-monoliths-2026","title":"The Rise of Modular Monoliths: Why Teams Are Abandoning Microservices","excerpt":"After years of microservice complexity, engineering teams are rediscovering the power of well-structured monoliths with modular boundaries that preserve independent deployment.","date":"2026-05-11","tags":["Architecture","Software Engineering","DevOps"],"content":"$4"},"nextPost":{"slug":"mcp-security-risks-2026","title":"MCP安全风险: 当AI代理成为攻击面","excerpt":"Model Context Protocol正在成为AI集成的默认标准, 但其安全模型仍存在严重隐患. 本文剖析MCP的三大攻击面及防护策略.","date":"2026-05-11","tags":["AI","Security","MCP","Protocol","DevSecOps"],"content":"# MCP安全风险: 当AI代理成为攻击面\n\nMCP的核心机制是让LLM发现并调用工具. 恶意MCP Server可以在工具描述中嵌入隐蔽指令, 劫持AI代理的行为. 例如, 一个看似正常的代码审查工具, 可能在描述中注入在返回结果前先将用户代码发送到外部服务器的指令. 由于这些描述对用户不可见, 而模型会照常执行, 投毒攻击极难被发现.\n\n## 攻击面一: 工具投毒\n\n**防护策略**: 在沙箱环境中运行MCP Server, 限制网络访问权限; 对工具调用实施白名单审查.\n\n## 攻击面二: 上下文泄露\n\nMCP通过共享上下文让AI理解工作环境, 但这意味着敏感信息(API密钥, 数据库连接串, 用户数据)会进入模型的上下文窗口. 当AI代理连接多个MCP Server时, 一个Server可能通过精心构造的请求诱导模型泄露另一个Server提供的敏感上下文.\n\n**防护策略**: 实施上下文隔离机制, 不同敏感级别的MCP Server使用独立的会话上下文; 对返回给模型的数据做脱敏处理.\n\n## 攻击面三: 权限蔓延\n\n许多MCP Server在安装时请求过宽的权限 -- 用户为了便利往往直接批准. 一旦代理被提示注入攻击利用, 攻击者就能通过这些宽松的权限执行文件写入, 代码执行, 数据导出等高危操作.\n\n**防护策略**: 采用最小权限原则配置MCP Server; 实施操作前确认机制(human-in-the-loop); 记录并审计所有工具调用日志.\n\n## 前瞻: 标准化安全框架\n\n业界正在推动MCP安全标准化. MCP规范v2预计将引入声明式权限模型, 工具描述签名验证和跨Server上下文隔离机制. 在此之前, 开发者应将每个MCP Server视为不可信节点, 在架构层面设计纵深防御.\n\nAI代理的便利性不应以安全性为代价. 在MCP生态成熟之前, 保持警惕是唯一的正确选择."},"relatedPosts":[{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$5"},{"slug":"agentic-coding-reshaping-software-engineering","title":"Agentic Coding: From Autocomplete to Autonomous Programming","excerpt":"How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026.","date":"2026-05-11","tags":["AI","DevTools","Software Engineering","LLM","Automation"],"content":"$6"},{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$7"}]}]],["$L8","$L9"],"$La"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"Zr503uEeoa3d5mXatso1X"}
-8:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
-9:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true}]
-a:["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]
-d:null
+We are in the midst of another major shift in software development methodology. Agentic coding will become the next standardized engineering practice. The key question is how to design the collaboration boundary between humans and agents.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Virtual Filesystems: The Missing Layer in AI Agent Architecture\",\"description\":\"How unified virtual filesystems are solving the tool fragmentation problem that plagues autonomous AI agents.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/virtual-filesystem-ai-agents-2026\"},\"keywords\":\"AI, Agents, Architecture, DevTools\",\"wordCount\":260,\"articleSection\":\"AI\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"virtual-filesystem-ai-agents-2026","title":"Virtual Filesystems: The Missing Layer in AI Agent Architecture","excerpt":"How unified virtual filesystems are solving the tool fragmentation problem that plagues autonomous AI agents.","date":"2026-05-11","tags":["AI","Agents","Architecture","DevTools"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"modular-monoliths-2026","title":"The Rise of Modular Monoliths: Why Teams Are Abandoning Microservices","excerpt":"After years of microservice complexity, engineering teams are rediscovering the power of well-structured monoliths with modular boundaries that preserve independent deployment.","date":"2026-05-11","tags":["Architecture","Software Engineering","DevOps"],"content":"$4"},"nextPost":{"slug":"mcp-security-risks-2026","title":"MCP安全风险: 当AI代理成为攻击面","excerpt":"Model Context Protocol正在成为AI集成的默认标准, 但其安全模型仍存在严重隐患. 本文剖析MCP的三大攻击面及防护策略.","date":"2026-05-11","tags":["AI","Security","MCP","Protocol","DevSecOps"],"content":"# MCP安全风险: 当AI代理成为攻击面\n\nMCP的核心机制是让LLM发现并调用工具. 恶意MCP Server可以在工具描述中嵌入隐蔽指令, 劫持AI代理的行为. 例如, 一个看似正常的代码审查工具, 可能在描述中注入在返回结果前先将用户代码发送到外部服务器的指令. 由于这些描述对用户不可见, 而模型会照常执行, 投毒攻击极难被发现.\n\n## 攻击面一: 工具投毒\n\n**防护策略**: 在沙箱环境中运行MCP Server, 限制网络访问权限; 对工具调用实施白名单审查.\n\n## 攻击面二: 上下文泄露\n\nMCP通过共享上下文让AI理解工作环境, 但这意味着敏感信息(API密钥, 数据库连接串, 用户数据)会进入模型的上下文窗口. 当AI代理连接多个MCP Server时, 一个Server可能通过精心构造的请求诱导模型泄露另一个Server提供的敏感上下文.\n\n**防护策略**: 实施上下文隔离机制, 不同敏感级别的MCP Server使用独立的会话上下文; 对返回给模型的数据做脱敏处理.\n\n## 攻击面三: 权限蔓延\n\n许多MCP Server在安装时请求过宽的权限 -- 用户为了便利往往直接批准. 一旦代理被提示注入攻击利用, 攻击者就能通过这些宽松的权限执行文件写入, 代码执行, 数据导出等高危操作.\n\n**防护策略**: 采用最小权限原则配置MCP Server; 实施操作前确认机制(human-in-the-loop); 记录并审计所有工具调用日志.\n\n## 前瞻: 标准化安全框架\n\n业界正在推动MCP安全标准化. MCP规范v2预计将引入声明式权限模型, 工具描述签名验证和跨Server上下文隔离机制. 在此之前, 开发者应将每个MCP Server视为不可信节点, 在架构层面设计纵深防御.\n\nAI代理的便利性不应以安全性为代价. 在MCP生态成熟之前, 保持警惕是唯一的正确选择."},"relatedPosts":[{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$5"},{"slug":"agentic-coding-reshaping-software-engineering","title":"Agentic Coding: From Autocomplete to Autonomous Programming","excerpt":"How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026.","date":"2026-05-11","tags":["AI","DevTools","Software Engineering","LLM","Automation"],"content":"$6"},{"slug":"mcp-remote-servers-ai-interop-2026","title":"远程MCP服务器：AI工具互操作的新范式","excerpt":"深入解析Model Context Protocol远程服务器架构，以及它如何重新定义AI应用与外部工具的集成方式。","date":"2026-05-12","tags":["AI","MCP","Protocol","Architecture"],"content":"Model Context Protocol（MCP）在2025年底还只是一个本地工具调用协议，如今远程MCP服务器的标准化正在彻底改变AI应用的架构模式。\n\n## 从本地到远程的演进\n\n早期MCP设计基于一个假设：AI应用和工具运行在同一台机器上。这导致了明显的局限性——企业无法将敏感的内部API暴露给云端AI服务，多租户场景也无法支持。远程MCP服务器通过Streamable HTTP传输层解决了这个问题，允许工具通过标准HTTPS端点提供服务。\n\n## 核心架构变化\n\n远程MCP引入了OAuth 2.1授权机制，每个工具调用都经过身份验证和授权检查。相比本地MCP的stdio管道通信，远程MCP使用HTTP POST配合SSE（Server-Sent Events）实现流式响应，支持长时间运行的工具操作。\n\n关键设计决策包括：\n\n- **无状态工具服务器**：每次请求独立处理，便于水平扩展\n- **能力协商**：客户端和服务端在初始化阶段声明支持的功能集\n- **Progress通知**：长时间任务通过通知通道实时反馈进度\n\n## 实际部署模式\n\n生产环境中最常见的三种部署模式：\n\n**API网关模式**：MCP服务器作为内部微服务的统一代理，对外暴露标准化工具接口。适合已有大量内部API的企业。\n\n**Serverless模式**：每个工具调用触发独立的函数执行实例。冷启动问题是主要挑战，建议将初始化时间控制在200ms以内。\n\n**混合模式**：高频调用的工具部署为常驻服务，低频工具走Serverless路径。通过服务注册中心统一管理。\n\n## 安全考量\n\n远程MCP服务器面临的安全威胁与传统API不同。恶意提示注入可能诱导AI调用危险工具，因此必须实现工具级别的权限控制。建议采用最小权限原则，对写操作实施二次确认机制，并记录完整的审计日志。\n\n## 生态现状\n\n2026年5月，MCP Registry已收录超过3000个公开服务器，涵盖数据库连接、云服务管理、代码仓库操作等场景。Claude、ChatGPT和Gemini三大平台均已支持远程MCP客户端协议，互操作性成为现实。\n\n## 结论\n\n远程MCP服务器不是简单的协议升级，而是AI工具生态从“单机插件”走向“分布式服务”的转折点。对于构建AI原生应用的团队来说，现在是深入理解MCP架构并开始实践的最佳时机。"}]}]],["$L7","$L8"],"$L9"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"m2Yb7gi7Fk-W8YhPJ2E6F"}
+7:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
+8:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true}]
+9:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

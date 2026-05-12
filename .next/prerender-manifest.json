@@ -247,6 +247,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/posts/browser-native-local-ai-inference-2026": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/posts/[slug]",
+      "dataRoute": "/posts/browser-native-local-ai-inference-2026.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/posts/bun-runtime-javascript-revolution-2026": {
       "experimentalBypassFor": [
         {
@@ -334,6 +358,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/posts/[slug]",
       "dataRoute": "/posts/database-indexing-strategies.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/posts/durable-execution-reliable-workflows-2026": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/posts/[slug]",
+      "dataRoute": "/posts/durable-execution-reliable-workflows-2026.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -526,6 +574,30 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/posts/[slug]",
       "dataRoute": "/posts/mastering-typescript.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/posts/mcp-remote-servers-ai-interop-2026": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/posts/[slug]",
+      "dataRoute": "/posts/mcp-remote-servers-ai-interop-2026.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -981,8 +1053,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "509b332e995a996f3ad8e5e2aa733364",
-    "previewModeSigningKey": "91f4622131e2631731cbad095f27672c2533d7a310b044257c2a8eeb93ce5bbd",
-    "previewModeEncryptionKey": "bc5d48dff87ea74ee50deacfc29d62289f4114cc679ddb65baed9a44fa6d3c98"
+    "previewModeId": "0a63e914c25db5ba5bda72321678eb39",
+    "previewModeSigningKey": "8bfd836fc9523db464b3acee46b219a00b449b71f76eb404468a3e3d5e0df06d",
+    "previewModeEncryptionKey": "79eae5855b9bb7e4219515388ea4e9a1ad751944f56e9006a6e81936a6cd03c1"
   }
 }
