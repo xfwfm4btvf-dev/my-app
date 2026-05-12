@@ -1,0 +1,246 @@
+1:"$Sreact.fragment"
+2:I[92825,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"ClientSegmentRoot"]
+3:I[42525,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
+4:I[39756,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
+5:I[37457,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
+6:I[36768,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js","/my-app/_next/static/chunks/0jganziq5pu93.js","/my-app/_next/static/chunks/010lnl~dwguvg.js","/my-app/_next/static/chunks/10mvbcj9aoy_k.js"],"default"]
+9:I[97367,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+d:I[97367,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"ViewportBoundary"]
+f:I[97367,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"MetadataBoundary"]
+11:I[68027,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"default",1]
+0:{"P":null,"c":["","posts","edge-computing-webassembly"],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","edge-computing-webassembly","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","script","script-0",{"src":"/my-app/_next/static/chunks/0k-4zsa7vneav.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0h8jteog6642c.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/my-app/_next/static/chunks/0t2xr05rlu96l.js","async":true,"nonce":"$undefined"}]],["$","$L2",null,{"Component":"$3","slots":{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]},"serverProvidedParams":{"params":{},"promises":["$@7"]}}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L8",[["$","script","script-0",{"src":"/my-app/_next/static/chunks/010lnl~dwguvg.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true,"nonce":"$undefined"}]],["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]]}],{},null,false,null]},null,false,"$@c"]},null,false,"$@c"]},null,false,null],["$","$1","h",{"children":[null,["$","$Ld",null,{"children":"$Le"}],["$","div",null,{"hidden":true,"children":["$","$Lf",null,{"children":["$","$a",null,{"name":"Next.Metadata","children":"$L10"}]}]}],null]}],false]],"m":"$undefined","G":["$11",[]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"xCjQq8jV1HHXRwfa6MKDH"}
+12:[]
+c:"$W12"
+7:"$0:f:0:1:0:props:children:1:props:serverProvidedParams:params"
+13:I[24082,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js","/my-app/_next/static/chunks/010lnl~dwguvg.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
+14:T526,# Edge Computing Meets WebAssembly
+
+The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
+
+## Why WebAssembly at the Edge
+
+Traditional serverless functions suffer from cold starts. Wasm modules, by contrast, can instantiate in microseconds. This makes them ideal for latency-sensitive edge workloads like real-time personalization, A/B testing, and authentication.
+
+## The WASI Standard
+
+The WebAssembly System Interface (WASI) provides a standardized way for Wasm modules to interact with the host OS. This means your Wasm code can run identically across Cloudflare Workers, Fastly Compute, and Fermyon's Spin — truly write once, run anywhere.
+
+## Getting Started
+
+```rust
+use spin_sdk::http::{Request, Response};
+
+#[spin_sdk::http_component]
+fn handle_request(req: Request) -> Response {
+    Response::builder()
+        .status(200)
+        .body("Hello from the edge!")
+        .build()
+}
+```
+
+## The Future
+
+With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.15:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
+
+In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
+
+## How It Works
+
+A circuit breaker monitors calls to external services and "trips" (opens) when failures exceed a threshold. It has three states:
+
+- **Closed**: Requests flow normally. Failures are counted.
+- **Open**: Requests are immediately rejected with a fallback response.
+- **Half-Open**: After a timeout, a limited number of test requests are allowed through.
+
+## Implementation
+
+```typescript
+class CircuitBreaker {
+  private failures = 0;
+  private lastFailure = 0;
+  private state: 'closed' | 'open' | 'half-open' = 'closed';
+
+  constructor(
+    private threshold: number = 5,
+    private timeout: number = 30000
+  ) {}
+
+  async call<T>(fn: () => Promise<T>): Promise<T> {
+    if (this.state === 'open') {
+      if (Date.now() - this.lastFailure > this.timeout) {
+        this.state = 'half-open';
+      } else {
+        throw new Error('Circuit is open');
+      }
+    }
+
+    try {
+      const result = await fn();
+      this.onSuccess();
+      return result;
+    } catch (error) {
+      this.onFailure();
+      throw error;
+    }
+  }
+
+  private onSuccess() {
+    this.failures = 0;
+    this.state = 'closed';
+  }
+
+  private onFailure() {
+    this.failures++;
+    this.lastFailure = Date.now();
+    if (this.failures >= this.threshold) {
+      this.state = 'open';
+    }
+  }
+}
+```
+
+## Best Practices
+
+1. **Use with retry logic**: Combine with exponential backoff for transient failures.
+2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
+3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.16:T6ba,# Rust + WebAssembly: The New Default Stack for Edge Computing in 2026
+
+The edge computing landscape has consolidated around a clear winner in 2026: Rust compiled to WebAssembly. Cloudflare Workers, Fastly Compute, Deno Deploy, and Fermyon Spin all now optimize for the Rust+WASM combo, and the performance numbers explain why.
+
+## Why Rust+WASM Won at the Edge
+
+Edge runtimes impose strict constraints: cold starts under 5ms, memory limits of 128MB, and CPU time quotas measured in milliseconds. Traditional container-based deployments cannot meet these requirements. WASM modules start in microseconds and run in sandboxed isolation without the overhead of a full OS.
+
+Rust fits this model perfectly. Its zero-cost abstractions, lack of a garbage collector, and predictable memory usage produce WASM binaries that are typically 10x smaller than equivalent Go or Java modules.
+
+## The Performance Gap Is Real
+
+- **Cold start**: 0.5-2ms (WASM) vs 50-200ms (Node.js containers)
+- **Memory usage**: 2-8MB typical vs 30-80MB for Node.js
+- **Throughput**: 2-5x higher requests/second at the same CPU quota
+- **P99 latency**: 40-60% lower tail latency due to no GC pauses
+
+## Getting Started
+
+    use worker::*;
+    #[event(fetch)]
+    async fn main(req: Request, env: Env, _ctx: Context) -> Result<Response> {
+        let router = Router::new();
+        router.get_async("/api/data", handle_data).run(req, env).await
+    }
+
+## What This Means for Web Developers
+
+The shift to Rust+WASM at the edge changes deployment economics. With sub-millisecond cold starts and minimal memory footprints, platforms can pack thousands of edge workers on a single machine. This directly translates to lower costs and higher free-tier limits.17:T742,# Edge-Native Databases: Data Where Your Users Are
+
+The traditional client-server model assumes a single, centralized database. Edge-native databases flip this model, placing data close to users across a global network of edge nodes.
+
+## Why Centralized Databases Fall Short
+
+A user in Tokyo querying a database in Virginia faces 150ms+ round-trip latency. For real-time collaboration, gaming, and IoT, this is unacceptable.
+
+## The Edge-Native Approach
+
+Edge-native databases replicate and partition data across geographic regions automatically:
+
+- **Local-first reads**: Served from the nearest edge node
+- **Conflict-free replication**: CRDTs handle concurrent writes
+- **Offline support**: Apps work without connectivity, syncing when reconnected
+
+## Popular Solutions
+
+**Cloudflare D1**: SQLite at the edge, backed by Cloudflare global network.
+
+**Turso (libSQL)**: Distributed SQLite with per-user databases for multi-tenant SaaS.
+
+**Neon**: Serverless PostgreSQL with branching for dev workflows.
+
+## Consistency Trade-offs
+
+Edge databases typically offer eventual consistency. For strong consistency:
+
+1. **Regional strong consistency**: Pin critical tables to a primary region
+2. **Conflict resolution policies**: Define custom merge logic
+3. **Hybrid approach**: Edge reads, centralized writes
+
+## Architecture Patterns
+
+**Read Replicas at Edge**: Main DB in one region, read replicas at edge. Simple but write latency unchanged.
+
+**Multi-Primary with CRDTs**: Every edge node accepts writes. Complex but lowest latency.
+
+**Tiered Storage**: Hot data at edge, warm in regional nodes, cold in central storage.
+
+## When to Use
+
+- Global SaaS with users across continents
+- Real-time collaborative applications
+- Offline-first mobile apps
+- IoT data collection at scale
+
+Start with one use case like user profiles, then expand as you build confidence.18:Tbf0,# Browser-Native AI: Running LLMs Locally with WebGPU and WASM
+
+The browser is becoming an AI runtime. With WebGPU now shipping in all major browsers and WASM threading mature enough for matrix operations, running 7B-parameter language models entirely client-side is not just possible — it's becoming practical.
+
+## Why Browser-Native AI Matters
+
+Three forces are converging:
+
+1. **Privacy regulation**: GDPR enforcement fines hit record levels in 2026. Companies are desperate for AI features that never transmit user data.
+
+2. **Cost pressure**: API inference costs remain significant at scale. Client-side inference eliminates per-request billing entirely.
+
+3. **Latency requirements**: Real-time features like code completion need sub-50ms responses. Even fast APIs can't compete with local execution.
+
+## The 2026 Stack
+
+**WebGPU** provides GPU compute shaders that match CUDA capabilities for inference. Chrome, Firefox, and Safari all ship WebGPU with compute shader support as of early 2026.
+
+**WASM SIMD + Threads** handle the CPU fallback path. Modern browsers support SharedArrayBuffer and 128-bit SIMD, enabling optimized matrix multiplication without GPU access.
+
+**ONNX Runtime Web** and **MediaPipe LLM Inference** provide the runtime layer, handling quantized model formats optimized for browser memory constraints.
+
+## Performance Realities
+
+In 2026 benchmarks on mid-range hardware:
+
+- **Phi-3 Mini (3.8B, Q4)**: 25-40 tokens/sec on WebGPU, 8-12 tokens/sec CPU-only
+- **Gemma 2B (Q4)**: 35-55 tokens/sec on WebGPU
+- **Llama 3.1 8B (Q4)**: 12-20 tokens/sec on WebGPU (usable but not snappy)
+
+These numbers make browser-native AI viable for chat interfaces, code suggestions, and document summarization.
+
+## Memory Management Is the Real Challenge
+
+The biggest constraint is not compute — it is memory. A 4-bit quantized 3.8B model needs about 2.5GB of RAM. Browsers allocate this from the same pool as your tabs.
+
+Best practices:
+
+- Check `navigator.deviceMemory` before loading large models
+- Offload to Web Worker to avoid blocking UI
+- Fall back to API-based inference for low-memory devices
+
+## Use Cases Already in Production
+
+Several major applications shipped browser-native AI in 2026:
+
+- Code editors run fine-tuned 1.5B models locally for privacy-sensitive corporate accounts
+- Design tools use WebGPU for AI inference, avoiding round-trips to servers
+- Web IDEs run 2B code completion models client-side for offline coding support
+- Writing apps use local 1B models for real-time suggestions
+
+## Getting Started
+
+If you are building a web app today, consider a hybrid approach:
+
+1. **Ship a small model** (1-3B params) for latency-critical, privacy-sensitive features
+2. **Fall back to API** for complex tasks that need larger models
+3. **Cache aggressively** — model weights are downloaded once and persist across sessions
+
+The era of AI requires a server is ending. The browser is now a legitimate AI inference platform, and early adopters are shipping features that feel magical — instant, private, and free at scale.8:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Edge Computing Meets WebAssembly\",\"description\":\"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/edge-computing-webassembly\"},\"keywords\":\"WebAssembly, Edge Computing\",\"wordCount\":179,\"articleSection\":\"WebAssembly\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L13",null,{"post":{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$14"},"readingTime":1,"prevPost":{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$15"},"nextPost":null,"relatedPosts":[{"slug":"rust-wasm-edge-computing-2026","title":"Rust + WebAssembly: The New Default Stack for Edge Computing in 2026","excerpt":"Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.","date":"2026-05-11","tags":["Rust","WebAssembly","Edge Computing","Serverless","Performance"],"content":"$16"},{"slug":"edge-native-databases","title":"Edge-Native Databases: Data Where Your Users Are","excerpt":"How edge-native databases are redefining data locality, latency, and offline-first architectures.","date":"2026-05-11","tags":["Database","Edge Computing","Architecture"],"content":"$17"},{"slug":"browser-native-local-ai-inference-2026","title":"Browser-Native AI: Running LLMs Locally with WebGPU and WASM","excerpt":"How WebGPU and WebAssembly are enabling full LLM inference directly in the browser — no server, no API keys, no data leaving your machine.","date":"2026-05-12","tags":["AI","WebGPU","WebAssembly","JavaScript","Performance","Privacy"],"content":"$18"}]}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+19:I[27201,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"IconMark"]
+b:null
+10:[["$","title","0",{"children":"Edge Computing Meets WebAssembly | Nitrogen Blog"}],["$","meta","1",{"name":"description","content":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications."}],["$","meta","2",{"name":"keywords","content":"WebAssembly,Edge Computing"}],["$","link","3",{"rel":"canonical","href":"/my-app/posts/edge-computing-webassembly"}],["$","meta","4",{"property":"og:title","content":"Edge Computing Meets WebAssembly"}],["$","meta","5",{"property":"og:description","content":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications."}],["$","meta","6",{"property":"og:url","content":"https://xfwfm4btvf-dev.github.io/my-app/posts/edge-computing-webassembly"}],["$","meta","7",{"property":"og:image","content":"http://localhost:3000/my-app/og-image.svg"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Edge Computing Meets WebAssembly"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"property":"article:published_time","content":"2026-05-11"}],["$","meta","13",{"property":"article:tag","content":"WebAssembly"}],["$","meta","14",{"property":"article:tag","content":"Edge Computing"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Edge Computing Meets WebAssembly"}],["$","meta","17",{"name":"twitter:description","content":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications."}],["$","meta","18",{"name":"twitter:image","content":"http://localhost:3000/my-app/og-image.svg"}],["$","link","19",{"rel":"icon","href":"/my-app/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L19","20",{}]]

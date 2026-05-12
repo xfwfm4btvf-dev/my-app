@@ -1,0 +1,261 @@
+1:"$Sreact.fragment"
+2:I[24082,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js","/my-app/_next/static/chunks/010lnl~dwguvg.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
+c:I[97367,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"OutletBoundary"]
+d:"$Sreact.suspense"
+3:T80f,# Zero-Knowledge Proofs Are Finally Coming to Web Apps
+
+The cryptographic primitive that powered Zcash and blockchain rollups is now landing in your browser. Zero-Knowledge Proofs (ZKPs) let a user prove they know something without revealing the thing itself. In 2026, this is finally practical for mainstream web apps.
+
+## Why Now?
+
+Three converging trends made this possible:
+
+1. **Browser-native WASM speed**: ZK proof generation used to take minutes. With optimized WASM backends (circom-wasm, snarkjs-ng), a proof generates in under 2 seconds on modern hardware.
+
+2. **Proof size collapse**: Groth16 proofs are just 128 bytes. PLONK proofs are under 500 bytes. That is smaller than a typical API response payload.
+
+3. **Regulatory pressure**: GDPR, California Privacy Act, and India DPDP Act all push toward data minimization. ZKPs let you verify without collecting.
+
+## Real Use Cases Today
+
+**Age Verification**: Prove you are over 18 without sharing your birthdate. The browser generates a ZK circuit from a government ID hash and outputs a binary true/false proof.
+
+**Credit Score Ranges**: Prove your score is above 700 without revealing the exact number. Fintech apps are adopting this for loan pre-qualification.
+
+**Credential Verification**: Prove you hold a valid degree or certification without revealing the institution or graduation year.
+
+## Getting Started
+
+The simplest path is @zk-kit/identity combined with circom circuits.
+
+## The UX Challenge
+
+The biggest barrier is user education. Nobody understands what generating a zero-knowledge proof means. The winning pattern is hiding it entirely. The proof generation happens silently in the background while the UI shows a simple verification badge.
+
+## What is Next
+
+Recursive proofs (proofs of proofs) are enabling composable verification chains. Imagine a job application where each credential check generates a proof, and all proofs roll up into a single 256-byte proof the employer verifies instantly.
+
+The web is entering a new privacy era. ZKPs are the infrastructure that makes it real.4:T6ba,# Rust + WebAssembly: The New Default Stack for Edge Computing in 2026
+
+The edge computing landscape has consolidated around a clear winner in 2026: Rust compiled to WebAssembly. Cloudflare Workers, Fastly Compute, Deno Deploy, and Fermyon Spin all now optimize for the Rust+WASM combo, and the performance numbers explain why.
+
+## Why Rust+WASM Won at the Edge
+
+Edge runtimes impose strict constraints: cold starts under 5ms, memory limits of 128MB, and CPU time quotas measured in milliseconds. Traditional container-based deployments cannot meet these requirements. WASM modules start in microseconds and run in sandboxed isolation without the overhead of a full OS.
+
+Rust fits this model perfectly. Its zero-cost abstractions, lack of a garbage collector, and predictable memory usage produce WASM binaries that are typically 10x smaller than equivalent Go or Java modules.
+
+## The Performance Gap Is Real
+
+- **Cold start**: 0.5-2ms (WASM) vs 50-200ms (Node.js containers)
+- **Memory usage**: 2-8MB typical vs 30-80MB for Node.js
+- **Throughput**: 2-5x higher requests/second at the same CPU quota
+- **P99 latency**: 40-60% lower tail latency due to no GC pauses
+
+## Getting Started
+
+    use worker::*;
+    #[event(fetch)]
+    async fn main(req: Request, env: Env, _ctx: Context) -> Result<Response> {
+        let router = Router::new();
+        router.get_async("/api/data", handle_data).run(req, env).await
+    }
+
+## What This Means for Web Developers
+
+The shift to Rust+WASM at the edge changes deployment economics. With sub-millisecond cold starts and minimal memory footprints, platforms can pack thousands of edge workers on a single machine. This directly translates to lower costs and higher free-tier limits.5:Tbf2,# Why Local AI Is Becoming the Default Choice in 2026
+
+The conversation around AI has shifted. Two years ago, the question was "which cloud API should I use?" Today, it is "why am I sending my data to a third party at all?"
+
+## The Three Forces Driving Local AI
+
+**Privacy as a requirement, not a feature.** GDPR enforcement has intensified. Healthcare and legal sectors now mandate data residency. Running models locally eliminates the compliance headache entirely.
+
+**Cost economics flipped.** A single H100 GPU inference setup costs less per month than equivalent API calls once you cross roughly 50M tokens. For teams with predictable workloads, local is now cheaper.
+
+**Latency expectations rose.** Real-time applications like code completion and voice assistants cannot tolerate 200ms+ network round trips. Local inference delivers sub-50ms responses.
+
+## What Actually Works Locally
+
+The model landscape has matured significantly:
+
+- **Qwen3 30B-A3B**: Runs on 8GB VRAM with impressive multilingual capabilities
+- **Llama 4 Scout 109B**: MoE architecture activates only 17B parameters per token, fits on consumer hardware
+- **DeepSeek R1 Distill**: Reasoning capabilities previously exclusive to cloud models
+- **Whisper v4**: Speech-to-text that rivals commercial APIs at zero marginal cost
+
+## The Tooling Stack
+
+The infrastructure has caught up:
+
+```bash
+# Ollama for quick model serving
+ollama run qwen3:30b-a3b
+
+# vLLM for production throughput
+vllm serve Qwen/Qwen3-30B-A3B --gpu-memory-utilization 0.9
+
+# llama.cpp for CPU inference
+./llama-server -m model.gguf -c 4096 --port 8080
+```
+
+## Hybrid Architecture Pattern
+
+The smart play is not all-or-nothing. Use local models for routine tasks and escalate to cloud APIs for complex reasoning:
+
+```typescript
+async function generateResponse(prompt: string) {
+  // Try local first
+  const localResult = await localLLM.generate(prompt, {
+    maxTokens: 512,
+    temperature: 0.7
+  });
+
+  // Check quality signal
+  if (localResult.confidence > 0.85) {
+    return localResult.text;
+  }
+
+  // Escalate to cloud for complex queries
+  return await cloudAPI.generate(prompt);
+}
+```
+
+## Real-World Deployments
+
+Companies running local AI in production:
+
+- **Codeium**: Local completion for enterprise customers who cannot send code to external APIs
+- **Brave Search**: On-device query understanding without cloud dependency
+- **Signal**: Local message classification for spam detection, preserving E2E encryption
+
+## What Still Needs Work
+
+- **Model updates**: Keeping local models current requires manual orchestration
+- **Multi-GPU scaling**: Not as seamless as cloud auto-scaling
+- **Fine-tuning workflows**: Still more complex than API-based fine-tuning
+
+## The Verdict
+
+Local AI is not replacing cloud AI. It is becoming the default first layer, with cloud as the overflow and specialized capability provider. Every serious engineering team should have a local inference strategy by now.
+
+The question is no longer "should we run AI locally?" It is "why are we still sending everything to the cloud?"6:T64e,# Zero-Knowledge Proofs Are Revolutionizing Web Authentication
+
+The biggest security news of 2026 is the mainstream adoption of zero-knowledge proofs (ZKPs) for web authentication.
+
+## The Password Problem
+
+Traditional authentication stores hashed passwords server-side. Even with bcrypt or argon2, a compromised database means millions of credentials are at risk. ZKPs flip this model entirely.
+
+## How ZKP Authentication Works
+
+Instead of sending your password to a server, you prove you *know* the password without revealing it:
+
+1. **Commitment**: Your client generates a cryptographic commitment to your secret
+2. **Challenge**: The server sends a random challenge
+3. **Proof**: Your client computes a proof showing knowledge of the secret
+4. **Verification**: The server verifies the proof learns nothing about your actual password
+
+The server never stores, sees, or transmits your password — ever.
+
+## Libraries Leading the Change
+
+**SnarkJS** and **Circom** have matured into production-ready tools. **zkLogin** from Sui Foundation now handles millions of authentications daily. **Semaphore** enables anonymous group authentication for privacy-first applications.
+
+## Real-World Impact
+
+- **Financial services**: Banks adopting ZKP auth for regulatory compliance
+- **Healthcare**: HIPAA-friendly authentication without storing PHI
+- **Gaming**: Proving account ownership without exposing credentials
+
+## Getting Started
+
+Start with Semaphore for anonymous auth or zkLogin for OAuth-compatible ZKP flows. The learning curve is steep, but the security payoff is massive.
+
+The passwordless future is proofs.7:T887,# Post-Quantum Cryptography: Hardening Web Apps Before Q-Day
+
+## The Quantum Clock Is Ticking
+
+NIST officially finalized three post-quantum cryptographic standards in 2024: ML-KEM (formerly Kyber), ML-DSA (Dilithium), and SLH-DSA (SPHINCS+). With quantum computing advances accelerating, the window to migrate your applications is narrowing.
+
+The "harvest now, decrypt later" threat means adversaries are already collecting encrypted traffic today, waiting for quantum machines capable of breaking RSA-2048 and ECC-256.
+
+## What Breaks First
+
+- **RSA/ECC key exchange** - replaced by ML-KEM-768/1024
+- **Digital signatures** - replaced by ML-DSA-65/87
+- **TLS certificates** - hybrid certificates becoming standard
+- **SSH keys** - OpenSSH 9.x added hybrid key exchange
+
+## Migration Checklist
+
+**1. TLS Libraries**
+OpenSSL 3.2+, BoringSSL, and rustls all support hybrid key exchange. Enable X25519Kyber768Draft00 alongside classical ECDHE for backward compatibility.
+
+**2. Hybrid Mode is Non-Negotiable**
+Never go pure-PQC yet. Hybrid schemes combine classical + post-quantum algorithms. If PQC turns out weak, your classical layer still protects.
+
+**3. Certificate Authorities**
+DigiCert and Let's Encrypt are testing PQC certificate issuance. Start requesting hybrid test certificates for staging environments.
+
+**4. Application-Layer Crypto**
+Review JWT signing (switch from RS256 to ML-DSA), database encryption keys, and API authentication tokens.
+
+## Code Example: Hybrid TLS with OpenSSL
+
+```bash
+# Generate hybrid PQC + classical key pair
+openssl genpkey -algorithm MLKEM768 -out pqc_key.pem
+openssl genpkey -algorithm X25519 -out classical_key.pem
+
+# Configure nginx with hybrid groups
+ssl_conf_command KEMGroups X25519Kyber768Draft00:X25519
+```
+
+## Timeline Estimates
+
+| Milestone | Target |
+|-----------|--------|
+| Hybrid TLS in production | 2025-2026 |
+| PQC-only TLS optional | 2027-2028 |
+| RSA/ECC deprecation begins | 2029-2030 |
+
+## Bottom Line
+
+Start your migration now. Enable hybrid key exchange in your TLS stack today — it costs negligible performance and buys you future-proof security. The crypto-agility you build now will be critical when Q-Day arrives.8:T467,# Why Web Developers Should Learn Rust in 2026
+
+Rust has been voted the most loved programming language for eight years running. But beyond the hype, Rust is making concrete inroads into web development tooling.
+
+## Rust-Powered Web Tools
+
+The most popular web tools are increasingly built with Rust:
+
+- **SWC**: Powers Next.js compilation, replacing Babel
+- **Turbopack**: Vercel's Rust-based bundler replacing Webpack
+- **Biome**: Rust rewrite of ESLint + Prettier
+- **oxc**: Fast JavaScript linter and parser
+
+These tools deliver 10-100x speed improvements over their JavaScript predecessors.
+
+## Beyond Tooling
+
+Rust is also becoming viable for writing web applications directly:
+
+- **Leptos**: A full-stack Rust framework with fine-grained reactivity
+- **Actix Web**: Blazingly fast HTTP framework
+- **Dioxus**: React-like component model in Rust
+
+## Where to Start
+
+If you are a web developer new to Rust, start with:
+
+1. The Rust Book (free online)
+2. Exercism's Rust track
+3. Build a small CLI tool, then try a simple API with Actix
+
+The learning curve is real, but the payoff in performance and reliability is immense.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Zero-Knowledge Proofs Are Finally Coming to Web Apps\",\"description\":\"How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-proofs-web-apps-2026\"},\"keywords\":\"Cryptography, ZKP, Privacy, Web Development, Security\",\"wordCount\":312,\"articleSection\":\"Cryptography\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"zero-knowledge-proofs-web-apps-2026","title":"Zero-Knowledge Proofs Are Finally Coming to Web Apps","excerpt":"How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.","date":"2026-05-11","tags":["Cryptography","ZKP","Privacy","Web Development","Security"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"rust-wasm-edge-computing-2026","title":"Rust + WebAssembly: The New Default Stack for Edge Computing in 2026","excerpt":"Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.","date":"2026-05-11","tags":["Rust","WebAssembly","Edge Computing","Serverless","Performance"],"content":"$4"},"nextPost":{"slug":"local-ai-movement-2026","title":"Why Local AI Is Becoming the Default Choice in 2026","excerpt":"The shift from cloud-dependent AI to local inference is accelerating. Here is why privacy, cost, and latency are making local-first AI the new standard.","date":"2026-05-11","tags":["AI","Local-LLM","Privacy","Edge-Computing"],"content":"$5"},"relatedPosts":[{"slug":"zero-knowledge-web-auth-2026","title":"Zero-Knowledge Proofs Are Revolutionizing Web Authentication","excerpt":"How zero-knowledge proofs are eliminating password breaches and transforming how we prove identity online.","date":"2026-05-11","tags":["Security","Cryptography","Web Development","Authentication"],"content":"$6"},{"slug":"post-quantum-cryptography-web-apps","title":"Post-Quantum Cryptography: Hardening Web Apps Before Q-Day","excerpt":"NIST finalized post-quantum standards. Here is how to migrate your web apps before quantum computers break RSA and ECC.","date":"2026-05-11","tags":["Cryptography","Security","Quantum","TLS","NIST"],"content":"$7"},{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"xCjQq8jV1HHXRwfa6MKDH"}
+9:["$","script","script-0",{"src":"/my-app/_next/static/chunks/010lnl~dwguvg.js","async":true}]
+a:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true}]
+b:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
+e:null
