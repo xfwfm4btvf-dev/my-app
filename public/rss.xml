@@ -5,7 +5,7 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 May 2026 00:50:43 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 01:59:47 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
@@ -365,6 +365,29 @@
       <category>Backend</category>
       <category>DevOps</category>
       <category>Reliability</category>
+    </item>
+    <item>
+      <title>npm Supply Chain Attacks: How to Protect Your Projects in 2026</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/npm-supply-chain-attacks-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/npm-supply-chain-attacks-2026</guid>
+      <description>The TanStack compromise is a wake-up call. Here is how npm supply chain attacks work and the concrete steps to defend your projects.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>Security</category>
+      <category>JavaScript</category>
+      <category>DevSecOps</category>
+      <category>npm</category>
+    </item>
+    <item>
+      <title>Unified Virtual Filesystems: Solving AI Agent File Access at Scale</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/unified-virtual-filesystem-ai-agents-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/unified-virtual-filesystem-ai-agents-2026</guid>
+      <description>How virtual filesystem layers are becoming the missing infrastructure piece for reliable, multi-agent AI systems.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Agents</category>
+      <category>Architecture</category>
+      <category>Filesystem</category>
+      <category>Infrastructure</category>
     </item>
   </channel>
 </rss>

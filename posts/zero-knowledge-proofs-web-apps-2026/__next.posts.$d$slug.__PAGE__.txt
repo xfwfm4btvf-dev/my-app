@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/15e1llgr~7x7o.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0t22lgdtuez_h.js"],"default"]
-c:I[97367,["/my-app/_next/static/chunks/15e1llgr~7x7o.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+2:I[24082,["/my-app/_next/static/chunks/0m5kelcox5v9i.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0qe_jsqkv-8un.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aab-l6hodiiz.js"],"default"]
+c:I[97367,["/my-app/_next/static/chunks/0m5kelcox5v9i.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0qe_jsqkv-8un.js"],"OutletBoundary"]
 d:"$Sreact.suspense"
-3:T7d9,
+3:T80f,# Zero-Knowledge Proofs Are Finally Coming to Web Apps
 
 The cryptographic primitive that powered Zcash and blockchain rollups is now landing in your browser. Zero-Knowledge Proofs (ZKPs) let a user prove they know something without revealing the thing itself. In 2026, this is finally practical for mainstream web apps.
 
@@ -36,7 +36,7 @@ The biggest barrier is user education. Nobody understands what generating a zero
 
 Recursive proofs (proofs of proofs) are enabling composable verification chains. Imagine a job application where each credential check generates a proof, and all proofs roll up into a single 256-byte proof the employer verifies instantly.
 
-The web is entering a new privacy era. ZKPs are the infrastructure that makes it real.4:T674,
+The web is entering a new privacy era. ZKPs are the infrastructure that makes it real.4:T6ba,# Rust + WebAssembly: The New Default Stack for Edge Computing in 2026
 
 The edge computing landscape has consolidated around a clear winner in 2026: Rust compiled to WebAssembly. Cloudflare Workers, Fastly Compute, Deno Deploy, and Fermyon Spin all now optimize for the Rust+WASM combo, and the performance numbers explain why.
 
@@ -64,7 +64,7 @@ Rust fits this model perfectly. Its zero-cost abstractions, lack of a garbage co
 
 ## What This Means for Web Developers
 
-The shift to Rust+WASM at the edge changes deployment economics. With sub-millisecond cold starts and minimal memory footprints, platforms can pack thousands of edge workers on a single machine. This directly translates to lower costs and higher free-tier limits.5:Tbbd,
+The shift to Rust+WASM at the edge changes deployment economics. With sub-millisecond cold starts and minimal memory footprints, platforms can pack thousands of edge workers on a single machine. This directly translates to lower costs and higher free-tier limits.5:Tbf2,# Why Local AI Is Becoming the Default Choice in 2026
 
 The conversation around AI has shifted. Two years ago, the question was "which cloud API should I use?" Today, it is "why am I sending my data to a third party at all?"
 
@@ -140,7 +140,7 @@ Companies running local AI in production:
 
 Local AI is not replacing cloud AI. It is becoming the default first layer, with cloud as the overflow and specialized capability provider. Every serious engineering team should have a local inference strategy by now.
 
-The question is no longer "should we run AI locally?" It is "why are we still sending everything to the cloud?"6:T610,
+The question is no longer "should we run AI locally?" It is "why are we still sending everything to the cloud?"6:T64e,# Zero-Knowledge Proofs Are Revolutionizing Web Authentication
 
 The biggest security news of 2026 is the mainstream adoption of zero-knowledge proofs (ZKPs) for web authentication.
 
@@ -173,7 +173,7 @@ The server never stores, sees, or transmits your password — ever.
 
 Start with Semaphore for anonymous auth or zkLogin for OAuth-compatible ZKP flows. The learning curve is steep, but the security payoff is massive.
 
-The passwordless future is proofs.7:T84b,
+The passwordless future is proofs.7:T887,# Post-Quantum Cryptography: Hardening Web Apps Before Q-Day
 
 ## The Quantum Clock Is Ticking
 
@@ -223,7 +223,7 @@ ssl_conf_command KEMGroups X25519Kyber768Draft00:X25519
 
 ## Bottom Line
 
-Start your migration now. Enable hybrid key exchange in your TLS stack today — it costs negligible performance and buys you future-proof security. The crypto-agility you build now will be critical when Q-Day arrives.8:T439,
+Start your migration now. Enable hybrid key exchange in your TLS stack today — it costs negligible performance and buys you future-proof security. The crypto-agility you build now will be critical when Q-Day arrives.8:T467,# Why Web Developers Should Learn Rust in 2026
 
 Rust has been voted the most loved programming language for eight years running. But beyond the hype, Rust is making concrete inroads into web development tooling.
 
@@ -254,8 +254,8 @@ If you are a web developer new to Rust, start with:
 2. Exercism's Rust track
 3. Build a small CLI tool, then try a simple API with Actix
 
-The learning curve is real, but the payoff in performance and reliability is immense.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Zero-Knowledge Proofs Are Finally Coming to Web Apps\",\"description\":\"How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-proofs-web-apps-2026\"},\"keywords\":\"Cryptography, ZKP, Privacy, Web Development, Security\",\"wordCount\":303,\"articleSection\":\"Cryptography\"}"}}],["$","$L2",null,{"post":{"slug":"zero-knowledge-proofs-web-apps-2026","title":"Zero-Knowledge Proofs Are Finally Coming to Web Apps","excerpt":"How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.","date":"2026-05-11","tags":["Cryptography","ZKP","Privacy","Web Development","Security"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"rust-wasm-edge-computing-2026","title":"Rust + WebAssembly: The New Default Stack for Edge Computing in 2026","excerpt":"Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.","date":"2026-05-11","tags":["Rust","WebAssembly","Edge Computing","Serverless","Performance"],"content":"$4"},"nextPost":{"slug":"local-ai-movement-2026","title":"Why Local AI Is Becoming the Default Choice in 2026","excerpt":"The shift from cloud-dependent AI to local inference is accelerating. Here is why privacy, cost, and latency are making local-first AI the new standard.","date":"2026-05-11","tags":["AI","Local-LLM","Privacy","Edge-Computing"],"content":"$5"},"relatedPosts":[{"slug":"zero-knowledge-web-auth-2026","title":"Zero-Knowledge Proofs Are Revolutionizing Web Authentication","excerpt":"How zero-knowledge proofs are eliminating password breaches and transforming how we prove identity online.","date":"2026-05-11","tags":["Security","Cryptography","Web Development","Authentication"],"content":"$6"},{"slug":"post-quantum-cryptography-web-apps","title":"Post-Quantum Cryptography: Hardening Web Apps Before Q-Day","excerpt":"NIST finalized post-quantum standards. Here is how to migrate your web apps before quantum computers break RSA and ECC.","date":"2026-05-11","tags":["Cryptography","Security","Quantum","TLS","NIST"],"content":"$7"},{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"_qyfHjluOOXste8Owcp4n"}
+The learning curve is real, but the payoff in performance and reliability is immense.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Zero-Knowledge Proofs Are Finally Coming to Web Apps\",\"description\":\"How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-proofs-web-apps-2026\"},\"keywords\":\"Cryptography, ZKP, Privacy, Web Development, Security\",\"wordCount\":312,\"articleSection\":\"Cryptography\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"zero-knowledge-proofs-web-apps-2026","title":"Zero-Knowledge Proofs Are Finally Coming to Web Apps","excerpt":"How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.","date":"2026-05-11","tags":["Cryptography","ZKP","Privacy","Web Development","Security"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"rust-wasm-edge-computing-2026","title":"Rust + WebAssembly: The New Default Stack for Edge Computing in 2026","excerpt":"Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.","date":"2026-05-11","tags":["Rust","WebAssembly","Edge Computing","Serverless","Performance"],"content":"$4"},"nextPost":{"slug":"local-ai-movement-2026","title":"Why Local AI Is Becoming the Default Choice in 2026","excerpt":"The shift from cloud-dependent AI to local inference is accelerating. Here is why privacy, cost, and latency are making local-first AI the new standard.","date":"2026-05-11","tags":["AI","Local-LLM","Privacy","Edge-Computing"],"content":"$5"},"relatedPosts":[{"slug":"zero-knowledge-web-auth-2026","title":"Zero-Knowledge Proofs Are Revolutionizing Web Authentication","excerpt":"How zero-knowledge proofs are eliminating password breaches and transforming how we prove identity online.","date":"2026-05-11","tags":["Security","Cryptography","Web Development","Authentication"],"content":"$6"},{"slug":"post-quantum-cryptography-web-apps","title":"Post-Quantum Cryptography: Hardening Web Apps Before Q-Day","excerpt":"NIST finalized post-quantum standards. Here is how to migrate your web apps before quantum computers break RSA and ECC.","date":"2026-05-11","tags":["Cryptography","Security","Quantum","TLS","NIST"],"content":"$7"},{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"aCsSuCORVlll7gYJMcJAI"}
 9:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
-a:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0t22lgdtuez_h.js","async":true}]
+a:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aab-l6hodiiz.js","async":true}]
 b:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
 e:null

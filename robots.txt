@@ -1,4 +1,7 @@
-User-agent: *
+User-Agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
 
 Sitemap: https://xfwfm4btvf-dev.github.io/my-app/sitemap.xml

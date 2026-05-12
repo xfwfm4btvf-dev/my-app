@@ -1,8 +1,8 @@
 1:"$Sreact.fragment"
-2:I[24082,["/my-app/_next/static/chunks/15e1llgr~7x7o.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0t22lgdtuez_h.js"],"default"]
-c:I[97367,["/my-app/_next/static/chunks/15e1llgr~7x7o.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js"],"OutletBoundary"]
+2:I[24082,["/my-app/_next/static/chunks/0m5kelcox5v9i.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0qe_jsqkv-8un.js","/my-app/_next/static/chunks/0hn0fksvameoa.js","/my-app/_next/static/chunks/0aab-l6hodiiz.js"],"default"]
+c:I[97367,["/my-app/_next/static/chunks/0m5kelcox5v9i.js","/my-app/_next/static/chunks/0bn7sb9dt40_4.js","/my-app/_next/static/chunks/0qe_jsqkv-8un.js"],"OutletBoundary"]
 d:"$Sreact.suspense"
-3:T6c5,
+3:T6ff,# Building Resilient APIs with the Circuit Breaker Pattern
 
 In distributed systems, failures are inevitable. The circuit breaker pattern prevents a single failing service from cascading into a system-wide outage.
 
@@ -65,7 +65,7 @@ class CircuitBreaker {
 
 1. **Use with retry logic**: Combine with exponential backoff for transient failures.
 2. **Monitor circuit states**: Expose metrics for alerting when circuits open.
-3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.4:T439,
+3. **Provide meaningful fallbacks**: Return cached data or degraded functionality instead of errors.4:T467,# Why Web Developers Should Learn Rust in 2026
 
 Rust has been voted the most loved programming language for eight years running. But beyond the hype, Rust is making concrete inroads into web development tooling.
 
@@ -96,7 +96,7 @@ If you are a web developer new to Rust, start with:
 2. Exercism's Rust track
 3. Build a small CLI tool, then try a simple API with Actix
 
-The learning curve is real, but the payoff in performance and reliability is immense.5:T504,
+The learning curve is real, but the payoff in performance and reliability is immense.5:T526,# Edge Computing Meets WebAssembly
 
 The convergence of WebAssembly (Wasm) and edge computing is reshaping how we think about application deployment. Originally designed for browsers, Wasm's sandboxed execution model makes it a natural fit for edge environments.
 
@@ -124,7 +124,7 @@ fn handle_request(req: Request) -> Response {
 
 ## The Future
 
-With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.6:T872,
+With the Component Model proposal, Wasm modules will be able to compose and interoperate across languages. Imagine importing a Rust crypto library directly into your JavaScript edge function — that future is closer than you think.6:T8b2,# AI Agent Orchestration: From Chaos to Coordinated Intelligence
 
 The era of single-prompt LLM interactions is ending. In 2026, the real power lies in orchestrating multiple specialized AI agents that work together like a well-coordinated team.
 
@@ -168,7 +168,7 @@ For most teams, start with the Supervisor pattern using a strong reasoning model
 
 ## The Road Ahead
 
-Agent orchestration is becoming infrastructure. Expect standardized protocols (like MCP for tool use) to emerge for inter-agent communication, making multi-agent systems as composable as microservices are today.7:T710,
+Agent orchestration is becoming infrastructure. Expect standardized protocols (like MCP for tool use) to emerge for inter-agent communication, making multi-agent systems as composable as microservices are today.7:T742,# Edge-Native Databases: Data Where Your Users Are
 
 The traditional client-server model assumes a single, centralized database. Edge-native databases flip this model, placing data close to users across a global network of edge nodes.
 
@@ -215,7 +215,7 @@ Edge databases typically offer eventual consistency. For strong consistency:
 - Offline-first mobile apps
 - IoT data collection at scale
 
-Start with one use case like user profiles, then expand as you build confidence.8:T6a1,
+Start with one use case like user profiles, then expand as you build confidence.8:T6e1,# The HTMX + Alpine.js Stack: Building Dynamic UIs Without React
 
 The frontend ecosystem has long assumed that dynamic web applications require React, Vue, or Svelte. HTMX and Alpine.js are proving that assumption wrong — and the results are compelling for a large class of applications.
 
@@ -248,8 +248,8 @@ This approach excels for content-driven applications: blogs, dashboards, admin p
 
 ## When to Stick With React
 
-Complex client-side applications with rich interactions — real-time collaboration tools, design editors, spreadsheet apps — genuinely benefit from a component framework. The key insight is that most web applications are not in this category.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Building Resilient APIs with the Circuit Breaker Pattern\",\"description\":\"Prevent cascading failures in distributed systems with the circuit breaker design pattern.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/circuit-breaker-pattern-apis\"},\"keywords\":\"Architecture, APIs\",\"wordCount\":232,\"articleSection\":\"Architecture\"}"}}],["$","$L2",null,{"post":{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$4"},"nextPost":{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$5"},"relatedPosts":[{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$6"},{"slug":"edge-native-databases","title":"Edge-Native Databases: Data Where Your Users Are","excerpt":"How edge-native databases are redefining data locality, latency, and offline-first architectures.","date":"2026-05-11","tags":["Database","Edge Computing","Architecture"],"content":"$7"},{"slug":"htmx-alpine-javascript-free-2026","title":"The HTMX + Alpine.js Stack: Building Dynamic UIs Without React","excerpt":"How the HTMX and Alpine.js combination is challenging the SPA orthodoxy and delivering better developer experience for content-driven applications.","date":"2026-05-11","tags":["HTMX","Alpine.js","Frontend","Architecture","Web Development"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"_qyfHjluOOXste8Owcp4n"}
+Complex client-side applications with rich interactions — real-time collaboration tools, design editors, spreadsheet apps — genuinely benefit from a component framework. The key insight is that most web applications are not in this category.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Building Resilient APIs with the Circuit Breaker Pattern\",\"description\":\"Prevent cascading failures in distributed systems with the circuit breaker design pattern.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/circuit-breaker-pattern-apis\"},\"keywords\":\"Architecture, APIs\",\"wordCount\":241,\"articleSection\":\"Architecture\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"circuit-breaker-pattern-apis","title":"Building Resilient APIs with the Circuit Breaker Pattern","excerpt":"Prevent cascading failures in distributed systems with the circuit breaker design pattern.","date":"2026-05-11","tags":["Architecture","APIs"],"content":"$3"},"readingTime":2,"prevPost":{"slug":"rust-for-web-developers","title":"Why Web Developers Should Learn Rust in 2026","excerpt":"Rust is no longer just for systems programmers — it is becoming essential for modern web development.","date":"2026-05-10","tags":["Rust","Web Development"],"content":"$4"},"nextPost":{"slug":"edge-computing-webassembly","title":"Edge Computing Meets WebAssembly","excerpt":"How WebAssembly is unlocking new possibilities for edge computing and server-side applications.","date":"2026-05-11","tags":["WebAssembly","Edge Computing"],"content":"$5"},"relatedPosts":[{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$6"},{"slug":"edge-native-databases","title":"Edge-Native Databases: Data Where Your Users Are","excerpt":"How edge-native databases are redefining data locality, latency, and offline-first architectures.","date":"2026-05-11","tags":["Database","Edge Computing","Architecture"],"content":"$7"},{"slug":"htmx-alpine-javascript-free-2026","title":"The HTMX + Alpine.js Stack: Building Dynamic UIs Without React","excerpt":"How the HTMX and Alpine.js combination is challenging the SPA orthodoxy and delivering better developer experience for content-driven applications.","date":"2026-05-11","tags":["HTMX","Alpine.js","Frontend","Architecture","Web Development"],"content":"$8"}]}]],["$L9","$La"],"$Lb"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"aCsSuCORVlll7gYJMcJAI"}
 9:["$","script","script-0",{"src":"/my-app/_next/static/chunks/0hn0fksvameoa.js","async":true}]
-a:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0t22lgdtuez_h.js","async":true}]
+a:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aab-l6hodiiz.js","async":true}]
 b:["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]
 e:null
