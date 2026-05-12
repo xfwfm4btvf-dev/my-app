@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { SearchDialog } from "@/components/SearchDialog";
 import { BackToTop } from "@/components/BackToTop";
+import { ReadingProgress } from "@/components/ReadingProgress";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -74,6 +75,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-black text-white min-h-screen flex flex-col">
+        <ReadingProgress />
         <nav className="border-b border-white/10 bg-black/50 backdrop-blur-lg sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="/my-app" className="text-xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
