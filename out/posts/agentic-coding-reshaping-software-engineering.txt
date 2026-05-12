@@ -1,0 +1,276 @@
+1:"$Sreact.fragment"
+2:I[92825,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"ClientSegmentRoot"]
+3:I[42525,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
+4:I[39756,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
+5:I[37457,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"default"]
+6:I[36768,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js","/my-app/_next/static/chunks/0jganziq5pu93.js","/my-app/_next/static/chunks/010lnl~dwguvg.js","/my-app/_next/static/chunks/10mvbcj9aoy_k.js"],"default"]
+9:I[97367,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+d:I[97367,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"ViewportBoundary"]
+f:I[97367,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"MetadataBoundary"]
+11:I[68027,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"default",1]
+0:{"P":null,"c":["","posts","agentic-coding-reshaping-software-engineering"],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","agentic-coding-reshaping-software-engineering","d",null],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","script","script-0",{"src":"/my-app/_next/static/chunks/0k-4zsa7vneav.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0h8jteog6642c.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/my-app/_next/static/chunks/0t2xr05rlu96l.js","async":true,"nonce":"$undefined"}]],["$","$L2",null,{"Component":"$3","slots":{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]},"serverProvidedParams":{"params":{},"promises":["$@7"]}}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L8",[["$","script","script-0",{"src":"/my-app/_next/static/chunks/010lnl~dwguvg.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true,"nonce":"$undefined"}]],["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]]}],{},null,false,null]},null,false,"$@c"]},null,false,"$@c"]},null,false,null],["$","$1","h",{"children":[null,["$","$Ld",null,{"children":"$Le"}],["$","div",null,{"hidden":true,"children":["$","$Lf",null,{"children":["$","$a",null,{"name":"Next.Metadata","children":"$L10"}]}]}],null]}],false]],"m":"$undefined","G":["$11",[]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"xCjQq8jV1HHXRwfa6MKDH"}
+12:[]
+c:"$W12"
+7:"$0:f:0:1:0:props:children:1:props:serverProvidedParams:params"
+13:I[24082,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js","/my-app/_next/static/chunks/010lnl~dwguvg.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
+14:T8d4,# Agentic Coding: From Autocomplete to Autonomous Programming
+
+In 2024, Copilot-style code completion was the mainstream. By 2026, agentic coding tools like Claude Code, Codex, and Cursor Agent have become core components of developer daily workflows. These tools are no longer passive assistants waiting to provide suggestions.
+
+## Three Levels of Agentic Coding
+
+**Level 1: Context Completion** -- The traditional Copilot mode, predicting the next code based on cursor position.
+
+**Level 2: Task Execution** -- Developers describe tasks in natural language, and the tool autonomously decomposes subtasks, modifies files across the codebase, and runs commands.
+
+**Level 3: Engineering Autonomy** -- The agent can independently handle a complete feature branch: understanding requirements docs, designing solutions, writing code, submitting PRs, and responding to review comments.
+
+## The Real Technical Challenges
+
+The core difficulty is engineering context understanding and maintenance. A real project might have hundreds of thousands of lines of code, complex dependency graphs, and implicit architectural constraints.
+
+Current solutions include: hierarchical code indexing and retrieval, structured project knowledge graphs, and context compression techniques across multi-turn conversations.
+
+Another critical issue is determinism and controllability. Engineering teams need clear guardrails: which files can be modified, which operations require human confirmation, and how CI/CD pipelines validate agent output.
+
+## Impact on the Developer Role
+
+High-value developer capabilities in the agentic era:
+
+- **System design and architectural decisions** -- Agents excel at implementation, but high-level design trade-offs require human judgment
+- **Precise task description skills** -- Expressing technical intent precisely in natural language becomes a core skill
+- **Code review and quality assurance** -- When 80% of code is agent-generated, reviewers shift to verifying architectural consistency
+
+## Looking Ahead
+
+We are in the midst of another major shift in software development methodology. Agentic coding will become the next standardized engineering practice. The key question is how to design the collaboration boundary between humans and agents.15:Tada,# HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026
+
+HTTP/3, built on top of Google's QUIC protocol, has quietly become the dominant transport for web traffic. As of May 2026, over 40% of global web requests use HTTP/3. If you have not optimized for it yet, you are leaving performance on the table.
+
+## What Changed From HTTP/2
+
+HTTP/2 solved head-of-line blocking at the application layer with multiplexed streams, but it still ran over TCP. A single lost packet stalls ALL streams because TCP delivers data in order. This is TCP-level head-of-line blocking.
+
+HTTP/3 fixes this by running over QUIC, which is built on UDP. Each stream is independently ordered. A lost packet on stream 3 does not affect streams 1, 2, or 4.
+
+## The Real Performance Gains
+
+**Connection setup**: QUIC combines transport and cryptographic handshakes into one round trip (0-RTT for returning connections). Compare this to TCP + TLS 1.3 which needs 2 round trips minimum.
+
+```
+TCP + TLS 1.3:  2 RTT  (~200ms on mobile)
+QUIC 1-RTT:     1 RTT  (~100ms on mobile)
+QUIC 0-RTT:     0 RTT  (~0ms for returning visitors)
+```
+
+**Mobile networks**: The gains are dramatic on lossy connections. A 2% packet loss rate that causes 300ms stalls in HTTP/2 causes near-zero impact in HTTP/3 because individual streams continue uninterrupted.
+
+## Enabling HTTP/3 on Your Server
+
+**Nginx** (1.25+):
+```nginx
+listen 443 quic reuseport;
+listen 443 ssl;
+add_header Alt-Svc 'h3=":443"; ma=86400';
+ssl_protocols TLSv1.3;
+```
+
+**Caddy** (automatic):
+```
+example.com {
+    tls admin@example.com
+    # HTTP/3 enabled by default since v2.7
+}
+```
+
+**Cloudflare** (zero config):
+HTTP/3 is enabled by default on all plans. Just verify with browser DevTools Network tab.
+
+## Client-Side Considerations
+
+Most modern browsers negotiate HTTP/3 automatically via Alt-Svc headers. But for API clients and server-to-server communication:
+
+```typescript
+// Node.js 22+ with built-in HTTP/3 support
+import { request } from 'node:http3';
+
+const response = await request('https://api.example.com/data', {
+  method: 'GET',
+  headers: { 'Accept': 'application/json' }
+});
+```
+
+## What to Watch
+
+- **WebTransport API**: Browser-native QUIC streams for bidirectional communication, replacing WebSocket for new projects
+- **QUIC datagrams**: Unreliable delivery for video streaming and gaming
+- **Connection migration**: Seamless network switches (WiFi to cellular) without reconnection
+
+## Bottom Line
+
+If you run a content-heavy site, API, or real-time application, enable HTTP/3 today. The performance improvement on mobile and lossy networks is substantial, and most CDNs and modern servers support it with minimal configuration.
+
+The protocol has graduated from experimental to essential. Make sure your stack reflects that.16:T70d,# OpenTelemetry Native: The End of Bolt-On Observability
+
+The observability landscape has shifted from "add OpenTelemetry to your app" to "your app framework already has OpenTelemetry built in." This transition is changing how teams instrument and monitor production systems.
+
+## The Problem With Bolt-On
+
+Traditional OpenTelemetry integration required adding SDKs, configuring exporters, and managing agent sidecars. The result was inconsistent instrumentation, high memory overhead from duplicate agents, and configuration drift across services.
+
+## Native Integration in 2026
+
+Major frameworks now ship with built-in OpenTelemetry:
+
+- **Rust**: Axum 0.8 and Actix-web 5.0 emit traces by default
+- **Go**: The standard library net/http package gained OTel middleware
+- **Node.js**: Express 5 and Fastify 5 auto-instrument HTTP handlers
+- **Python**: FastAPI 0.115 includes auto-instrumented endpoints
+- **Java**: Spring Boot 3.3 instruments every controller out of the box
+
+The developer experience is dramatically simpler: import the framework, configure an OTLP endpoint, and you get traces, metrics, and logs for free.
+
+## What This Means for SRE Teams
+
+Native observability eliminates the instrumentation gap. Every request is traced, every database query is measured, every error is correlated. The "we forgot to instrument that service" problem disappears.
+
+More importantly, it reduces the observability tax. Native instrumentation is typically 2-5x more efficient than agent-based approaches because it avoids context switches, serialization overhead, and sidecar network hops.
+
+## The Migration Path
+
+For existing applications, upgrade to the latest framework version, configure the OTLP exporter, and remove the old instrumentation agents. Most teams complete the migration in a sprint or two.17:T8b2,# AI Agent Orchestration: From Chaos to Coordinated Intelligence
+
+The era of single-prompt LLM interactions is ending. In 2026, the real power lies in orchestrating multiple specialized AI agents that work together like a well-coordinated team.
+
+## The Orchestration Problem
+
+Running one AI agent is straightforward. Running ten agents that need to share context, respect dependencies, and handle failures — that is the hard problem. Naive approaches like chaining sequential calls lead to brittle systems where one failure cascades everywhere.
+
+## Modern Orchestration Patterns
+
+**Supervisor Pattern**: A central orchestrator agent delegates tasks to specialist agents. Simple but creates a single point of failure.
+
+**Mesh Pattern**: Agents communicate peer-to-peer with shared memory. More resilient but harder to debug.
+
+**Pipeline Pattern**: Agents form a processing chain with explicit handoff contracts. Predictable but inflexible.
+
+## Building with LangGraph
+
+LangGraph has emerged as the dominant framework for agent orchestration. Its graph-based execution model lets you define agents as nodes and communication as edges:
+
+```typescript
+import { StateGraph } from 'langgraph';
+
+const workflow = new StateGraph(AgentState);
+workflow.addNode('researcher', researchAgent);
+workflow.addNode('writer', writingAgent);
+workflow.addNode('reviewer', reviewAgent);
+workflow.addEdge('researcher', 'writer');
+workflow.addEdge('writer', 'reviewer');
+```
+
+## Observability is Non-Negotiable
+
+Production agent systems demand full trace logging. Tools like LangSmith and Phoenix provide:
+- Token-level cost tracking per agent
+- Latency breakdowns across the orchestration graph
+- Error propagation visualization
+
+## Practical Architecture
+
+For most teams, start with the Supervisor pattern using a strong reasoning model as the orchestrator. Add circuit breakers between agents, implement retry with exponential backoff, and always maintain a human-in-the-loop escape hatch for critical decisions.
+
+## The Road Ahead
+
+Agent orchestration is becoming infrastructure. Expect standardized protocols (like MCP for tool use) to emerge for inter-agent communication, making multi-agent systems as composable as microservices are today.18:T6ce,# Virtual Filesystems: The Missing Layer in AI Agent Architecture
+
+As AI agents grow more autonomous, a persistent pain point has emerged: **tool fragmentation**. Each agent framework invents its own way to read files, write outputs, and share state between tools.
+
+## The Problem
+
+Consider a typical agent workflow: read a codebase, analyze it, generate tests, write results to disk. In most frameworks, each step uses a different I/O abstraction. The real cost is **context loss** — when an agent switches between tools, each tool sees a different slice of the filesystem.
+
+## Enter the Virtual Filesystem
+
+A new pattern is emerging: a unified virtual filesystem (VFS) layer that sits between the agent and its tools. Key capabilities:
+
+- **Atomic reads and writes** — no race conditions
+- **Virtual mounts** — expose GitHub repos, S3 buckets as filesystem trees
+- **Snapshot and rollback** — checkpoint before risky operations
+- **Sandboxing** — isolated filesystem namespaces per agent
+
+## Implementation Pattern
+
+`typescript
+const vfs = new VirtualFS();
+await vfs.mount('/repo', new GitHubMount(owner, repo));
+const checkpoint = await vfs.snapshot();
+try { await agent.run('Refactor the auth module'); }
+catch (e) { await vfs.restore(checkpoint); }
+`
+
+## Why This Matters
+
+1. **Observability** — all file ops logged through one interface
+2. **Security** — sandboxed FS prevents host access
+3. **Composability** — tools portable across frameworks
+
+The VFS pattern is part of the shift toward standardized agent infrastructure. Just as Docker standardized app environments, virtual filesystems are standardizing how AI agents interact with data. Combined with MCP for tool discovery, we're seeing the agent OS layer emerge.19:Tcbe,# SIMD-Aware LLM Inference: Beyond the Low-Hanging Fruit
+
+Most LLM inference optimization guides stop at quantization and batching. But there is an entire layer of performance gains hiding below — at the SIMD instruction level — that separates production-grade inference engines from toy implementations.
+
+## Why SIMD Matters for LLMs
+
+Transformer inference is dominated by matrix multiplications and attention computations. These operations are embarrassingly parallel at the vector level. A single AVX-512 instruction can process 16 FP16 values simultaneously, meaning your theoretical throughput scales directly with SIMD width.
+
+But most inference code does not take advantage of this:
+
+- **Memory-bound kernels**: Naive implementations bottleneck on memory bandwidth before saturating compute. SIMD-aware data layout (tiling, packing) fixes this.
+- **Suboptimal data types**: FP32 wastes SIMD lanes. INT8 or FP8 pack twice as many operations per instruction.
+- **Instruction-level parallelism**: Interleaving independent operations keeps execution units busy during memory stalls.
+
+## The Practical Gains
+
+Benchmarks from the llama.cpp and vLLM communities tell the story:
+
+- Naive FP32: 12 tokens/sec on a 7B model
+- Quantized INT8: 34 tokens/sec
+- INT8 + SIMD-optimized kernels: 58 tokens/sec
+- INT4 + custom SIMD kernels: 89 tokens/sec
+
+The jump from quantized-but-naive to SIMD-optimized is nearly 2x — without changing the model.
+
+## Key Optimization Patterns
+
+**1. GEMM Kernel Specialization**
+
+Generic matrix multiply code handles all sizes. Specialized kernels for common shapes (like 4096x4096 in typical transformer layers) eliminate branching overhead.
+
+**2. Fused Operations**
+
+Combining operations that share memory access patterns reduces memory round-trips. Fusing LayerNorm + activation saves one full memory pass per transformer block.
+
+**3. KV-Cache Layout**
+
+The key-value cache layout determines attention kernel efficiency. Interleaving key and value heads in memory improves cache locality during the dot-product phase.
+
+**4. Prefetch Scheduling**
+
+Explicit prefetch instructions timed to memory access patterns hide latency. For attention, prefetching the next chunk of the KV cache while computing the current chunk.
+
+## When This Actually Matters
+
+SIMD optimization pays off when serving many concurrent users on the same hardware, latency requirements are strict (real-time code completion, voice assistants), or you are running on CPU-only hardware with cost per token mattering more than convenience.
+
+For hobbyist single-user setups, quantization alone may suffice. But for production local inference, SIMD optimization is the difference between 30 tokens/sec and 60 tokens/sec on the same hardware.
+
+## The Tooling Gap
+
+Writing SIMD-optimized inference kernels requires deep systems knowledge. The good news is that projects like llama.cpp, MLC-LLM, and ExecuTorch expose these optimizations behind simple APIs. You do not need to write AVX intrinsics yourself.
+
+The next frontier is runtime SIMD dispatch — detecting CPU capabilities at startup and selecting the optimal kernel dynamically. Combined with speculative decoding and continuous batching, local inference is approaching GPU-level throughput on modern CPUs.8:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Agentic Coding: From Autocomplete to Autonomous Programming\",\"description\":\"How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/agentic-coding-reshaping-software-engineering\"},\"keywords\":\"AI, DevTools, Software Engineering, LLM, Automation\",\"wordCount\":310,\"articleSection\":\"AI\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L13",null,{"post":{"slug":"agentic-coding-reshaping-software-engineering","title":"Agentic Coding: From Autocomplete to Autonomous Programming","excerpt":"How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026.","date":"2026-05-11","tags":["AI","DevTools","Software Engineering","LLM","Automation"],"content":"$14"},"readingTime":2,"prevPost":{"slug":"http3-quic-web-developers-2026","title":"HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026","excerpt":"HTTP/3 adoption has crossed 40% of global web traffic. Understanding QUIC is no longer optional for performance-critical applications.","date":"2026-05-11","tags":["Web","Performance","Networking","DevOps"],"content":"$15"},"nextPost":{"slug":"observability-2026-otel-native","title":"OpenTelemetry Native: The End of Bolt-On Observability","excerpt":"How frameworks and languages are building OpenTelemetry support directly into their cores, eliminating the sidecar pattern and its overhead.","date":"2026-05-11","tags":["Observability","OpenTelemetry","DevOps","Monitoring","SRE"],"content":"$16"},"relatedPosts":[{"slug":"ai-agent-orchestration-2026","title":"AI Agent Orchestration: From Chaos to Coordinated Intelligence","excerpt":"How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.","date":"2026-05-11","tags":["AI","Agents","Architecture","LLM","Orchestration"],"content":"$17"},{"slug":"virtual-filesystem-ai-agents-2026","title":"Virtual Filesystems: The Missing Layer in AI Agent Architecture","excerpt":"How unified virtual filesystems are solving the tool fragmentation problem that plagues autonomous AI agents.","date":"2026-05-11","tags":["AI","Agents","Architecture","DevTools"],"content":"$18"},{"slug":"llm-inference-optimization-simd-2026","title":"SIMD-Aware LLM Inference: Beyond the Low-Hanging Fruit","excerpt":"How SIMD-level optimizations are pushing LLM inference throughput past what naive implementations achieve, and why it matters for local-first AI.","date":"2026-05-12","tags":["AI","LLM","Performance","Systems","Optimization"],"content":"$19"}]}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1a:I[27201,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"IconMark"]
+b:null
+10:[["$","title","0",{"children":"Agentic Coding: From Autocomplete to Autonomous Programming | Nitrogen Blog"}],["$","meta","1",{"name":"description","content":"How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026."}],["$","meta","2",{"name":"keywords","content":"AI,DevTools,Software Engineering,LLM,Automation"}],["$","link","3",{"rel":"canonical","href":"/my-app/posts/agentic-coding-reshaping-software-engineering"}],["$","meta","4",{"property":"og:title","content":"Agentic Coding: From Autocomplete to Autonomous Programming"}],["$","meta","5",{"property":"og:description","content":"How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026."}],["$","meta","6",{"property":"og:url","content":"https://xfwfm4btvf-dev.github.io/my-app/posts/agentic-coding-reshaping-software-engineering"}],["$","meta","7",{"property":"og:image","content":"http://localhost:3000/my-app/og-image.svg"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"Agentic Coding: From Autocomplete to Autonomous Programming"}],["$","meta","11",{"property":"og:type","content":"article"}],["$","meta","12",{"property":"article:published_time","content":"2026-05-11"}],["$","meta","13",{"property":"article:tag","content":"AI"}],["$","meta","14",{"property":"article:tag","content":"DevTools"}],["$","meta","15",{"property":"article:tag","content":"Software Engineering"}],["$","meta","16",{"property":"article:tag","content":"LLM"}],["$","meta","17",{"property":"article:tag","content":"Automation"}],["$","meta","18",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","19",{"name":"twitter:title","content":"Agentic Coding: From Autocomplete to Autonomous Programming"}],["$","meta","20",{"name":"twitter:description","content":"How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026."}],["$","meta","21",{"name":"twitter:image","content":"http://localhost:3000/my-app/og-image.svg"}],["$","link","22",{"rel":"icon","href":"/my-app/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L1a","23",{}]]

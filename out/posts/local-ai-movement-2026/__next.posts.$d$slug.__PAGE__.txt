@@ -1,0 +1,211 @@
+1:"$Sreact.fragment"
+2:I[24082,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js","/my-app/_next/static/chunks/010lnl~dwguvg.js","/my-app/_next/static/chunks/0aovxeg~365eq.js"],"default"]
+a:I[97367,["/my-app/_next/static/chunks/0k-4zsa7vneav.js","/my-app/_next/static/chunks/0h8jteog6642c.js","/my-app/_next/static/chunks/0t2xr05rlu96l.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+3:Tbf2,# Why Local AI Is Becoming the Default Choice in 2026
+
+The conversation around AI has shifted. Two years ago, the question was "which cloud API should I use?" Today, it is "why am I sending my data to a third party at all?"
+
+## The Three Forces Driving Local AI
+
+**Privacy as a requirement, not a feature.** GDPR enforcement has intensified. Healthcare and legal sectors now mandate data residency. Running models locally eliminates the compliance headache entirely.
+
+**Cost economics flipped.** A single H100 GPU inference setup costs less per month than equivalent API calls once you cross roughly 50M tokens. For teams with predictable workloads, local is now cheaper.
+
+**Latency expectations rose.** Real-time applications like code completion and voice assistants cannot tolerate 200ms+ network round trips. Local inference delivers sub-50ms responses.
+
+## What Actually Works Locally
+
+The model landscape has matured significantly:
+
+- **Qwen3 30B-A3B**: Runs on 8GB VRAM with impressive multilingual capabilities
+- **Llama 4 Scout 109B**: MoE architecture activates only 17B parameters per token, fits on consumer hardware
+- **DeepSeek R1 Distill**: Reasoning capabilities previously exclusive to cloud models
+- **Whisper v4**: Speech-to-text that rivals commercial APIs at zero marginal cost
+
+## The Tooling Stack
+
+The infrastructure has caught up:
+
+```bash
+# Ollama for quick model serving
+ollama run qwen3:30b-a3b
+
+# vLLM for production throughput
+vllm serve Qwen/Qwen3-30B-A3B --gpu-memory-utilization 0.9
+
+# llama.cpp for CPU inference
+./llama-server -m model.gguf -c 4096 --port 8080
+```
+
+## Hybrid Architecture Pattern
+
+The smart play is not all-or-nothing. Use local models for routine tasks and escalate to cloud APIs for complex reasoning:
+
+```typescript
+async function generateResponse(prompt: string) {
+  // Try local first
+  const localResult = await localLLM.generate(prompt, {
+    maxTokens: 512,
+    temperature: 0.7
+  });
+
+  // Check quality signal
+  if (localResult.confidence > 0.85) {
+    return localResult.text;
+  }
+
+  // Escalate to cloud for complex queries
+  return await cloudAPI.generate(prompt);
+}
+```
+
+## Real-World Deployments
+
+Companies running local AI in production:
+
+- **Codeium**: Local completion for enterprise customers who cannot send code to external APIs
+- **Brave Search**: On-device query understanding without cloud dependency
+- **Signal**: Local message classification for spam detection, preserving E2E encryption
+
+## What Still Needs Work
+
+- **Model updates**: Keeping local models current requires manual orchestration
+- **Multi-GPU scaling**: Not as seamless as cloud auto-scaling
+- **Fine-tuning workflows**: Still more complex than API-based fine-tuning
+
+## The Verdict
+
+Local AI is not replacing cloud AI. It is becoming the default first layer, with cloud as the overflow and specialized capability provider. Every serious engineering team should have a local inference strategy by now.
+
+The question is no longer "should we run AI locally?" It is "why are we still sending everything to the cloud?"4:T80f,# Zero-Knowledge Proofs Are Finally Coming to Web Apps
+
+The cryptographic primitive that powered Zcash and blockchain rollups is now landing in your browser. Zero-Knowledge Proofs (ZKPs) let a user prove they know something without revealing the thing itself. In 2026, this is finally practical for mainstream web apps.
+
+## Why Now?
+
+Three converging trends made this possible:
+
+1. **Browser-native WASM speed**: ZK proof generation used to take minutes. With optimized WASM backends (circom-wasm, snarkjs-ng), a proof generates in under 2 seconds on modern hardware.
+
+2. **Proof size collapse**: Groth16 proofs are just 128 bytes. PLONK proofs are under 500 bytes. That is smaller than a typical API response payload.
+
+3. **Regulatory pressure**: GDPR, California Privacy Act, and India DPDP Act all push toward data minimization. ZKPs let you verify without collecting.
+
+## Real Use Cases Today
+
+**Age Verification**: Prove you are over 18 without sharing your birthdate. The browser generates a ZK circuit from a government ID hash and outputs a binary true/false proof.
+
+**Credit Score Ranges**: Prove your score is above 700 without revealing the exact number. Fintech apps are adopting this for loan pre-qualification.
+
+**Credential Verification**: Prove you hold a valid degree or certification without revealing the institution or graduation year.
+
+## Getting Started
+
+The simplest path is @zk-kit/identity combined with circom circuits.
+
+## The UX Challenge
+
+The biggest barrier is user education. Nobody understands what generating a zero-knowledge proof means. The winning pattern is hiding it entirely. The proof generation happens silently in the background while the UI shows a simple verification badge.
+
+## What is Next
+
+Recursive proofs (proofs of proofs) are enabling composable verification chains. Imagine a job application where each credential check generates a proof, and all proofs roll up into a single 256-byte proof the employer verifies instantly.
+
+The web is entering a new privacy era. ZKPs are the infrastructure that makes it real.5:T64e,# Zero-Knowledge Proofs Are Revolutionizing Web Authentication
+
+The biggest security news of 2026 is the mainstream adoption of zero-knowledge proofs (ZKPs) for web authentication.
+
+## The Password Problem
+
+Traditional authentication stores hashed passwords server-side. Even with bcrypt or argon2, a compromised database means millions of credentials are at risk. ZKPs flip this model entirely.
+
+## How ZKP Authentication Works
+
+Instead of sending your password to a server, you prove you *know* the password without revealing it:
+
+1. **Commitment**: Your client generates a cryptographic commitment to your secret
+2. **Challenge**: The server sends a random challenge
+3. **Proof**: Your client computes a proof showing knowledge of the secret
+4. **Verification**: The server verifies the proof learns nothing about your actual password
+
+The server never stores, sees, or transmits your password — ever.
+
+## Libraries Leading the Change
+
+**SnarkJS** and **Circom** have matured into production-ready tools. **zkLogin** from Sui Foundation now handles millions of authentications daily. **Semaphore** enables anonymous group authentication for privacy-first applications.
+
+## Real-World Impact
+
+- **Financial services**: Banks adopting ZKP auth for regulatory compliance
+- **Healthcare**: HIPAA-friendly authentication without storing PHI
+- **Gaming**: Proving account ownership without exposing credentials
+
+## Getting Started
+
+Start with Semaphore for anonymous auth or zkLogin for OAuth-compatible ZKP flows. The learning curve is steep, but the security payoff is massive.
+
+The passwordless future is proofs.6:Tbf0,# Browser-Native AI: Running LLMs Locally with WebGPU and WASM
+
+The browser is becoming an AI runtime. With WebGPU now shipping in all major browsers and WASM threading mature enough for matrix operations, running 7B-parameter language models entirely client-side is not just possible — it's becoming practical.
+
+## Why Browser-Native AI Matters
+
+Three forces are converging:
+
+1. **Privacy regulation**: GDPR enforcement fines hit record levels in 2026. Companies are desperate for AI features that never transmit user data.
+
+2. **Cost pressure**: API inference costs remain significant at scale. Client-side inference eliminates per-request billing entirely.
+
+3. **Latency requirements**: Real-time features like code completion need sub-50ms responses. Even fast APIs can't compete with local execution.
+
+## The 2026 Stack
+
+**WebGPU** provides GPU compute shaders that match CUDA capabilities for inference. Chrome, Firefox, and Safari all ship WebGPU with compute shader support as of early 2026.
+
+**WASM SIMD + Threads** handle the CPU fallback path. Modern browsers support SharedArrayBuffer and 128-bit SIMD, enabling optimized matrix multiplication without GPU access.
+
+**ONNX Runtime Web** and **MediaPipe LLM Inference** provide the runtime layer, handling quantized model formats optimized for browser memory constraints.
+
+## Performance Realities
+
+In 2026 benchmarks on mid-range hardware:
+
+- **Phi-3 Mini (3.8B, Q4)**: 25-40 tokens/sec on WebGPU, 8-12 tokens/sec CPU-only
+- **Gemma 2B (Q4)**: 35-55 tokens/sec on WebGPU
+- **Llama 3.1 8B (Q4)**: 12-20 tokens/sec on WebGPU (usable but not snappy)
+
+These numbers make browser-native AI viable for chat interfaces, code suggestions, and document summarization.
+
+## Memory Management Is the Real Challenge
+
+The biggest constraint is not compute — it is memory. A 4-bit quantized 3.8B model needs about 2.5GB of RAM. Browsers allocate this from the same pool as your tabs.
+
+Best practices:
+
+- Check `navigator.deviceMemory` before loading large models
+- Offload to Web Worker to avoid blocking UI
+- Fall back to API-based inference for low-memory devices
+
+## Use Cases Already in Production
+
+Several major applications shipped browser-native AI in 2026:
+
+- Code editors run fine-tuned 1.5B models locally for privacy-sensitive corporate accounts
+- Design tools use WebGPU for AI inference, avoiding round-trips to servers
+- Web IDEs run 2B code completion models client-side for offline coding support
+- Writing apps use local 1B models for real-time suggestions
+
+## Getting Started
+
+If you are building a web app today, consider a hybrid approach:
+
+1. **Ship a small model** (1-3B params) for latency-critical, privacy-sensitive features
+2. **Fall back to API** for complex tasks that need larger models
+3. **Cache aggressively** — model weights are downloaded once and persist across sessions
+
+The era of AI requires a server is ending. The browser is now a legitimate AI inference platform, and early adopters are shipping features that feel magical — instant, private, and free at scale.0:{"rsc":["$","$1","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Why Local AI Is Becoming the Default Choice in 2026\",\"description\":\"The shift from cloud-dependent AI to local inference is accelerating. Here is why privacy, cost, and latency are making local-first AI the new standard.\",\"datePublished\":\"2026-05-11\",\"dateModified\":\"2026-05-11\",\"author\":{\"@type\":\"Person\",\"name\":\"Henry Nitrogen\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/about\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Nitrogen Blog\",\"url\":\"https://xfwfm4btvf-dev.github.io/my-app/\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-movement-2026\"},\"keywords\":\"AI, Local-LLM, Privacy, Edge-Computing\",\"wordCount\":440,\"articleSection\":\"AI\",\"image\":\"https://xfwfm4btvf-dev.github.io/my-app/og-image.svg\"}"}}],["$","$L2",null,{"post":{"slug":"local-ai-movement-2026","title":"Why Local AI Is Becoming the Default Choice in 2026","excerpt":"The shift from cloud-dependent AI to local inference is accelerating. Here is why privacy, cost, and latency are making local-first AI the new standard.","date":"2026-05-11","tags":["AI","Local-LLM","Privacy","Edge-Computing"],"content":"$3"},"readingTime":3,"prevPost":{"slug":"zero-knowledge-proofs-web-apps-2026","title":"Zero-Knowledge Proofs Are Finally Coming to Web Apps","excerpt":"How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.","date":"2026-05-11","tags":["Cryptography","ZKP","Privacy","Web Development","Security"],"content":"$4"},"nextPost":{"slug":"zero-knowledge-web-auth-2026","title":"Zero-Knowledge Proofs Are Revolutionizing Web Authentication","excerpt":"How zero-knowledge proofs are eliminating password breaches and transforming how we prove identity online.","date":"2026-05-11","tags":["Security","Cryptography","Web Development","Authentication"],"content":"$5"},"relatedPosts":[{"slug":"local-ai-deployment-patterns-2026","title":"本地AI部署：从实验到生产的三种架构模式","excerpt":"探讨本地AI从原型到生产的三种主流部署架构，以及各自适用场景与性能权衡。","date":"2026-05-11","tags":["AI","Local-LLM","Privacy","Edge-Computing"],"content":"随着大模型量化技术和推理引擎的成熟，本地AI部署正从极客玩具走向生产级应用。本文梳理三种主流架构模式，帮助开发者做出正确的技术选型。\n\n## 模式一：嵌入式推理（Embedded Inference）\n\n直接将推理引擎集成到应用中，适用于桌面应用和CLI工具。\n\n**技术栈：** llama.cpp / MLX / ONNX Runtime\n\n**典型场景：** 代码补全助手、离线翻译、文档摘要\n\n**优势：** 零网络延迟，完全隐私，无需服务器基础设施\n\n**关键指标：**\n- M4 Pro运行7B模型：首Token约40ms，吞吐35 tokens/s\n- 内存占用：INT4量化约4GB，INT8约7GB\n- 启动时间：模型加载约2-3秒（SSD）\n\n## 模式二：本地API网关（Local API Gateway）\n\n在本地运行推理服务，通过类OpenAI API对外暴露，适合多应用共享模型。\n\n**技术栈：** Ollama / vLLM / LocalAI\n\n**典型场景：** 开发环境AI辅助、多工具共享模型、本地RAG管线\n\n**优势：** 模型一次加载多处使用，统一API接口便于切换\n\n## 模式三：混合推理（Hybrid Inference）\n\n本地处理简单任务，复杂任务路由到云端，实现成本与隐私的最佳平衡。\n\n**架构设计：**\n- 路由层判断任务复杂度和敏感度\n- 日常对话、代码片段 -> 本地7B模型\n- 长文档分析、复杂推理 -> 云端70B+模型\n- 含敏感数据的请求 -> 强制本地处理\n\n**关键挘战：**\n上下文同步是最大难点。本地和云端模型需要共享对话历史，否则用户体验割裂。推荐方案是使用结构化的会话格式，确保上下文可移植。\n\n## 选型建议\n\n- **单机桌面应用** -> 嵌入式推理（llama.cpp, MLX）\n- **多工具共享** -> 本地API网关（Ollama, vLLM）\n- **隐私敏感+复杂任务** -> 混合推理（自建路由层）\n\n## 未来展望\n\n随着WebGPU和移动端NPU算力提升，嵌入式推理将在浏览器和移动端普及。模型小型化趋势（如Phi-4-mini、Gemma-3-1B）进一步降低了本地运行门槛。2026年下半年，预计本地AI将成为大多数开发者工具的默认选项，而非特殊配置。\n"},{"slug":"browser-native-local-ai-inference-2026","title":"Browser-Native AI: Running LLMs Locally with WebGPU and WASM","excerpt":"How WebGPU and WebAssembly are enabling full LLM inference directly in the browser — no server, no API keys, no data leaving your machine.","date":"2026-05-12","tags":["AI","WebGPU","WebAssembly","JavaScript","Performance","Privacy"],"content":"$6"},{"slug":"ai-powered-development","title":"AI-Powered Development Tools","excerpt":"How AI assistants are transforming the way we write code.","date":"2026-05-05","tags":["AI","Productivity"],"content":"# AI-Powered Development Tools\n\nArtificial intelligence is revolutionizing how we write, review, and ship code.\n\n## The AI Coding Landscape\n\n1. Code completion: Inline suggestions (Copilot, Codeium)\n2. Conversational agents: Chat-based assistants (Claude, ChatGPT)\n3. Autonomous agents: Full-task execution (Codex, Claude Code)\n\n## Code Completion Tools\n\n- GitHub Copilot: VS Code integration, $10/mo\n- Codeium: Free tier, multi-IDE\n- Cursor: Agent mode, $20/mo\n- Supermaven: Fastest completions\n\n## Impact on Productivity\n\n- 30-55% faster code writing\n- 25% faster code review\n- 10-15% fewer bugs with test generation\n\n## Best Practices\n\n1. Review everything - AI code may have subtle bugs\n2. Use for boilerplate - Focus on architecture\n3. Pair with tests - Always test AI-generated code\n4. Stay in control - Use AI as a tool, not replacement"}]}]],["$L7","$L8"],"$L9"]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"xCjQq8jV1HHXRwfa6MKDH"}
+7:["$","script","script-0",{"src":"/my-app/_next/static/chunks/010lnl~dwguvg.js","async":true}]
+8:["$","script","script-1",{"src":"/my-app/_next/static/chunks/0aovxeg~365eq.js","async":true}]
+9:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
+c:null

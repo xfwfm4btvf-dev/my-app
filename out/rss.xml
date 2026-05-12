@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nitrogen Blog - Tech, Code and Future</title>
+    <link>https://xfwfm4btvf-dev.github.io/my-app</link>
+    <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 May 2026 02:06:06 GMT</lastBuildDate>
+    <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Edge Computing Meets WebAssembly</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/edge-computing-webassembly</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/edge-computing-webassembly</guid>
+      <description>How WebAssembly is unlocking new possibilities for edge computing and server-side applications.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>WebAssembly</category>
+      <category>Edge Computing</category>
+    </item>
+    <item>
+      <title>Building Resilient APIs with the Circuit Breaker Pattern</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/circuit-breaker-pattern-apis</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/circuit-breaker-pattern-apis</guid>
+      <description>Prevent cascading failures in distributed systems with the circuit breaker design pattern.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Architecture</category>
+      <category>APIs</category>
+    </item>
+    <item>
+      <title>Why Web Developers Should Learn Rust in 2026</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/rust-for-web-developers</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/rust-for-web-developers</guid>
+      <description>Rust is no longer just for systems programmers — it is becoming essential for modern web development.</description>
+      <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+      <category>Rust</category>
+      <category>Web Development</category>
+    </item>
+    <item>
+      <title>Database Indexing Strategies for High-Traffic Applications</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/database-indexing-strategies</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/database-indexing-strategies</guid>
+      <description>Master the art of database indexing to keep your application fast as it scales.</description>
+      <pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate>
+      <category>Database</category>
+      <category>Performance</category>
+    </item>
+    <item>
+      <title>Container Queries: The End of Media Query Hacks</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/css-container-queries</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/css-container-queries</guid>
+      <description>CSS container queries let components respond to their own size, not just the viewport.</description>
+      <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+      <category>CSS</category>
+      <category>Frontend</category>
+    </item>
+    <item>
+      <title>Mastering TypeScript: A Guide to Better JavaScript</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/mastering-typescript</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/mastering-typescript</guid>
+      <description>TypeScript has become the gold standard for building robust web applications.</description>
+      <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+      <category>TypeScript</category>
+      <category>JavaScript</category>
+    </item>
+    <item>
+      <title>Getting Started with Next.js 16</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/getting-started-with-nextjs</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/getting-started-with-nextjs</guid>
+      <description>Next.js 16 brings exciting new features.</description>
+      <pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate>
+      <category>Next.js</category>
+      <category>React</category>
+    </item>
+    <item>
+      <title>AI-Powered Development Tools</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/ai-powered-development</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/ai-powered-development</guid>
+      <description>How AI assistants are transforming the way we write code.</description>
+      <pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Productivity</category>
+    </item>
+    <item>
+      <title>Web Security Essentials for Modern Apps</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/web-security-essentials</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/web-security-essentials</guid>
+      <description>Security is not optional. Learn the essential practices.</description>
+      <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+      <category>Security</category>
+      <category>Web</category>
+    </item>
+    <item>
+      <title>OpenTelemetry: Unified Observability for Microservices</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/opentelemetry-observability-microservices</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/opentelemetry-observability-microservices</guid>
+      <description>How OpenTelemetry is becoming the universal standard for traces, metrics, and logs in distributed systems.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Observability</category>
+      <category>DevOps</category>
+    </item>
+    <item>
+      <title>Model Context Protocol: AI 工具集成的新标准</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/model-context-protocol-ai-integration</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/model-context-protocol-ai-integration</guid>
+      <description>深入解析 MCP 如何统一 AI 模型与外部工具的交互方式，以及它对开发者生态的影响。</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>MCP</category>
+      <category>开发工具</category>
+    </item>
+    <item>
+      <title>WebGPU: Browser-Side AI Inference Revolution</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/webgpu-browser-ai-inference</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/webgpu-browser-ai-inference</guid>
+      <description>How WebGPU is transforming browsers into AI inference platforms and what it means for frontend development.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>WebGPU</category>
+      <category>AI</category>
+      <category>Performance</category>
+    </item>
+    <item>
+      <title>AI Agent Orchestration: From Chaos to Coordinated Intelligence</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/ai-agent-orchestration-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/ai-agent-orchestration-2026</guid>
+      <description>How modern orchestration frameworks are turning autonomous AI agents into reliable, production-ready systems.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Agents</category>
+      <category>Architecture</category>
+      <category>LLM</category>
+      <category>Orchestration</category>
+    </item>
+    <item>
+      <title>Post-Quantum Cryptography: Hardening Web Apps Before Q-Day</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/post-quantum-cryptography-web-apps</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/post-quantum-cryptography-web-apps</guid>
+      <description>NIST finalized post-quantum standards. Here is how to migrate your web apps before quantum computers break RSA and ECC.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Cryptography</category>
+      <category>Security</category>
+      <category>Quantum</category>
+      <category>TLS</category>
+      <category>NIST</category>
+    </item>
+    <item>
+      <title>Edge-Native Databases: Data Where Your Users Are</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/edge-native-databases</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/edge-native-databases</guid>
+      <description>How edge-native databases are redefining data locality, latency, and offline-first architectures.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Database</category>
+      <category>Edge Computing</category>
+      <category>Architecture</category>
+    </item>
+    <item>
+      <title>本地AI部署：从实验到生产的三种架构模式</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-deployment-patterns-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-deployment-patterns-2026</guid>
+      <description>探讨本地AI从原型到生产的三种主流部署架构，以及各自适用场景与性能权衡。</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Local-LLM</category>
+      <category>Privacy</category>
+      <category>Edge-Computing</category>
+    </item>
+    <item>
+      <title>Zero-Knowledge Proofs Are Revolutionizing Web Authentication</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-web-auth-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-web-auth-2026</guid>
+      <description>How zero-knowledge proofs are eliminating password breaches and transforming how we prove identity online.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Security</category>
+      <category>Cryptography</category>
+      <category>Web Development</category>
+      <category>Authentication</category>
+    </item>
+    <item>
+      <title>Why Local AI Is Becoming the Default Choice in 2026</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-movement-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/local-ai-movement-2026</guid>
+      <description>The shift from cloud-dependent AI to local inference is accelerating. Here is why privacy, cost, and latency are making local-first AI the new standard.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Local-LLM</category>
+      <category>Privacy</category>
+      <category>Edge-Computing</category>
+    </item>
+    <item>
+      <title>Zero-Knowledge Proofs Are Finally Coming to Web Apps</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-proofs-web-apps-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/zero-knowledge-proofs-web-apps-2026</guid>
+      <description>How ZK circuits running in the browser are enabling a new era of privacy-preserving web applications without sacrificing UX.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Cryptography</category>
+      <category>ZKP</category>
+      <category>Privacy</category>
+      <category>Web Development</category>
+      <category>Security</category>
+    </item>
+    <item>
+      <title>Rust + WebAssembly: The New Default Stack for Edge Computing in 2026</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/rust-wasm-edge-computing-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/rust-wasm-edge-computing-2026</guid>
+      <description>Why Rust compiled to WebAssembly is becoming the de facto standard for edge runtimes, and how to get started with the stack that is replacing Node.js at the edge.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Rust</category>
+      <category>WebAssembly</category>
+      <category>Edge Computing</category>
+      <category>Serverless</category>
+      <category>Performance</category>
+    </item>
+    <item>
+      <title>TypeScript 5.7: Pattern Matching and Beyond</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/typescript-5-7-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/typescript-5-7-2026</guid>
+      <description>TypeScript 5.7 finally introduces native pattern matching, bringing one of the most requested features to the language.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>TypeScript</category>
+      <category>JavaScript</category>
+      <category>Programming</category>
+      <category>Web Development</category>
+    </item>
+    <item>
+      <title>The HTMX + Alpine.js Stack: Building Dynamic UIs Without React</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/htmx-alpine-javascript-free-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/htmx-alpine-javascript-free-2026</guid>
+      <description>How the HTMX and Alpine.js combination is challenging the SPA orthodoxy and delivering better developer experience for content-driven applications.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>HTMX</category>
+      <category>Alpine.js</category>
+      <category>Frontend</category>
+      <category>Architecture</category>
+      <category>Web Development</category>
+    </item>
+    <item>
+      <title>Biome: The Rust-Powered JavaScript Toolchain Replacing ESLint and Prettier</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/biome-js-linter-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/biome-js-linter-2026</guid>
+      <description>How Biome is consolidating linting and formatting into a single, blazingly fast tool — and why the ecosystem is embracing it.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>JavaScript</category>
+      <category>Tooling</category>
+      <category>Rust</category>
+      <category>Developer Experience</category>
+    </item>
+    <item>
+      <title>OpenTelemetry Native: The End of Bolt-On Observability</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/observability-2026-otel-native</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/observability-2026-otel-native</guid>
+      <description>How frameworks and languages are building OpenTelemetry support directly into their cores, eliminating the sidecar pattern and its overhead.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Observability</category>
+      <category>OpenTelemetry</category>
+      <category>DevOps</category>
+      <category>Monitoring</category>
+      <category>SRE</category>
+    </item>
+    <item>
+      <title>Agentic Coding: From Autocomplete to Autonomous Programming</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/agentic-coding-reshaping-software-engineering</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/agentic-coding-reshaping-software-engineering</guid>
+      <description>How AI coding tools evolved beyond autocomplete into autonomous engineering participants in 2026.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>DevTools</category>
+      <category>Software Engineering</category>
+      <category>LLM</category>
+      <category>Automation</category>
+    </item>
+    <item>
+      <title>HTTP/3 and QUIC: What Every Web Developer Needs to Know in 2026</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/http3-quic-web-developers-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/http3-quic-web-developers-2026</guid>
+      <description>HTTP/3 adoption has crossed 40% of global web traffic. Understanding QUIC is no longer optional for performance-critical applications.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Web</category>
+      <category>Performance</category>
+      <category>Networking</category>
+      <category>DevOps</category>
+    </item>
+    <item>
+      <title>Passkeys: …年密码消亡的真正起点</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/passkeys-passwordless-auth-web-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/passkeys-passwordless-auth-web-2026</guid>
+      <description>Passkeys 已从实验性功能变成主流认证方式。本文解析其工作原理、浏览器支持现状，以及如何在你的项目中集成无密码登录。</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>安全</category>
+      <category>WebAuthn</category>
+      <category>身份认证</category>
+      <category>前端</category>
+    </item>
+    <item>
+      <title>Bun Runtime: The JavaScript Engine Revolution of 2026</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/bun-runtime-javascript-revolution-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/bun-runtime-javascript-revolution-2026</guid>
+      <description>How Bun is reshaping the JavaScript ecosystem with its all-in-one toolkit approach and blazing-fast performance.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>JavaScript</category>
+      <category>Performance</category>
+      <category>DevOps</category>
+    </item>
+    <item>
+      <title>MCP安全风险: 当AI代理成为攻击面</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/mcp-security-risks-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/mcp-security-risks-2026</guid>
+      <description>Model Context Protocol正在成为AI集成的默认标准, 但其安全模型仍存在严重隐患. 本文剖析MCP的三大攻击面及防护策略.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Security</category>
+      <category>MCP</category>
+      <category>Protocol</category>
+      <category>DevSecOps</category>
+    </item>
+    <item>
+      <title>Virtual Filesystems: The Missing Layer in AI Agent Architecture</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/virtual-filesystem-ai-agents-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/virtual-filesystem-ai-agents-2026</guid>
+      <description>How unified virtual filesystems are solving the tool fragmentation problem that plagues autonomous AI agents.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>Agents</category>
+      <category>Architecture</category>
+      <category>DevTools</category>
+    </item>
+    <item>
+      <title>The Rise of Modular Monoliths: Why Teams Are Abandoning Microservices</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/modular-monoliths-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/modular-monoliths-2026</guid>
+      <description>After years of microservice complexity, engineering teams are rediscovering the power of well-structured monoliths with modular boundaries that preserve independent deployment.</description>
+      <pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate>
+      <category>Architecture</category>
+      <category>Software Engineering</category>
+      <category>DevOps</category>
+    </item>
+    <item>
+      <title>远程MCP服务器：AI工具互操作的新范式</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/mcp-remote-servers-ai-interop-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/mcp-remote-servers-ai-interop-2026</guid>
+      <description>深入解析Model Context Protocol远程服务器架构，以及它如何重新定义AI应用与外部工具的集成方式。</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>MCP</category>
+      <category>Protocol</category>
+      <category>Architecture</category>
+    </item>
+    <item>
+      <title>Browser-Native AI: Running LLMs Locally with WebGPU and WASM</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/browser-native-local-ai-inference-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/browser-native-local-ai-inference-2026</guid>
+      <description>How WebGPU and WebAssembly are enabling full LLM inference directly in the browser — no server, no API keys, no data leaving your machine.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>WebGPU</category>
+      <category>WebAssembly</category>
+      <category>JavaScript</category>
+      <category>Performance</category>
+      <category>Privacy</category>
+    </item>
+    <item>
+      <title>Durable Execution: Building Reliable Workflows Without the Headache</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/durable-execution-reliable-workflows-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/durable-execution-reliable-workflows-2026</guid>
+      <description>How durable execution frameworks like Temporal, Restate, and Inngest are replacing brittle retry loops with truly reliable distributed workflows.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>Architecture</category>
+      <category>Backend</category>
+      <category>DevOps</category>
+      <category>Reliability</category>
+    </item>
+    <item>
+      <title>npm Supply Chain Attacks: How to Protect Your Projects in 2026</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/npm-supply-chain-attacks-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/npm-supply-chain-attacks-2026</guid>
+      <description>The TanStack compromise is a wake-up call. Here is how npm supply chain attacks work and the concrete steps to defend your projects.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>Security</category>
+      <category>JavaScript</category>
+      <category>DevSecOps</category>
+      <category>npm</category>
+    </item>
+    <item>
+      <title>SIMD-Aware LLM Inference: Beyond the Low-Hanging Fruit</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/llm-inference-optimization-simd-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/llm-inference-optimization-simd-2026</guid>
+      <description>How SIMD-level optimizations are pushing LLM inference throughput past what naive implementations achieve, and why it matters for local-first AI.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>LLM</category>
+      <category>Performance</category>
+      <category>Systems</category>
+      <category>Optimization</category>
+    </item>
+  </channel>
+</rss>
