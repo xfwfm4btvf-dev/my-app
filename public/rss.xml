@@ -5,7 +5,7 @@
     <link>https://xfwfm4btvf-dev.github.io/my-app</link>
     <description>Exploring tech, code, and the future. In-depth articles on web development, DevOps, architecture, and emerging technologies.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 May 2026 22:29:38 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2026 00:43:58 GMT</lastBuildDate>
     <atom:link href="https://xfwfm4btvf-dev.github.io/my-app/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Edge Computing Meets WebAssembly</title>
@@ -330,6 +330,30 @@
       <category>Architecture</category>
       <category>Software Engineering</category>
       <category>DevOps</category>
+    </item>
+    <item>
+      <title>远程MCP服务器：AI工具互操作的新范式</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/mcp-remote-servers-ai-interop-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/mcp-remote-servers-ai-interop-2026</guid>
+      <description>深入解析Model Context Protocol远程服务器架构，以及它如何重新定义AI应用与外部工具的集成方式。</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>MCP</category>
+      <category>Protocol</category>
+      <category>Architecture</category>
+    </item>
+    <item>
+      <title>Browser-Native AI: Running LLMs Locally with WebGPU and WASM</title>
+      <link>https://xfwfm4btvf-dev.github.io/my-app/posts/browser-native-local-ai-inference-2026</link>
+      <guid isPermaLink="true">https://xfwfm4btvf-dev.github.io/my-app/posts/browser-native-local-ai-inference-2026</guid>
+      <description>How WebGPU and WebAssembly are enabling full LLM inference directly in the browser — no server, no API keys, no data leaving your machine.</description>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+      <category>AI</category>
+      <category>WebGPU</category>
+      <category>WebAssembly</category>
+      <category>JavaScript</category>
+      <category>Performance</category>
+      <category>Privacy</category>
     </item>
   </channel>
 </rss>
